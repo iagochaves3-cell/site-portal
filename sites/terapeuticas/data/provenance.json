@@ -1,0 +1,82 @@
+{
+  "created": "2026-10-23",
+  "reviewUpdated": "2026-10-15T19:17:44Z",
+  "topics": 348,
+  "medications": 500,
+  "annexes": 14,
+  "reviewCounts": {
+    "partial": 178,
+    "reviewed": 19,
+    "documentary": 133
+  },
+  "expansion": {
+    "count": 18,
+    "date": "2026-10-23",
+    "baselineTopics": 330,
+    "review": "Pesquisa dirigida assistida por IA; sem homologação médica humana atribuída."
+  },
+  "declaredCount": 331,
+  "sourceFiles": [
+    {
+      "name": "Biblioteca_Medicamentosa_Pediatrica_MASTER_500_2026-10-18.md",
+      "bytes": 913604,
+      "sha256": "809f08f88cd2b6d03a58c3136fe118c41f04fbd006b575449aa1582981b700d2"
+    },
+    {
+      "name": "PedWB_Consolidado.md",
+      "bytes": 1350614,
+      "sha256": "90f179d907bb8054d37417357ad03de8c63d08a1fec1198c24b5686c2a9ff2b3"
+    },
+    {
+      "name": "PedWB_Integracao_Progressiva.md",
+      "bytes": 709934,
+      "sha256": "0ef4822a2cb69286950debadb5fc4e7e00301231927ede64b27a300af7236ef7"
+    },
+    {
+      "name": "PedWB_Revisao_Continua.json",
+      "bytes": 3589666,
+      "sha256": "3c2e61ff40d7142d13cf0d2b140ac2c76fb55fe688a58de2f490c60cfa06c277"
+    },
+    {
+      "name": "PedWB_infosWB_v42_Recibo_Publicacao_e_Retomada_20261020.md",
+      "bytes": 196395,
+      "sha256": "6ba91154e781f4dbd098105498c53d52153fc198846802f441ada6c3494ac270"
+    },
+    {
+      "name": "SITEGPT_TERAPIAS.docx",
+      "bytes": 61654,
+      "sha256": "bb2f524d22fa52f442c8efd9b2f2e4d1f90f0d96a7515b7b49225c27d4f30157"
+    },
+    {
+      "name": "Soroterapia_Desidratacao_original.pdf",
+      "bytes": 103890,
+      "sha256": "0a3e4d0e758b74def843f374f24dcc7b5018444516f88359ba02f2dc4bbe5612"
+    },
+    {
+      "name": "anvisa-documentary-20261025.json",
+      "bytes": 509163,
+      "sha256": "0c1e477286f87f7edfa84baa02d72a8267baf371e9b3d0cca7168e3cabe16546"
+    },
+    {
+      "name": "anvisa-presentations-20261023.json",
+      "bytes": 581500,
+      "sha256": "7be0f5cf44e6aa0de286b6e38f7d7c1439f73622ec81e21752e409469c01b167"
+    },
+    {
+      "name": "folder-supplements.json",
+      "bytes": 11181,
+      "sha256": "6ec4ddb0dd4c9e35b504ad119f62c72737c23e093511e155fe517ebcf0ecd06d"
+    },
+    {
+      "name": "soroterapia.md",
+      "bytes": 19212,
+      "sha256": "4e863f56f7444135365986036f81b508c1eaea7cf2522583c4501b7454e24d04"
+    },
+    {
+      "name": "terapias-expansion-20261023.json",
+      "bytes": 79970,
+      "sha256": "5115d94c92b05b24244c944ed4527a6e4b1d60dce585285402a4fc87a8c3a628"
+    }
+  ],
+  "note": "Contagens calculadas pelos registros efetivos. A base PedWB contém 330 temas; os novos temas TERAPIAS têm origem e revisão separadas. O resumo do JSON original declara 331 identidades. Revisão documental não equivale a homologação clínica humana."
+}
