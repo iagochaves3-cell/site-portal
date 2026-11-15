@@ -1,0 +1,18 @@
+import {ageYears} from './medical.js';
+export function lma(w){return w<=5?'1':w<=10?'1,5':w<=20?'2':w<=30?'2,5':w<=50?'3':w<=70?'4':w<=100?'5':'6';}
+export function equipment(c){if(!(c.weight>0)||ageYears(c)==null)return null;const y=ageYears(c),w=c.weight;let tube,depth,blade;
+ if(c.profile==='neo'){tube=w<1?2.5:w<2?3:w<=3.5?3.5:4;depth=w<1?'6,5–7 cm (tabela; individualizar no extremo prematuro)':w<2?'7–8 cm':w<3?'8–9 cm':w<=4?'9–10 cm':'Individualizar pelo exame e imagem';blade=c.gestWeeks==null?'IG necessária para escolher Miller 00/0/1':c.gestWeeks<37?'Miller 00 ou 0':'Miller 1';}
+ else if(c.profile==='ped'){tube=y<1?(c.ageMonths<6?3:3.5):Math.round((y/4+3.5)*2)/2;depth=y>=2?(y/2+12).toFixed(1)+' cm (estimativa oral)':y>=1?'11–12 cm (estimativa oral)':'Confirmar tabela do lactente; não aplicar fórmula de crianças maiores';blade=y<2?'Reta Miller 1, ajustar anatomia':y<10?'Macintosh 2 ou Miller apropriada':'Macintosh 3; ajustar anatomia';}
+ else {tube=null;depth='Fixação inicial usual 21–23 cm, individualizar por anatomia e capnografia';blade='Macintosh 3 ou 4 / lâmina equivalente do videolaringoscópio';}
+ const suction=c.profile==='neo'?(tube===2.5?'5–6 Fr':tube<=3.5?'6–7 Fr':'8 Fr'):'Escolher conforme diâmetro interno do tubo e sistema de aspiração';
+ return [
+ ['Tubo traqueal',tube?`${tube.toFixed(1)} mm de diâmetro interno · ${c.profile==='neo'?'sem cuff':'com cuff'}`:'Usual 7,0–8,0 mm com cuff; seleção pela anatomia','Disponibilizar tamanhos 0,5 mm abaixo/acima. Em RN, confrontar peso e idade gestacional.'],
+ ['Profundidade / fixação',depth,'Estimativa aos lábios. Confirmar passagem, expansão bilateral, CO₂ expirado e posição radiológica; proteger a pele.'],
+ ['Lâmina',blade,'Tamanho depende do fabricante e da anatomia; verificar iluminação e plano de resgate.'],
+ ['Máscara laríngea',`LMA Unique de silicone · tamanho ${lma(w)}`,'Faixas do fabricante têm limites compartilhados. No limite, ter os dois tamanhos disponíveis; pressão do cuff ≤60 cmH₂O.'],
+ ['Sonda de aspiração traqueal',suction,'Tabela neonatal RCH para aspiração aberta; sistema fechado tem dimensões próprias. Não avançar além da ponta do tubo.'],
+ ['Máscara facial / Guedel','Selecionar por medida direta no paciente','Máscara deve vedar nariz e boca. Guedel: incisivos ao ângulo mandibular; numeração varia entre modelos.'],
+ ['Sonda oro/nasogástrica','Selecionar calibre conforme indicação e fabricante; medir comprimento no paciente','Não há tamanho único determinado só por kg/idade. Em trauma de base do crânio, evitar via nasal. Confirmar posição antes do uso.'],
+ ['Acesso vascular','Maior calibre viável conforme vaso e necessidade; acesso IO no resgate','Não inferir calibre ou local apenas pelo peso. Considerar ultrassom e linha dedicada para vasoativos.']];
+}
+export function energies(c,maxAdult=200){if(c.profile==='adult')return {cv:{af:200,flutter:200,svt:100,vt:100},defib:'Bifásico: energia recomendada pelo fabricante (ex.: 120–200 J). Se desconhecida, máxima disponível. Monofásico: 360 J. Próximos choques: mesma energia ou maior.'};if(!(c.weight>0))return null;const w=c.weight;return {cv:{firstMin:.5*w,firstMax:w,next:2*w},defib:{first:Math.min(2*w,maxAdult),second:Math.min(4*w,maxAdult),subsequentMin:Math.min(4*w,maxAdult),maximum:Math.min(10*w,maxAdult)},note:c.profile==='neo'?'Energias PALS para taquiarritmias neonatais fora da reanimação habitual ao nascer, com especialista. Na sala de parto, hipóxia/bradicardia são tratadas com ventilação e compressões; choque não é rotina.':'PALS: cardioversão 0,5–1 J/kg → 2 J/kg; desfibrilação 2 → 4 → ≥4 J/kg, até 10 J/kg ou máximo adulto do aparelho.'};}

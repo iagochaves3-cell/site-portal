@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#160c10">
+  <title>Drogas CardioPapers · Preparo e terapêutica no PA</title>
+  <meta name="description" content="Referência clínica e calculadoras de preparo, infusão, soroterapia e sedoanalgesia para adultos, pediatria e neonatologia.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230c171b'/%3E%3Cpath d='M9 34h12l7-17 9 31 6-14h12' fill='none' stroke='%23ff7584' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Ir para o conteúdo</a>
+  <header class="site-header"><div class="header-inner">
+    <a href="#" class="brand" aria-label="Drogas CardioPapers, início"><span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 22h9l4-12 6 21 4-9h9"/></svg></span><span>Drogas <b>CardioPapers</b><small>MEDICINA DE EMERGÊNCIA</small></span></a>
+    <div class="header-tools"><span class="edition">REFERÊNCIA CLÍNICA · OUT 2026</span><button id="print" class="icon-button" aria-label="Imprimir esta aba"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 17H4V9h16v8h-2M6 14h12v7H6z"/></svg><span>Imprimir</span></button></div>
+  </div></header>
+  <main id="main" class="shell">
+    <section class="intro"><div><div class="eyebrow"><span class="live-dot"></span> PRECISÃO NO PREPARO. CLAREZA NA CONDUTA.</div><h1>O essencial, <em>na dose certa.</em></h1><p>Medicações, soluções e decisões clínicas. Uma referência para cada fase da vida.</p></div><div class="intro-meta"><span>01 / 03</span><small>ADULTO<br>PEDIATRIA<br>NEONATOLOGIA</small></div></section>
+    <section class="patient-panel" aria-label="Dados do paciente">
+      <div class="profile-tabs" role="tablist" aria-label="Faixa etária"><button role="tab" id="tab-adult" aria-controls="workspace" aria-selected="true" data-profile="adult">Adulto <span>≥18 anos</span></button><button role="tab" id="tab-ped" aria-controls="workspace" aria-selected="false" tabindex="-1" data-profile="ped">Pediatria <span>1 mês a &lt;18 anos</span></button><button role="tab" id="tab-neo" aria-controls="workspace" aria-selected="false" tabindex="-1" data-profile="neo">Neonatologia <span>Recém-nascido</span></button></div>
+      <div class="patient-body"><div class="weight-field"><label for="weight">Peso de cálculo</label><div class="weight-wrap"><input id="weight" inputmode="decimal" autocomplete="off" placeholder="—" aria-describedby="weight-help weight-error"><span>kg</span></div><small id="weight-help">Informe o peso para calcular os preparos.</small><span id="weight-error" class="error" role="status"></span></div>
+      <div id="demographics" class="demographics"></div><div class="patient-summary"><span class="tiny-label">PERFIL ATIVO</span><strong id="patient-label">Adulto</strong><small id="patient-note">O peso não define a indicação clínica.</small></div></div>
+      <div class="clinical-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 17H3zM12 9v5m0 3h.01"/></svg><span>Apoio ao preparo para profissionais. Confirmar apresentação, indicação e função orgânica; realizar dupla conferência antes da administração.</span></div>
+    </section>
+    <div id="workspace" role="tabpanel" aria-labelledby="tab-adult">
+      <nav class="workspace-nav" aria-label="Conteúdo da página"><button class="active" data-view="drugs">Medicações <span id="drug-count">—</span></button><button data-view="fluids">Soroterapia</button><button data-view="conditions">Condutas no PA</button><button data-view="sedation">Sedação & analgesia</button><button data-view="equipment">Materiais</button><button data-view="references">Referências</button></nav>
+      <section id="drugs-view" class="view"><div class="section-title"><div><span class="eyebrow">ARSENAL TERAPÊUTICO</span><h2>Preparo e infusão</h2></div><button id="copy-all" class="secondary-button">Copiar resultados filtrados <span>↗</span></button></div><div class="search-row"><label class="search"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><input id="search" type="search" placeholder="Buscar medicação, indicação ou classe…" aria-label="Buscar medicação"></label><span id="result-count" class="result-count"></span></div><div id="categories" class="category-chips" aria-label="Filtrar por classe"></div><div id="drug-grid" class="drug-grid"></div><p class="scope-note">As faixas exibidas são as do esquema selecionado. “Máxima da faixa” não representa um teto universal. Titulação, compatibilidade em Y, estabilidade e acesso devem seguir o protocolo institucional.</p></section>
+      <section id="fluids-view" class="view" hidden></section>
+      <section id="conditions-view" class="view" hidden></section>
+      <section id="sedation-view" class="view" hidden></section>
+      <section id="equipment-view" class="view" hidden></section>
+      <section id="references-view" class="view" hidden></section>
+    </div>
+    <section id="equipment-summary" class="equipment-summary"></section>
+    <footer><div class="footer-brand">Drogas <b>CardioPapers</b><span>PREPARO · INFUSÃO · DECISÃO</span></div><p>Referência independente elaborada a partir do arquivo fornecido e ampliada com fontes primárias. Não constitui protocolo homologado nem substitui avaliação clínica.</p><small>Revisão de conteúdo: 05/10/2026 · Sem armazenamento de dados de pacientes.</small></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>

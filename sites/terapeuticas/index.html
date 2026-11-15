@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TERAPIAS — Referência clínica</title>
+  <meta name="description" content="Biblioteca clínica de emergência e terapia intensiva pediátrica. Protocolos PedWB, medicamentos, calculadoras e fontes oficiais.">
+  <meta name="theme-color" content="#111615">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Ir para o conteúdo</a>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#inicio" aria-label="TERAPIAS início"><span class="brand-mark">T<span>+</span></span><span>TERAPIAS<small>REFERÊNCIA CLÍNICA</small></span></a>
+    <div class="nav-label">SEU ESPAÇO CLÍNICO</div>
+    <nav aria-label="Navegação principal">
+      <a href="#inicio" data-nav="inicio"><span data-icon="home"></span>Visão geral</a>
+      <a href="#protocolos" data-nav="protocolos"><span data-icon="book"></span>Protocolos <b>348</b></a>
+      <a href="#medicamentos" data-nav="medicamentos"><span data-icon="pill"></span>Medicamentos <b>500</b></a>
+      <a href="#soroterapia" data-nav="soroterapia"><span data-icon="pulse"></span>Soroterapia</a>
+      <a href="#calculadoras" data-nav="calculadoras"><span data-icon="calc"></span>Calculadoras</a>
+      <a href="#favoritos" data-nav="favoritos"><span data-icon="star"></span>Favoritos</a>
+    </nav>
+    <div class="nav-label second">CONHECIMENTO E FONTES</div>
+    <nav aria-label="Referências">
+      <a href="#fontes" data-nav="fontes"><span data-icon="globe"></span>Fontes e diretrizes</a>
+      <a href="#acervo" data-nav="acervo"><span data-icon="layers"></span>Anexos do acervo</a>
+      <a href="#revisoes" data-nav="revisoes"><span data-icon="history"></span>Revisões e método</a>
+    </nav>
+    <div class="sidebar-bottom"><span class="avatar">IA</span><div>Espaço de Iago<small>Emergência · Pediatria</small></div><span class="private-dot" title="Site privado"></span></div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><button id="menu" class="icon-button" aria-label="Abrir navegação" aria-expanded="false"><span data-icon="menu"></span></button><div class="breadcrumb">TERAPIAS <span>/</span> <strong id="crumb">Visão geral</strong></div><div class="top-meta"><span class="dot"></span> ACERVO CLÍNICO <span class="divider"></span> <span>23 OUT 2026</span></div></header>
+    <main id="main" tabindex="-1"><div class="loading"><span class="spinner"></span>Carregando biblioteca clínica…</div></main>
+    <footer><span>TERAPIAS <span class="footer-divider">/</span> Conhecimento para a prática.</span><a href="#revisoes">Fontes, versão e limites do acervo ↗</a></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* NEONATOLOGIA · tema gibi 2026 · enhancement visual e reversivel
+   Aplica-se somente ao body com a classe neo-gibi-2026.
+   NAO altera regras, calculos, doses, conteudo, tabelas ou validacoes. */
+:root { --neo-ink:#243554; --neo-indigo:#56469a; --neo-purple:#dfd5ff; --neo-yellow:#fff0ad; --neo-peach:#ffddca; --neo-mint:#d6f7e9; --neo-pink:#ffe1ea; --neo-sky:#d9efff; --neo-line:#344a67; --neo-shadow:0 7px 0 rgba(52,74,103,.14); }
+body.neo-gibi-2026 { background:radial-gradient(circle at 4% 5%,#ffe0a8 0 7%, transparent 7.2%),radial-gradient(circle at 97% 18%,#dcd6ff 0 9%,transparent 9.2%),#f9f7ff; color:var(--neo-ink);font-family: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif; }
+body.neo-gibi-2026 :where(h1,h2,h3,h4) { font-family:'Trebuchet MS', 'Segoe UI', Arial, sans-serif; letter-spacing:-.02em; }
+body.neo-gibi-2026 .neo-gibi-masthead { position:relative; overflow:hidden; isolation:isolate; background:linear-gradient(113deg,#dbf2ff 0%,#f3e5ff 55%,#fff2d1 100%) !important; color:var(--neo-ink); border:2px solid #c7b9eb; border-radius:0 0 25px 25px; box-shadow:var(--neo-shadow); }
+body.neo-gibi-2026 .neo-gibi-masthead::after {content:'✦  ✧   ✦';position:absolute;right:5%;top:6px;font-size:27px;color:#ed9e37;pointer-events:none;opacity:.8;z-index:-1}
+body.neo-gibi-2026 .neo-gibi-masthead :where(h1,h2) { color:#273f75 !important; text-shadow:1px 2px 0 rgba(255,255,255,.75); }
+body.neo-gibi-2026 :where(nav,[role='navigation']) {border-radius:17px; }
+body.neo-gibi-2026 :where(nav a,nav button,[role='tablist'] button,[role='tablist'] a,[role='navigation'] a) { border-radius:13px; font-weight:700; }
+body.neo-gibi-2026 :where(button,a[role='button'],input[type='button'],input[type='submit']) {font-family:inherit; border-radius:13px; transition:transform .15s ease,box-shadow .15s ease,filter .15s ease; }
+body.neo-gibi-2026 :where(button,a[role='button']):not(:disabled):not([aria-disabled='true']):hover {transform:translateY(-2px);filter:saturate(1.1)}
+body.neo-gibi-2026 :where(button,a[role='button']):focus-visible {outline:3px solid #f59b22;outline-offset:3px}
+body.neo-gibi-2026 :is(.card,.article-body) { border:2px solid #d5d6ef; border-radius:19px; box-shadow:var(--neo-shadow); }
+body.neo-gibi-2026 :is(.card,.article-body):nth-of-type(5n+1) {border-color:#b3d5f1}
+body.neo-gibi-2026 :is(.card,.article-body):nth-of-type(5n+2) {border-color:#d3b9ef}
+body.neo-gibi-2026 :is(.card,.article-body):nth-of-type(5n+3) {border-color:#f3d08b}
+body.neo-gibi-2026 :is(.card,.article-body):nth-of-type(5n+4) {border-color:#a9dfc8}
+body.neo-gibi-2026 :where(table) { border-collapse:separate; border-spacing:0; max-width:100%; }
+body.neo-gibi-2026 :where(th) { background:#e2edff; color:#273d67; }
+body.neo-gibi-2026 :where(th,td) { padding:9px 10px; }
+body.neo-gibi-2026 :where(a):focus-visible {outline:3px solid #f2a43a;outline-offset:3px}
+body.neo-gibi-2026 #neo-cuidados-rn-pdf { display:inline-flex;align-items:center;gap:7px; white-space:nowrap; background:#ffe1ad!important; color:#2f3158!important; border:2px solid #b78038!important; box-shadow:0 3px 0 #b7803855; text-decoration:none!important; font-weight:800!important; }
+body.neo-gibi-2026 #neo-cuidados-rn-pdf::before {content:'▤';font-size:1.12em}
+body.neo-gibi-2026 #neo-cuidados-rn-pdf:hover {transform:translateY(-2px)}
+@media (max-width:700px){body.neo-gibi-2026 .neo-gibi-masthead{border-radius:0 0 18px 18px}body.neo-gibi-2026 :where(th,td){padding:7px 6px;font-size:inherit}}
+@media(prefers-reduced-motion:reduce){body.neo-gibi-2026 *{transition:none!important;animation:none!important}}
+@media print{body.neo-gibi-2026 {background:#fff!important;color:#111!important}body.neo-gibi-2026 :is(.card,.article-body){box-shadow:none!important}body.neo-gibi-2026 .neo-gibi-masthead{box-shadow:none!important}body.neo-gibi-2026 #neo-cuidados-rn-pdf{display:none!important}}
+/* Integração com o cabeçalho e a navegação originais. */
+body.neo-gibi-2026 .header { gap:16px; }
+body.neo-gibi-2026 .download { text-align:center; }
+body.neo-gibi-2026 .searchbar { top:var(--neo-header-height,87px); }
+body.neo-gibi-2026 .sidebar { top:var(--neo-sticky-height,152px); height:calc(100dvh - var(--neo-sticky-height,152px)); }
+html { scroll-padding-top:calc(var(--neo-sticky-height,152px) + 16px); }
+body.neo-gibi-2026 .source { scroll-margin-top:calc(var(--neo-sticky-height,152px) + 16px); }
+@media(max-width:1200px) {
+  body.neo-gibi-2026 .header { height:auto; min-height:87px; flex-wrap:wrap; padding:14px 4% 9px; gap:12px; }
+  body.neo-gibi-2026 .topnav { order:3; width:100%; justify-content:space-between; overflow:auto; padding:5px 0; }
+  body.neo-gibi-2026 .brand { margin-right:auto; }
+}
+@media(max-width:600px) {
+  body.neo-gibi-2026 .header { padding:12px 20px 8px; gap:10px; }
+  body.neo-gibi-2026 .brand { width:100%; }
+  body.neo-gibi-2026 .download { flex:1; font-size:10px; padding:8px 10px; }
+  body.neo-gibi-2026 .download span { display:inline; }
+  body.neo-gibi-2026 #neo-cuidados-rn-pdf { justify-content:center; }
+}
+
