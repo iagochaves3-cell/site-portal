@@ -1,0 +1,1 @@
+import{r as e}from"./framework-BeEOmv_9.js";import{i as t,t as n}from"./button-CUZFMpEM.js";var r=e();function i(){return(0,r.jsxs)(n,{className:`no-print`,variant:`outline`,onClick:()=>window.print(),children:[(0,r.jsx)(t,{"aria-hidden":`true`}),` Imprimir tema`]})}export{i as default};
