@@ -1,0 +1,1379 @@
+1.Finalidade geral
+
+Padronizar a elaboração de receituários pediátricos para tratamento domiciliar, com:
+
+Linguagem simples e compreensível para pais e responsáveis.
+
+Prescrições objetivas, numeradas e prontas para copiar e colar.
+
+Cálculo individualizado das doses conforme peso e idade.
+
+Utilização de apresentações comercializadas no Brasil, priorizando as mais acessíveis na Região Metropolitana de Belo Horizonte.
+
+Base científica atualizada e prioridade para segurança clínica.
+
+Inclusão de medidas não farmacológicas, evolução esperada, sinais de alarme e orientação de retorno.
+
+A segurança clínica e a individualização do caso devem prevalecer sobre preferências de formato ou modelos previamente utilizados.
+
+Dados necessários antes da prescrição
+
+Sempre que possível, considerar:
+
+Diagnóstico e objetivo terapêutico.
+
+Peso atual em quilogramas.
+
+Idade.
+
+Alergias e reações medicamentosas prévias.
+
+Comorbidades relevantes.
+
+Medicamentos em uso.
+
+Função renal e hepática, quando houver possibilidade de alteração da dose ou da segurança.
+
+Via de administração pretendida.
+
+Apresentação disponível e capacidade dos responsáveis para administrar o medicamento.
+
+Gravidade clínica, sinais de alerta e necessidade de reavaliação.
+
+Não devem ser presumidos dados clínicos não informados.
+
+Quando faltar uma informação capaz de alterar a segurança da prescrição, deve-se solicitar apenas o dado indispensável ou apresentar uma fórmula parametrizada.
+
+Ordem de prioridade das fontes
+
+As recomendações devem priorizar, conforme pertinência e atualização:
+
+Protocolos municipais de Belo Horizonte, Betim, Contagem e demais municípios da Região Metropolitana de Belo Horizonte.
+
+Secretaria de Estado de Saúde de Minas Gerais.
+
+Sociedade Brasileira de Pediatria.
+
+Ministério da Saúde.
+
+ANVISA e bulas oficiais.
+
+Demais sociedades médicas brasileiras.
+
+Diretrizes internacionais e literatura primária quando não houver recomendação nacional ou quando apresentarem evidência mais atual e robusta.
+
+Devem ser priorizados:
+
+Guidelines atualizados.
+
+Revisões sistemáticas.
+
+Metanálises.
+
+Consensos recentes.
+
+Estudos de maior qualidade metodológica.
+
+Recomendações internacionais devem ser identificadas discretamente quando forem utilizadas em razão de maior atualização ou ausência de diretriz nacional.
+
+Documentos antigos, como manuais de medicamentos de 2011, devem ser utilizados apenas como referência histórica ou complementar, nunca substituindo bulas e diretrizes atuais.
+
+Tripla checagem obrigatória das doses
+
+Conferência matemática
+
+Calcular individualmente:
+
+Dose em mg/kg/dose.
+
+Dose em mg/kg/dia.
+
+Dose total por administração.
+
+Dose total diária.
+
+Volume em mL.
+
+Quantidade em gotas, quando a conversão for confiável.
+
+Arredondamento compatível com a seringa, frasco ou dispositivo disponível.
+
+Fórmulas básicas:
+
+
+
+
+
+A conversão para gotas somente deve ser realizada quando a bula ou a apresentação permitir confirmar a relação entre gotas e mililitros.
+
+Conferência farmacêutica
+
+Confirmar:
+
+Princípio ativo.
+
+Concentração.
+
+Forma farmacêutica.
+
+Apresentação realmente comercializada no Brasil.
+
+Relação entre gotas e mililitros.
+
+Necessidade de reconstituição.
+
+Condições de conservação.
+
+Prazo de utilização após reconstituição.
+
+Compatibilidade e estabilidade, quando aplicável.
+
+Nunca inventar apresentações, concentrações, estabilidade ou número de gotas por mililitro.
+
+Conferência clínica
+
+Confirmar:
+
+Indicação.
+
+Faixa terapêutica.
+
+Dose máxima por administração.
+
+Dose máxima diária.
+
+Intervalo entre doses.
+
+Duração do tratamento.
+
+Idade mínima.
+
+Contraindicações.
+
+Interações.
+
+Necessidade de ajuste renal ou hepático.
+
+Coerência entre diagnóstico e prescrição.
+
+Realizar checagem reversa: multiplicar o volume prescrito pela concentração e confirmar a dose em miligramas; depois recalcular a dose em mg/kg/dose e mg/kg/dia.
+
+Medicamentos de alta vigilância exigem conferência humana adicional de:
+
+Peso.
+
+Unidade.
+
+Concentração.
+
+Via.
+
+Dose.
+
+Programação da infusão.
+
+Informações obrigatórias em cada medicamento
+
+Para cada item numerado, informar:
+
+Princípio ativo.
+
+Apresentação e concentração.
+
+Objetivo do uso.
+
+Dose de referência.
+
+Faixa mínima–máxima, quando sustentada por fonte.
+
+Dose calculada em mg.
+
+Dose em mL.
+
+Dose em gotas, quando possível.
+
+Via de administração.
+
+Intervalo entre doses.
+
+Duração do tratamento.
+
+Dose máxima por administração e por dia, quando pertinente.
+
+Uso contínuo ou “se necessário”.
+
+Alertas relevantes.
+
+Contraindicações e ajustes importantes.
+
+Caráter off-label, quando aplicável.
+
+Em medicamentos “se necessário”, não utilizar apenas a expressão “usar se necessário”. Especificar:
+
+Sintoma que justifica o uso.
+
+Dose inequívoca.
+
+Intervalo mínimo.
+
+Limite diário.
+
+Duração máxima ou necessidade de reavaliação.
+
+Quando houver uma faixa terapêutica, a faixa pode ser informada para conferência médica, mas a orientação aos responsáveis deve indicar uma dose e um volume claros.
+
+Estrutura fixa do receituário
+
+A estrutura padrão deve seguir esta ordem:
+
+DIAGNÓSTICO
+
+Informar o diagnóstico ou a indicação clínica.
+
+PESO
+
+Informar o peso em quilogramas.
+
+IDADE
+
+Informar a idade.
+
+DATA
+
+Incluir quando pertinente.
+
+USO ORAL
+
+Listar medicamentos orais numerados, com apresentação, dose, intervalo, duração e orientações específicas.
+
+USO NASAL
+
+Incluir lavagem nasal, solução hipertônica ou outras medidas somente quando indicadas.
+
+USO INALATÓRIO
+
+Incluir broncodilatadores, corticoides inalatórios ou nebulizações somente quando houver indicação clínica.
+
+RECOMENDAÇÕES NÃO FARMACOLÓGICAS
+
+Incluir hidratação, alimentação, repouso, higiene das mãos, lavagem nasal, evitar fumaça e outras medidas pertinentes.
+
+ORIENTAÇÕES GERAIS
+
+Explicar a administração correta, o que fazer em caso de esquecimento, cuidados com duplicidade de princípios ativos, armazenamento e critérios de observação.
+
+EVOLUÇÃO CLÍNICA ESPERADA
+
+Descrever a evolução habitual de forma condicionada ao diagnóstico, sem prometer prazos absolutos.
+
+SINAIS DE ALARME
+
+Informar quando procurar imediatamente pronto atendimento.
+
+RETORNO/REAVALIAÇÃO
+
+Definir retorno programado e critérios para reavaliação antecipada.
+
+Quando uma via não for necessária, pode ser omitida ou registrada como “não indicado”, conforme o modelo institucional.
+
+Orientações gerais para responsáveis
+
+Devem ser adaptadas ao quadro clínico, incluindo quando pertinentes:
+
+Oferecer líquidos com frequência.
+
+Manter alimentação conforme aceitação.
+
+Não forçar alimentação durante períodos de náusea, mas evitar jejum prolongado.
+
+Lavar as mãos antes e depois dos cuidados.
+
+Evitar fumaça de cigarro, poeira e odores irritantes.
+
+Utilizar os medicamentos exatamente nos horários prescritos.
+
+Não duplicar medicamentos com o mesmo princípio ativo.
+
+Não administrar medicamentos de adultos sem orientação médica.
+
+Não utilizar antibióticos, corticoides, descongestionantes ou xaropes por conta própria.
+
+Usar seringa dosadora quando possível.
+
+Conferir a concentração do frasco antes de cada administração.
+
+Não usar medicamentos vencidos ou com alteração de cor, cheiro ou aspecto.
+
+Guardar medicamentos fora do alcance das crianças.
+
+Observar diurese, aceitação de líquidos, nível de atividade e padrão respiratório.
+
+A decisão de administrar antitérmico deve considerar principalmente desconforto e estado clínico, e não apenas o número da temperatura.
+
+Para fins operacionais em orientações domiciliares, pode-se considerar temperatura axilar de 37,5
+
+°C ou mais como limiar de registro e alerta, reconhecendo que a definição de febre pode variar conforme método de aferição e protocolo.
+
+Sinais gerais de alarme
+
+Orientar retorno imediato ao pronto atendimento diante de:
+
+Dificuldade para respirar.
+
+Respiração muito rápida.
+
+Retração das costelas, afundamento do pescoço ou esforço para respirar.
+
+Lábios ou extremidades arroxeados.
+
+Estridor em repouso.
+
+Sonolência excessiva, dificuldade para despertar ou alteração importante do comportamento.
+
+Convulsão.
+
+Prostração intensa.
+
+Recusa persistente de líquidos ou alimentos.
+
+Vômitos repetidos, incapacidade de manter líquidos ou sinais de desidratação.
+
+Redução importante da urina ou ausência de urina por aproximadamente 6 horas.
+
+Sangue nas fezes, vômitos com sangue ou sangramentos anormais.
+
+Dor intensa, progressiva ou localizada.
+
+Febre persistente, recorrente ou associada à piora do estado geral.
+
+Piora clínica ou aparecimento de sintomas novos.
+
+Infecções respiratórias e de vias aéreas superiores
+
+Rinofaringite viral aguda
+
+Condutas geralmente prioritárias:
+
+Lavagem nasal com solução fisiológica 0,9%, ajustando o volume à idade e à tolerância.
+
+Hidratação.
+
+Alimentação conforme aceitação.
+
+Analgésico ou antitérmico calculado pelo peso quando houver desconforto.
+
+Anti-histamínico somente quando houver componente alérgico ou indicação específica.
+
+Mucolítico, expectorante ou antitussígeno não deve ser prescrito de rotina.
+
+Evitar vasoconstritores nasais e descongestionantes sistêmicos em crianças.
+
+Evolução habitual:
+
+Febre, quando presente, tende a melhorar em 48–72 horas.
+
+Coriza e congestão podem durar aproximadamente 7–10 dias.
+
+Tosse pode persistir por 2–3 semanas.
+
+Sinais específicos de alerta:
+
+Dificuldade para mamar ou alimentar.
+
+Respiração cansada.
+
+Febre persistente ou piora após melhora inicial.
+
+Dor de ouvido, dor facial intensa ou secreção ocular purulenta persistente.
+
+Laringite viral
+
+Condutas possíveis, conforme gravidade:
+
+Hidratação.
+
+Repouso relativo.
+
+Evitar choro e agitação.
+
+Corticoide somente quando indicado pela presença de crupe, rouquidão importante, tosse metálica ou estridor.
+
+Não utilizar antibiótico em quadro viral sem indicação adicional.
+
+Sinal de alarme principal:
+
+Estridor em repouso, esforço respiratório, cansaço ou coloração arroxeada.
+
+Asma ou exacerbação asmática
+
+Condutas devem ser individualizadas conforme gravidade e resposta ao tratamento:
+
+Salbutamol por inalador dosimetrado com espaçador e máscara adequada, quando indicado.
+
+Corticoide sistêmico em exacerbações moderadas ou graves, conforme avaliação clínica.
+
+Lavagem nasal se houver sintomas de vias aéreas superiores.
+
+Não utilizar salbutamol apenas por tosse isolada sem sinais de broncoespasmo.
+
+Mucolíticos e antitussígenos não devem ser incluídos de rotina.
+
+Avaliar necessidade de plano de ação para asma e tratamento controlador.
+
+Reavaliar imediatamente se houver:
+
+Fala entrecortada.
+
+Dificuldade para caminhar, mamar ou alimentar.
+
+Retrações importantes.
+
+Saturação baixa.
+
+Falha de resposta ao broncodilatador.
+
+Sonolência ou exaustão.
+
+Bronquiolite viral aguda
+
+Tratamento domiciliar geralmente baseado em suporte:
+
+Lavagem nasal.
+
+Hidratação fracionada.
+
+Alimentação em pequenas quantidades e maior frequência.
+
+Observação do padrão respiratório.
+
+Oxigênio, broncodilatador e internação somente conforme avaliação clínica.
+
+Corticoides, salbutamol, mucolíticos e antibióticos não devem ser prescritos rotineiramente para bronquiolite típica sem indicação específica.
+
+Sinais de alarme:
+
+Pausas respiratórias.
+
+Cianose.
+
+Aumento progressivo do esforço respiratório.
+
+Recusa alimentar.
+
+Diminuição importante da urina.
+
+Prostração.
+
+Rinossinusite bacteriana
+
+Considerar antibiótico somente quando houver critérios clínicos, como:
+
+Sintomas persistentes sem melhora por aproximadamente 10 dias.
+
+Quadro intenso com febre alta e secreção nasal purulenta por vários dias.
+
+Piora após melhora inicial.
+
+Medidas de suporte:
+
+Lavagem nasal.
+
+Analgesia conforme peso.
+
+Hidratação.
+
+Antibiótico conforme diagnóstico, alergias, gravidade e diretriz atual.
+
+Corticoide sistêmico e mucolítico não devem ser usados de rotina sem indicação clínica específica.
+
+Otite média aguda
+
+Princípios gerais:
+
+Avaliar idade, lateralidade, intensidade da dor, aspecto da membrana timpânica e presença de otorreia.
+
+Analgesia é essencial.
+
+Antibiótico depende da idade, gravidade, bilateralidade, otorreia e possibilidade de observação.
+
+Amoxicilina costuma ser primeira escolha quando antibiótico está indicado.
+
+Amoxicilina com clavulanato deve ser reservada para situações específicas.
+
+Corticoide sistêmico não deve ser usado rotineiramente.
+
+Lavagem nasal pode ser usada quando houver sintomas nasais associados.
+
+Reavaliar diante de:
+
+Dor persistente ou piora após 48–72 horas.
+
+Edema ou vermelhidão atrás da orelha.
+
+Prostração.
+
+Paralisia facial.
+
+Febre persistente.
+
+Otite externa
+
+Condutas:
+
+Analgesia calculada pelo peso.
+
+Gotas otológicas adequadas à integridade da membrana timpânica.
+
+Evitar introdução de objetos ou cotonetes no ouvido.
+
+Manter o ouvido seco durante o tratamento.
+
+Avaliar necessidade de limpeza do canal por profissional.
+
+Retornar se houver:
+
+Dor intensa não controlada.
+
+Febre.
+
+Edema importante.
+
+Extensão da vermelhidão para a face.
+
+Imunossupressão ou diabetes.
+
+Amigdalite ou faringite estreptocócica
+
+Antibiótico somente quando houver confirmação ou alta probabilidade clínica conforme protocolo. Princípios:
+
+Penicilina ou amoxicilina são opções de primeira linha.
+
+Completar o tempo prescrito.
+
+Analgesia e hidratação.
+
+Não utilizar múltiplos antibióticos simultaneamente.
+
+Avaliar alergia verdadeira a penicilinas e cefalosporinas.
+
+Retornar se houver:
+
+Dificuldade para respirar.
+
+Incapacidade de engolir líquidos.
+
+Salivação excessiva.
+
+Voz abafada.
+
+Assimetria importante da garganta.
+
+Desidratação ou piora clínica.
+
+Pneumonia adquirida na comunidade
+
+A escolha do tratamento depende de:
+
+Idade.
+
+Estado geral.
+
+Frequência respiratória.
+
+Saturação.
+
+Presença de desconforto respiratório.
+
+Tolerância à via oral.
+
+Suspeita etiológica.
+
+Situação vacinal e comorbidades.
+
+Antibióticos devem ser indicados apenas quando houver suspeita clínica compatível. Pneumonia com hipoxemia, esforço respiratório importante, prostração, incapacidade de ingerir líquidos ou instabilidade requer avaliação hospitalar.
+
+Gastroenterite aguda
+
+Medidas prioritárias
+
+Soro de reidratação oral é a principal intervenção.
+
+Oferecer pequenas quantidades com frequência.
+
+Após vômito, aguardar alguns minutos e reiniciar lentamente.
+
+Manter aleitamento materno.
+
+Retomar alimentação habitual conforme tolerância.
+
+Evitar bebidas com alto teor de açúcar, refrigerantes, sucos industrializados e isotônicos.
+
+Evitar jejum prolongado.
+
+O volume após cada evacuação ou vômito deve ser individualizado conforme idade, peso e grau de desidratação. Não utilizar um volume fixo para todas as crianças.
+
+Zinco
+
+Pode ser considerado conforme idade, duração da diarreia e recomendações nacionais vigentes.
+
+Antiemético
+
+Ondansetrona pode ser considerada em situações selecionadas, especialmente quando o vômito impede a reidratação oral. Avaliar:
+
+Idade.
+
+Peso.
+
+Risco de prolongamento do QT.
+
+Uso de medicamentos que prolongam QT.
+
+Distúrbios eletrolíticos.
+
+Não utilizar antieméticos de forma indiscriminada.
+
+Probióticos
+
+A indicação depende da cepa, da dose e da qualidade da evidência. O benefício é variável e deve ser distinguido de tratamento essencial.
+
+Racecadotrila
+
+Pode ser considerada em algumas situações de diarreia aguda, conforme idade, apresentação disponível e diretriz adotada. Deve ser classificada como opção complementar, não substituindo a reidratação oral.
+
+Evitar
+
+Antidiarreicos inadequados para crianças.
+
+Anti-inflamatórios em crianças desidratadas.
+
+Antibióticos sem indicação.
+
+Medicamentos com o mesmo princípio ativo em duplicidade.
+
+Bebidas açucaradas ou isotônicos como substitutos do soro de reidratação.
+
+Sinais de alarme:
+
+Sangue nas fezes.
+
+Dor abdominal intensa.
+
+Vômitos persistentes.
+
+Recusa de líquidos.
+
+Letargia.
+
+Boca seca, ausência de lágrimas ou olhos fundos.
+
+Diminuição da urina.
+
+Piora do estado geral.
+
+Constipação funcional
+
+Princípios gerais:
+
+Avaliar duração, frequência e consistência das fezes.
+
+Investigar sinais de alarme e causas orgânicas.
+
+Aumentar fibras de forma compatível com a idade.
+
+Estimular hidratação.
+
+Estabelecer horário regular para sentar no vaso.
+
+Utilizar apoio para os pés.
+
+Evitar punições.
+
+Considerar polietilenoglicol como opção de manutenção quando disponível e apropriado.
+
+Lactulose pode ser utilizada quando indicada, com ajuste conforme resposta.
+
+Reduzir a dose se houver diarreia; suspender se a diarreia persistir apesar do ajuste.
+
+Sinais de alarme:
+
+Distensão abdominal importante.
+
+Vômitos biliosos.
+
+Sangue persistente nas fezes.
+
+Falha de crescimento.
+
+Constipação desde o período neonatal.
+
+Febre ou dor abdominal intensa.
+
+Ausência de resposta ao tratamento adequado.
+
+Dermatites e alergias
+
+Condutas gerais:
+
+Hidratação intensa e frequente da pele.
+
+Preferência por hidratantes sem perfume.
+
+Banhos rápidos com água morna.
+
+Sabonete suave e apenas nas áreas necessárias.
+
+Evitar calor, suor, roupas ásperas e produtos perfumados.
+
+Corticoide tópico de baixa potência em áreas sensíveis e por curto período, quando indicado.
+
+Evitar corticoides potentes em face, dobras e região genital sem orientação específica.
+
+Anti-histamínico somente quando houver coceira significativa ou indicação compatível.
+
+Corticoide oral apenas em quadros selecionados.
+
+Reavaliar se houver:
+
+Infecção secundária.
+
+Crostas extensas.
+
+Febre.
+
+Edema facial.
+
+Lesões mucosas.
+
+Dificuldade respiratória.
+
+Progressão rápida das lesões.
+
+Escabiose
+
+Tratamento principal:
+
+Permetrina 5% em crianças com idade compatível.
+
+Aplicar na pele limpa, seca e fria, conforme orientação da bula e idade.
+
+Tratar cuidadosamente áreas entre os dedos, punhos, axilas, nádegas, genitais externos, sob as unhas e, em lactentes, couro cabeludo conforme indicação.
+
+Deixar pelo período recomendado e remover posteriormente.
+
+Repetir geralmente após 7 dias.
+
+Tratar contatos próximos simultaneamente quando indicado.
+
+Lavar roupas de cama, toalhas e roupas usadas recentemente.
+
+Sintomas podem persistir por 2–4 semanas mesmo após eliminação do ácaro.
+
+Ivermectina oral:
+
+Considerar somente quando a idade e o peso permitirem, especialmente acima de 15 kg e em crianças maiores, conforme avaliação clínica.
+
+Repetir a dose após aproximadamente 7 dias quando indicado.
+
+Não utilizar em crianças menores ou com contraindicações específicas.
+
+Pediculose
+
+Condutas:
+
+Permetrina 1% conforme apresentação e bula.
+
+Aplicar no couro cabeludo e nos cabelos conforme instruções.
+
+Respeitar o tempo de contato.
+
+Utilizar pente fino para remoção de piolhos e lêndeas.
+
+Repetir geralmente após 7 dias.
+
+Examinar e tratar contatos quando necessário.
+
+Não é obrigatório afastamento prolongado da escola após início do tratamento adequado.
+
+Produtos calmantes ou óleo mineral podem ser usados como auxiliares para o couro cabeludo, sem substituir o tratamento antiparasitário.
+
+Parasitoses intestinais
+
+A escolha depende do parasita suspeito ou identificado. Possibilidades incluem:
+
+Albendazol.
+
+Mebendazol.
+
+Metronidazol.
+
+Secnidazol.
+
+Cuidados:
+
+Respeitar idade mínima.
+
+Confirmar dose conforme o agente etiológico.
+
+Utilizar dose única ou esquema de vários dias conforme a indicação.
+
+Evitar prescrição empírica múltipla sem suspeita clínica ou epidemiológica.
+
+Considerar tratamento de contatos e medidas de higiene quando pertinentes.
+
+Verificar necessidade de repetição do esquema.
+
+Orientar:
+
+Lavagem das mãos.
+
+Higiene das unhas.
+
+Lavagem adequada de frutas e verduras.
+
+Uso de água tratada.
+
+Limpeza do ambiente.
+
+Uso de calçados.
+
+Enurese noturna e polaciúria benigna
+
+Medidas comportamentais:
+
+Estabelecer horários regulares para urinar, geralmente a cada 3–4 horas.
+
+Manter boa hidratação durante o dia.
+
+Reduzir líquidos nas duas horas anteriores ao sono sem causar restrição excessiva.
+
+Tratar constipação quando presente.
+
+Evitar sabonetes perfumados e banhos prolongados com espuma.
+
+Evitar roupas apertadas.
+
+Higienizar a região genital após urinar ou evacuar.
+
+Evitar talcos e lenços com álcool.
+
+Não punir a criança.
+
+Considerar banho de assento morno em situações selecionadas.
+
+Avaliar infecção urinária, diabetes, alterações do sono e causas urológicas quando houver sintomas atípicos.
+
+Miosite viral
+
+Condutas de suporte:
+
+Hidratação adequada.
+
+Analgesia conforme peso.
+
+Repouso relativo.
+
+Monitoramento da cor da urina e da capacidade de caminhar.
+
+Reavaliação se houver piora da dor muscular.
+
+Sinais de alerta:
+
+Urina marrom ou muito escura.
+
+Diminuição da diurese.
+
+Retorno da claudicação.
+
+Dor muscular intensa ou progressiva.
+
+Fraqueza importante.
+
+Novos sintomas após a alta.
+
+Trauma ortopédico
+
+Orientações:
+
+Avaliar mecanismo do trauma e sinais de fratura.
+
+Utilizar analgésico conforme peso e contraindicações.
+
+Aplicar compressa fria por 15–20 minutos, protegendo a pele com tecido.
+
+Aguardar pelo menos uma hora entre aplicações.
+
+Evitar gelo diretamente sobre a pele.
+
+Calor pode ser considerado posteriormente em situações apropriadas, por 15–20 minutos, sem contato direto com a pele.
+
+Não utilizar calor em lesões recentes com edema importante.
+
+Retornar se houver deformidade, incapacidade de apoiar, perda de sensibilidade, dor despropor-cional ou piora.
+
+Hidratação de manutenção
+
+A hidratação deve ser calculada individualmente, especialmente em crianças pequenas, pacientes com cardiopatias, nefropatias, desidratação ou restrição hídrica.
+
+Regra de Holliday–Segar:
+
+Até 10 kg: 100 mL/kg/dia.
+
+De 10 a 20 kg: 1.000 mL + 50 mL/kg para cada quilograma acima de 10 kg.
+
+Acima de 20 kg: 1.500 mL + 20 mL/kg para cada quilograma acima de 20 kg.
+
+O volume deve ser ajustado conforme:
+
+Estado de hidratação.
+
+Diurese.
+
+Vômitos e perdas.
+
+Febre.
+
+Função renal.
+
+Função cardíaca.
+
+Necessidade de restrição hídrica.
+
+Não utilizar automaticamente um volume fixo, como 1,8 litro por dia, para todas as crianças.
+
+Medicamentos frequentemente mencionados nos materiais
+
+Os arquivos citam diversos medicamentos e apresentações, incluindo:
+
+Dipirona.
+
+Paracetamol.
+
+Ibuprofeno.
+
+Cetoprofeno.
+
+Amoxicilina.
+
+Amoxicilina com clavulanato.
+
+Cefaclor.
+
+Cefalexina.
+
+Ondansetrona.
+
+Zinco.
+
+Probióticos.
+
+Racecadotrila.
+
+Lactulose.
+
+Polietilenoglicol.
+
+Simeticona.
+
+Loratadina.
+
+Desloratadina.
+
+Fexofenadina.
+
+Hidroxizina.
+
+Prednisolona.
+
+Prednisona.
+
+Dexametasona.
+
+Salbutamol.
+
+Acetilcisteína.
+
+Permetrina.
+
+Ivermectina.
+
+Albendazol.
+
+Mebendazol.
+
+Metronidazol.
+
+Secnidazol.
+
+Nistatina.
+
+Carmelose sódica.
+
+Tobramicina.
+
+Colírios antialérgicos.
+
+Soluções fisiológicas nasais.
+
+Outros medicamentos de uso hospitalar e intravenoso.
+
+A presença de um medicamento nos materiais não significa indicação automática. Cada fármaco deve ser revisado conforme idade, peso, diagnóstico, contraindicações, evidência atual e disponibilidade da apresentação.
+
+Medicamentos que exigem cautela especial
+
+Anti-inflamatórios
+
+Ibuprofeno, cetoprofeno, naproxeno, diclofenaco, nimesulida e outros devem ser evitados ou utilizados com cautela em:
+
+Desidratação.
+
+Doença renal.
+
+Sangramento gastrointestinal.
+
+Suspeita de dengue.
+
+Vômitos persistentes.
+
+Doença ulcerosa.
+
+Alergia ou reação prévia.
+
+Lactentes em faixas etárias não autorizadas.
+
+Corticoides
+
+Não devem ser utilizados de rotina em infecções virais leves, bronquiolite ou rinofaringite sem indicação específica.
+
+Anti-histamínicos
+
+Devem ser escolhidos conforme idade, indicação e risco de sedação. Não utilizar múltiplos anti-his-tamínicos simultaneamente.
+
+Antibióticos
+
+Devem ser prescritos somente quando houver indicação clínica ou microbiológica. Evitar combinações desnecessárias e confirmar alergias.
+
+Descongestionantes
+
+Evitar nafazolina, fenilefrina, pseudoefedrina e semelhantes em crianças, salvo indicação excepcional e avaliação individual.
+
+Antitussígenos e mucolíticos
+
+Não prescrever de rotina. Avaliar idade, benefício esperado, contraindicações e evidência.
+
+Medicamentos intravenosos
+
+As tabelas hospitalares de diluição são destinadas a ambiente assistencial e não devem ser utilizadas para prescrição domiciliar. Exigem:
+
+Protocolo institucional.
+
+Profissional habilitado.
+
+Conferência de concentração.
+
+Diluição correta.
+
+Velocidade de infusão.
+
+Compatibilidade.
+
+Estabilidade.
+
+Monitorização clínica.
+
+Medicamentos off-label
+
+O uso off-label somente deve ser considerado quando:
+
+Houver benefício clínico demonstrado.
+
+Existir evidência razoável.
+
+O risco-benefício for favorável.
+
+Não houver alternativa melhor estabelecida.
+
+A indicação fizer sentido para o paciente.
+
+O caráter off-label for identificado.
+
+Houver registro e consentimento conforme prática institucional.
+
+Plausibilidade biológica isolada não é suficiente para recomendar um medicamento.
+
+Modelo de evolução clínica e retorno
+
+A evolução deve ser específica para o diagnóstico e apresentada de forma condicional. Exemplos:
+
+Febre pode melhorar em 48–72 horas.
+
+Coriza pode persistir por 7–10 dias.
+
+Tosse pode durar até 2–3 semanas.
+
+Coceira após tratamento da escabiose pode persistir por 2–4 semanas.
+
+Diarreia deve apresentar redução progressiva, mas a duração depende do agente e do estado de hidratação.
+
+Dor de ouvido deve melhorar progressivamente após analgesia e tratamento adequado.
+
+Orientar retorno:
+
+Imediato diante de qualquer sinal de alarme.
+
+Em 24–48 horas quando houver dúvida sobre evolução ou sintomas relevantes.
+
+Em 48–72 horas se não houver melhora conforme esperado.
+
+Ao final do tratamento quando houver necessidade de confirmar resolução.
+
+Antes do prazo se houver piora ou novos sintomas.
+
+Modelo de atendimento clínico
+
+Identificação
+
+Peso.
+
+Alergias medicamentosas.
+
+Comorbidades.
+
+Medicações de uso contínuo.
+
+História clínica
+
+Registrar queixa principal, início, evolução, sintomas associados, ingestão de líquidos, diurese, medicações já utilizadas e contatos relevantes.
+
+Exame físico
+
+Descrever:
+
+Estado geral.
+
+Hidratação.
+
+Perfusão.
+
+Nível de consciência.
+
+Exame neurológico.
+
+Padrão respiratório.
+
+Saturação.
+
+Ausculta pulmonar.
+
+Ausculta cardíaca.
+
+Abdome.
+
+Mucosas.
+
+Pele.
+
+Achados específicos relacionados ao diagnóstico.
+
+Não acrescentar achados que não foram avaliados ou informados.
+
+Hipóteses diagnósticas
+
+Listar hipóteses clínicas de forma objetiva.
+
+Condutas
+
+Prescrição compatível com o diagnóstico.
+
+Orientação aos responsáveis.
+
+Sinais de alarme.
+
+Retorno programado.
+
+Registro de ciência e concordância do acompanhante.
+
+Encaminhamento ou internação quando indicado.
+
+Modelo para enfermaria pediátrica
+
+Registrar:
+
+Peso.
+
+Data da internação.
+
+Alergias.
+
+Medicamentos de uso contínuo.
+
+Diagnóstico.
+
+Medicamentos em uso.
+
+Contexto clínico.
+
+Exames laboratoriais.
+
+Avaliação do dia.
+
+Exame físico.
+
+Dados vitais.
+
+Propostas terapêuticas.
+
+Vigilância respiratória e hemodinâmica.
+
+Orientações ao acompanhante.
+
+Sinais de alarme e critérios de escalonamento.
+
+Atestado de acompanhante
+
+O documento deve registrar que o paciente necessitou de atendimento pediátrico e que esteve acompanhado por responsável legal, recomendando afastamento laboral do acompanhante quando necessário para os cuidados da criança.
+
+A emissão deve observar:
+
+Identificação correta do paciente.
+
+Identificação do acompanhante.
+
+Data.
+
+Período recomendado.
+
+Finalidade do documento.
+
+Normas éticas e administrativas aplicáveis.
+
+Legislação e orientações do CRM competente.
+
+Folha de parada e medicamentos hospitalares
+
+Os materiais hospitalares incluem referências para:
+
+Diluição de medicamentos intravenosos.
+
+Estabilidade após reconstituição.
+
+Concentrações usuais e máximas.
+
+Velocidades de infusão.
+
+Medicamentos de alta vigilância.
+
+Antibióticos intravenosos.
+
+Sedativos e analgésicos.
+
+Vasopressores.
+
+Broncodilatadores.
+
+Anticonvulsivantes.
+
+Eletrólitos.
+
+Hemocomponentes.
+
+Hidratação e manutenção.
+
+Essas informações são destinadas a profissionais treinados em ambiente hospitalar, especialmente emergência, enfermaria, unidade de terapia intensiva e unidade neonatal. Não devem ser convertidas automaticamente em prescrições domiciliares.
+
+A utilização exige conferência com o protocolo institucional vigente e com a farmácia hospitalar.
+
+Regras finais de segurança e padronização
+
+Não prescrever medicamentos novos sem indicação.
+
+Não copiar bulas extensas; sintetizar as informações.
+
+Não prescrever todas as opções simultaneamente quando forem alternativas.
+
+Diferenciar medicamentos obrigatórios, opcionais e de resgate.
+
+Evitar duplicidade terapêutica.
+
+Não utilizar doses fixas de modelos antigos sem recalcular pelo peso.
+
+Não utilizar doses de um paciente como modelo para outro.
+
+Confirmar apresentação e concentração disponíveis.
+
+Não assumir que gotas equivalem ao mesmo número em todas as apresentações.
+
+Não usar antibiótico para doença viral sem indicação.
+
+Não usar salbutamol apenas para tosse isolada.
+
+Não usar corticoide ou mucolítico por rotina.
+
+Não utilizar anti-inflamatórios em crianças desidratadas.
+
+Sempre incluir sinais de alarme.
+
+Sempre incluir evolução esperada.
+
+Sempre informar quando retornar.
+
+Manter linguagem clara, curta e prática.
+
+Preservar a sequência padronizada do receituário.
+
+Não incluir achados, alergias, comorbidades ou medicamentos não informados.
+
+Realizar revisão matemática, farmacêutica e clínica antes da entrega.
+
+Quando houver divergência entre modelo anterior e diretriz atual, prevalece a orientação mais segura e baseada em evidências.
+
+Checklist final
+
+Antes de finalizar qualquer receituário, verificar:
+
+Dados essenciais presentes.
+
+Diagnóstico coerente.
+
+Peso e idade conferidos.
+
+Cálculo ponderal correto.
+
+Dose em mg conferida.
+
+Volume em mL conferido.
+
+Conversão para gotas validada.
+
+Apresentação comercial confirmada.
+
+Dose máxima conferida.
+
+Intervalo conferido.
+
+Duração definida.
+
+Idade mínima verificada.
+
+Contraindicações avaliadas.
+
+Alergias avaliadas.
+
+Interações relevantes avaliadas.
+
+Ajustes renal e hepático considerados.
+
+Medicações opcionais identificadas.
+
+Off-label sinalizado.
+
+Orientações gerais incluídas.
+
+Evolução clínica esperada incluída.
+
+Sinais de alarme incluídos.
+
+Retorno ou reavaliação definido.
+
+Texto pronto para copiar e colar.
+
+Estrutura padronizada mantida.

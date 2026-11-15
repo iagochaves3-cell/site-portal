@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">Levodropropizina — revisão de 13 de outubro de 2026</title>
+  <desc id="desc">Card clínico com apresentações Antux, cálculo por peso, máximos e alertas de segurança.</desc>
+  <rect width="1080" height="1350" fill="#0b0f14"/>
+  <rect x="54" y="54" width="972" height="1242" rx="34" fill="#111923" stroke="#2f536d" stroke-width="3"/>
+  <text x="94" y="125" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="26" font-weight="700">CATÁLOGO PEDIÁTRICO · 13/10/2026</text>
+  <text x="94" y="196" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="800">LEVODROPROPIZINA</text>
+  <text x="94" y="242" fill="#c8d4df" font-family="Arial, sans-serif" font-size="27">Antux · tosse seca/não produtiva · uso acima de 2 anos</text>
+
+  <rect x="82" y="286" width="916" height="225" rx="24" fill="#172636"/>
+  <text x="112" y="335" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="28" font-weight="700">O QUE MUDOU</text>
+  <text x="112" y="384" fill="#ffffff" font-family="Arial, sans-serif" font-size="27">• Xarope 30 mg/5 mL = 6 mg/mL · frasco 120 mL</text>
+  <text x="112" y="428" fill="#ffffff" font-family="Arial, sans-serif" font-size="27">• Gotas 30 mg/mL · 30 gotas/mL · 1 mg/gota</text>
+  <text x="112" y="472" fill="#ffffff" font-family="Arial, sans-serif" font-size="27">• Bula BU06c aprovada pela Anvisa em 23/05/2025</text>
+
+  <rect x="82" y="539" width="916" height="260" rx="24" fill="#13251f"/>
+  <text x="112" y="589" fill="#86efac" font-family="Arial, sans-serif" font-size="28" font-weight="700">NA PRÁTICA</text>
+  <text x="112" y="640" fill="#ffffff" font-family="Arial, sans-serif" font-size="29" font-weight="700">Dose: 1 mg/kg por tomada · até 3 vezes/dia</text>
+  <text x="112" y="687" fill="#ffffff" font-family="Arial, sans-serif" font-size="27">Xarope: peso ÷ 6 = mL por tomada</text>
+  <text x="112" y="731" fill="#ffffff" font-family="Arial, sans-serif" font-size="27">Gotas: 1 gota/kg por tomada</text>
+  <text x="112" y="775" fill="#cfe9d9" font-family="Arial, sans-serif" font-size="24">Intervalo mínimo 6 h · suspender quando cessar a tosse</text>
+
+  <rect x="82" y="827" width="916" height="318" rx="24" fill="#321b1c" stroke="#6f3438" stroke-width="2"/>
+  <text x="112" y="878" fill="#fca5a5" font-family="Arial, sans-serif" font-size="28" font-weight="700">ATENÇÃO</text>
+  <text x="112" y="929" fill="#ffffff" font-family="Arial, sans-serif" font-size="26">• Xarope: máximo 30 mL/dia = 180 mg/dia</text>
+  <text x="112" y="973" fill="#ffffff" font-family="Arial, sans-serif" font-size="26">• Gotas: máximo 120 gotas/dia = 120 mg/dia</text>
+  <text x="112" y="1017" fill="#ffffff" font-family="Arial, sans-serif" font-size="26">• Não usar em tosse produtiva/hipersecreção</text>
+  <text x="112" y="1061" fill="#ffffff" font-family="Arial, sans-serif" font-size="26">• BU06c: álcool 3% (xarope) e 14,3% (gotas)</text>
+  <text x="112" y="1105" fill="#ffd0d0" font-family="Arial, sans-serif" font-size="24">Alerta de possível dano hepático: acompanhamento médico</text>
+  <text x="112" y="1137" fill="#ffd0d0" font-family="Arial, sans-serif" font-size="24">estrito e exames laboratoriais periódicos.</text>
+
+  <line x1="94" y1="1191" x2="986" y2="1191" stroke="#33475a" stroke-width="2"/>
+  <text x="94" y="1232" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="22" font-weight="700">SIGLAS E SIGNIFICADOS</text>
+  <text x="94" y="1268" fill="#c8d4df" font-family="Arial, sans-serif" font-size="20">Anvisa: Agência Nacional de Vigilância Sanitária · BU: bula</text>
+  <text x="94" y="1298" fill="#c8d4df" font-family="Arial, sans-serif" font-size="20">mg: miligrama · mL: mililitro · kg: quilograma · h: hora</text>
+</svg>

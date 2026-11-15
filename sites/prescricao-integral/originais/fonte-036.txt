@@ -1,0 +1,254 @@
+Registro de Fontes Definitivas — Medicina PED
+
+Versão: 2026-08-21
+Finalidade: inventário canônico e regras de incorporação das fontes fornecidas pelo usuário ao projeto Medicina PED.
+
+Regra de governança
+
+Todo o conteúdo dos arquivos abaixo integra o corpus documental do projeto e deve ser considerado em pesquisas, prescrições, calculadoras e folhas de emergência.
+
+A presença de uma informação no corpus não a transforma, isoladamente, em recomendação clínica validada.
+
+Antes de exibir dose, concentração, diluição, estabilidade, compatibilidade, via, máximo ou velocidade de bomba, o programa deve:
+
+identificar fármaco, indicação, idade, peso, via, apresentação e função renal/hepática pertinente;
+
+confrontar o dado com pelo menos duas fontes independentes adequadas, incluindo fonte oficial ou diretriz primária quando disponível;
+
+realizar checagem matemática direta e reversa;
+
+registrar divergências e privilegiar o esquema aplicável ao cenário clínico;
+
+identificar uso pediátrico off-label quando aplicável.
+
+Nenhum “macete” substitui a fórmula universal da bomba:
+
+mL/h = [dose (mcg/kg/min) × peso (kg) × 60] ÷ concentração final (mcg/mL)
+
+Para dose em mU/kg/min, usar concentração final em mU/mL. Para mg/kg/h, usar concentração final em mg/mL, sem o fator 60.
+
+Em drogas de alta vigilância, exigir dupla checagem humana de peso, unidade, apresentação, concentração final, volume final, via e programação da BIC.
+
+Fontes primárias incorporadas
+
+Arquivo
+
+Tipo
+
+Escopo
+
+SHA-256
+
+Guia Completo de Farmacoterapia Pediátrica.docx
+
+DOCX
+
+413 monografias pediátricas, apresentações, indicações, doses e restrições
+
+6894e8b895fab44d91017e1a23f259666f9442a4a3c1ae68776df7e7d4219d41
+
+Guia_Farmacoterapia_Pediatrica.pdf
+
+PDF, 96 páginas
+
+Edição paginada do guia e registro de 413 fármacos/apresentações
+
+d381edd5ec69d799763fc20224e1c1caa2669c405f3352291ff2037c5e2e19bd
+
+Materiais complementares incorporados ao corpus
+
+Arquivo
+
+Tipo
+
+SHA-256
+
+01-Macetes-tridil-e-nipride.png
+
+PNG
+
+3464e8b895fab44d91017e1a23f259666f9442a4a3c1ae68776df7e7d4219d41
+
+02-Macetes-infusa-o-continua.png
+
+PNG
+
+43572a1add76d33afa4637cd57c9350d5a7a65fd20c36309ec2f2918b6903e82
+
+03-Folha-de-Emerge-ncia-ABRAMEDE-ATUALIZADA.xlsx
+
+XLSX
+
+99dcf4a9ff99c0d87bbf1114f4d84346d7ff1270208c25478a81f7b7e2d7dab2
+
+04-Pediatria-1.pages
+
+Pages
+
+a0420e76198b0cb3f51990e39efe5f1a728f19b06b1fac43a9859dfee103e2f8
+
+05-Tridil-e-nipride-ped.png
+
+PNG
+
+bc06a9af0074e8078a9adeab2cd8b731c537fc32b9bb87c3ed239b957c31a8c8
+
+06-Pediatria-8.pages
+
+Pages
+
+304f457283b9614b6a50f509d229eca7d7e482954e6a2a0880d1f18df06b793a
+
+07-DVA.png
+
+PNG
+
+5a9168fe3ba4c8b2dfeb391c3fd6d7a129ab7f405224fc042efcc030360f6262
+
+08-Medicac-o-es-comuns-PED.xlsx
+
+XLSX
+
+c007a46f24c33e448ec99816b8d9767537f57d7d6c73a4e3d6cb19221b8d9cce
+
+09-Folha-de-PCR-CMI.xlsx
+
+XLSX
+
+9eabcbc3486e2ca68400529ddc010374797bcb010adebc3f8b3d8abcb7947e5f
+
+10-EMERGE-NCIA-PED.xlsx
+
+XLSX
+
+67c3c7f5abe22f96f43ea6c1bbbf0fd0a61fc32e816f4db9cd2f335c6cc4263c
+
+11-Pediatria-7.pages
+
+Pages
+
+775e584da188caf3196999226ebac8137891facd0aff6b53945ec5561d0b1d3c
+
+12-Protocolos-UTI-Pediatrica-Santa-Casa-BH.v3.pdf
+
+PDF, 23 páginas
+
+cd34eb93a45eb3a29d9f8c50f2d7c01660ab5ed27443885de6674b3177b41cff
+
+13-Pediatria-2.pages
+
+Pages
+
+c75482f447d0f152a2772aa2c35b61cbbc115a90633dd72b385a5ed962bdab14
+
+14-Pediatria-6.pages
+
+Pages
+
+5e5f0dd9cf0ca7207963f9d5185c43bf0dd93470763018549f4558078b577c04
+
+15-Doses-ped.pdf
+
+PDF, 20 páginas
+
+de226118b8a690f1545780ac1cd960e08d35b06a53077940a30e3b816bd3a881
+
+16-Doses-ped-excel.xlsx
+
+XLSX
+
+bac725321a9108d5e290d0dec7ca8a0f3a398e5da3f61dc6436add3b59564ed1
+
+Normalização auditada das fórmulas das imagens
+
+Os fatores abaixo são válidos somente para a apresentação e diluição descritas. A concentração final deve ser recalculada usando o volume final real; “adicionar diluente” e “completar para volume final” não são operações equivalentes.
+
+Fármaco e preparo documental
+
+Concentração calculada
+
+Fórmula de BIC conferida
+
+Adrenalina 1 mg/mL, 2 mL, completar para 100 mL
+
+20 mcg/mL
+
+mL/h = peso × dose × 3
+
+Noradrenalina base 1 mg/mL, 4 mL, completar para 250 mL
+
+16 mcg/mL
+
+mL/h = peso × dose × 3,75 (imagem arredonda para 3,8)
+
+Vasopressina 20 U/mL, 1 mL, completar para 250 mL
+
+80 mU/mL
+
+mL/h = peso × dose × 0,75
+
+Dopamina 5 mg/mL, 10 mL, completar para 100 mL
+
+500 mcg/mL
+
+mL/h = peso × dose × 0,12
+
+Dobutamina 12,5 mg/mL, 20 mL, completar para 170 mL
+
+1.470,6 mcg/mL
+
+mL/h = peso × dose × 0,0408; se volume final for 150 mL, fator = 0,036
+
+Milrinona 1 mg/mL, 10 mL, completar para 100 mL
+
+100 mcg/mL
+
+mL/h = peso × dose × 0,6
+
+Nitroglicerina 5 mg/mL, 2 mL + SG5% 50 mL
+
+192,3 mcg/mL em 52 mL
+
+mL/h = peso × dose × 0,312; fator 0,32 pressupõe aproximação/volume final de 53,3 mL
+
+Nitroprussiato 25 mg/mL, 1 mL + SG5% 100 mL
+
+247,5 mcg/mL em 101 mL
+
+mL/h = peso × dose × 0,2424
+
+Correções e alertas obrigatórios
+
+Nitroglicerina: a faixa pediátrica publicada na bula consultada é 0,5–5 mcg/kg/min; o uso pediátrico não tem segurança/eficácia formalmente estabelecidas. Não exibir 10 mcg/kg/min como máximo pediátrico padrão sem fonte específica para a indicação.
+
+Nitroprussiato: 0,5–10 mcg/kg/min é faixa de bula, mas 10 mcg/kg/min deve ser limitado ao menor período possível; uma bula consultada determina não manter essa taxa por mais de 10 minutos. Exigir monitorização contínua de pressão e alertar para toxicidade por cianeto/tiocianato, especialmente em doses >2 mcg/kg/min, uso prolongado e disfunção hepática/renal.
+
+Nitroglicerina e materiais de infusão: considerar adsorção ao PVC; usar sistema compatível/não adsorvente conforme apresentação e bula utilizada.
+
+Noradrenalina: diferenciar quantidade do sal de quantidade equivalente de norepinefrina base; os cálculos acima usam 1 mg/mL de base.
+
+Dobutamina (imagem 07): o texto “20 mL + 150 mL” gera 170 mL se interpretado literalmente; o fator 0,04 é aproximação e não corresponde exatamente nem a 150 mL nem a 170 mL finais. O programa deve solicitar/definir explicitamente o volume final.
+
+Acesso periférico: não classificar automaticamente todas as diluições da imagem como universalmente seguras. O programa deve considerar concentração, osmolaridade, fármaco, calibre/local do acesso, duração prevista, vigilância do sítio e protocolo institucional; vasopressores periféricos exigem monitorização frequente e plano para extravasamento.
+
+Hierarquia de uso no programa
+
+Fontes oficiais brasileiras vigentes (ANVISA/bula, Ministério da Saúde, SES-MG/RMBH) e diretrizes de sociedades aplicáveis.
+
+Protocolos institucionais anexados e literatura primária/de consenso atual.
+
+Guia consolidado DOCX/PDF para cobertura e recuperação de dados.
+
+Planilhas, arquivos Pages e imagens como material operacional e para comparação.
+
+Havendo conflito, nunca escolher apenas por conveniência matemática; registrar a divergência, justificar a escolha e manter a fórmula auditável.
+
+Estado da incorporação
+
+Os dois guias principais foram extraídos e indexados como fontes do corpus.
+
+Os 16 materiais complementares foram inventariados com integridade verificável por SHA-256.
+
+As quatro imagens de infusão foram transcritas e tiveram os fatores matemáticos conferidos.
+
+A validação clínica individual das 413 monografias permanece um processo contínuo por indicação; este registro impede que conteúdo documental não verificado seja convertido silenciosamente em prescrição.

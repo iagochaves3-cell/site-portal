@@ -1,0 +1,740 @@
+@Sites (M)
+
+EXECUTAR CORREÇÃO GLOBAL DE MEDICAMENTOS E APRESENTAÇÕES POR DELTA
+EM TODOS OS SITESGPTs DA MINHA CONTA.
+
+PUBLICAÇÃO JÁ AUTORIZADA DE ANTEMÃO PARA TODO SITE QUE RECEBER
+CORREÇÃO VALIDADA.
+
+OBJETIVO PRINCIPAL
+Garantir que TODAS as medicações existentes em TODOS os SitesGPTs tenham
+suas apresentações brasileiras vigentes, clinicamente apropriadas e
+matematicamente calculáveis corretamente, sem reconstruir nem modificar
+o que já estiver correto.
+
+============================================================
+1. ESCOPO OBRIGATÓRIO
+============================================================
+
+Consultar primeiro o inventário nativo completo de @Sites.
+
+Incluir obrigatoriamente, mas NÃO limitar-se, aos seguintes projetos:
+
+1. Prescrição Pediátrica Segura
+   slug: prescricao-pediatrica-segura
+   projeto: appgprj_6a6e0d5a4ae881918e3fe01410787335
+
+2. Pediatric Flow — Emergência Pediátrica
+   slug: pediatric-flow-cdss
+   projeto: appgprj_6a96eeef557481919e4dbdb4c25839ab
+
+3. Emergência Pediátrica — Doses e Cálculos
+   slug: emergencia-pediatrica-doses
+   projeto: appgprj_6a7750eac2c481918af84a3871119c13
+
+4. FOLHA DE PARADA
+   slug: folha-de-parada
+
+5. Soroterapia Pediátrica
+   slug: soroterapia-pediatrica
+
+6. Ventilação Mecânica
+   slug: ventilacao-mecanica
+
+7. Laboratório e Radiografia
+   slug: laboratorioeradiografia
+
+8. QUALQUER OUTRO SiteGPT ativo pertencente à minha conta,
+   inclusive Sites criados recentemente e não listados acima.
+
+Nos Sites em que medicamentos não façam parte da funcionalidade clínica,
+não inventar nem adicionar catálogo farmacológico desnecessário.
+Apenas registrar "NÃO APLICÁVEL".
+
+============================================================
+2. USAR O ESTADO PUBLICADO COMO BASELINE
+============================================================
+
+Para cada Site:
+
+1. Abrir o projeto correto.
+2. Confirmar nome, slug e identidade antes de editar.
+3. Ler a versão efetivamente publicada.
+4. Considerar essa versão como BASELINE.
+5. Comparar o baseline com todas as configurações já aprovadas.
+6. NÃO reconstruir o projeto.
+7. NÃO repetir alterações já presentes.
+8. NÃO remover configurações aprovadas.
+9. NÃO alterar medicações, doses ou apresentações que já estejam corretas.
+
+CORRIGIR SOMENTE:
+- apresentações ausentes;
+- apresentações incorretas;
+- apresentações documentadas mas não selecionáveis;
+- apresentações selecionáveis mas sem cálculo;
+- cálculos errados;
+- concentrações incorretas;
+- vias erradas;
+- fatores de gotas incorretos;
+- incompatibilidade entre apresentação e fórmula;
+- erros de arredondamento;
+- máximos incorretos;
+- erros de UI/seleção;
+- regressões;
+- duplicidades;
+- apresentações brasileiras vigentes indevidamente ocultadas;
+- apresentações antigas/suspensas indevidamente ativas.
+
+============================================================
+3. AUDITORIA MEDICAÇÃO POR MEDICAÇÃO
+============================================================
+
+Realizar auditoria individual de TODAS as medicações presentes em cada
+catálogo, inventário, monografia, diagnóstico, protocolo ou linha
+terapêutica do Site.
+
+Não limitar a auditoria apenas aos medicamentos atualmente visíveis no
+seletor.
+
+Cruzar obrigatoriamente:
+
+A. catálogo documental;
+B. catálogo clínico ativo;
+C. apresentações documentadas;
+D. seletor de apresentação/concentração;
+E. linhas de cálculo;
+F. monografias;
+G. inventários anexados;
+H. terapêuticas associadas aos diagnósticos;
+I. apresentações brasileiras cadastradas;
+J. receituário domiciliar;
+K. terapêutica hospitalar;
+L. medicamentos de emergência;
+M. drogas de infusão contínua;
+N. drogas de alta vigilância.
+
+Identificar especificamente a situação:
+
+"APRESENTAÇÃO DOCUMENTADA, MAS NÃO OPERACIONAL"
+
+e corrigir esse tipo de divergência sempre que existirem dados clínicos,
+regulatórios e matemáticos suficientes para torná-la operacional.
+
+============================================================
+4. APRESENTAÇÕES BRASILEIRAS
+============================================================
+
+Para CADA medicamento:
+
+Identificar todas as apresentações atualmente válidas e pertinentes no
+Brasil.
+
+Prioridade de confirmação:
+
+1. ANVISA / Bulário Eletrônico;
+2. registro sanitário vigente;
+3. bula oficial do fabricante;
+4. Ministério da Saúde;
+5. SES-MG;
+6. Sociedade Brasileira de Pediatria;
+7. fontes primárias ou diretrizes reconhecidas quando necessárias.
+
+Quando possível, verificar também aplicabilidade/disponibilidade prática
+na RMBH, sem confundir disponibilidade comercial local com registro
+sanitário.
+
+Incluir, conforme aplicável:
+
+- gotas;
+- solução oral;
+- suspensão oral;
+- xarope;
+- elixir;
+- comprimido;
+- comprimido dispersível;
+- comprimido mastigável;
+- comprimido orodispersível;
+- cápsula;
+- sachê;
+- granulado;
+- pó para solução;
+- supositório;
+- solução injetável;
+- ampola;
+- frasco-ampola;
+- bolsa pronta;
+- apresentações EV;
+- IM;
+- SC;
+- IO;
+- intranasal;
+- inalatória;
+- tópica;
+- ocular;
+- ótica;
+- retal;
+- outras formas farmacêuticas pertinentes.
+
+Não utilizar marca comercial como substituto do princípio ativo.
+
+============================================================
+5. NÃO CONFUNDIR CONCENTRAÇÃO COM APRESENTAÇÃO
+============================================================
+
+Apresentações com a MESMA concentração NÃO devem automaticamente ser
+tratadas como equivalentes.
+
+Diferenciar:
+
+- solução × suspensão;
+- gotas × solução administrada por seringa;
+- frasco conta-gotas × seringa dosadora;
+- solução oral × solução injetável;
+- frasco-ampola × bolsa pronta;
+- liberação imediata × prolongada;
+- medicamento isolado × associação;
+- sal farmacêutico × quantidade de princípio ativo;
+- concentração da ampola × concentração após diluição.
+
+O fator de gotas deve ser vinculado ao PRODUTO/APRESENTAÇÃO específica.
+
+NUNCA utilizar automaticamente:
+"1 gota/kg"
+
+sem conhecer:
+- concentração;
+- gotas/mL;
+- quantidade de princípio ativo por gota.
+
+============================================================
+6. REGRA GLOBAL PARA O SELETOR
+============================================================
+
+Toda apresentação válida deve aparecer no campo:
+
+"APRESENTAÇÃO / CONCENTRAÇÃO"
+
+quando:
+
+1. existir no Brasil ou estiver formalmente disponível;
+2. for pertinente à população/indicação;
+3. houver concentração verificável;
+4. houver fórmula matemática segura;
+5. houver via identificada;
+6. houver dose e limites estruturados;
+7. houver fonte rastreável.
+
+Ao trocar a apresentação:
+
+- recalcular imediatamente todos os resultados;
+- zerar valores derivados da apresentação anterior;
+- não reutilizar concentração anterior;
+- não reutilizar fator de gotas anterior;
+- não reutilizar volume anterior;
+- não reutilizar diluição anterior.
+
+============================================================
+7. APRESENTAÇÕES PEDIÁTRICAS E NÃO PEDIÁTRICAS
+============================================================
+
+Não excluir automaticamente uma apresentação apenas porque a bula não
+traz indicação pediátrica.
+
+Classificar corretamente como:
+
+A. uso pediátrico em bula;
+B. uso pediátrico off-label com respaldo;
+C. uso hospitalar especializado;
+D. apresentação inadequada à faixa etária;
+E. apresentação sem dados suficientes;
+F. comercialização/registro suspenso.
+
+Uma apresentação inadequada para uma determinada criança pode permanecer
+no catálogo, porém NÃO deve ser oferecida como opção ativa para aquele
+peso/idade/indicação.
+
+============================================================
+8. CÁLCULO OBRIGATÓRIO
+============================================================
+
+Para cada medicamento e apresentação calculável:
+
+1. calcular primeiro na unidade clínica original:
+
+mg/kg/dose
+mg/kg/dia
+mcg/kg/dose
+mcg/kg/min
+mcg/kg/h
+mg/kg/h
+U/kg/h
+U/kg/min
+mU/kg/min
+mEq/kg
+mEq/kg/h
+mL/kg
+mL/kg/h
+ou outra unidade original aplicável.
+
+2. calcular a dose total.
+
+Exemplo genérico:
+
+Dose total =
+peso × dose ponderal
+
+3. aplicar o teto adequado:
+
+- máximo por dose;
+- máximo por dia;
+- máximo absoluto;
+- limite por idade;
+- limite por indicação.
+
+4. somente DEPOIS converter para:
+
+- mL;
+- gotas;
+- comprimidos;
+- cápsulas;
+- ampolas;
+- frascos;
+- unidades;
+- jatos;
+- mL/h.
+
+============================================================
+9. TRIPLA CHECAGEM OBRIGATÓRIA
+============================================================
+
+TODOS OS CÁLCULOS PEDIÁTRICOS DEVEM PASSAR POR TRIPLA CHECAGEM.
+
+CHECAGEM 1 — CLÍNICA
+
+Confirmar:
+- medicamento;
+- indicação;
+- idade;
+- peso;
+- via;
+- dose;
+- intervalo;
+- duração;
+- máximos;
+- contraindicações;
+- função renal/hepática quando relevante;
+- status on-label/off-label.
+
+CHECAGEM 2 — MATEMÁTICA DIRETA
+
+Peso
+×
+dose ponderal
+=
+dose total
+
+Dose total
+÷
+concentração
+=
+volume/unidades.
+
+CHECAGEM 3 — REVERSA INDEPENDENTE
+
+Volume final
+×
+concentração
+=
+dose administrada
+
+Dose administrada
+÷
+peso
+=
+dose ponderal efetivamente administrada.
+
+Comparar novamente com:
+
+- faixa mínima;
+- faixa usual;
+- faixa máxima;
+- máximo por dose;
+- máximo diário;
+- máximo absoluto.
+
+A terceira checagem NÃO pode simplesmente confiar em um texto "OK".
+
+Ela deve recalcular numericamente.
+
+============================================================
+10. ARREDONDAMENTO
+============================================================
+
+O arredondamento deve ocorrer somente após o cálculo da dose correta.
+
+Depois do arredondamento:
+
+RECALCULAR a dose efetivamente administrada.
+
+Exibir quando pertinente:
+
+"Após arredondamento:
+X mL = Y mg = Z mg/kg/dose."
+
+Não permitir arredondamento que ultrapasse teto clínico.
+
+Preferir mL com seringa dosadora quando o arredondamento em gotas produzir
+distorção clinicamente relevante.
+
+============================================================
+11. INFUSÕES CONTÍNUAS
+============================================================
+
+Para TODA medicação em bomba de infusão:
+
+informar obrigatoriamente, quando houver respaldo:
+
+- apresentação original;
+- concentração original;
+- quantidade aspirada;
+- volume aspirado;
+- diluente;
+- volume de diluente adicionado;
+- volume final;
+- concentração final;
+- dose ponderal;
+- dose total;
+- mL/h;
+- unidade clínica original;
+- equivalência em mcg/kg/min, mcg/kg/h, mg/kg/h, U/kg/h etc.;
+- duração da solução;
+- consumo em 6 h;
+- consumo em 12 h;
+- consumo em 24 h;
+- via;
+- necessidade de acesso central/periférico;
+- monitorização;
+- titulação;
+- máximo.
+
+Fórmula independente de mL/h:
+
+mL/h =
+[dose desejada × peso × fator temporal]
+÷
+concentração final.
+
+Realizar novamente cálculo reverso a partir dos mL/h.
+
+============================================================
+12. MEDICAÇÕES DE ALTA VIGILÂNCIA
+============================================================
+
+Para drogas de alta vigilância:
+
+exigir destaque para dupla conferência humana independente de:
+
+- paciente;
+- peso;
+- medicamento;
+- concentração;
+- unidade;
+- diluição;
+- via;
+- velocidade;
+- programação da bomba.
+
+Além da tripla checagem matemática automatizada.
+
+============================================================
+13. DOMICILIAR × HOSPITALAR
+============================================================
+
+Manter separação rígida.
+
+APRESENTAÇÕES DOMICILIARES:
+podem gerar receituário quando clinicamente apropriadas.
+
+APRESENTAÇÕES HOSPITALARES:
+devem permanecer disponíveis para cálculo hospitalar, porém NÃO devem
+ser automaticamente inseridas no receituário de alta.
+
+Exemplos:
+- drogas EV;
+- sedativos;
+- vasopressores;
+- soluções para infusão;
+- medicamentos de ressuscitação;
+- drogas para IOT;
+- antibióticos exclusivamente hospitalares.
+
+============================================================
+14. COMBINAÇÕES FARMACOLÓGICAS
+============================================================
+
+Para produtos combinados:
+
+NÃO calcular pela concentração total da associação.
+
+Definir explicitamente:
+
+- princípio ativo usado no cálculo;
+- quantidade desse componente por mL/comprimido;
+- relação entre componentes;
+- dose ponderal do componente de referência;
+- máximo do mesmo componente.
+
+Exemplo conceitual:
+
+amoxicilina + clavulanato
+
+dose deve ser calculada pela quantidade de AMOXICILINA quando essa for a
+unidade definida pela diretriz.
+
+============================================================
+15. APRESENTAÇÕES ANTIGAS OU NÃO CONFIRMADAS
+============================================================
+
+Não apagar silenciosamente informações históricas.
+
+Classificar como:
+
+- VIGENTE E SELECIONÁVEL;
+- VIGENTE — USO RESTRITO;
+- HISTÓRICA/NÃO CONFIRMADA;
+- NÃO PEDIÁTRICA PARA ESTA FAIXA;
+- SUSPENSA/RETIRADA;
+- FONTE INSUFICIENTE.
+
+Somente apresentações verificadas podem entrar automaticamente no motor
+de cálculo.
+
+============================================================
+16. DUPLICIDADES
+============================================================
+
+Identificar e corrigir:
+
+- nomes duplicados;
+- sinônimos tratados como medicamentos diferentes;
+- sal × princípio ativo duplicado;
+- marca × genérico duplicado;
+- mesma apresentação escrita de formas diferentes;
+- mg/5 mL versus mg/mL equivalentes duplicados.
+
+Não perder informações durante a consolidação.
+
+============================================================
+17. REGRESSÃO PERMANENTE
+============================================================
+
+Para cada falha corrigida:
+
+CRIAR ou MANTER TESTE DE REGRESSÃO PERMANENTE.
+
+Testar pelo menos:
+
+- peso baixo;
+- peso intermediário;
+- peso alto;
+- lactente;
+- criança;
+- adolescente;
+- limite inferior;
+- limite superior;
+- valor imediatamente abaixo do limite;
+- valor imediatamente acima do limite.
+
+Para apresentações líquidas:
+
+testar conversão:
+
+mg/kg
+→ mg
+→ mL
+→ gotas quando aplicável
+→ mg
+→ mg/kg novamente.
+
+Para infusões:
+
+dose
+→ concentração
+→ mL/h
+→ dose reversa.
+
+============================================================
+18. TESTES DE INTERFACE
+============================================================
+
+Testar:
+
+- abrir medicamento;
+- selecionar indicação;
+- selecionar apresentação;
+- trocar apresentação;
+- selecionar dose;
+- alterar peso;
+- alterar idade;
+- alterar diagnóstico;
+- selecionar múltiplos medicamentos;
+- adicionar ao receituário;
+- remover;
+- selecionar novamente;
+- navegar entre abas;
+- voltar;
+- gerar saída;
+- copiar;
+- responsividade.
+
+Confirmar especialmente ausência de:
+
+- tela preta;
+- botão "BACK" inesperado;
+- travamento;
+- valor antigo persistente;
+- item A desmarcando item B indevidamente;
+- seleção não aparecendo na saída;
+- dose calculada para concentração errada.
+
+============================================================
+19. ESTRATÉGIA DE TESTES E ECONOMIA DE CRÉDITOS
+============================================================
+
+NÃO executar milhões de testes redundantes.
+
+Usar:
+
+1. testes unitários focados;
+2. testes parametrizados;
+3. property-based/fuzzing quando aplicável;
+4. testes de fronteira;
+5. regressões das falhas encontradas;
+6. smoke test global final.
+
+Priorizar cobertura real, não quantidade artificial de execuções.
+
+Reutilizar baseline, resultados e testes existentes.
+
+============================================================
+20. REGRA DE CORREÇÃO POR DELTA
+============================================================
+
+NÃO refazer configurações corretas.
+
+Para cada divergência:
+
+DETECTAR
+→ CORRIGIR
+→ TESTAR
+→ SALVAR
+→ PUBLICAR
+→ REABRIR A VERSÃO PUBLICADA
+→ VERIFICAR.
+
+Somente então marcar:
+
+CONCLUÍDO.
+
+Se nenhum erro for encontrado em determinado Site:
+
+- não editar;
+- não criar versão desnecessária;
+- não republicar.
+
+============================================================
+21. PUBLICAÇÃO
+============================================================
+
+A PUBLICAÇÃO JÁ ESTÁ AUTORIZADA.
+
+Sempre que houver pelo menos uma correção validada:
+
+1. salvar;
+2. executar testes pertinentes;
+3. confirmar sucesso;
+4. publicar;
+5. aguardar deployment;
+6. abrir a versão efetivamente publicada;
+7. testar novamente os itens corrigidos.
+
+NÃO considerar:
+
+- preview;
+- código local;
+- build local;
+- versão salva;
+
+como publicação.
+
+Somente informar PUBLICADO após confirmação real do deployment.
+
+============================================================
+22. RELATÓRIO FINAL
+============================================================
+
+Entregar relatório sucinto por Site:
+
+SITE:
+VERSÃO ANTERIOR:
+VERSÃO NOVA:
+PUBLICADO: SIM/NÃO
+
+MEDICAÇÕES AUDITADAS:
+APRESENTAÇÕES AUDITADAS:
+
+CORREÇÕES:
+- X apresentações adicionadas;
+- Y apresentações corrigidas;
+- Z cálculos corrigidos;
+- N duplicidades removidas;
+- M apresentações suspensas/desativadas.
+
+TESTES:
+- testes focados: PASS/FAIL
+- regressão: PASS/FAIL
+- cálculos reversos: PASS/FAIL
+- interface: PASS/FAIL
+- smoke global: PASS/FAIL
+
+DEPLOYMENT:
+- confirmado/não confirmado
+
+PENDÊNCIAS REAIS:
+- listar somente as que não puderem ser resolvidas.
+
+============================================================
+REGRA FINAL
+============================================================
+
+O trabalho NÃO consiste simplesmente em "adicionar todas as apresentações".
+
+O objetivo é:
+
+TODAS AS MEDICAÇÕES
+×
+TODAS AS APRESENTAÇÕES BRASILEIRAS VIGENTES E PERTINENTES
+×
+TODAS AS INDICAÇÕES
+×
+PESO
+×
+IDADE
+×
+VIA
+×
+CONCENTRAÇÃO
+×
+LIMITES
+×
+CÁLCULO
+×
+TRIPLA CHECAGEM
+×
+REGRESSÃO.
+
+CORRIGIR POR DELTA.
+PRESERVAR TUDO QUE JÁ ESTIVER CERTO.
+NÃO INVENTAR DADOS.
+NÃO SIMULAR TESTES OU PUBLICAÇÃO.
+PUBLICAR AUTOMATICAMENTE APÓS CORREÇÕES VALIDADAS.

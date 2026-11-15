@@ -1,0 +1,197 @@
+[
+  {
+    "regimen_id": "cetirizine-1mgml-allergic-rhinitis-urticaria-age-2-6",
+    "medication_id": "cetirizine",
+    "indication_id": "allergic-rhinitis-or-urticaria",
+    "diagnosis_ids": [
+      "allergic-rhinitis",
+      "urticaria"
+    ],
+    "role": "principal_or_adjunct_by_protocol",
+    "population": {
+      "minimum_age_days": 730,
+      "maximum_age_days": 2191
+    },
+    "route": "VO",
+    "presentation_id": "cetirizine-oral-solution-1mg-ml-br",
+    "concentration": {
+      "value": 1,
+      "unit": "mg/mL"
+    },
+    "calculation_component": "dicloridrato de cetirizina",
+    "dose": {
+      "value": 2.5,
+      "unit": "mg/dose",
+      "basis": "fixed_by_age"
+    },
+    "operational_output": {
+      "volume": 2.5,
+      "volume_unit": "mL/dose",
+      "reverse_check": "2.5 mL × 1 mg/mL = 2.5 mg"
+    },
+    "interval": "12/12 h",
+    "duration_or_stop_rule": "diagnosis-specific clinical plan; label does not define a universal course",
+    "maximums": {
+      "per_dose": "2.5 mg",
+      "per_day": "5 mg/day"
+    },
+    "evidence": {
+      "on_label_status": "ON_LABEL",
+      "evidence_grade": "BRAZILIAN_LABEL",
+      "source_ids": [
+        "BRAZIL_CETIRIZINE_1MG_ML_LABEL_CROSSCHECK"
+      ],
+      "last_verified": "2026-08-24",
+      "jurisdiction": "Brazil"
+    },
+    "triple_audit": {
+      "structural": "PASSED",
+      "pharmaceutical": "PASSED",
+      "clinical_regulatory": "PASSED_FOR_LABEL_INDICATIONS",
+      "status": "PASSED"
+    }
+  },
+  {
+    "regimen_id": "cetirizine-1mgml-allergic-rhinitis-urticaria-age-6-12",
+    "medication_id": "cetirizine",
+    "indication_id": "allergic-rhinitis-or-urticaria",
+    "diagnosis_ids": [
+      "allergic-rhinitis",
+      "urticaria"
+    ],
+    "role": "principal_or_adjunct_by_protocol",
+    "population": {
+      "minimum_age_days": 2192,
+      "maximum_age_days": 4382
+    },
+    "route": "VO",
+    "presentation_id": "cetirizine-oral-solution-1mg-ml-br",
+    "concentration": {
+      "value": 1,
+      "unit": "mg/mL"
+    },
+    "calculation_component": "dicloridrato de cetirizina",
+    "dose_options": [
+      {
+        "dose": "5 mg",
+        "volume": "5 mL",
+        "interval": "12/12 h"
+      },
+      {
+        "dose": "10 mg",
+        "volume": "10 mL",
+        "interval": "24/24 h"
+      }
+    ],
+    "duration_or_stop_rule": "diagnosis-specific clinical plan; label does not define a universal course",
+    "maximums": {
+      "per_day": "10 mg/day"
+    },
+    "evidence": {
+      "on_label_status": "ON_LABEL",
+      "evidence_grade": "BRAZILIAN_LABEL",
+      "source_ids": [
+        "BRAZIL_CETIRIZINE_1MG_ML_LABEL_CROSSCHECK"
+      ],
+      "last_verified": "2026-08-24",
+      "jurisdiction": "Brazil"
+    },
+    "triple_audit": {
+      "structural": "PASSED",
+      "pharmaceutical": "PASSED",
+      "clinical_regulatory": "PASSED_FOR_LABEL_INDICATIONS",
+      "status": "PASSED"
+    }
+  },
+  {
+    "regimen_id": "ondansetron-enavo-8mgml-acute-gastroenteritis-ed-single-dose",
+    "medication_id": "ondansetron",
+    "indication_id": "age-vomiting-failed-ort-or-mild-moderate-dehydration",
+    "diagnosis_ids": [
+      "acute-gastroenteritis"
+    ],
+    "role": "adjunct",
+    "clinical_target": "documented_symptom",
+    "population": {
+      "minimum_age_days": 183,
+      "requirements": [
+        "vomiting",
+        "emergency-department setting",
+        "mild-to-moderate dehydration OR failed oral rehydration trial"
+      ],
+      "exclusions": [
+        "moderate-to-severe diarrhea as predominant symptom"
+      ]
+    },
+    "route": "VO",
+    "presentation_ids": [
+      "ondansetron-enavo-drops-8mg-ml-5ml-br",
+      "ondansetron-enavo-drops-8mg-ml-10ml-br"
+    ],
+    "concentration": {
+      "value": 8,
+      "unit": "mg/mL"
+    },
+    "drop_factor": {
+      "drops_per_mL": 20,
+      "active_mg_per_drop": 0.4
+    },
+    "calculation_component": "ondansetrona base",
+    "dose": {
+      "value": 0.15,
+      "unit": "mg/kg/dose",
+      "basis": "single_dose",
+      "maximum": "8 mg"
+    },
+    "weight_band_alternative": [
+      {
+        "weight": "8–15 kg",
+        "dose": "2 mg",
+        "volume": "0.25 mL",
+        "drops": 5
+      },
+      {
+        "weight": "15–30 kg",
+        "dose": "4 mg",
+        "volume": "0.50 mL",
+        "drops": 10
+      },
+      {
+        "weight": ">30 kg",
+        "dose": "6–8 mg",
+        "volume": "0.75–1.00 mL",
+        "drops": "15–20"
+      }
+    ],
+    "interval": "single dose",
+    "duration_or_stop_rule": "single dose only; start oral rehydration 15–30 minutes later",
+    "maximums": {
+      "per_dose": "8 mg",
+      "for_this_regimen": "single dose"
+    },
+    "safety": {
+      "monitoring": [
+        "hydration/oral tolerance",
+        "diarrhea",
+        "individual QT risk assessment"
+      ],
+      "note": "Off-label for gastroenteritis relative to Brazilian product indications; no automatic multidose outpatient prescription."
+    },
+    "evidence": {
+      "on_label_status": "OFF_LABEL_ON_EVIDENCE",
+      "evidence_grade": "PROFESSIONAL_SOCIETY_EVIDENCE_REVIEW",
+      "source_ids": [
+        "CPS_ORAL_ONDANSETRON_GASTROENTERITIS",
+        "ENAVO_8MG_ML_COMMERCIAL_CROSSCHECK"
+      ],
+      "last_verified": "2026-08-24",
+      "jurisdiction": "Canada evidence + Brazil presentation"
+    },
+    "triple_audit": {
+      "structural": "PASSED",
+      "pharmaceutical": "PASSED",
+      "clinical_regulatory": "PASSED_WITH_OFF_LABEL_LABEL",
+      "status": "PASSED"
+    }
+  }
+]

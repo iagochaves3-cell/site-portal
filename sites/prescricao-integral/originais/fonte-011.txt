@@ -1,0 +1,789 @@
+# PROMPT MESTRE — CRIAÇÃO DE SITE PREMIUM, ROBUSTO E PRONTO PARA PRODUÇÃO
+
+Crie um site completo, premium, profissional e pronto para uso real em produção.
+
+O objetivo não é produzir apenas uma demonstração visual, protótipo superficial ou página genérica. O resultado deve ser um produto funcional, consistente, responsivo, rápido, seguro, visualmente refinado e tecnicamente robusto.
+
+## 1. OBJETIVO PRINCIPAL
+
+Desenvolva o site:
+
+**Nome do projeto:** [INSERIR NOME]
+
+**Objetivo principal:**  
+[DESCREVER O QUE O SITE DEVE FAZER]
+
+**Público-alvo:**  
+[DESCREVER O PÚBLICO]
+
+**Funcionalidades essenciais:**  
+[LISTAR FUNCIONALIDADES]
+
+O produto final deve transmitir imediatamente:
+
+- qualidade;
+- confiabilidade;
+- organização;
+- modernidade;
+- sofisticação;
+- facilidade de uso;
+- clareza;
+- velocidade;
+- segurança;
+- acabamento profissional.
+
+---
+
+# 2. REGRA FUNDAMENTAL
+
+Não entregue um site apenas "bonito".
+
+Entregue um sistema que seja simultaneamente:
+
+- visualmente premium;
+- funcional;
+- intuitivo;
+- responsivo;
+- consistente;
+- rápido;
+- acessível;
+- escalável;
+- seguro;
+- resiliente a erros;
+- preparado para dados reais;
+- preparado para manutenção futura;
+- pronto para publicação.
+
+Nenhuma funcionalidade deve existir apenas visualmente.
+
+Todos os botões, links, filtros, formulários, menus, abas, modais, seletores e componentes interativos devem funcionar de verdade.
+
+---
+
+# 3. DESIGN PREMIUM
+
+Crie uma identidade visual própria, elegante e contemporânea.
+
+Evite aparência de:
+
+- template genérico;
+- dashboard barato;
+- projeto acadêmico;
+- página HTML básica;
+- interface excessivamente colorida;
+- excesso de gradientes;
+- excesso de caixas;
+- elementos desalinhados;
+- espaçamentos inconsistentes.
+
+Utilize:
+
+- hierarquia visual clara;
+- tipografia profissional;
+- espaçamento consistente;
+- excelente contraste;
+- grid bem estruturado;
+- bordas e sombras discretas;
+- microinterações refinadas;
+- animações sutis;
+- ícones coerentes;
+- estados de hover;
+- estados de foco;
+- estados ativos;
+- estados desabilitados;
+- skeleton/loading quando necessário;
+- feedback visual de sucesso, erro e processamento.
+
+A interface deve parecer um produto desenvolvido por uma equipe profissional de:
+
+- Product Design;
+- UX;
+- UI;
+- Front-end;
+- Engenharia de Software;
+- QA.
+
+---
+
+# 4. MOBILE FIRST E RESPONSIVIDADE TOTAL
+
+O site deve funcionar perfeitamente em:
+
+- smartphones;
+- tablets;
+- notebooks;
+- desktops;
+- monitores ultrawide.
+
+Testar especialmente larguras aproximadas de:
+
+- 320 px;
+- 375 px;
+- 390 px;
+- 430 px;
+- 768 px;
+- 1024 px;
+- 1280 px;
+- 1440 px;
+- 1920 px.
+
+Não permitir:
+
+- conteúdo cortado;
+- componentes sobrepostos;
+- texto extrapolando containers;
+- tabelas inutilizáveis no celular;
+- botões pequenos demais;
+- rolagem horizontal desnecessária;
+- menus quebrados;
+- modais maiores que a tela.
+
+Quando necessário, adaptar componentes em vez de apenas reduzi-los.
+
+---
+
+# 5. EXPERIÊNCIA DO USUÁRIO
+
+Toda jornada deve ser simples e previsível.
+
+O usuário deve compreender rapidamente:
+
+1. onde está;
+2. o que pode fazer;
+3. qual informação está vendo;
+4. qual é a próxima ação;
+5. o resultado da ação executada.
+
+Reduza o número de cliques sempre que possível.
+
+Utilize:
+
+- busca;
+- filtros;
+- agrupamento lógico;
+- breadcrumbs quando úteis;
+- seções recolhíveis;
+- cards;
+- abas;
+- menus contextuais;
+- atalhos;
+- paginação ou carregamento progressivo quando necessário.
+
+Evite páginas excessivamente longas.
+
+Quando houver muito conteúdo, prefira organização modular em blocos, abas, acordeões, cards ou navegação contextual.
+
+---
+
+# 6. ARQUITETURA
+
+Estruture o projeto de forma modular e escalável.
+
+Separar adequadamente:
+
+- páginas;
+- componentes;
+- layouts;
+- hooks;
+- serviços;
+- APIs;
+- tipos;
+- validações;
+- constantes;
+- utilitários;
+- configurações;
+- estilos;
+- assets.
+
+Evite:
+
+- arquivos gigantes;
+- duplicação de lógica;
+- funções excessivamente acopladas;
+- valores importantes hardcoded;
+- código morto;
+- dependências desnecessárias.
+
+Priorize componentes reutilizáveis.
+
+---
+
+# 7. QUALIDADE DO CÓDIGO
+
+O código deve ser:
+
+- legível;
+- tipado quando aplicável;
+- modular;
+- documentado onde realmente necessário;
+- consistente;
+- fácil de testar;
+- fácil de atualizar.
+
+Não utilizar soluções improvisadas apenas para "fazer funcionar".
+
+Corrija a causa raiz de problemas.
+
+Evite hacks frágeis.
+
+---
+
+# 8. FUNCIONALIDADES
+
+Implemente integralmente todas as funções solicitadas.
+
+Para cada funcionalidade:
+
+1. implementar interface;
+2. implementar lógica;
+3. validar entradas;
+4. tratar erros;
+5. exibir feedback;
+6. testar estados extremos;
+7. verificar funcionamento mobile;
+8. testar integração com demais componentes.
+
+Nunca deixar botões sem função.
+
+Nunca criar interface fictícia indicando funcionalidade inexistente.
+
+---
+
+# 9. FORMULÁRIOS
+
+Todo formulário deve possuir:
+
+- label;
+- placeholder quando útil;
+- validação;
+- mensagem de erro objetiva;
+- feedback de envio;
+- bloqueio de envio duplicado;
+- estado de loading;
+- confirmação de sucesso;
+- preservação apropriada dos dados;
+- acessibilidade por teclado.
+
+Sanitizar entradas quando aplicável.
+
+---
+
+# 10. TRATAMENTO DE ERROS
+
+O sistema deve possuir tratamento elegante para:
+
+- erro de API;
+- timeout;
+- erro de autenticação;
+- sessão expirada;
+- conexão indisponível;
+- dados vazios;
+- resultado inexistente;
+- entrada inválida;
+- erro interno;
+- rota inexistente;
+- permissões insuficientes.
+
+Nunca mostrar ao usuário erro técnico bruto, stack trace ou mensagem incompreensível.
+
+Registrar detalhes técnicos separadamente quando possível.
+
+---
+
+# 11. ESTADOS DE INTERFACE
+
+Todo componente dependente de dados deve contemplar:
+
+- loading;
+- sucesso;
+- vazio;
+- erro;
+- sem resultados;
+- indisponibilidade temporária.
+
+Nenhuma tela deve parecer quebrada porque não há dados.
+
+---
+
+# 12. PERFORMANCE
+
+Priorize excelente desempenho.
+
+Aplicar quando pertinente:
+
+- lazy loading;
+- code splitting;
+- otimização de imagens;
+- compressão;
+- cache;
+- redução de chamadas redundantes;
+- memoização apenas quando útil;
+- carregamento assíncrono;
+- virtualização de listas grandes;
+- otimização de fontes;
+- redução do bundle.
+
+Evitar re-renderizações desnecessárias.
+
+---
+
+# 13. SEO
+
+Quando o projeto for indexável, configurar adequadamente:
+
+- title;
+- meta description;
+- canonical;
+- Open Graph;
+- Twitter Cards;
+- sitemap;
+- robots;
+- headings semânticos;
+- URLs amigáveis;
+- dados estruturados quando aplicável.
+
+---
+
+# 14. ACESSIBILIDADE
+
+Buscar conformidade com WCAG 2.2 AA quando pertinente.
+
+Garantir:
+
+- contraste adequado;
+- navegação por teclado;
+- foco visível;
+- labels;
+- aria-label quando necessário;
+- HTML semântico;
+- textos alternativos para imagens;
+- áreas clicáveis adequadas;
+- compatibilidade razoável com leitores de tela.
+
+Não depender exclusivamente de cor para comunicar informação.
+
+---
+
+# 15. SEGURANÇA
+
+Aplicar boas práticas de segurança.
+
+Avaliar quando aplicável:
+
+- autenticação;
+- autorização;
+- controle de acesso;
+- validação server-side;
+- proteção contra XSS;
+- CSRF;
+- injection;
+- exposição de secrets;
+- manipulação de parâmetros;
+- upload inseguro;
+- enumeração de usuários;
+- rate limiting;
+- políticas de sessão;
+- armazenamento seguro de tokens.
+
+Nunca expor:
+
+- API keys;
+- senhas;
+- secrets;
+- tokens privados;
+- credenciais internas.
+
+---
+
+# 16. PRIVACIDADE
+
+Se houver coleta de dados pessoais:
+
+- coletar somente o necessário;
+- informar finalidade;
+- proteger armazenamento e transmissão;
+- limitar exposição;
+- considerar requisitos da LGPD.
+
+---
+
+# 17. BANCO DE DADOS
+
+Caso exista banco de dados:
+
+- criar estrutura coerente;
+- utilizar relacionamentos apropriados;
+- evitar duplicação desnecessária;
+- definir constraints;
+- criar índices quando necessários;
+- validar consistência;
+- prever migrações;
+- proteger operações sensíveis.
+
+Operações críticas devem possuir mecanismos contra corrupção de dados.
+
+---
+
+# 18. APIs E INTEGRAÇÕES
+
+Toda integração externa deve possuir:
+
+- tratamento de timeout;
+- tratamento de falhas;
+- validação do retorno;
+- tratamento de respostas inesperadas;
+- estados de loading;
+- retry apenas quando apropriado;
+- fallback quando possível.
+
+Não assumir que API externa estará sempre disponível.
+
+---
+
+# 19. AUTENTICAÇÃO
+
+Quando necessária, implementar fluxo completo:
+
+- login;
+- logout;
+- recuperação de senha;
+- sessão;
+- sessão expirada;
+- proteção de rotas;
+- permissões;
+- mensagens de erro;
+- carregamento inicial;
+- prevenção de acesso indevido.
+
+Não proteger apenas a interface.
+
+A autorização deve existir também no backend/banco quando necessário.
+
+---
+
+# 20. CONSISTÊNCIA VISUAL
+
+Criar design system básico com:
+
+- cores;
+- tipografia;
+- espaçamentos;
+- radius;
+- sombras;
+- estados;
+- botões;
+- inputs;
+- selects;
+- cards;
+- tabelas;
+- modais;
+- alerts;
+- badges;
+- tooltips.
+
+Reutilizar os padrões em toda a aplicação.
+
+---
+
+# 21. COMPONENTES DE ALTA QUALIDADE
+
+Todos os componentes devem possuir acabamento completo.
+
+Exemplo para botão:
+
+- default;
+- hover;
+- focus;
+- active;
+- disabled;
+- loading.
+
+Exemplo para input:
+
+- default;
+- focus;
+- preenchido;
+- inválido;
+- desabilitado.
+
+Esse nível de consistência deve ser aplicado a toda a interface.
+
+---
+
+# 22. PREVENÇÃO DE REGRESSÕES
+
+Antes de alterar qualquer parte já funcional:
+
+1. entender seu funcionamento;
+2. preservar comportamentos existentes;
+3. fazer a menor alteração necessária;
+4. testar novamente fluxos relacionados.
+
+Não corrigir um problema criando outro.
+
+Se estiver editando um projeto existente:
+
+**priorizar PATCH INCREMENTAL MÍNIMO.**
+
+Não reconstruir integralmente algo funcional sem necessidade.
+
+---
+
+# 23. TESTES OBRIGATÓRIOS
+
+Antes de considerar o projeto concluído, testar:
+
+## Interface
+
+- desktop;
+- tablet;
+- mobile;
+- menus;
+- modais;
+- abas;
+- dropdowns;
+- filtros;
+- navegação;
+- formulários.
+
+## Funcionalidade
+
+- criar;
+- editar;
+- excluir;
+- pesquisar;
+- filtrar;
+- salvar;
+- cancelar;
+- recarregar;
+- login/logout quando aplicável.
+
+## Estados excepcionais
+
+- internet lenta;
+- API indisponível;
+- retorno vazio;
+- dado inválido;
+- timeout;
+- usuário não autorizado;
+- URL inexistente.
+
+---
+
+# 24. QA FINAL
+
+Executar uma auditoria final procurando:
+
+- erro visual;
+- texto truncado;
+- link quebrado;
+- botão inativo;
+- console error;
+- warning relevante;
+- rota quebrada;
+- erro 404;
+- erro 500;
+- problemas de responsividade;
+- falha de acessibilidade;
+- componente desalinhado;
+- carregamento infinito;
+- conteúdo duplicado;
+- inconsistência visual;
+- comportamento inesperado.
+
+Corrigir tudo que for identificado antes da conclusão.
+
+---
+
+# 25. TESTE DE CONSOLE
+
+Verifique o console do navegador.
+
+O resultado esperado é:
+
+**0 erros relevantes em produção.**
+
+Corrigir:
+
+- JavaScript errors;
+- React errors;
+- hydration errors;
+- chamadas de API quebradas;
+- recursos inexistentes;
+- warnings que indiquem problema funcional.
+
+---
+
+# 26. TESTE DE NAVEGAÇÃO
+
+Percorra manualmente as principais jornadas do usuário como se estivesse utilizando o produto pela primeira vez.
+
+Não considerar o projeto pronto apenas porque compilou.
+
+**Build bem-sucedido não significa sistema funcional.**
+
+---
+
+# 27. TESTE DE PRODUÇÃO
+
+Após publicação:
+
+1. abrir a URL pública;
+2. testar carregamento inicial;
+3. testar navegação;
+4. testar funcionalidades essenciais;
+5. testar pelo menos um fluxo completo;
+6. testar mobile;
+7. verificar console;
+8. verificar chamadas de rede;
+9. confirmar persistência de dados quando aplicável.
+
+Não concluir o projeto apenas com base no ambiente de desenvolvimento.
+
+---
+
+# 28. DEPLOY
+
+O projeto só pode ser considerado concluído após:
+
+- build aprovado;
+- deploy aprovado;
+- URL pública acessível;
+- aplicação carregando;
+- funcionalidades principais testadas;
+- ausência de erros críticos;
+- versão publicada correspondente à versão validada.
+
+---
+
+# 29. PROIBIÇÕES
+
+Não:
+
+- criar funcionalidades falsas;
+- utilizar dados fictícios como se fossem reais;
+- esconder erros;
+- remover funcionalidades para facilitar implementação;
+- substituir requisito complexo por versão simplificada sem necessidade;
+- deletar conteúdo existente sem solicitação;
+- reconstruir projeto inteiro quando um patch resolver;
+- declarar sucesso sem testar;
+- declarar "pronto" apenas porque compilou;
+- deixar TODOs importantes;
+- deixar placeholders;
+- deixar lorem ipsum;
+- deixar botões sem ação;
+- deixar telas parcialmente implementadas.
+
+---
+
+# 30. SE EXISTIR CONTEÚDO ANTERIOR
+
+Preservar integralmente:
+
+- funcionalidades válidas;
+- banco de dados;
+- conteúdo;
+- histórico;
+- identidade visual útil;
+- configurações;
+- integrações existentes.
+
+Novas funcionalidades devem ser adicionadas de forma complementar.
+
+Não apagar informação válida para resolver conflitos.
+
+Quando houver conflito real, reconciliar tecnicamente.
+
+---
+
+# 31. PROCESSO DE EXECUÇÃO
+
+Executar na seguinte ordem:
+
+**Etapa 1 — auditoria**
+- entender projeto;
+- mapear estrutura;
+- identificar requisitos;
+- identificar riscos.
+
+**Etapa 2 — arquitetura**
+- estruturar páginas;
+- componentes;
+- dados;
+- APIs;
+- navegação.
+
+**Etapa 3 — implementação**
+- construir funcionalidades;
+- integrar serviços;
+- implementar UI.
+
+**Etapa 4 — refinamento**
+- responsividade;
+- acessibilidade;
+- performance;
+- design.
+
+**Etapa 5 — testes**
+- funcional;
+- visual;
+- mobile;
+- integração;
+- erros.
+
+**Etapa 6 — correção**
+- corrigir qualquer inconformidade detectada.
+
+**Etapa 7 — build**
+- executar build completo.
+
+**Etapa 8 — deploy**
+- publicar versão validada.
+
+**Etapa 9 — smoke test em produção**
+- testar URL real.
+
+**Etapa 10 — fechamento**
+- somente considerar concluído quando os requisitos acima estiverem efetivamente atendidos.
+
+---
+
+# 32. CRITÉRIO DE CONCLUSÃO
+
+A tarefa NÃO está concluída quando:
+
+- apenas o código foi escrito;
+- apenas o preview funciona;
+- apenas o build passou;
+- apenas a home foi testada.
+
+A tarefa está concluída quando:
+
+**IMPLEMENTAÇÃO → TESTE → CORREÇÃO → BUILD → DEPLOY → TESTE EM PRODUÇÃO → VALIDAÇÃO FINAL**
+
+forem completados satisfatoriamente.
+
+---
+
+# 33. PADRÃO DE EXCELÊNCIA
+
+Antes de finalizar, faça esta pergunta internamente:
+
+> "Se este produto fosse entregue hoje a milhares de usuários reais, existe algum problema óbvio de funcionamento, segurança, design, navegação, performance ou confiabilidade que deveria ter sido corrigido antes?"
+
+Se a resposta for sim, corrija antes de considerar concluído.
+
+---
+
+# 34. PRINCÍPIO FINAL
+
+Não busque simplesmente executar o pedido.
+
+Busque entregar a **melhor versão tecnicamente viável do produto**, respeitando integralmente os requisitos, preservando o que já funciona e eliminando falhas identificáveis.
+
+O resultado esperado é um site com padrão de produto comercial premium, e não um protótipo.
+
+## RESULTADO FINAL ESPERADO
+
+**Site completo + arquitetura sólida + interface premium + funcionalidades reais + responsividade + segurança + acessibilidade + testes + build + deploy + validação em produção.**

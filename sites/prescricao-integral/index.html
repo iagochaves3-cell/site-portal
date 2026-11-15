@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRESCRIÇÃO INTEGRAL</title>
+<meta name="description" content="Prescrição pediátrica, catálogo de medicamentos, calculadoras auditáveis e acervo integrado com fontes originais.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050505'/%3E%3Cpath d='M29 14h8v14h14v8H37v14h-8V36H15v-8h14z' fill='%23eeeeef'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<aside class="sidebar" id="sidebar">
+ <a class="brand" href="#prescricao"><span class="brand-symbol">✚</span><span>PRESCRIÇÃO<strong>INTEGRAL</strong></span></a>
+ <div class="sidebar-label">ÁREA CLÍNICA</div>
+ <nav aria-label="Navegação principal" id="nav">
+  <a href="#prescricao" data-tab="prescricao"><span data-icon="rx"></span>Prescrição <b class="count" id="rx-count">0</b></a>
+  <a href="#medicamentos" data-tab="medicamentos"><span data-icon="pill"></span>Medicamentos</a>
+  <a href="#diagnosticos" data-tab="diagnosticos"><span data-icon="steth"></span>Diagnósticos e temas</a>
+  <a href="#calculadoras" data-tab="calculadoras"><span data-icon="calculator"></span>Calculadoras</a>
+
+ </nav>
+ <div class="sidebar-bottom"><button class="theme-button" id="theme-toggle" aria-pressed="false"><span data-icon="moon"></span> Contraste reforçado</button></div>
+</aside>
+<div class="workspace">
+ <header class="topbar"><button class="icon-button mobile-menu" id="menu" aria-label="Abrir menu"><span data-icon="menu"></span></button><div class="breadcrumb">Área clínica <span>/</span> <strong id="current-title">Prescrição</strong></div><form id="global-search" class="global-search"><span data-icon="search"></span><input id="global-query" aria-label="Pesquisar em todas as fontes" placeholder="Pesquisar em todas as fontes…" autocomplete="off"><button type="submit" aria-label="Buscar">↵</button></form><span class="profile" title="Dr. Iago Vildete Almeida Chaves">IV</span></header>
+ <main id="main" tabindex="-1">
+  <div class="page-heading"><div><div class="eyebrow" id="eyebrow">ATENDIMENTO</div><h1 id="page-title">Prescrição pediátrica</h1><p id="page-subtitle">Dados do paciente, referência clínica e dose no mesmo lugar.</p></div><button class="button outline" id="new-patient"><span data-icon="plus"></span>Novo paciente</button></div>
+  <section class="patient-bar" aria-label="Dados do paciente">
+   <label class="patient-name">Paciente<input id="patient-name" placeholder="Nome do paciente" autocomplete="off"></label>
+   <label>Peso · kg<input id="patient-weight" inputmode="decimal" placeholder="Ex.: 16" autocomplete="off"></label>
+   <fieldset class="age-input"><legend>Idade</legend><label><input id="age-years" inputmode="numeric" placeholder="—" aria-label="Idade em anos">a</label><label><input id="age-months" inputmode="numeric" placeholder="—" aria-label="Idade em meses">m</label><label><input id="age-days" inputmode="numeric" placeholder="—" aria-label="Idade em dias">d</label></fieldset>
+   <label class="diagnosis-input">Diagnóstico / indicação<input id="patient-diagnosis" list="diagnosis-options" placeholder="Pesquisar diagnóstico ou informar indicação" autocomplete="off"></label>
+   <datalist id="diagnosis-options"></datalist><button class="text-button" id="patient-more"><span data-icon="sliders"></span>Mais dados</button>
+  </section>
+  <section class="clinical-context" aria-label="Sintomas e contexto clínico">
+   <label>Há tosse?<select id="patient-cough"><option value="none">Não</option><option value="unknown">Sim — esclarecer tipo</option><option value="dry">Seca / irritativa</option><option value="wet">Produtiva / com secreção</option><option value="barking">Em latido / estridor</option><option value="wheeze">Com chiado</option><option value="paroxysmal">Em crises / guincho</option><option value="blood">Com sangue</option></select></label>
+   <label id="cough-days-label" hidden>Duração da tosse · dias<input id="patient-cough-days" inputmode="numeric" placeholder="Dias" autocomplete="off"></label>
+   <label id="respiratory-alarm-label" hidden>Falta de ar, cianose, estridor em repouso ou prostração?<select id="patient-respiratory-alarm"><option value="unknown">A avaliar</option><option value="no">Ausentes após avaliação</option><option value="yes">Presentes</option></select></label>
+   <label class="check-label"><input id="patient-pain" type="checkbox">Dor ou febre com desconforto</label>
+   <label class="check-label"><input id="patient-vomiting" type="checkbox">Vômitos</label>
+   <label>Contexto<select id="patient-setting"><option value="outpatient">Consulta / plano de alta</option><option value="observed">Em avaliação na unidade</option><option value="hospital">Internação hospitalar</option></select></label>
+   <label class="check-label"><input id="patient-severe" type="checkbox">Quadro grave / complicação</label>
+  </section>
+  <div id="patient-extra" class="patient-extra" hidden><label>Alergias<input id="patient-allergies" placeholder="Não informado; registre alergias ou ausência conhecida" autocomplete="off"></label><label>Comorbidades<input id="patient-comorbidities" placeholder="Se vazio, considerar criança hígida" autocomplete="off"></label><label>Função renal<select id="patient-renal"><option value="">Não informada — confirmar</option><option value="normal">Normal — conhecida</option><option value="alterada">Alterada — individualizar</option><option value="desconhecida">Desconhecida</option></select></label><label>Função hepática<select id="patient-hepatic"><option value="">Não informada — confirmar</option><option value="normal">Normal — conhecida</option><option value="alterada">Alterada — individualizar</option><option value="desconhecida">Desconhecida</option></select></label><label>Observações clínicas<input id="patient-notes" placeholder="Informe funções conhecidas e observações; não presumir normalidade" autocomplete="off"></label><label>Medicações utilizadas (se houver)<input id="patient-medications" placeholder="Se vazio, considerar que não usa medicações" autocomplete="off"></label><p>Dados do atendimento permanecem apenas nesta aba. Recarregar a página apaga o atendimento.</p></div>
+  <div id="content" aria-live="polite"><div class="loading"><span class="spinner"></span>Carregando o acervo…</div></div>
+ </main>
+ <footer class="site-credit">Desenvolvido por Iago Almeida</footer>
+</div>
+<dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><div><div class="eyebrow" id="dialog-eyebrow">CONSULTA</div><h2 id="dialog-title"></h2></div><button class="icon-button" id="close-dialog" aria-label="Fechar janela">✕</button></div><div id="dialog-content"></div></dialog>
+<div id="toast" role="status" hidden></div><div id="print-area"></div>
+<script type="module" src="app.mjs"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5af22a0aec48a29',t:'MTc5NDc1NDkyOA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5af22a0aec48a29',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
