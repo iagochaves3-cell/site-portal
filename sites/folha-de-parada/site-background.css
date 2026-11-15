@@ -1,0 +1,27 @@
+html[data-site-background="dark-texture"] {
+  min-height: 100%;
+  background-color: #070809;
+  background-image: url("/images/dark-texture-background-4k.webp");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+html[data-site-background="dark-texture"] body {
+  min-height: 100vh;
+  background: transparent !important;
+}
+
+@media (max-width: 760px), (prefers-reduced-motion: reduce) {
+  html[data-site-background="dark-texture"] {
+    background-attachment: scroll;
+  }
+}
+
+@media print {
+  html[data-site-background="dark-texture"],
+  html[data-site-background="dark-texture"] body {
+    background: #fff !important;
+  }
+}
