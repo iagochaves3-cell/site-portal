@@ -1,0 +1,166 @@
+{
+  "verifiedAt": "14/09/2026",
+  "baselineVersion": 105,
+  "baselineCommit": "144a35ecd6834ac5111ace1708d9d953d558e995",
+  "implemented": [
+    {
+      "id": "ondansetrona-radio",
+      "drug": "ondansetrona",
+      "indication": "Radioterapia — prevenção de náuseas e vômitos (VO)",
+      "presentation": "Comprimido orodispersível 4 mg",
+      "classification": "Bula brasileira — 2 a 11 anos; sobreposição aos 11 anos",
+      "source": "https://cdn.biolabfarma.com.br/imagens/7896241296523-Bula.Pdf"
+    },
+    {
+      "id": "verapamil-hta",
+      "drug": "verapamil",
+      "indication": "Hipertensão — adolescente >50 kg (VO, liberação imediata)",
+      "presentation": "Comprimido revestido 80 mg — liberação imediata; inteiro",
+      "classification": "Bula brasileira — cálculo assistido após decisão cardiológica",
+      "source": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf"
+    },
+    {
+      "id": "verapamil-angina",
+      "drug": "verapamil",
+      "indication": "Angina / isquemia miocárdica — adolescente >50 kg (VO, liberação imediata)",
+      "presentation": "Comprimido revestido 80 mg — liberação imediata; inteiro",
+      "classification": "Bula brasileira — cálculo assistido após decisão cardiológica",
+      "source": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf"
+    },
+    {
+      "id": "dantroleno-snm",
+      "drug": "dantroleno",
+      "indication": "Síndrome neuroléptica maligna — manutenção após resposta (EV intermitente)",
+      "presentation": "Dantroleno sódico 20 mg/frasco — reconstituir com 60 mL de água para injetáveis",
+      "classification": "Off-label — cálculo assistido hospitalar; evidência pediátrica limitada",
+      "source": "https://redantidotos.org/wp-content/uploads/2018/04/Dantroleno_Red-Antidotos_2021.pdf"
+    }
+  ],
+  "omitted": [
+    {
+      "drug": "escetamina",
+      "pattern": "asma|broncoespasmo",
+      "indication": "Asma refratária — infusão subdissociativa",
+      "reason": "Sem regime pediátrico específico confirmado de infusão broncodilatadora de escetamina. A referência Pfizer de novembro/2023 descreve intubação no status asmático, uma indicação distinta; não valida BIC subdissociativa. Não converter doses de cetamina racêmica nem de sedação.",
+      "source": "https://figi.pfizer.de/sites/default/files/FI-1435.pdf"
+    },
+    {
+      "drug": "clopidogrel",
+      "pattern": "stent|dispositivo|antiagrega|adolescente",
+      "indication": "Stents/dispositivos em crianças maiores",
+      "reason": "Cenário genérico de stents/dispositivos: sem regime universal seguro. Há evidência C histórica específica para flow diverter intracraniano: séries AJNR 2017 e SNI 2022 usaram clopidogrel 75 mg VO/dia em pacientes >45 kg, iniciado cinco dias antes. Associação com AAS e continuação após seis meses diferem entre séries; houve hiper-resposta plaquetária. Idades individuais por peso não recuperadas e consenso de 2026 sem íntegra: manter fora do seletor automático até definição individual pela neurointervenção. Não extrapolar para stents cardíacos, PICOLO, dose mg/kg ou fracionamento do comprimido.",
+      "source": "https://www.ajnr.org/content/38/1/113"
+    },
+    {
+      "drug": "clorpromazina",
+      "pattern": "sydenham|coreia",
+      "indication": "Coreia de Sydenham",
+      "reason": "Registro histórico de 2 mg/kg/dia não define sozinho intervalo e teto; consenso de 2025 alerta para efeitos adversos dos antipsicóticos antigos. Não usar dose de agitação.",
+      "source": "https://eprints.gla.ac.uk/372852/1/372852.pdf"
+    },
+    {
+      "drug": "sucralfato",
+      "pattern": "gastrite|doenca erosiva",
+      "indication": "Gastrite erosiva",
+      "reason": "Pediamécum lista gastrite crônica, mas não fornece regime específico para gastrite erosiva pediátrica. Não extrapolar a posologia de sangramento, úlcera ou esofagite.",
+      "source": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/sucralfato"
+    },
+    {
+      "drug": "venlafaxina",
+      "pattern": "panico",
+      "indication": "Transtorno do pânico em menores de 18 anos",
+      "reason": "MEDICAÇÃO NÃO INDICADA PARA IDADE: a bula brasileira consultada contraindica venlafaxina abaixo de 18 anos.",
+      "source": "https://www.viatris.com.br/-/media/project/common/viatriscombr/pdf/leaflets_legacy_myl_brazil/efexor-xr_bula_profissional.pdf"
+    },
+    {
+      "drug": "acetato de calcio",
+      "pattern": "hiperfosfat|titulacao|manutencao|quelante",
+      "indication": "Hiperfosfatemia na DRC",
+      "reason": "Dose do estudo esclarecida: 0,45 mL/kg/dia da solução estrangeira com 133,4 mg de sal/mL e 33,8 mg de cálcio elementar/mL = 60,03 mg de sal/kg/dia e 15,21 mg de cálcio/kg/dia, em três refeições. Titulação: 0,1–0,2 mL/kg/dia; incrementos de 0,5 mL são arredondamento das tomadas. O total e sua distribuição devem respeitar as tabelas do estudo. Produto, composição e administrabilidade brasileiros ainda não confirmados: sem cálculo clínico. Não converter para comprimidos nem transferir tetos do estudo dependentes de propilenoglicol e carga cálcica.",
+      "source": "https://cdn.clinicaltrials.gov/large-docs/64/NCT02688764/Prot_000.pdf"
+    }
+  ],
+  "scope": "Complemento por delta sobre Emergência v105 e Prescrição v194. Demais sites: apenas documentação do catálogo existente; sem novas receitas domiciliares. Quatro ramos calculáveis (três dos nove esquemas); seis esquemas omitidos. Não é certificação de todo o catálogo.",
+  "sourceDates": {
+    "ondansetrona": "Bula aprovada Anvisa 05/12/2025",
+    "verapamil": "Bula Aché 02/2021",
+    "dantroleno": "Red Antídotos 2021; Utah 05/2025; bula Cristália consultada 14/09/2026",
+    "acetato_de_calcio": "Protocolo 22/09/2015 v2; publicação online 27/10/2020, volume 2021; FDA histórica 04/2015",
+    "venlafaxina": "Bula Viatris 11/2025",
+    "sucralfato": "Pediamécum 12/2020",
+    "clorpromazina": "Consenso 2025; regime histórico sem intervalo validado",
+    "clopidogrel": "Consenso 11/06/2026, somente resumo acessível"
+  },
+  "calciumStudy": {
+    "classification": "historical_study_not_brazilian_product",
+    "clinical_calculator_enabled": false,
+    "trial": "NCT02688764",
+    "protocol_version": "2.0",
+    "protocol_date": "2015-09-22",
+    "publication_year": 2021,
+    "population": "Participantes de 2–18 anos com DRC 4–5/5D; 19 receberam acetato de cálcio",
+    "salt_mg_per_ml": 133.4,
+    "elemental_calcium_mg_per_ml": 33.8,
+    "initial_ml_kg_day": 0.45,
+    "initial_salt_mg_kg_day": 60.03,
+    "initial_elemental_mg_kg_day": 15.21,
+    "titration_ml_kg_day": [
+      0.1,
+      0.2
+    ],
+    "rounding_increment_ml": 0.5,
+    "rounding_policy": "Tabela 24: total diário arredondado para baixo a 0,5 mL; tabela 25: distribuir esse total entre três refeições, maior tomada com maior refeição.",
+    "study_maximum": "≤35 kg: 1,25 mL/kg/dia; >35 kg: 44 mL/dia; exclusivamente formulação do protocolo, considerando propilenoglicol e cálcio.",
+    "examples": [
+      {
+        "weight_kg": 20,
+        "unrounded_daily_ml": 9,
+        "daily_ml": 9,
+        "meals_ml": [
+          3,
+          3,
+          3
+        ],
+        "salt_mg_day": 1200.6,
+        "elemental_mg_day": 304.2
+      },
+      {
+        "weight_kg": 35,
+        "unrounded_daily_ml": 15.75,
+        "daily_ml": 15.5,
+        "meals_ml": [
+          5.5,
+          5,
+          5
+        ],
+        "salt_mg_day": 2067.7,
+        "elemental_mg_day": 523.9
+      }
+    ]
+  },
+  "baselineArchive": "/fontes/nove-esquemas-baseline-105.json",
+  "limitations": [
+    "Velocidade inicial de dantroleno divergente: Red 2021, 3 min/frasco; Utah 2025, ≥1 hora para formulação convencional. Ataque permanece sem automação. Manutenção intermitente em 1 hora concordante.",
+    "Consenso neurovascular de junho/2026 sem íntegra recuperada; não se incorporou dose por resumo.",
+    "Phoslyra é solução estrangeira; apresentação brasileira aplicável não confirmada.",
+    "Escetamina na intubação de status asmático não valida infusão broncodilatadora subdissociativa.",
+    "Clorpromazina histórica: faltam intervalo/teto/duração para coreia; sucralfato: falta regime específico pediátrico para gastrite erosiva.",
+    "Páginas PMC citadas retornaram barreira de acesso; Pediamécum sucralfato não reabriu nesta etapa. Não foram tratadas como revisão integral atual."
+  ],
+  "followupRevision": "baseline105-followup-2026-09-14",
+  "sourceDiscrepancies": [
+    {
+      "source": "Red Antídotos 2021",
+      "issue": "Texto menciona hipopotassemia com verapamil; bula brasileira e Utah descrevem hipercalemia. A aplicação mantém hipercalemia conforme essas fontes."
+    }
+  ],
+  "legacyClopidogrelProtection": "Os ramos Antiagregação Plaquetária Pediátrica e Adolescentes do resumo legado foram bloqueados por misturarem populações/doses sem protocolo por dispositivo. O regime farmacodinâmico PICOLO de 0–24 meses permanece exclusivamente documental no catálogo (pdf-129-row-01), sem cálculo, conversão para mL, divisão de comprimido ou inferência de formulação brasileira.",
+  "closureReview": {
+    "reviewedAt": "2026-09-14",
+    "mode": "delta_from_actual_published_version",
+    "clopidogrel": "Cenário genérico de stents/dispositivos: sem regime universal seguro. Há evidência C histórica específica para flow diverter intracraniano: séries AJNR 2017 e SNI 2022 usaram clopidogrel 75 mg VO/dia em pacientes >45 kg, iniciado cinco dias antes. Associação com AAS e continuação após seis meses diferem entre séries; houve hiper-resposta plaquetária. Idades individuais por peso não recuperadas e consenso de 2026 sem íntegra: manter fora do seletor automático até definição individual pela neurointervenção. Não extrapolar para stents cardíacos, PICOLO, dose mg/kg ou fracionamento do comprimido.",
+    "calcium": "C documental; base sal/elemento esclarecida. Apresentação brasileira aplicável permanece não confirmada.",
+    "dantroleneAccess": "Preferir acesso central; veia periférica calibrosa é alternativa sob vigilância contínua de extravasamento.",
+    "sourceAccessUpdate": "Pediamécum sucralfato e artigo de acetato recuperados integralmente nesta etapa; restrições de acesso anteriores são históricas."
+  }
+}

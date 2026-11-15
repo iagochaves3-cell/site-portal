@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+<title id="title">Emicizumabe — revisão documental de 21/10/2026</title>
+<desc id="desc">Apresentações brasileiras, indicação da bula e critérios específicos do protocolo SUS. Texto completo e fontes estão junto ao card.</desc>
+<rect width="1080" height="1350" fill="#07111f"/>
+<rect x="56" y="52" width="968" height="1246" rx="28" fill="#0d2138" stroke="#59c3ff" stroke-width="3"/>
+<text x="96" y="130" fill="#83ddff" font-family="Arial, sans-serif" font-size="34" font-weight="700">CATÁLOGO PEDIÁTRICO • 21/10/2026</text>
+<text x="96" y="205" fill="#ffffff" font-family="Arial, sans-serif" font-size="60" font-weight="700">EMICIZUMABE</text>
+<text x="96" y="260" fill="#c9eaff" font-family="Arial, sans-serif" font-size="30" font-weight="400">Bula brasileira e protocolo SUS</text>
+<rect x="86" y="300" width="908" height="260" rx="22" fill="#123456"/>
+<rect x="86" y="582" width="908" height="350" rx="22" fill="#123456"/>
+<text x="120" y="350" fill="#73e0b5" font-family="Arial, sans-serif" font-size="31" font-weight="700">APRESENTAÇÕES EM BULA</text>
+<text x="120" y="398" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">30 mg/mL: 12 mg/0,4 mL ou 30 mg/1 mL.</text>
+<text x="120" y="444" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">150 mg/mL: 60 mg/0,4 mL; 105 mg/0,7 mL;</text>
+<text x="120" y="490" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">150 mg/1 mL ou 300 mg/2 mL.</text>
+<text x="120" y="536" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">Solução pronta para via subcutânea, sem diluição.</text>
+<text x="120" y="636" fill="#ffd166" font-family="Arial, sans-serif" font-size="31" font-weight="700">INDICAÇÃO E ACESSO</text>
+<text x="120" y="684" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">Bula: hemofilia A congênita, em todas as idades,</text>
+<text x="120" y="728" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">com ou sem inibidores do fator VIII.</text>
+<text x="120" y="772" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">Protocolo SUS 2026: início até 6 anos completos,</text>
+<text x="120" y="816" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">sem inibidor e atividade de fator VIII inferior a 2%.</text>
+<text x="120" y="860" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">Exige cadastro, termo e acompanhamento especializado.</text>
+<text x="120" y="904" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">Esse recorte não limita a indicação geral da bula.</text>
+<rect x="86" y="954" width="908" height="194" rx="22" fill="#3a1722" stroke="#ff7f8f" stroke-width="2"/>
+<text x="120" y="1006" fill="#ff9cab" font-family="Arial, sans-serif" font-size="31" font-weight="700">ATENÇÃO</text>
+<text x="120" y="1050" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">Não usar como tratamento isolado de hemorragia aguda.</text>
+<text x="120" y="1092" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">Não administrar por via intravenosa.</text>
+<text x="120" y="1134" fill="#ffffff" font-family="Arial, sans-serif" font-size="27" font-weight="400">Registro em bula não comprova oferta ou estoque.</text>
+<text x="96" y="1196" fill="#83ddff" font-family="Arial, sans-serif" font-size="24" font-weight="700">FONTES: ROCHE • MINISTÉRIO DA SAÚDE</text>
+<line x1="96" y1="1220" x2="984" y2="1220" stroke="#4a6f91"/>
+<text x="96" y="1256" fill="#ffffff" font-family="Arial, sans-serif" font-size="23" font-weight="700">Siglas e significados</text>
+<text x="96" y="1288" fill="#c9eaff" font-family="Arial, sans-serif" font-size="21" font-weight="400">SUS: Sistema Único de Saúde • mg: miligrama • mL: mililitro</text>
+</svg>
