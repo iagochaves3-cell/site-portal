@@ -53,7 +53,7 @@
   <footer>
     <p class="warn">Uso profissional. Ferramenta de apoio à decisão — não substitui julgamento clínico,
     conferência de dose nem validação institucional.</p>
-    <p>Publicado em GitHub Pages. Cada site também está disponível no repositório correspondente.</p>
+    <p>Publicado na Cloudflare. Cada site também está disponível no repositório correspondente.</p>
   </footer>
 </div>
 
@@ -61,16 +61,35 @@
 (function () {
   "use strict";
   var SITES = [
-    ["01","ReceitaPediago","Revisão clínica, contratos versionados e governança do modelo posológico.","https://iagochaves3-cell.github.io/site-receitapediago/"],
-    ["02","Receita PED","Prescrição, medicações e Folha de Parada pediátrica.","https://iagochaves3-cell.github.io/site-receita-ped/"],
-    ["03","Orientações aos Pais","Gera o texto de orientação para a família a partir do diagnóstico.","https://iagochaves3-cell.github.io/site-orientacoes-aos-pais/"],
-    ["04","Prescrição Pediátrica Segura — PPS v2.0","Script mestre de prescrição e terapêutica completa.","https://iagochaves3-cell.github.io/site-prescricao-pediatrica-segura/"],
-    ["05","Catálogo Posológico Pediátrico","Consulta ao acervo de monografias com atualizações.","https://iagochaves3-cell.github.io/site-catalogo-pediatrico/"],
-    ["06","Emergências e Terapêutica","Condutas de urgência e emergência pediátrica.","https://iagochaves3-cell.github.io/site-emergencias-terapeutica/"],
-    ["07","Reidratação Pediátrica v11","Calculadora de hidratação, déficit e manutenção.","https://iagochaves3-cell.github.io/site-reidratacao-pediatrica/"],
-    ["08","Infusão Contínua — Drogas em BIC","Cálculo de velocidade em mL/h e titulação.","https://iagochaves3-cell.github.io/site-infusao-bic/"],
-    ["09","Anamnese Pediátrica Guiada","Roteiro estruturado de anamnese e consulta.","https://iagochaves3-cell.github.io/site-anamnese-pediatrica/"],
-    ["10","infosWB · Compêndio Pediátrico","Compêndio de consulta rápida para o plantão.","https://iagochaves3-cell.github.io/site-infoswb/"]
+    ["01", "ReceitaPediago", "Revisão clínica, contratos versionados e governança do modelo posológico.", "https://receitapediago.sites-pediatria.workers.dev/"],
+    ["02", "Receita PED", "Prescrição, medicações e Folha de Parada pediátrica.", "https://receita-ped.sites-pediatria.workers.dev/"],
+    ["03", "Orientações aos Pais", "Gera o texto de orientação para a família a partir do diagnóstico.", "https://orientacoes-aos-pais.sites-pediatria.workers.dev/"],
+    ["04", "Prescrição Pediátrica Segura — PPS v2.0", "Script mestre de prescrição e terapêutica completa.", "https://prescricao-pediatrica-segura.sites-pediatria.workers.dev/"],
+    ["05", "Catálogo Posológico Pediátrico", "Consulta ao acervo de monografias com atualizações.", "https://catalogo-pediatrico.sites-pediatria.workers.dev/"],
+    ["06", "Emergências e Terapêutica", "Condutas de urgência e emergência pediátrica.", "https://emergencias-e-terapeutica.sites-pediatria.workers.dev/"],
+    ["07", "Reidratação Pediátrica v11", "Calculadora de hidratação, déficit e manutenção.", "https://reidratacao.sites-pediatria.workers.dev/"],
+    ["08", "Infusão Contínua — Drogas em BIC", "Cálculo de velocidade em mL/h e titulação.", "https://infusao-bic.sites-pediatria.workers.dev/"],
+    ["09", "Anamnese Pediátrica Guiada", "Roteiro estruturado de anamnese e consulta.", "https://anamnese-pediatrica.sites-pediatria.workers.dev/"],
+    ["10", "infosWB · Compêndio Pediátrico", "Compêndio de consulta rápida para o plantão.", "https://infoswb.sites-pediatria.workers.dev/"],
+    ["11", "Folha de Parada", "Doses e materiais de emergência por peso.", "https://folha-de-parada.sites-pediatria.workers.dev/"],
+    ["12", "Pediatric Flow — Emergência Pediátrica", "Apoio à decisão em emergência pediátrica.", "https://pediatric-flow-cdss.sites-pediatria.workers.dev/"],
+    ["13", "Medicações Pediátricas", "Doses conforme peso e idade.", "https://medicacoes-pediatricas.sites-pediatria.workers.dev/"],
+    ["14", "Soroterapia Pediátrica", "Cálculo de fluidos, manutenção e gotejamento.", "https://soroterapia-pediatrica.sites-pediatria.workers.dev/"],
+    ["15", "Ventilação Mecânica", "Parâmetros ventilatórios em pediatria.", "https://ventilacao-mecanica.sites-pediatria.workers.dev/"],
+    ["16", "Escores Clínicos", "Calculadoras de escores clínicos.", "https://scores-clinicos.sites-pediatria.workers.dev/"],
+    ["17", "Neonatologia", "Cuidados com o recém-nascido.", "https://neonatologia.sites-pediatria.workers.dev/"],
+    ["18", "Terapêuticas", "Condutas terapêuticas por diagnóstico.", "https://terapeuticas.sites-pediatria.workers.dev/"],
+    ["19", "Drogas CardioPapers", "Drogas cardiovasculares e doses.", "https://drogas-cardiopapers.sites-pediatria.workers.dev/"],
+    ["20", "Farmacologia Pediátrica", "Dicionário farmacológico pediátrico.", "https://farmacologia-pediatrica.sites-pediatria.workers.dev/"],
+    ["21", "Medicações ANVISA", "Medicações da Anvisa e apresentações.", "https://medicacoes-anvisa.sites-pediatria.workers.dev/"],
+    ["22", "Bulário Completo", "Bulário por nome genérico, com fontes originais.", "https://bulario.sites-pediatria.workers.dev/"],
+    ["23", "Dermatologia", "Consulta de dermatologia.", "https://dermatologia.sites-pediatria.workers.dev/"],
+    ["24", "Laboratório e Raio X", "Exames laboratoriais e radiografia.", "https://laboratorioeradiografia.sites-pediatria.workers.dev/"],
+    ["25", "Estudo Continuado", "Temas de estudo e e-cards.", "https://estudo-continuado.sites-pediatria.workers.dev/"],
+    ["26", "Briefings Diários", "eCards e resumos diários.", "https://briefings-diarios.sites-pediatria.workers.dev/"],
+    ["27", "Abordagens Clínicas", "Assistente de pesquisa de protocolos clínicos.", "https://abordagem-clinica.sites-pediatria.workers.dev/"],
+    ["28", "Guideliness", "Protocolos e diretrizes.", "https://guideliness.sites-pediatria.workers.dev/"],
+    ["29", "Prescrição Integral", "Prescrição integral.", "https://prescricao-integral.sites-pediatria.workers.dev/"]
   ];
 
   var grid = document.getElementById("grid");
