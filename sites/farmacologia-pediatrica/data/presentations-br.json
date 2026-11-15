@@ -1,0 +1,4349 @@
+{
+  "source": {
+    "text": "Ministério da Saúde — RENAME 2024, 2ª edição, 2025; apêndice A",
+    "url": "https://bvsms.saude.gov.br/bvs/publicacoes/relacao_nacional_medicamentos_2024_2ed.pdf",
+    "accessed": "2026-09-30",
+    "license": "CC BY-NC-SA 4.0",
+    "scope": "Concentrações e formas farmacêuticas constantes na lista nacional. Não comprova estoque, comercialização atual, indicação pediátrica ou intercambialidade de formulações."
+  },
+  "medications": {
+    "2": [
+      {
+        "name": "acetazolamida",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 121
+      }
+    ],
+    "4": [
+      {
+        "name": "aciclovir",
+        "strength": "50 mg/g (5%)",
+        "form": "creme",
+        "page": 50
+      },
+      {
+        "name": "aciclovir",
+        "strength": "200 mg",
+        "form": "comprimido",
+        "page": 61
+      },
+      {
+        "name": "aciclovir",
+        "strength": "250 mg",
+        "form": "pó para solução injetável",
+        "page": 61
+      }
+    ],
+    "5": [
+      {
+        "name": "ácido acetilsalicílico",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 34
+      },
+      {
+        "name": "ácido acetilsalicílico",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 101
+      }
+    ],
+    "8": [
+      {
+        "name": "ácido fólico",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 34
+      },
+      {
+        "name": "ácido fólico",
+        "strength": "0,2 mg/mL",
+        "form": "solução oral",
+        "page": 34
+      }
+    ],
+    "9": [
+      {
+        "name": "ácido folínico",
+        "strength": "15 mg",
+        "form": "comprimido",
+        "page": 123
+      }
+    ],
+    "13": [
+      {
+        "name": "ácido tranexâmico",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 34
+      }
+    ],
+    "14": [
+      {
+        "name": "ácido ursodesoxicólico",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 26
+      },
+      {
+        "name": "ácido ursodesoxicólico",
+        "strength": "150 mg",
+        "form": "comprimido",
+        "page": 26
+      },
+      {
+        "name": "ácido ursodesoxicólico",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 26
+      }
+    ],
+    "19": [
+      {
+        "name": "albendazol",
+        "strength": "40 mg/mL",
+        "form": "suspensão oral",
+        "page": 113
+      },
+      {
+        "name": "albendazol",
+        "strength": "400 mg",
+        "form": "comprimido mastigável",
+        "page": 113
+      }
+    ],
+    "20": [
+      {
+        "name": "alendronato de sódio",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 99
+      },
+      {
+        "name": "alendronato de sódio",
+        "strength": "70 mg",
+        "form": "comprimido",
+        "page": 99
+      }
+    ],
+    "23": [
+      {
+        "name": "alopurinol",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 99
+      },
+      {
+        "name": "alopurinol",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 99
+      }
+    ],
+    "26": [
+      {
+        "name": "alteplase",
+        "strength": "10 mg",
+        "form": "pó para solução injetável",
+        "page": 35
+      },
+      {
+        "name": "alteplase",
+        "strength": "20 mg",
+        "form": "pó para solução injetável",
+        "page": 35
+      },
+      {
+        "name": "alteplase",
+        "strength": "50 mg",
+        "form": "pó para solução injetável",
+        "page": 35
+      }
+    ],
+    "27": [
+      {
+        "name": "cloridrato de amantadina",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 102
+      }
+    ],
+    "29": [
+      {
+        "name": "sulfato de amicacina",
+        "strength": "250 mg/mL",
+        "form": "solução injetável",
+        "page": 82
+      }
+    ],
+    "32": [
+      {
+        "name": "cloridrato de amiodarona",
+        "strength": "50 mg/mL",
+        "form": "solução injetável",
+        "page": 44
+      },
+      {
+        "name": "cloridrato de amiodarona",
+        "strength": "200 mg",
+        "form": "comprimido",
+        "page": 44
+      }
+    ],
+    "33": [
+      {
+        "name": "cloridrato de amitriptilina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 102
+      },
+      {
+        "name": "cloridrato de amitriptilina",
+        "strength": "75 mg",
+        "form": "comprimido",
+        "page": 102
+      }
+    ],
+    "35": [
+      {
+        "name": "amoxicilina",
+        "strength": "50 mg/mL",
+        "form": "suspensão oral",
+        "page": 61
+      },
+      {
+        "name": "amoxicilina",
+        "strength": "500 mg",
+        "form": "cápsula",
+        "page": 61
+      },
+      {
+        "name": "amoxicilina",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 61
+      }
+    ],
+    "36": [
+      {
+        "name": "amoxicilina + clavulanato de potássio",
+        "strength": "50 mg/mL + 12,5 mg/mL",
+        "form": "suspensão oral",
+        "page": 61
+      },
+      {
+        "name": "amoxicilina + clavulanato de potássio",
+        "strength": "500 mg + 125 mg",
+        "form": "comprimido",
+        "page": 61
+      }
+    ],
+    "40": [
+      {
+        "name": "anfotericina B (complexo lipídico)",
+        "strength": "5 mg/mL",
+        "form": "suspensão injetável",
+        "page": 61
+      },
+      {
+        "name": "anfotericina B (desoxicolato)",
+        "strength": "50 mg",
+        "form": "pó para solução injetável",
+        "page": 61
+      },
+      {
+        "name": "anfotericina B (lipossomal)",
+        "strength": "50 mg",
+        "form": "pó para solução injetável",
+        "page": 62
+      }
+    ],
+    "41": [
+      {
+        "name": "anidulafungina",
+        "strength": "100 mg",
+        "form": "pó liofilizado para solução injetável",
+        "page": 62
+      }
+    ],
+    "43": [
+      {
+        "name": "atenolol",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 43
+      },
+      {
+        "name": "atenolol",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 43
+      }
+    ],
+    "45": [
+      {
+        "name": "sulfato de atropina",
+        "strength": "0,25 mg/mL",
+        "form": "solução injetável",
+        "page": 33
+      }
+    ],
+    "46": [
+      {
+        "name": "azatioprina",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 91
+      }
+    ],
+    "48": [
+      {
+        "name": "azitromicina",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 62
+      },
+      {
+        "name": "azitromicina",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 62
+      },
+      {
+        "name": "azitromicina",
+        "strength": "40 mg/mL",
+        "form": "pó para suspensão oral",
+        "page": 62
+      }
+    ],
+    "52": [
+      {
+        "name": "dipropionato de beclometasona",
+        "strength": "50 mcg/dose",
+        "form": "solução aerossol",
+        "page": 118
+      },
+      {
+        "name": "dipropionato de beclometasona",
+        "strength": "50 mcg/dose",
+        "form": "suspensão para inalação nasal",
+        "page": 118
+      },
+      {
+        "name": "dipropionato de beclometasona",
+        "strength": "200 mcg/dose",
+        "form": "pó para inalação oral",
+        "page": 118
+      },
+      {
+        "name": "dipropionato de beclometasona",
+        "strength": "200 mcg/dose",
+        "form": "solução aerossol",
+        "page": 118
+      },
+      {
+        "name": "dipropionato de beclometasona",
+        "strength": "250 mcg/dose",
+        "form": "solução aerossol",
+        "page": 118
+      },
+      {
+        "name": "dipropionato de beclometasona",
+        "strength": "200 mcg/dose",
+        "form": "cápsula para inalação oral",
+        "page": 118
+      },
+      {
+        "name": "dipropionato de beclometasona",
+        "strength": "400 mcg/dose",
+        "form": "pó para inalação oral",
+        "page": 118
+      },
+      {
+        "name": "dipropionato de beclometasona",
+        "strength": "400 mcg/dose",
+        "form": "cápsula para inalação oral",
+        "page": 118
+      }
+    ],
+    "54": [
+      {
+        "name": "benzilpenicilina benzatina",
+        "strength": "600.000 UI",
+        "form": "pó para suspensão injetável",
+        "page": 62
+      },
+      {
+        "name": "benzilpenicilina benzatina",
+        "strength": "600.000 UI",
+        "form": "suspensão injetável",
+        "page": 62
+      },
+      {
+        "name": "benzilpenicilina benzatina",
+        "strength": "1.200.000 UI",
+        "form": "pó para suspensão injetável",
+        "page": 62
+      },
+      {
+        "name": "benzilpenicilina benzatina",
+        "strength": "1.200.000 UI",
+        "form": "suspensão injetável",
+        "page": 62
+      }
+    ],
+    "55": [
+      {
+        "name": "benzilpenicilina potássica",
+        "strength": "5.000.000 UI",
+        "form": "pó para solução injetável",
+        "page": 63
+      }
+    ],
+    "57": [
+      {
+        "name": "benznidazol",
+        "strength": "12,5 mg",
+        "form": "comprimido",
+        "page": 113
+      },
+      {
+        "name": "benznidazol",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 113
+      }
+    ],
+    "59": [
+      {
+        "name": "beractanto (surfactante pulmonar)",
+        "strength": "25 mg/mL",
+        "form": "solução injetável intratecal ou intrabronquica",
+        "page": 116
+      }
+    ],
+    "61": [
+      {
+        "name": "bicarbonato de sódio",
+        "strength": "84 mg/mL (8,4%) equivalente a 1 mEq/mL",
+        "form": "solução injetável",
+        "page": 36
+      }
+    ],
+    "63": [
+      {
+        "name": "bimatoprosta",
+        "strength": "0,3 mg/mL (0,03%)",
+        "form": "solução oftálmica",
+        "page": 121
+      }
+    ],
+    "64": [
+      {
+        "name": "cloridrato de biperideno",
+        "strength": "4 mg",
+        "form": "comprimido de liberação prolongada",
+        "page": 102
+      },
+      {
+        "name": "cloridrato de biperideno",
+        "strength": "2 mg",
+        "form": "comprimido",
+        "page": 102
+      }
+    ],
+    "66": [
+      {
+        "name": "bosentana",
+        "strength": "62,5 mg",
+        "form": "comprimido",
+        "page": 44
+      },
+      {
+        "name": "bosentana",
+        "strength": "125 mg",
+        "form": "comprimido",
+        "page": 44
+      }
+    ],
+    "67": [
+      {
+        "name": "tartarato de brimonidina",
+        "strength": "2 mg/mL (0,2%)",
+        "form": "solução oftálmica",
+        "page": 122
+      }
+    ],
+    "68": [
+      {
+        "name": "brometo de ipratrópio",
+        "strength": "0,25 mg/mL",
+        "form": "solução para inalação",
+        "page": 116
+      },
+      {
+        "name": "brometo de ipratrópio",
+        "strength": "20 mcg/dose",
+        "form": "solução aerossol",
+        "page": 116
+      }
+    ],
+    "75": [
+      {
+        "name": "budesonida",
+        "strength": "32 mcg",
+        "form": "suspensão para inalação nasal",
+        "page": 117
+      },
+      {
+        "name": "budesonida",
+        "strength": "50 mcg",
+        "form": "suspensão para inalação nasal",
+        "page": 117
+      },
+      {
+        "name": "budesonida",
+        "strength": "64 mcg",
+        "form": "suspensão para inalação nasal",
+        "page": 117
+      },
+      {
+        "name": "budesonida",
+        "strength": "200 mcg",
+        "form": "aerossol oral",
+        "page": 117
+      },
+      {
+        "name": "budesonida",
+        "strength": "200 mcg",
+        "form": "cápsula inalatória",
+        "page": 117
+      },
+      {
+        "name": "budesonida",
+        "strength": "200 mcg",
+        "form": "pó inalatório",
+        "page": 117
+      },
+      {
+        "name": "budesonida",
+        "strength": "400 mcg",
+        "form": "cápsula inalatória",
+        "page": 117
+      }
+    ],
+    "76": [
+      {
+        "name": "cloridrato de bupivacaína",
+        "strength": "2,5 mg/mL (0,25%)",
+        "form": "solução injetável",
+        "page": 102
+      },
+      {
+        "name": "cloridrato de bupivacaína",
+        "strength": "5 mg/mL (0,50%)",
+        "form": "solução injetável",
+        "page": 102
+      }
+    ],
+    "78": [
+      {
+        "name": "cloridrato de bupropiona",
+        "strength": "150 mg",
+        "form": "comprimido de liberação prolongada",
+        "page": 103
+      }
+    ],
+    "80": [
+      {
+        "name": "calcipotriol",
+        "strength": "50 mcg/g (0,005%)",
+        "form": "pomada",
+        "page": 50
+      }
+    ],
+    "82": [
+      {
+        "name": "calcitriol",
+        "strength": "0,25 mcg",
+        "form": "cápsula",
+        "page": 27
+      }
+    ],
+    "84": [
+      {
+        "name": "captopril",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 44
+      }
+    ],
+    "85": [
+      {
+        "name": "carbamazepina",
+        "strength": "200 mg",
+        "form": "comprimido",
+        "page": 102
+      },
+      {
+        "name": "carbamazepina",
+        "strength": "400 mg",
+        "form": "comprimido",
+        "page": 102
+      },
+      {
+        "name": "carbamazepina",
+        "strength": "20 mg/mL",
+        "form": "suspensão oral",
+        "page": 102
+      }
+    ],
+    "87": [
+      {
+        "name": "carbonato de cálcio",
+        "strength": "1.250 mg (equivalente a 500 mg de cálcio elementar)",
+        "form": "comprimido",
+        "page": 27
+      }
+    ],
+    "89": [
+      {
+        "name": "carvão vegetal ativado",
+        "strength": "-",
+        "form": "pó para suspensão oral",
+        "page": 28
+      }
+    ],
+    "90": [
+      {
+        "name": "carvedilol",
+        "strength": "3,125 mg",
+        "form": "comprimido",
+        "page": 44
+      },
+      {
+        "name": "carvedilol",
+        "strength": "6,25 mg",
+        "form": "comprimido",
+        "page": 44
+      },
+      {
+        "name": "carvedilol",
+        "strength": "12,5 mg",
+        "form": "comprimido",
+        "page": 44
+      },
+      {
+        "name": "carvedilol",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 44
+      }
+    ],
+    "94": [
+      {
+        "name": "cefalexina",
+        "strength": "500 mg",
+        "form": "cápsula",
+        "page": 63
+      },
+      {
+        "name": "cefalexina",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 63
+      },
+      {
+        "name": "cefalexina",
+        "strength": "50 mg/mL",
+        "form": "suspensão oral",
+        "page": 63
+      }
+    ],
+    "98": [
+      {
+        "name": "cefotaxima sódica",
+        "strength": "500 mg",
+        "form": "pó para solução injetável",
+        "page": 63
+      }
+    ],
+    "109": [
+      {
+        "name": "cetoconazol",
+        "strength": "20 mg/mL (2%)",
+        "form": "xampu",
+        "page": 50
+      }
+    ],
+    "113": [
+      {
+        "name": "ciclosporina",
+        "strength": "10 mg",
+        "form": "cápsula",
+        "page": 92
+      },
+      {
+        "name": "ciclosporina",
+        "strength": "25 mg",
+        "form": "cápsula",
+        "page": 92
+      },
+      {
+        "name": "ciclosporina",
+        "strength": "50 mg",
+        "form": "cápsula",
+        "page": 92
+      },
+      {
+        "name": "ciclosporina",
+        "strength": "100 mg",
+        "form": "cápsula",
+        "page": 92
+      },
+      {
+        "name": "ciclosporina",
+        "strength": "50 mg",
+        "form": "solução injetável",
+        "page": 92
+      },
+      {
+        "name": "ciclosporina",
+        "strength": "100 mg/mL",
+        "form": "solução oral",
+        "page": 92
+      }
+    ],
+    "117": [
+      {
+        "name": "ciprofloxacino",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 64
+      },
+      {
+        "name": "ciprofloxacino",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 64
+      }
+    ],
+    "120": [
+      {
+        "name": "claritromicina",
+        "strength": "50 mg/mL",
+        "form": "grânulo para suspensão oral",
+        "page": 64
+      },
+      {
+        "name": "claritromicina",
+        "strength": "500 mg",
+        "form": "cápsula",
+        "page": 64
+      },
+      {
+        "name": "claritromicina",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 64
+      },
+      {
+        "name": "claritromicina",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 64
+      }
+    ],
+    "121": [
+      {
+        "name": "fosfato de clindamicina",
+        "strength": "10 mg/g",
+        "form": "solução tópica",
+        "page": 51
+      },
+      {
+        "name": "fosfato de clindamicina",
+        "strength": "10 mg/g",
+        "form": "gel",
+        "page": 51
+      },
+      {
+        "name": "cloridrato de clindamicina",
+        "strength": "150 mg",
+        "form": "cápsula",
+        "page": 65
+      },
+      {
+        "name": "cloridrato de clindamicina",
+        "strength": "300 mg",
+        "form": "cápsula",
+        "page": 65
+      }
+    ],
+    "123": [
+      {
+        "name": "clobazam",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 102
+      },
+      {
+        "name": "clobazam",
+        "strength": "20 mg",
+        "form": "comprimido",
+        "page": 102
+      }
+    ],
+    "125": [
+      {
+        "name": "cloridrato de clomipramina",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 103
+      },
+      {
+        "name": "cloridrato de clomipramina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 103
+      }
+    ],
+    "126": [
+      {
+        "name": "clonazepam",
+        "strength": "2,5 mg/mL",
+        "form": "solução oral",
+        "page": 102
+      }
+    ],
+    "130": [
+      {
+        "name": "cloreto de potássio",
+        "strength": "191 mg/mL (19,1%) equivalente a 2,56 mEq/mL",
+        "form": "solução injetável",
+        "page": 36
+      }
+    ],
+    "131": [
+      {
+        "name": "cloreto de sódio",
+        "strength": "200 mg/mL (20%) equivalente a 3,4 mEq/mL",
+        "form": "solução injetável",
+        "page": 36
+      },
+      {
+        "name": "cloreto de sódio",
+        "strength": "9 mg/mL (0,9%) equivalente a 0,154 mEq/mL",
+        "form": "solução injetável",
+        "page": 37
+      },
+      {
+        "name": "cloreto de sódio",
+        "strength": "9 mg/mL (0,9%)",
+        "form": "solução nasal",
+        "page": 117
+      }
+    ],
+    "133": [
+      {
+        "name": "cloridrato de clorpromazina",
+        "strength": "5 mg/mL",
+        "form": "solução injetável",
+        "page": 103
+      },
+      {
+        "name": "cloridrato de clorpromazina",
+        "strength": "40 mg/mL",
+        "form": "solução oral",
+        "page": 103
+      },
+      {
+        "name": "cloridrato de clorpromazina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 103
+      },
+      {
+        "name": "cloridrato de clorpromazina",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 103
+      }
+    ],
+    "135": [
+      {
+        "name": "fosfato de codeína",
+        "strength": "3 mg/mL",
+        "form": "solução oral",
+        "page": 119
+      },
+      {
+        "name": "fosfato de codeína",
+        "strength": "30 mg",
+        "form": "comprimido",
+        "page": 119
+      },
+      {
+        "name": "fosfato de codeína",
+        "strength": "60 mg",
+        "form": "comprimido",
+        "page": 119
+      },
+      {
+        "name": "fosfato de codeína",
+        "strength": "30 mg/mL",
+        "form": "solução injetável",
+        "page": 119
+      }
+    ],
+    "140": [
+      {
+        "name": "colistimetato de sódio",
+        "strength": "1.000.000 UI (80 mg)",
+        "form": "pó para solução para infusão e inalação",
+        "page": 65
+      },
+      {
+        "name": "colistimetato de sódio",
+        "strength": "2.000.000 UI (160 mg)",
+        "form": "pó para solução para infusão e inalação",
+        "page": 66
+      }
+    ],
+    "147": [
+      {
+        "name": "deferasirox",
+        "strength": "125 mg",
+        "form": "comprimido para suspensão",
+        "page": 125
+      },
+      {
+        "name": "deferasirox",
+        "strength": "250 mg",
+        "form": "comprimido para suspensão",
+        "page": 125
+      },
+      {
+        "name": "deferasirox",
+        "strength": "500 mg",
+        "form": "comprimido para suspensão",
+        "page": 125
+      }
+    ],
+    "152": [
+      {
+        "name": "acetato de desmopressina",
+        "strength": "0,1 mg/mL",
+        "form": "solução spray nasal",
+        "page": 56
+      },
+      {
+        "name": "acetato de desmopressina",
+        "strength": "4 mcg/mL",
+        "form": "solução injetável",
+        "page": 56
+      },
+      {
+        "name": "acetato de desmopressina",
+        "strength": "15 mcg/mL",
+        "form": "solução injetável",
+        "page": 56
+      },
+      {
+        "name": "acetato de desmopressina",
+        "strength": "0,1 mg",
+        "form": "comprimido",
+        "page": 56
+      },
+      {
+        "name": "acetato de desmopressina",
+        "strength": "0,2 mg",
+        "form": "comprimido",
+        "page": 56
+      }
+    ],
+    "154": [
+      {
+        "name": "dexametasona",
+        "strength": "1 mg/g (0,1%)",
+        "form": "creme dermatológico",
+        "page": 51
+      },
+      {
+        "name": "dexametasona",
+        "strength": "4 mg",
+        "form": "comprimido",
+        "page": 57
+      },
+      {
+        "name": "dexametasona",
+        "strength": "0,1 mg/mL",
+        "form": "elixir",
+        "page": 57
+      },
+      {
+        "name": "dexametasona",
+        "strength": "4 mg/mL",
+        "form": "solução injetável",
+        "page": 57
+      },
+      {
+        "name": "dexametasona",
+        "strength": "1 mg/g (0,1%)",
+        "form": "pomada oftálmica",
+        "page": 121
+      },
+      {
+        "name": "dexametasona",
+        "strength": "1 mg/mL (0,1%)",
+        "form": "suspensão oftálmica",
+        "page": 121
+      }
+    ],
+    "155": [
+      {
+        "name": "maleato de dexclorfeniramina",
+        "strength": "2 mg",
+        "form": "comprimido",
+        "page": 120
+      },
+      {
+        "name": "maleato de dexclorfeniramina",
+        "strength": "0,4 mg/mL",
+        "form": "solução oral",
+        "page": 120
+      },
+      {
+        "name": "maleato de dexclorfeniramina",
+        "strength": "0,4 mg/mL",
+        "form": "xarope",
+        "page": 120
+      }
+    ],
+    "158": [
+      {
+        "name": "diazepam",
+        "strength": "5 mg/mL",
+        "form": "solução injetável",
+        "page": 105
+      },
+      {
+        "name": "diazepam",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 105
+      },
+      {
+        "name": "diazepam",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 105
+      }
+    ],
+    "162": [
+      {
+        "name": "digoxina",
+        "strength": "0,25 mg",
+        "form": "comprimido",
+        "page": 46
+      },
+      {
+        "name": "digoxina",
+        "strength": "0,05 mg/mL",
+        "form": "elixir",
+        "page": 46
+      }
+    ],
+    "167": [
+      {
+        "name": "cloridrato de dobutamina",
+        "strength": "12,5 mg/mL",
+        "form": "solução injetável",
+        "page": 44
+      }
+    ],
+    "169": [
+      {
+        "name": "cloridrato de dopamina",
+        "strength": "5 mg/mL",
+        "form": "solução injetável",
+        "page": 45
+      }
+    ],
+    "171": [
+      {
+        "name": "doxiciclina",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 67
+      },
+      {
+        "name": "doxiciclina",
+        "strength": "100 mg",
+        "form": "pó para solução injetável",
+        "page": 67
+      },
+      {
+        "name": "doxiciclina",
+        "strength": "100 mg",
+        "form": "comprimido solúvel",
+        "page": 67
+      }
+    ],
+    "174": [
+      {
+        "name": "eculizumabe",
+        "strength": "10 mg/mL",
+        "form": "solução para diluição para infusão",
+        "page": 93
+      }
+    ],
+    "176": [
+      {
+        "name": "maleato de enalapril",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 47
+      },
+      {
+        "name": "maleato de enalapril",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 47
+      },
+      {
+        "name": "maleato de enalapril",
+        "strength": "20 mg",
+        "form": "comprimido",
+        "page": 47
+      }
+    ],
+    "177": [
+      {
+        "name": "enoxaparina sódica",
+        "strength": "40 mg/0,4 mL",
+        "form": "solução injetável",
+        "page": 38
+      },
+      {
+        "name": "enoxaparina sódica",
+        "strength": "60 mg/0,6 mL",
+        "form": "solução injetável",
+        "page": 38
+      }
+    ],
+    "186": [
+      {
+        "name": "espiramicina",
+        "strength": "1.500.000 UI",
+        "form": "comprimido",
+        "page": 68
+      }
+    ],
+    "187": [
+      {
+        "name": "espironolactona",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 46
+      },
+      {
+        "name": "espironolactona",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 46
+      }
+    ],
+    "188": [
+      {
+        "name": "cloridrato de etambutol",
+        "strength": "400 mg",
+        "form": "comprimido",
+        "page": 65
+      }
+    ],
+    "190": [
+      {
+        "name": "etossuximida",
+        "strength": "50 mg/mL",
+        "form": "xarope",
+        "page": 106
+      }
+    ],
+    "195": [
+      {
+        "name": "fenobarbital",
+        "strength": "100 mg/mL",
+        "form": "solução injetável",
+        "page": 106
+      },
+      {
+        "name": "fenobarbital",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 106
+      },
+      {
+        "name": "fenobarbital",
+        "strength": "40 mg/mL",
+        "form": "solução oral",
+        "page": 106
+      }
+    ],
+    "196": [
+      {
+        "name": "bromidrato de fenoterol",
+        "strength": "100 mcg/dose",
+        "form": "solução aerossol",
+        "page": 116
+      }
+    ],
+    "201": [
+      {
+        "name": "filgrastim",
+        "strength": "300 mcg",
+        "form": "solução injetável",
+        "page": 94
+      }
+    ],
+    "203": [
+      {
+        "name": "flucitosina",
+        "strength": "500 mg",
+        "form": "cápsula",
+        "page": 68
+      }
+    ],
+    "204": [
+      {
+        "name": "fluconazol",
+        "strength": "150 mg",
+        "form": "cápsula",
+        "page": 69
+      },
+      {
+        "name": "fluconazol",
+        "strength": "10 mg/mL",
+        "form": "suspensão oral",
+        "page": 69
+      },
+      {
+        "name": "fluconazol",
+        "strength": "100 mg",
+        "form": "cápsula",
+        "page": 69
+      },
+      {
+        "name": "fluconazol",
+        "strength": "2 mg/mL",
+        "form": "solução injetável",
+        "page": 69
+      }
+    ],
+    "205": [
+      {
+        "name": "acetato de fludrocortisona",
+        "strength": "0,1 mg",
+        "form": "comprimido",
+        "page": 56
+      }
+    ],
+    "206": [
+      {
+        "name": "flumazenil",
+        "strength": "0,1 mg/mL",
+        "form": "solução injetável",
+        "page": 125
+      }
+    ],
+    "207": [
+      {
+        "name": "cloridrato de fluoxetina",
+        "strength": "20 mg",
+        "form": "cápsula",
+        "page": 103
+      },
+      {
+        "name": "cloridrato de fluoxetina",
+        "strength": "20 mg",
+        "form": "comprimido",
+        "page": 103
+      }
+    ],
+    "210": [
+      {
+        "name": "fumarato de formoterol",
+        "strength": "12 mcg",
+        "form": "cápsula inalatória",
+        "page": 119
+      },
+      {
+        "name": "fumarato de formoterol",
+        "strength": "12 mcg",
+        "form": "pó inalatório",
+        "page": 119
+      }
+    ],
+    "212": [
+      {
+        "name": "furosemida",
+        "strength": "40 mg",
+        "form": "comprimido",
+        "page": 47
+      },
+      {
+        "name": "furosemida",
+        "strength": "10 mg/mL",
+        "form": "solução injetável",
+        "page": 47
+      }
+    ],
+    "213": [
+      {
+        "name": "gabapentina",
+        "strength": "300 mg",
+        "form": "cápsula",
+        "page": 106
+      },
+      {
+        "name": "gabapentina",
+        "strength": "400 mg",
+        "form": "cápsula",
+        "page": 106
+      }
+    ],
+    "214": [
+      {
+        "name": "galsulfase",
+        "strength": "5 mg",
+        "form": "solução injetável",
+        "page": 29
+      }
+    ],
+    "216": [
+      {
+        "name": "sulfato de gentamicina",
+        "strength": "40 mg/mL",
+        "form": "solução injetável",
+        "page": 82
+      },
+      {
+        "name": "gentamicina",
+        "strength": "5 mg/g",
+        "form": "pomada oftálmica",
+        "page": 121
+      },
+      {
+        "name": "gentamicina",
+        "strength": "5 mg/mL",
+        "form": "solução oftálmica",
+        "page": 121
+      }
+    ],
+    "218": [
+      {
+        "name": "glicose",
+        "strength": "50 mg/mL (5%)",
+        "form": "solução injetável",
+        "page": 126
+      },
+      {
+        "name": "glicose",
+        "strength": "100 mg/mL (10%)",
+        "form": "solução injetável",
+        "page": 126
+      },
+      {
+        "name": "glicose",
+        "strength": "500 mg/mL (50%)",
+        "form": "solução injetável",
+        "page": 126
+      }
+    ],
+    "223": [
+      {
+        "name": "haloperidol",
+        "strength": "1 mg",
+        "form": "comprimido",
+        "page": 107
+      },
+      {
+        "name": "haloperidol",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 107
+      },
+      {
+        "name": "haloperidol",
+        "strength": "50 mg/mL",
+        "form": "solução injetável",
+        "page": 107
+      },
+      {
+        "name": "haloperidol",
+        "strength": "2 mg/mL",
+        "form": "solução oral",
+        "page": 107
+      },
+      {
+        "name": "haloperidol",
+        "strength": "5 mg/mL",
+        "form": "solução injetável",
+        "page": 107
+      }
+    ],
+    "226": [
+      {
+        "name": "cloridrato de hidralazina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 45
+      },
+      {
+        "name": "cloridrato de hidralazina",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 45
+      }
+    ],
+    "227": [
+      {
+        "name": "hidroclorotiazida",
+        "strength": "12,5 mg",
+        "form": "comprimido",
+        "page": 47
+      },
+      {
+        "name": "hidroclorotiazida",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 47
+      }
+    ],
+    "228": [
+      {
+        "name": "acetato de hidrocortisona",
+        "strength": "10 mg/g (1%)",
+        "form": "creme",
+        "page": 50
+      },
+      {
+        "name": "succinato sódico de hidrocortisona",
+        "strength": "100 mg",
+        "form": "pó para solução injetável",
+        "page": 60
+      },
+      {
+        "name": "succinato sódico de hidrocortisona",
+        "strength": "500 mg",
+        "form": "pó para solução injetável",
+        "page": 60
+      }
+    ],
+    "229": [
+      {
+        "name": "sulfato de hidroxicloroquina",
+        "strength": "400 mg",
+        "form": "comprimido",
+        "page": 115
+      }
+    ],
+    "230": [
+      {
+        "name": "hidróxido de alumínio",
+        "strength": "230 mg",
+        "form": "comprimido",
+        "page": 30
+      },
+      {
+        "name": "hidróxido de alumínio",
+        "strength": "60 mg/mL",
+        "form": "suspensão oral",
+        "page": 30
+      }
+    ],
+    "235": [
+      {
+        "name": "cloridrato de hidroxocobalamina",
+        "strength": "5 g",
+        "form": "pó para solução injetável",
+        "page": 123
+      }
+    ],
+    "236": [
+      {
+        "name": "ibuprofeno",
+        "strength": "200 mg",
+        "form": "comprimido",
+        "page": 99
+      },
+      {
+        "name": "ibuprofeno",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 99
+      },
+      {
+        "name": "ibuprofeno",
+        "strength": "600 mg",
+        "form": "cápsula",
+        "page": 99
+      },
+      {
+        "name": "ibuprofeno",
+        "strength": "600 mg",
+        "form": "comprimido",
+        "page": 99
+      },
+      {
+        "name": "ibuprofeno",
+        "strength": "50 mg/mL",
+        "form": "suspensão oral",
+        "page": 99
+      }
+    ],
+    "238": [
+      {
+        "name": "idursulfase",
+        "strength": "2 mg/mL",
+        "form": "solução injetável",
+        "page": 30
+      }
+    ],
+    "239": [
+      {
+        "name": "iloprosta",
+        "strength": "10 mcg/mL",
+        "form": "solução inalatória",
+        "page": 40
+      }
+    ],
+    "240": [
+      {
+        "name": "imiglucerase",
+        "strength": "400 U",
+        "form": "pó para solução injetável",
+        "page": 30
+      }
+    ],
+    "244": [
+      {
+        "name": "imunoglobulina humana antirrábica",
+        "strength": "150 UI/mL",
+        "form": "solução injetável",
+        "page": 72
+      }
+    ],
+    "255": [
+      {
+        "name": "Iodeto de potássio",
+        "strength": "130 mg",
+        "form": "comprimido",
+        "page": 126
+      },
+      {
+        "name": "Iodeto de potássio",
+        "strength": "20 mg/mL",
+        "form": "xarope",
+        "page": 126
+      }
+    ],
+    "258": [
+      {
+        "name": "isoniazida",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 72
+      },
+      {
+        "name": "isoniazida",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 72
+      }
+    ],
+    "260": [
+      {
+        "name": "itraconazol",
+        "strength": "10 mg/mL",
+        "form": "solução oral",
+        "page": 72
+      },
+      {
+        "name": "itraconazol",
+        "strength": "100 mg",
+        "form": "cápsula",
+        "page": 72
+      }
+    ],
+    "261": [
+      {
+        "name": "ivermectina",
+        "strength": "6 mg",
+        "form": "comprimido",
+        "page": 114
+      }
+    ],
+    "264": [
+      {
+        "name": "lactulose",
+        "strength": "667 mg/mL",
+        "form": "xarope",
+        "page": 31
+      }
+    ],
+    "265": [
+      {
+        "name": "lamotrigina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 107
+      },
+      {
+        "name": "lamotrigina",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 107
+      },
+      {
+        "name": "lamotrigina",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 107
+      }
+    ],
+    "267": [
+      {
+        "name": "laronidase",
+        "strength": "0,58 mg/mL",
+        "form": "solução injetável",
+        "page": 31
+      }
+    ],
+    "268": [
+      {
+        "name": "levetiracetam",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 108
+      },
+      {
+        "name": "levetiracetam",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 108
+      },
+      {
+        "name": "levetiracetam",
+        "strength": "750 mg",
+        "form": "comprimido",
+        "page": 108
+      },
+      {
+        "name": "levetiracetam",
+        "strength": "1.000 mg",
+        "form": "comprimido",
+        "page": 108
+      },
+      {
+        "name": "levetiracetam",
+        "strength": "100 mg/mL",
+        "form": "solução oral",
+        "page": 108
+      }
+    ],
+    "272": [
+      {
+        "name": "levofloxacino",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 73
+      },
+      {
+        "name": "levofloxacino",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 73
+      }
+    ],
+    "275": [
+      {
+        "name": "levotiroxina sódica",
+        "strength": "12,5 mcg",
+        "form": "comprimido",
+        "page": 58
+      },
+      {
+        "name": "levotiroxina sódica",
+        "strength": "25 mcg",
+        "form": "comprimido",
+        "page": 58
+      },
+      {
+        "name": "levotiroxina sódica",
+        "strength": "37,5 mcg",
+        "form": "comprimido",
+        "page": 58
+      },
+      {
+        "name": "levotiroxina sódica",
+        "strength": "50 mcg",
+        "form": "comprimido",
+        "page": 58
+      },
+      {
+        "name": "levotiroxina sódica",
+        "strength": "100 mcg",
+        "form": "comprimido",
+        "page": 58
+      }
+    ],
+    "276": [
+      {
+        "name": "cloridrato de lidocaína",
+        "strength": "10 mg/mL (1%)",
+        "form": "solução injetável",
+        "page": 45
+      },
+      {
+        "name": "cloridrato de lidocaína",
+        "strength": "20 mg/mL (2%)",
+        "form": "solução injetável",
+        "page": 45
+      },
+      {
+        "name": "cloridrato de lidocaína",
+        "strength": "20 mg/g (2%)",
+        "form": "gel",
+        "page": 50
+      },
+      {
+        "name": "cloridrato de lidocaína",
+        "strength": "100 mg/mL (10%)",
+        "form": "solução spray",
+        "page": 103
+      }
+    ],
+    "277": [
+      {
+        "name": "linezolida",
+        "strength": "600 mg",
+        "form": "comprimido",
+        "page": 73
+      },
+      {
+        "name": "linezolida",
+        "strength": "2 mg/mL",
+        "form": "solução para infusão",
+        "page": 73
+      }
+    ],
+    "281": [
+      {
+        "name": "loratadina",
+        "strength": "1 mg/mL",
+        "form": "xarope",
+        "page": 119
+      },
+      {
+        "name": "loratadina",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 119
+      }
+    ],
+    "283": [
+      {
+        "name": "losartana potássica",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 47
+      }
+    ],
+    "290": [
+      {
+        "name": "mesalazina",
+        "strength": "400 mg",
+        "form": "comprimido",
+        "page": 31
+      },
+      {
+        "name": "mesalazina",
+        "strength": "500 mg",
+        "form": "comprimido de liberação prolongada",
+        "page": 31
+      },
+      {
+        "name": "mesalazina",
+        "strength": "800 mg",
+        "form": "comprimido",
+        "page": 31
+      },
+      {
+        "name": "mesalazina",
+        "strength": "250 mg",
+        "form": "supositório retal",
+        "page": 31
+      },
+      {
+        "name": "mesalazina",
+        "strength": "500 mg",
+        "form": "supositório retal",
+        "page": 31
+      },
+      {
+        "name": "mesalazina",
+        "strength": "1.000 mg",
+        "form": "supositório retal",
+        "page": 31
+      },
+      {
+        "name": "mesalazina",
+        "strength": "10 mg/mL",
+        "form": "enema",
+        "page": 31
+      },
+      {
+        "name": "mesalazina",
+        "strength": "2 g",
+        "form": "granulado revestido de liberação prolongada",
+        "page": 31
+      }
+    ],
+    "291": [
+      {
+        "name": "cloridrato de metadona",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 104
+      },
+      {
+        "name": "cloridrato de metadona",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 104
+      },
+      {
+        "name": "cloridrato de metadona",
+        "strength": "10 mg/mL",
+        "form": "solução injetável",
+        "page": 104
+      }
+    ],
+    "292": [
+      {
+        "name": "cloridrato de metformina",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 28
+      },
+      {
+        "name": "cloridrato de metformina",
+        "strength": "850 mg",
+        "form": "comprimido",
+        "page": 28
+      }
+    ],
+    "296": [
+      {
+        "name": "cloridrato de metoclopramida",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 28
+      },
+      {
+        "name": "cloridrato de metoclopramida",
+        "strength": "5 mg/mL",
+        "form": "solução injetável",
+        "page": 28
+      },
+      {
+        "name": "cloridrato de metoclopramida",
+        "strength": "4 mg/mL",
+        "form": "solução oral",
+        "page": 28
+      }
+    ],
+    "297": [
+      {
+        "name": "succinato de metoprolol",
+        "strength": "25 mg",
+        "form": "comprimido de liberação prolongada",
+        "page": 49
+      },
+      {
+        "name": "succinato de metoprolol",
+        "strength": "50 mg",
+        "form": "comprimido de liberação prolongada",
+        "page": 49
+      },
+      {
+        "name": "succinato de metoprolol",
+        "strength": "100 mg",
+        "form": "comprimido de liberação prolongada",
+        "page": 49
+      },
+      {
+        "name": "tartarato de metoprolol",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 49
+      }
+    ],
+    "300": [
+      {
+        "name": "nitrato de miconazol",
+        "strength": "2% (20 mg/g)",
+        "form": "gel oral",
+        "page": 32
+      },
+      {
+        "name": "nitrato de miconazol",
+        "strength": "2% (20 mg/g)",
+        "form": "loção",
+        "page": 51
+      },
+      {
+        "name": "nitrato de miconazol",
+        "strength": "2% (20 mg/g)",
+        "form": "pó",
+        "page": 51
+      },
+      {
+        "name": "nitrato de miconazol",
+        "strength": "2% (20 mg/g)",
+        "form": "creme",
+        "page": 51
+      },
+      {
+        "name": "nitrato de miconazol",
+        "strength": "2% (20 mg/g)",
+        "form": "creme vaginal",
+        "page": 55
+      }
+    ],
+    "301": [
+      {
+        "name": "midazolam",
+        "strength": "2 mg/mL",
+        "form": "solução oral",
+        "page": 108
+      }
+    ],
+    "304": [
+      {
+        "name": "cloridrato de minociclina",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 65
+      }
+    ],
+    "305": [
+      {
+        "name": "misoprostol",
+        "strength": "25 mcg",
+        "form": "comprimido vaginal",
+        "page": 55
+      },
+      {
+        "name": "misoprostol",
+        "strength": "200 mcg",
+        "form": "comprimido vaginal",
+        "page": 55
+      }
+    ],
+    "308": [
+      {
+        "name": "sulfato de morfina",
+        "strength": "10 mg/mL",
+        "form": "solução injetável",
+        "page": 111
+      },
+      {
+        "name": "sulfato de morfina",
+        "strength": "10 mg/mL",
+        "form": "solução oral",
+        "page": 111
+      },
+      {
+        "name": "sulfato de morfina",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 111
+      },
+      {
+        "name": "sulfato de morfina",
+        "strength": "30 mg",
+        "form": "comprimido",
+        "page": 111
+      },
+      {
+        "name": "sulfato de morfina",
+        "strength": "30 mg",
+        "form": "cápsula de liberação prolongada",
+        "page": 111
+      },
+      {
+        "name": "sulfato de morfina",
+        "strength": "60 mg",
+        "form": "cápsula de liberação prolongada",
+        "page": 111
+      },
+      {
+        "name": "sulfato de morfina",
+        "strength": "100 mg",
+        "form": "cápsula de liberação prolongada",
+        "page": 111
+      }
+    ],
+    "309": [
+      {
+        "name": "cloridrato de moxifloxacino",
+        "strength": "400 mg",
+        "form": "comprimido",
+        "page": 65
+      }
+    ],
+    "311": [
+      {
+        "name": "cloridrato de naloxona",
+        "strength": "0,4 mg/mL",
+        "form": "solução injetável",
+        "page": 124
+      }
+    ],
+    "312": [
+      {
+        "name": "naproxeno",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 100
+      },
+      {
+        "name": "naproxeno",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 100
+      }
+    ],
+    "316": [
+      {
+        "name": "nifedipino",
+        "strength": "10 mg",
+        "form": "cápsula",
+        "page": 48
+      },
+      {
+        "name": "nifedipino",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 48
+      }
+    ],
+    "318": [
+      {
+        "name": "nistatina",
+        "strength": "100.000 UI/mL",
+        "form": "suspensão oral",
+        "page": 32
+      }
+    ],
+    "321": [
+      {
+        "name": "nitrofurantoína",
+        "strength": "100 mg",
+        "form": "cápsula",
+        "page": 74
+      },
+      {
+        "name": "nitrofurantoína",
+        "strength": "5 mg/mL",
+        "form": "suspensão oral",
+        "page": 74
+      }
+    ],
+    "325": [
+      {
+        "name": "cloridrato de nortriptilina",
+        "strength": "10 mg",
+        "form": "cápsula",
+        "page": 104
+      },
+      {
+        "name": "cloridrato de nortriptilina",
+        "strength": "25 mg",
+        "form": "cápsula",
+        "page": 104
+      },
+      {
+        "name": "cloridrato de nortriptilina",
+        "strength": "50 mg",
+        "form": "cápsula",
+        "page": 104
+      },
+      {
+        "name": "cloridrato de nortriptilina",
+        "strength": "75 mg",
+        "form": "cápsula",
+        "page": 104
+      }
+    ],
+    "326": [
+      {
+        "name": "acetato de octreotida",
+        "strength": "10 mg",
+        "form": "pó para suspensão injetável",
+        "page": 57
+      },
+      {
+        "name": "acetato de octreotida",
+        "strength": "20 mg",
+        "form": "pó para suspensão injetável",
+        "page": 57
+      },
+      {
+        "name": "acetato de octreotida",
+        "strength": "30 mg",
+        "form": "pó para suspensão injetável",
+        "page": 57
+      },
+      {
+        "name": "acetato de octreotida",
+        "strength": "0,1 mg/mL",
+        "form": "solução injetável",
+        "page": 57
+      }
+    ],
+    "327": [
+      {
+        "name": "olanzapina",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 109
+      },
+      {
+        "name": "olanzapina",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 109
+      }
+    ],
+    "328": [
+      {
+        "name": "óleo mineral",
+        "strength": "-",
+        "form": "óleo para uso oral",
+        "page": 32
+      }
+    ],
+    "330": [
+      {
+        "name": "omalizumabe",
+        "strength": "150 mg",
+        "form": "pó para solução injetável",
+        "page": 120
+      },
+      {
+        "name": "omalizumabe",
+        "strength": "150 mg",
+        "form": "solução injetável",
+        "page": 120
+      }
+    ],
+    "331": [
+      {
+        "name": "omeprazol",
+        "strength": "10 mg",
+        "form": "cápsula",
+        "page": 32
+      },
+      {
+        "name": "omeprazol",
+        "strength": "20 mg",
+        "form": "cápsula",
+        "page": 32
+      }
+    ],
+    "332": [
+      {
+        "name": "cloridrato de ondansetrona",
+        "strength": "4 mg",
+        "form": "comprimido",
+        "page": 28
+      },
+      {
+        "name": "cloridrato de ondansetrona",
+        "strength": "4 mg",
+        "form": "comprimido orodispersível",
+        "page": 28
+      },
+      {
+        "name": "cloridrato de ondansetrona",
+        "strength": "8 mg",
+        "form": "comprimido",
+        "page": 28
+      },
+      {
+        "name": "cloridrato de ondansetrona",
+        "strength": "8 mg",
+        "form": "comprimido orodispersível",
+        "page": 28
+      }
+    ],
+    "333": [
+      {
+        "name": "fosfato de oseltamivir",
+        "strength": "30 mg",
+        "form": "cápsula",
+        "page": 69
+      },
+      {
+        "name": "fosfato de oseltamivir",
+        "strength": "45 mg",
+        "form": "cápsula",
+        "page": 69
+      },
+      {
+        "name": "fosfato de oseltamivir",
+        "strength": "75 mg",
+        "form": "cápsula",
+        "page": 69
+      }
+    ],
+    "339": [
+      {
+        "name": "palivizumabe",
+        "strength": "100 mg/mL (frasco de 0,5 mL e 1 mL)",
+        "form": "solução injetável",
+        "page": 74
+      }
+    ],
+    "341": [
+      {
+        "name": "paracetamol",
+        "strength": "200 mg/mL",
+        "form": "solução oral",
+        "page": 109
+      },
+      {
+        "name": "paracetamol",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 109
+      }
+    ],
+    "342": [
+      {
+        "name": "penicilamina",
+        "strength": "250 mg",
+        "form": "cápsula",
+        "page": 100
+      }
+    ],
+    "343": [
+      {
+        "name": "permetrina",
+        "strength": "10 mg/g (1%) 10 mg/mL (1%)",
+        "form": "loção",
+        "page": 114
+      },
+      {
+        "name": "permetrina",
+        "strength": "50 mg/g (5%) 50 mg/mL (5%)",
+        "form": "loção",
+        "page": 114
+      }
+    ],
+    "346": [
+      {
+        "name": "cloridrato de pilocarpina",
+        "strength": "20 mg/mL (2%)",
+        "form": "solução oftálmica",
+        "page": 121
+      }
+    ],
+    "349": [
+      {
+        "name": "pirazinamida",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 74
+      },
+      {
+        "name": "pirazinamida",
+        "strength": "30 mg/mL (3%)",
+        "form": "suspensão oral",
+        "page": 74
+      },
+      {
+        "name": "pirazinamida",
+        "strength": "150 mg",
+        "form": "comprimido dispersível",
+        "page": 74
+      }
+    ],
+    "351": [
+      {
+        "name": "cloridrato de piridoxina",
+        "strength": "40 mg",
+        "form": "comprimido",
+        "page": 29
+      },
+      {
+        "name": "cloridrato de piridoxina",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 29
+      },
+      {
+        "name": "cloridrato de piridoxina",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 29
+      }
+    ],
+    "352": [
+      {
+        "name": "pirimetamina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 115
+      }
+    ],
+    "360": [
+      {
+        "name": "praziquantel",
+        "strength": "600 mg",
+        "form": "comprimido",
+        "page": 115
+      }
+    ],
+    "362": [
+      {
+        "name": "prednisona",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 58
+      },
+      {
+        "name": "prednisona",
+        "strength": "20 mg",
+        "form": "comprimido",
+        "page": 58
+      }
+    ],
+    "364": [
+      {
+        "name": "primidona",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 109
+      },
+      {
+        "name": "primidona",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 109
+      }
+    ],
+    "366": [
+      {
+        "name": "cloridrato de prometazina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 117
+      },
+      {
+        "name": "cloridrato de prometazina",
+        "strength": "25 mg/mL",
+        "form": "solução injetável",
+        "page": 117
+      }
+    ],
+    "367": [
+      {
+        "name": "propiltiouracila",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 58
+      }
+    ],
+    "369": [
+      {
+        "name": "cloridrato de propranolol",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 45
+      },
+      {
+        "name": "cloridrato de propranolol",
+        "strength": "40 mg",
+        "form": "comprimido",
+        "page": 45
+      }
+    ],
+    "370": [
+      {
+        "name": "cloridrato de protamina",
+        "strength": "10 mg/mL",
+        "form": "solução injetável",
+        "page": 124
+      }
+    ],
+    "371": [
+      {
+        "name": "hemifumarato de quetiapina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 107
+      },
+      {
+        "name": "hemifumarato de quetiapina",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 107
+      },
+      {
+        "name": "hemifumarato de quetiapina",
+        "strength": "200 mg",
+        "form": "comprimido",
+        "page": 107
+      },
+      {
+        "name": "hemifumarato de quetiapina",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 107
+      }
+    ],
+    "376": [
+      {
+        "name": "ribavirina",
+        "strength": "250 mg",
+        "form": "cápsula",
+        "page": 75
+      }
+    ],
+    "378": [
+      {
+        "name": "risperidona",
+        "strength": "1 mg/mL",
+        "form": "solução oral",
+        "page": 110
+      },
+      {
+        "name": "risperidona",
+        "strength": "1 mg",
+        "form": "comprimido",
+        "page": 110
+      },
+      {
+        "name": "risperidona",
+        "strength": "2 mg",
+        "form": "comprimido",
+        "page": 110
+      },
+      {
+        "name": "risperidona",
+        "strength": "3 mg",
+        "form": "comprimido",
+        "page": 110
+      }
+    ],
+    "381": [
+      {
+        "name": "sulfato de salbutamol",
+        "strength": "100 mcg/dose",
+        "form": "suspensão aerossol",
+        "page": 120
+      },
+      {
+        "name": "sulfato de salbutamol",
+        "strength": "5 mg/mL",
+        "form": "solução para inalação",
+        "page": 120
+      },
+      {
+        "name": "sulfato de salbutamol",
+        "strength": "0,5 mg/mL",
+        "form": "solução injetável",
+        "page": 120
+      }
+    ],
+    "386": [
+      {
+        "name": "citrato de sildenafila",
+        "strength": "20 mg",
+        "form": "comprimido",
+        "page": 45
+      },
+      {
+        "name": "citrato de sildenafila",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 45
+      },
+      {
+        "name": "citrato de sildenafila",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 45
+      }
+    ],
+    "388": [
+      {
+        "name": "sinvastatina",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 49
+      },
+      {
+        "name": "sinvastatina",
+        "strength": "20 mg",
+        "form": "comprimido",
+        "page": 49
+      },
+      {
+        "name": "sinvastatina",
+        "strength": "40 mg",
+        "form": "comprimido",
+        "page": 49
+      }
+    ],
+    "390": [
+      {
+        "name": "somatropina",
+        "strength": "4 UI",
+        "form": "solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "4 UI",
+        "form": "pó para solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "12 UI",
+        "form": "solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "12 UI",
+        "form": "pó para solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "15 UI",
+        "form": "solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "15 UI",
+        "form": "pó para solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "16 UI",
+        "form": "solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "16 UI",
+        "form": "pó para solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "18 UI",
+        "form": "solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "18 UI",
+        "form": "pó para solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "24 UI",
+        "form": "solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "24 UI",
+        "form": "pó para solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "30 UI",
+        "form": "solução injetável",
+        "page": 59
+      },
+      {
+        "name": "somatropina",
+        "strength": "30 UI",
+        "form": "pó para solução injetável",
+        "page": 59
+      }
+    ],
+    "391": [
+      {
+        "name": "soro antiaracnídico (Loxosceles, Phoneutria e Tityus)",
+        "strength": "cada mL contém imunoglobulinas que neutralizam, no mínimo, 1,5 Dose Mínima Mortal (DMM) de veneno de Tityus serrulatus (1,5 DMM/ mL), 1,5 DMM de veneno de Phoneutria nigriventer (1,5 DMM/mL) e 15 DMN (Dose Mínima Necrosante) de veneno de Loxosceles gaucho (15 DMN/mL)",
+        "form": "solução injetável",
+        "page": 77
+      }
+    ],
+    "392": [
+      {
+        "name": "soro antibotrópico (pentavalente)",
+        "strength": "cada mL contém imunoglobulinas (IgG) que neutralizam, no mínimo, 5 mg de veneno de Bothrops jararaca (5 mg/mL)",
+        "form": "solução injetável",
+        "page": 77
+      }
+    ],
+    "394": [
+      {
+        "name": "soro anticrotálico",
+        "strength": "cada mL contém imunoglobulinas que neutralizam, no mínimo, 1,5 mg de veneno Crotalus durissus terrificus (1,5 mg/mL)",
+        "form": "solução injetável",
+        "page": 79
+      }
+    ],
+    "395": [
+      {
+        "name": "soro antidiftérico",
+        "strength": "cada mL contém imunoglobulinas que neutralizam, no mínimo, 1.000 UI de toxina diftérica (1.000 UI/mL)",
+        "form": "solução injetável",
+        "page": 79
+      }
+    ],
+    "396": [
+      {
+        "name": "soro antielapídico (bivalente)",
+        "strength": "cada mL contém imunoglobulinas que neutralizam, no mínimo, 1,5 mg de veneno de Micrurus frontalis (1,5 mg/mL)",
+        "form": "solução injetável",
+        "page": 80
+      }
+    ],
+    "397": [
+      {
+        "name": "soro antiescorpiônico",
+        "strength": "cada mL contém imunoglobulinas que neutralizam, no mínimo 1,5 DMM (Dose Mínima Mortal) de veneno de Tityus serrulatus (1,5 DMM/mL)",
+        "form": "solução injetável",
+        "page": 80
+      }
+    ],
+    "398": [
+      {
+        "name": "soro antitetânico",
+        "strength": "cada mL contém imunoglobulinas que neutralizam, no mínimo, 1.000 UI de toxina tetânica",
+        "form": "solução injetável",
+        "page": 81
+      }
+    ],
+    "404": [
+      {
+        "name": "sulfadiazina",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 81
+      }
+    ],
+    "405": [
+      {
+        "name": "sulfadiazina de prata",
+        "strength": "10 mg/g (1%)",
+        "form": "creme",
+        "page": 52
+      }
+    ],
+    "406": [
+      {
+        "name": "sulfametoxazol + trimetoprima",
+        "strength": "40 mg/mL + 8 mg/mL",
+        "form": "suspensão oral",
+        "page": 82
+      },
+      {
+        "name": "sulfametoxazol + trimetoprima",
+        "strength": "80 mg/mL + 16 mg/mL",
+        "form": "solução injetável",
+        "page": 82
+      },
+      {
+        "name": "sulfametoxazol + trimetoprima",
+        "strength": "400 mg + 80 mg",
+        "form": "comprimido",
+        "page": 82
+      }
+    ],
+    "407": [
+      {
+        "name": "sulfassalazina",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 33
+      }
+    ],
+    "408": [
+      {
+        "name": "sulfato de magnésio",
+        "strength": "-",
+        "form": "pó para solução oral",
+        "page": 33
+      },
+      {
+        "name": "sulfato de magnésio",
+        "strength": "10% (0,81 mEq/mL Mg++)",
+        "form": "solução injetável",
+        "page": 33
+      },
+      {
+        "name": "sulfato de magnésio",
+        "strength": "50% (4,05 mEq/mL Mg++)",
+        "form": "solução injetável",
+        "page": 33
+      }
+    ],
+    "409": [
+      {
+        "name": "sulfato de zinco",
+        "strength": "200 mcg/mL",
+        "form": "solução injetável",
+        "page": 33
+      },
+      {
+        "name": "sulfato de zinco",
+        "strength": "10 mg",
+        "form": "comprimido mastigável",
+        "page": 33
+      },
+      {
+        "name": "sulfato de zinco",
+        "strength": "equivalente a 4 mg/mL de zinco elementar",
+        "form": "xarope",
+        "page": 33
+      }
+    ],
+    "410": [
+      {
+        "name": "sulfato ferroso",
+        "strength": "Equivalente a 5 mg/mL de ferro elementar",
+        "form": "xarope",
+        "page": 42
+      },
+      {
+        "name": "sulfato ferroso",
+        "strength": "Equivalente a 25 mg/mL de ferro elementar",
+        "form": "solução oral",
+        "page": 42
+      },
+      {
+        "name": "sulfato ferroso",
+        "strength": "Equivalente a 40 mg de ferro elementar",
+        "form": "comprimido",
+        "page": 42
+      }
+    ],
+    "411": [
+      {
+        "name": "tacrolimo",
+        "strength": "1 mg",
+        "form": "cápsula",
+        "page": 97
+      },
+      {
+        "name": "tacrolimo",
+        "strength": "5 mg",
+        "form": "cápsula",
+        "page": 97
+      },
+      {
+        "name": "tacrolimo",
+        "strength": "5 mg/mL",
+        "form": "solução injetável",
+        "page": 97
+      }
+    ],
+    "414": [
+      {
+        "name": "tenecteplase",
+        "strength": "40 mg",
+        "form": "pó para solução injetável",
+        "page": 42
+      },
+      {
+        "name": "tenecteplase",
+        "strength": "50 mg",
+        "form": "pó para solução injetável",
+        "page": 42
+      }
+    ],
+    "419": [
+      {
+        "name": "cloridrato de tetraciclina",
+        "strength": "500 mg",
+        "form": "cápsula",
+        "page": 65
+      },
+      {
+        "name": "cloridrato de tetraciclina",
+        "strength": "5 mg/g",
+        "form": "pomada oftálmica",
+        "page": 121
+      }
+    ],
+    "421": [
+      {
+        "name": "tiamazol",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 60
+      },
+      {
+        "name": "tiamazol",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 60
+      }
+    ],
+    "422": [
+      {
+        "name": "cloridrato de tiamina",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 29
+      }
+    ],
+    "425": [
+      {
+        "name": "maleato de timolol",
+        "strength": "2,5 mg/mL (0,25%)",
+        "form": "solução oftálmica",
+        "page": 122
+      },
+      {
+        "name": "maleato de timolol",
+        "strength": "5 mg/mL (0,5%)",
+        "form": "solução oftálmica",
+        "page": 122
+      }
+    ],
+    "429": [
+      {
+        "name": "tobramicina",
+        "strength": "300 mg",
+        "form": "solução inalatória",
+        "page": 83
+      }
+    ],
+    "430": [
+      {
+        "name": "tocilizumabe",
+        "strength": "20 mg/mL",
+        "form": "solução injetável",
+        "page": 98
+      }
+    ],
+    "432": [
+      {
+        "name": "topiramato",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 112
+      },
+      {
+        "name": "topiramato",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 112
+      },
+      {
+        "name": "topiramato",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 112
+      }
+    ],
+    "440": [
+      {
+        "name": "varfarina sódica",
+        "strength": "1 mg",
+        "form": "comprimido",
+        "page": 42
+      },
+      {
+        "name": "varfarina sódica",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 42
+      }
+    ],
+    "442": [
+      {
+        "name": "cloridrato de verapamil",
+        "strength": "80 mg",
+        "form": "comprimido",
+        "page": 46
+      },
+      {
+        "name": "cloridrato de verapamil",
+        "strength": "2,5 mg/mL",
+        "form": "solução injetável",
+        "page": 46
+      },
+      {
+        "name": "cloridrato de verapamil",
+        "strength": "120 mg",
+        "form": "comprimido",
+        "page": 46
+      }
+    ],
+    "443": [
+      {
+        "name": "vigabatrina",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 112
+      }
+    ],
+    "445": [
+      {
+        "name": "voriconazol",
+        "strength": "200 mg",
+        "form": "comprimido",
+        "page": 88
+      },
+      {
+        "name": "voriconazol",
+        "strength": "200 mg",
+        "form": "pó liófilizado para injetável",
+        "page": 88
+      }
+    ],
+    "452": [
+      {
+        "name": "cloridrato de memantina",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 104
+      }
+    ],
+    "453": [
+      {
+        "name": "rivastigmina",
+        "strength": "1,5 mg",
+        "form": "cápsula",
+        "page": 110
+      },
+      {
+        "name": "rivastigmina",
+        "strength": "3 mg",
+        "form": "cápsula",
+        "page": 110
+      },
+      {
+        "name": "rivastigmina",
+        "strength": "4,5 mg",
+        "form": "cápsula",
+        "page": 110
+      },
+      {
+        "name": "rivastigmina",
+        "strength": "6 mg",
+        "form": "cápsula",
+        "page": 110
+      },
+      {
+        "name": "rivastigmina",
+        "strength": "2 mg/mL",
+        "form": "solução oral",
+        "page": 110
+      },
+      {
+        "name": "rivastigmina",
+        "strength": "9 mg",
+        "form": "adesivo transdérmico",
+        "page": 110
+      },
+      {
+        "name": "rivastigmina",
+        "strength": "18 mg",
+        "form": "adesivo transdérmico",
+        "page": 110
+      }
+    ],
+    "454": [
+      {
+        "name": "cloridrato de donepezila",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 103
+      },
+      {
+        "name": "cloridrato de donepezila",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 103
+      }
+    ],
+    "457": [
+      {
+        "name": "mepolizumabe",
+        "strength": "40 mg/0,4 mL",
+        "form": "solução injetável",
+        "page": 120
+      },
+      {
+        "name": "mepolizumabe",
+        "strength": "100 mg",
+        "form": "pó para solução injetável",
+        "page": 120
+      },
+      {
+        "name": "mepolizumabe",
+        "strength": "100 mg/mL",
+        "form": "solução injetável",
+        "page": 120
+      }
+    ],
+    "463": [
+      {
+        "name": "abatacepte",
+        "strength": "250 mg",
+        "form": "pó para solução para infusão",
+        "page": 89
+      },
+      {
+        "name": "abatacepte",
+        "strength": "125 mg/mL",
+        "form": "solução injetável",
+        "page": 89
+      }
+    ],
+    "464": [
+      {
+        "name": "adalimumabe",
+        "strength": "40 mg",
+        "form": "solução injetável",
+        "page": 90
+      }
+    ],
+    "465": [
+      {
+        "name": "etanercepte",
+        "strength": "25 mg",
+        "form": "solução injetável",
+        "page": 93
+      },
+      {
+        "name": "etanercepte",
+        "strength": "50 mg",
+        "form": "solução injetável",
+        "page": 93
+      }
+    ],
+    "466": [
+      {
+        "name": "secuquinumabe",
+        "strength": "150 mg/mL",
+        "form": "solução injetável",
+        "page": 96
+      }
+    ],
+    "467": [
+      {
+        "name": "albumina humana",
+        "strength": "0,2 g/mL (20%)",
+        "form": "solução injetável",
+        "page": 34
+      }
+    ],
+    "470": [
+      {
+        "name": "emicizumabe",
+        "strength": "30 mg/mL",
+        "form": "solução injetável",
+        "page": 38
+      },
+      {
+        "name": "emicizumabe",
+        "strength": "150 mg /mL (apresentações de 0,4 ml , 0,7 ml e 1 ml)",
+        "form": "solução injetável",
+        "page": 38
+      }
+    ],
+    "478": [
+      {
+        "name": "infliximabe",
+        "strength": "100 mg",
+        "form": "pó para solução injetável",
+        "page": 95
+      }
+    ],
+    "480": [
+      {
+        "name": "metotrexato",
+        "strength": "2,5 mg",
+        "form": "comprimido",
+        "page": 95
+      },
+      {
+        "name": "metotrexato",
+        "strength": "25 mg/mL",
+        "form": "solução injetável",
+        "page": 95
+      }
+    ],
+    "488": [
+      {
+        "name": "cloridrato de propafenona",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 45
+      },
+      {
+        "name": "cloridrato de propafenona",
+        "strength": "150 mg",
+        "form": "comprimido",
+        "page": 45
+      }
+    ],
+    "492": [
+      {
+        "name": "imunoglobulina humana antivaricela zoster",
+        "strength": "125 UI/2,5 mL",
+        "form": "solução injetável",
+        "page": 72
+      }
+    ],
+    "497": [
+      {
+        "name": "cloranfenicol",
+        "strength": "250 mg",
+        "form": "cápsula",
+        "page": 65
+      },
+      {
+        "name": "cloranfenicol",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 65
+      },
+      {
+        "name": "cloranfenicol",
+        "strength": "25 mg/mL",
+        "form": "suspensão oral",
+        "page": 65
+      }
+    ],
+    "509": [
+      {
+        "name": "ácido zoledrônico",
+        "strength": "0,05 mg/mL",
+        "form": "solução para infusão",
+        "page": 99
+      }
+    ],
+    "511": [
+      {
+        "name": "clozapina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 105
+      },
+      {
+        "name": "clozapina",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 105
+      }
+    ],
+    "513": [
+      {
+        "name": "natalizumabe",
+        "strength": "20 mg/mL",
+        "form": "solução injetável",
+        "page": 96
+      }
+    ],
+    "514": [
+      {
+        "name": "rituximabe",
+        "strength": "10 mg/mL",
+        "form": "solução para diluição para infusão",
+        "page": 96
+      }
+    ],
+    "515": [
+      {
+        "name": "vedolizumabe",
+        "strength": "300 mg",
+        "form": "pó para solução injetável",
+        "page": 98
+      }
+    ],
+    "520": [
+      {
+        "name": "sulfato de abacavir",
+        "strength": "20 mg/mL",
+        "form": "solução oral",
+        "page": 82
+      },
+      {
+        "name": "sulfato de abacavir",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 82
+      }
+    ],
+    "522": [
+      {
+        "name": "lamivudina",
+        "strength": "10 mg/mL",
+        "form": "solução oral",
+        "page": 73
+      },
+      {
+        "name": "lamivudina",
+        "strength": "150 mg",
+        "form": "comprimido",
+        "page": 73
+      }
+    ],
+    "523": [
+      {
+        "name": "hemifumarato de tenofovir alafenamida",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 70
+      }
+    ],
+    "525": [
+      {
+        "name": "zidovudina",
+        "strength": "100 mg",
+        "form": "cápsula",
+        "page": 88
+      },
+      {
+        "name": "zidovudina",
+        "strength": "10 mg/mL",
+        "form": "solução injetável",
+        "page": 88
+      },
+      {
+        "name": "zidovudina",
+        "strength": "10 mg/mL",
+        "form": "solução oral",
+        "page": 88
+      }
+    ],
+    "527": [
+      {
+        "name": "efavirenz",
+        "strength": "600 mg",
+        "form": "comprimido",
+        "page": 67
+      },
+      {
+        "name": "efavirenz",
+        "strength": "200 mg",
+        "form": "cápsula",
+        "page": 67
+      },
+      {
+        "name": "efavirenz",
+        "strength": "30 mg/mL",
+        "form": "solução oral",
+        "page": 67
+      }
+    ],
+    "528": [
+      {
+        "name": "etravirina",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 68
+      },
+      {
+        "name": "etravirina",
+        "strength": "200 mg",
+        "form": "comprimido",
+        "page": 68
+      }
+    ],
+    "529": [
+      {
+        "name": "nevirapina",
+        "strength": "200 mg",
+        "form": "comprimido",
+        "page": 74
+      },
+      {
+        "name": "nevirapina",
+        "strength": "10 mg/mL",
+        "form": "suspensão oral",
+        "page": 74
+      }
+    ],
+    "531": [
+      {
+        "name": "sulfato de atazanavir",
+        "strength": "300 mg",
+        "form": "cápsula",
+        "page": 82
+      }
+    ],
+    "532": [
+      {
+        "name": "darunavir",
+        "strength": "75 mg",
+        "form": "comprimido",
+        "page": 66
+      },
+      {
+        "name": "darunavir",
+        "strength": "150 mg",
+        "form": "comprimido",
+        "page": 66
+      },
+      {
+        "name": "darunavir",
+        "strength": "600 mg",
+        "form": "comprimido",
+        "page": 66
+      },
+      {
+        "name": "darunavir",
+        "strength": "800 mg",
+        "form": "comprimido",
+        "page": 66
+      }
+    ],
+    "533": [
+      {
+        "name": "lopinavir + ritonavir",
+        "strength": "200 mg + 50 mg",
+        "form": "comprimido",
+        "page": 73
+      },
+      {
+        "name": "lopinavir + ritonavir",
+        "strength": "80 mg/mL + 20 mg/mL",
+        "form": "solução oral",
+        "page": 73
+      },
+      {
+        "name": "lopinavir + ritonavir",
+        "strength": "100 mg + 25 mg",
+        "form": "comprimido",
+        "page": 73
+      }
+    ],
+    "534": [
+      {
+        "name": "maraviroque",
+        "strength": "150 mg",
+        "form": "comprimido",
+        "page": 73
+      }
+    ],
+    "542": [
+      {
+        "name": "ritonavir",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 76
+      }
+    ],
+    "543": [
+      {
+        "name": "risdiplam",
+        "strength": "0,75 mg/mL",
+        "form": "pó para solução oral",
+        "page": 100
+      }
+    ],
+    "544": [
+      {
+        "name": "nusinersena",
+        "strength": "2,4 mg/mL",
+        "form": "solução injetável",
+        "page": 100
+      }
+    ],
+    "15": [
+      {
+        "name": "ácido valproico",
+        "strength": "250 mg",
+        "form": "cápsula",
+        "page": 101
+      },
+      {
+        "name": "ácido valproico",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 101
+      },
+      {
+        "name": "ácido valproico",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 101
+      },
+      {
+        "name": "ácido valproico",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 101
+      },
+      {
+        "name": "ácido valproico",
+        "strength": "50 mg/mL",
+        "form": "solução oral",
+        "page": 101
+      },
+      {
+        "name": "ácido valproico",
+        "strength": "50 mg/mL",
+        "form": "xarope",
+        "page": 101
+      },
+      {
+        "name": "valproato de sódio",
+        "strength": "250 mg",
+        "form": "cápsula",
+        "page": 112
+      },
+      {
+        "name": "valproato de sódio",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 112
+      },
+      {
+        "name": "valproato de sódio",
+        "strength": "50mg/ml",
+        "form": "solução oral",
+        "page": 112
+      },
+      {
+        "name": "valproato de sódio",
+        "strength": "50 mg/mL",
+        "form": "xarope",
+        "page": 112
+      },
+      {
+        "name": "valproato de sódio",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 112
+      }
+    ],
+    "17": [
+      {
+        "name": "epinefrina",
+        "strength": "1 mg/mL",
+        "form": "solução injetável",
+        "page": 46
+      }
+    ],
+    "18": [
+      {
+        "name": "beta-agalsidase",
+        "strength": "35 mg",
+        "form": "pó para solução injetável",
+        "page": 26
+      }
+    ],
+    "21": [
+      {
+        "name": "alfadornase",
+        "strength": "1 mg/mL",
+        "form": "solução inalatória",
+        "page": 116
+      }
+    ],
+    "22": [
+      {
+        "name": "alfa-alglicosidade",
+        "strength": "50 mg",
+        "form": "pó para solução injetável",
+        "page": 26
+      }
+    ],
+    "34": [
+      {
+        "name": "besilato de anlodipino",
+        "strength": "5 mg",
+        "form": "comprimido",
+        "page": 43
+      },
+      {
+        "name": "besilato de anlodipino",
+        "strength": "10 mg",
+        "form": "comprimido",
+        "page": 43
+      }
+    ],
+    "56": [
+      {
+        "name": "benzilpenicilina procaína + benzilpenicilina potássica",
+        "strength": "300.000 UI + 100.000 UI",
+        "form": "pó para suspensão injetável",
+        "page": 63
+      }
+    ],
+    "81": [
+      {
+        "name": "calcitonina",
+        "strength": "200 UI/dose",
+        "form": "solução nasal",
+        "page": 57
+      }
+    ],
+    "104": [
+      {
+        "name": "ceftriaxona",
+        "strength": "250 mg",
+        "form": "pó para solução injetável",
+        "page": 63
+      },
+      {
+        "name": "ceftriaxona",
+        "strength": "500 mg",
+        "form": "pó para solução injetável",
+        "page": 63
+      },
+      {
+        "name": "ceftriaxona",
+        "strength": "1 g",
+        "form": "pó para solução injetável",
+        "page": 64
+      }
+    ],
+    "124": [
+      {
+        "name": "propionato de clobetasol",
+        "strength": "0,5 mg/g",
+        "form": "creme",
+        "page": 52
+      },
+      {
+        "name": "propionato de clobetasol",
+        "strength": "0,5 mg/g",
+        "form": "solução capilar",
+        "page": 52
+      }
+    ],
+    "129": [
+      {
+        "name": "bissulfato de clopidogrel",
+        "strength": "75 mg",
+        "form": "comprimido",
+        "page": 36
+      }
+    ],
+    "132": [
+      {
+        "name": "difosfato de cloroquina",
+        "strength": "150 mg",
+        "form": "comprimido",
+        "page": 114
+      }
+    ],
+    "141": [
+      {
+        "name": "complexo protrombínico humano",
+        "strength": "500 UI",
+        "form": "pó para solução injetável",
+        "page": 37
+      },
+      {
+        "name": "complexo protrombínico humano",
+        "strength": "600 UI",
+        "form": "pó para solução injetável",
+        "page": 37
+      },
+      {
+        "name": "complexo protrombínico parcialmente ativado",
+        "strength": "500 UI",
+        "form": "pó para solução injetável",
+        "page": 37
+      },
+      {
+        "name": "complexo protrombínico parcialmente ativado",
+        "strength": "1.000UI",
+        "form": "pó para solução injetável",
+        "page": 37
+      },
+      {
+        "name": "complexo protrombínico parcialmente ativado",
+        "strength": "2.500UI",
+        "form": "pó para solução injetável",
+        "page": 37
+      }
+    ],
+    "142": [
+      {
+        "name": "fibrinogênio",
+        "strength": "1 g",
+        "form": "pó para solução injetável",
+        "page": 40
+      }
+    ],
+    "148": [
+      {
+        "name": "mesilato de desferroxamina",
+        "strength": "500 mg",
+        "form": "pó para solução injetável",
+        "page": 127
+      }
+    ],
+    "166": [
+      {
+        "name": "dipirona",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 106
+      },
+      {
+        "name": "dipirona",
+        "strength": "500 mg/mL",
+        "form": "solução oral",
+        "page": 106
+      },
+      {
+        "name": "dipirona",
+        "strength": "500 mg/mL",
+        "form": "solução injetável",
+        "page": 106
+      }
+    ],
+    "170": [
+      {
+        "name": "mesilato de doxazosina",
+        "strength": "2 mg",
+        "form": "comprimido",
+        "page": 47
+      },
+      {
+        "name": "mesilato de doxazosina",
+        "strength": "4 mg",
+        "form": "comprimido",
+        "page": 47
+      }
+    ],
+    "178": [
+      {
+        "name": "pancreatina",
+        "strength": "10.000 UI",
+        "form": "cápsula",
+        "page": 32
+      },
+      {
+        "name": "pancreatina",
+        "strength": "25.000 UI",
+        "form": "cápsula",
+        "page": 32
+      }
+    ],
+    "180": [
+      {
+        "name": "estolato de eritromicina",
+        "strength": "25 mg/mL",
+        "form": "suspensão oral",
+        "page": 68
+      },
+      {
+        "name": "estolato de eritromicina",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 68
+      },
+      {
+        "name": "estolato de eritromicina",
+        "strength": "50 mg/mL",
+        "form": "suspensão oral",
+        "page": 68
+      }
+    ],
+    "192": [
+      {
+        "name": "fator VII de coagulação ativado recombinante",
+        "strength": "1 mg (50.000 UI)",
+        "form": "pó para solução injetável",
+        "page": 39
+      },
+      {
+        "name": "fator VII de coagulação ativado recombinante",
+        "strength": "2 mg (100.000 UI)",
+        "form": "pó para solução injetável",
+        "page": 39
+      },
+      {
+        "name": "fator VII de coagulação ativado recombinante",
+        "strength": "5 mg (250.000 UI)",
+        "form": "pó para solução injetável",
+        "page": 39
+      }
+    ],
+    "194": [
+      {
+        "name": "fenitoína",
+        "strength": "100 mg",
+        "form": "comprimido",
+        "page": 106
+      },
+      {
+        "name": "fenitoína",
+        "strength": "20 mg/mL",
+        "form": "suspensão oral",
+        "page": 106
+      },
+      {
+        "name": "fenitoína",
+        "strength": "50 mg/mL",
+        "form": "solução injetável",
+        "page": 106
+      }
+    ],
+    "199": [
+      {
+        "name": "ferripolimaltose",
+        "strength": "50 mg/mL",
+        "form": "solução oral",
+        "page": 40
+      },
+      {
+        "name": "ferripolimaltose",
+        "strength": "10 mg/mL",
+        "form": "xarope",
+        "page": 40
+      },
+      {
+        "name": "ferripolimaltose",
+        "strength": "100 mg",
+        "form": "comprimido mastigável",
+        "page": 40
+      }
+    ],
+    "217": [
+      {
+        "name": "glicerol",
+        "strength": "120 mg/mL",
+        "form": "solução retal",
+        "page": 30
+      },
+      {
+        "name": "glicerol",
+        "strength": "72 mg",
+        "form": "supositório retal",
+        "page": 30
+      }
+    ],
+    "225": [
+      {
+        "name": "heparina sódica",
+        "strength": "5.000 UI/0,25 mL",
+        "form": "solução injetável",
+        "page": 40
+      }
+    ],
+    "232": [
+      {
+        "name": "sacarato de hidróxido férrico",
+        "strength": "20 mg/mL",
+        "form": "solução injetável",
+        "page": 40
+      }
+    ],
+    "243": [
+      {
+        "name": "imunoglobulina humana anti- -hepatite B",
+        "strength": "100 UI",
+        "form": "solução injetável",
+        "page": 72
+      },
+      {
+        "name": "imunoglobulina humana anti- -hepatite B",
+        "strength": "180 - 200 UI/mL",
+        "form": "solução injetável",
+        "page": 72
+      },
+      {
+        "name": "imunoglobulina humana anti- -hepatite B",
+        "strength": "500 UI",
+        "form": "solução injetável",
+        "page": 72
+      },
+      {
+        "name": "imunoglobulina humana anti- -hepatite B",
+        "strength": "600 UI",
+        "form": "solução injetável",
+        "page": 72
+      },
+      {
+        "name": "imunoglobulina humana anti- -hepatite B",
+        "strength": "1.000 UI",
+        "form": "solução injetável",
+        "page": 72
+      }
+    ],
+    "245": [
+      {
+        "name": "imunoglobulina antitetânica",
+        "strength": "250 UI/mL",
+        "form": "solução injetável",
+        "page": 70
+      }
+    ],
+    "246": [
+      {
+        "name": "imunoglobulina humana",
+        "strength": "0,5 g",
+        "form": "pó para solução injetável",
+        "page": 71
+      },
+      {
+        "name": "imunoglobulina humana",
+        "strength": "0,5 g",
+        "form": "solução injetável",
+        "page": 71
+      },
+      {
+        "name": "imunoglobulina humana",
+        "strength": "2,5 g",
+        "form": "pó para solução injetável",
+        "page": 71
+      },
+      {
+        "name": "imunoglobulina humana",
+        "strength": "2,5 g",
+        "form": "solução injetável",
+        "page": 71
+      },
+      {
+        "name": "imunoglobulina humana",
+        "strength": "5 g",
+        "form": "pó para solução injetável",
+        "page": 71
+      },
+      {
+        "name": "imunoglobulina humana",
+        "strength": "5g",
+        "form": "solução injetável",
+        "page": 71
+      },
+      {
+        "name": "imunoglobulina humana",
+        "strength": "1 g",
+        "form": "pó para solução injetável",
+        "page": 71
+      },
+      {
+        "name": "imunoglobulina humana",
+        "strength": "1 g",
+        "form": "solução injetável",
+        "page": 71
+      }
+    ],
+    "253": [
+      {
+        "name": "insulina humana NPH",
+        "strength": "100 UI/mL",
+        "form": "suspensão injetável",
+        "page": 31
+      }
+    ],
+    "254": [
+      {
+        "name": "insulina humana regular",
+        "strength": "100 UI/mL",
+        "form": "solução injetável",
+        "page": 31
+      }
+    ],
+    "256": [
+      {
+        "name": "sulfato de Isavuconazônio",
+        "strength": "100 mg",
+        "form": "cápsula",
+        "page": 82
+      },
+      {
+        "name": "sulfato de Isavuconazônio",
+        "strength": "200 mg",
+        "form": "pó liofilizado para solução injetável",
+        "page": 82
+      }
+    ],
+    "259": [
+      {
+        "name": "dinitrato de isossorbida",
+        "strength": "5 mg",
+        "form": "comprimido sublingual",
+        "page": 46
+      },
+      {
+        "name": "mononitrato de isossorbida",
+        "strength": "20 mg",
+        "form": "comprimido",
+        "page": 48
+      },
+      {
+        "name": "mononitrato de isossorbida",
+        "strength": "40 mg",
+        "form": "comprimido",
+        "page": 48
+      }
+    ],
+    "270": [
+      {
+        "name": "levodopa + benserazida",
+        "strength": "100 mg + 25 mg",
+        "form": "cápsula",
+        "page": 108
+      },
+      {
+        "name": "levodopa + benserazida",
+        "strength": "100 mg + 25 mg",
+        "form": "comprimido",
+        "page": 108
+      },
+      {
+        "name": "levodopa + benserazida",
+        "strength": "200 mg + 50 mg",
+        "form": "comprimido",
+        "page": 108
+      },
+      {
+        "name": "levodopa + carbidopa",
+        "strength": "200 mg + 50 mg",
+        "form": "comprimido",
+        "page": 108
+      },
+      {
+        "name": "levodopa + carbidopa",
+        "strength": "250 mg + 25 mg",
+        "form": "comprimido",
+        "page": 108
+      }
+    ],
+    "279": [
+      {
+        "name": "carbonato de lítio",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 102
+      }
+    ],
+    "295": [
+      {
+        "name": "succinato sódico de metilprednisolona",
+        "strength": "500 mg",
+        "form": "pó para solução injetável",
+        "page": 60
+      }
+    ],
+    "298": [
+      {
+        "name": "metronidazol",
+        "strength": "100 mg/g (10%)",
+        "form": "gel vaginal",
+        "page": 55
+      },
+      {
+        "name": "metronidazol",
+        "strength": "250 mg",
+        "form": "comprimido",
+        "page": 73
+      },
+      {
+        "name": "metronidazol",
+        "strength": "400 mg",
+        "form": "comprimido",
+        "page": 73
+      },
+      {
+        "name": "benzoilmetronidazol",
+        "strength": "40 mg/mL",
+        "form": "suspensão oral",
+        "page": 113
+      }
+    ],
+    "324": [
+      {
+        "name": "hemitartarato de norepinefrina",
+        "strength": "2 mg/mL",
+        "form": "solução injetável",
+        "page": 47
+      }
+    ],
+    "350": [
+      {
+        "name": "brometo de piridostigmina",
+        "strength": "60 mg",
+        "form": "comprimido",
+        "page": 101
+      }
+    ],
+    "358": [
+      {
+        "name": "alfaporactanto (surfactante pulmonar)",
+        "strength": "80 mg/mL",
+        "form": "suspensão injetável intratecal ou intrabronquica",
+        "page": 116
+      }
+    ],
+    "361": [
+      {
+        "name": "fosfato sódico de prednisolona",
+        "strength": "1 mg/mL",
+        "form": "solução oral",
+        "page": 57
+      },
+      {
+        "name": "fosfato sódico de prednisolona",
+        "strength": "3 mg/mL",
+        "form": "solução oral",
+        "page": 57
+      }
+    ],
+    "375": [
+      {
+        "name": "palmitato de retinol",
+        "strength": "100.000 UI",
+        "form": "cápsula",
+        "page": 32
+      },
+      {
+        "name": "palmitato de retinol",
+        "strength": "200.000 UI",
+        "form": "cápsula",
+        "page": 32
+      },
+      {
+        "name": "palmitato de retinol",
+        "strength": "150.000 UI/mL",
+        "form": "solução oral",
+        "page": 32
+      }
+    ],
+    "377": [
+      {
+        "name": "rifampicina*",
+        "strength": "300 mg*",
+        "form": "cápsula",
+        "page": 75
+      },
+      {
+        "name": "rifampicina*",
+        "strength": "150 mg*",
+        "form": "cápsula",
+        "page": 75
+      },
+      {
+        "name": "rifampicina*",
+        "strength": "20mg/mL",
+        "form": "suspensão oral",
+        "page": 75
+      }
+    ],
+    "380": [
+      {
+        "name": "sais para reidratação oral",
+        "strength": "cloreto de sódio, glicose anidra, cloreto de potássio, citrato de sódio diidratado",
+        "form": "pó para solução oral",
+        "page": 33
+      }
+    ],
+    "382": [
+      {
+        "name": "xinafoato de salmeterol",
+        "strength": "50 mcg",
+        "form": "pó inalatório",
+        "page": 120
+      }
+    ],
+    "389": [
+      {
+        "name": "solução ringer + lactato",
+        "strength": "lactato de sódio 3 mg/mL + cloreto de sódio 6 mg/mL + cloreto de potássio 0/ ,3 mg/mL + cloreto de cálcio 0,2 mg/mL",
+        "form": "solução injetável",
+        "page": 41
+      }
+    ],
+    "393": [
+      {
+        "name": "soro antibotulínico AB (bivalente)",
+        "strength": "cada mL contém imunoglobulinas que neutralizam, no mínimo, 375 UI de toxina botulínica tipo A e 275 UI de toxina botulínica tipo B (375 UI/mL e 275 UI/mL)",
+        "form": "solução injetável",
+        "page": 79
+      }
+    ],
+    "469": [
+      {
+        "name": "eltrombopague olamina",
+        "strength": "25 mg",
+        "form": "comprimido",
+        "page": 37
+      },
+      {
+        "name": "eltrombopague olamina",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 37
+      }
+    ],
+    "471": [
+      {
+        "name": "fator XIII de coagulação",
+        "strength": "250 UI",
+        "form": "pó para solução injetável",
+        "page": 40
+      }
+    ],
+    "472": [
+      {
+        "name": "fator VIII de coagulação contendo fator de von Willebrand",
+        "strength": "250 UI",
+        "form": "pó para solução injetável",
+        "page": 39
+      },
+      {
+        "name": "fator VIII de coagulação contendo fator de von Willebrand",
+        "strength": "500 UI",
+        "form": "pó para solução injetável",
+        "page": 39
+      },
+      {
+        "name": "fator VIII de coagulação contendo fator de von Willebrand",
+        "strength": "1.000 UI",
+        "form": "pó para solução injetável",
+        "page": 39
+      }
+    ],
+    "473": [
+      {
+        "name": "fenoximetilpenicili- na potássica",
+        "strength": "80.000 UI/mL",
+        "form": "pó para solução oral",
+        "page": 68
+      }
+    ],
+    "477": [
+      {
+        "name": "fosfato de potássio monobásico + fosfato de potássio dibásico",
+        "strength": "0,03 g/mL + 0,1567 g/mL (equivalente a 2 mEq/mL)",
+        "form": "solução injetável",
+        "page": 40
+      }
+    ],
+    "479": [
+      {
+        "name": "micofenolato de mofetila",
+        "strength": "500 mg",
+        "form": "comprimido",
+        "page": 95
+      },
+      {
+        "name": "micofenolato de sódio",
+        "strength": "180 mg",
+        "form": "comprimido",
+        "page": 96
+      },
+      {
+        "name": "micofenolato de sódio",
+        "strength": "360 mg",
+        "form": "comprimido",
+        "page": 96
+      }
+    ],
+    "481": [
+      {
+        "name": "toxina botulínica A",
+        "strength": "100 U",
+        "form": "pó para solução injetável",
+        "page": 100
+      },
+      {
+        "name": "toxina botulínica A",
+        "strength": "500 U",
+        "form": "pó para solução injetável",
+        "page": 100
+      }
+    ],
+    "485": [
+      {
+        "name": "metilsulfato de pralidoxima",
+        "strength": "200 mg",
+        "form": "solução injetável",
+        "page": 127
+      }
+    ],
+    "491": [
+      {
+        "name": "fator IX de coagulação",
+        "strength": "200 UI",
+        "form": "pó para solução injetável",
+        "page": 38
+      },
+      {
+        "name": "fator IX de coagulação",
+        "strength": "250 UI",
+        "form": "pó para solução injetável",
+        "page": 38
+      },
+      {
+        "name": "fator IX de coagulação",
+        "strength": "500 UI",
+        "form": "pó para solução injetável",
+        "page": 38
+      },
+      {
+        "name": "fator IX de coagulação",
+        "strength": "600 UI",
+        "form": "pó para solução injetável",
+        "page": 38
+      },
+      {
+        "name": "fator IX de coagulação",
+        "strength": "1.000 UI",
+        "form": "pó para solução injetável",
+        "page": 38
+      },
+      {
+        "name": "fator IX de coagulação",
+        "strength": "1.200 UI",
+        "form": "pó para solução injetável",
+        "page": 38
+      }
+    ],
+    "493": [
+      {
+        "name": "alfaepoetina",
+        "strength": "1.000 UI",
+        "form": "solução injetável",
+        "page": 34
+      },
+      {
+        "name": "alfaepoetina",
+        "strength": "1.000 UI",
+        "form": "pó para solução injetável",
+        "page": 34
+      },
+      {
+        "name": "alfaepoetina",
+        "strength": "2.000 UI",
+        "form": "solução injetável",
+        "page": 34
+      },
+      {
+        "name": "alfaepoetina",
+        "strength": "2.000 UI",
+        "form": "pó para solução injetável",
+        "page": 34
+      },
+      {
+        "name": "alfaepoetina",
+        "strength": "3.000 UI",
+        "form": "solução injetável",
+        "page": 35
+      },
+      {
+        "name": "alfaepoetina",
+        "strength": "3.000 UI",
+        "form": "pó para solução injetável",
+        "page": 35
+      },
+      {
+        "name": "alfaepoetina",
+        "strength": "4.000 UI",
+        "form": "pó para solução injetável",
+        "page": 35
+      },
+      {
+        "name": "alfaepoetina",
+        "strength": "4.000 UI",
+        "form": "solução injetável",
+        "page": 35
+      },
+      {
+        "name": "alfaepoetina",
+        "strength": "10.000 UI",
+        "form": "solução injetável",
+        "page": 35
+      },
+      {
+        "name": "alfaepoetina",
+        "strength": "10.000 UI",
+        "form": "pó para solução injetável",
+        "page": 35
+      }
+    ],
+    "510": [
+      {
+        "name": "alfaelosulfase",
+        "strength": "5 mg",
+        "form": "solução injetável",
+        "page": 26
+      }
+    ],
+    "524": [
+      {
+        "name": "fumarato de tenofovir desoproxila",
+        "strength": "300 mg",
+        "form": "comprimido",
+        "page": 69
+      }
+    ],
+    "538": [
+      {
+        "name": "dolutegravir sódico",
+        "strength": "5mg",
+        "form": "comprimidos dispersíveis",
+        "page": 67
+      },
+      {
+        "name": "dolutegravir sódico",
+        "strength": "50 mg",
+        "form": "comprimido",
+        "page": 67
+      }
+    ],
+    "540": [
+      {
+        "name": "raltegravir potássico",
+        "strength": "100 mg",
+        "form": "granulado para suspensão oral",
+        "page": 75
+      },
+      {
+        "name": "raltegravir potássico",
+        "strength": "100 mg",
+        "form": "comprimido mastigável",
+        "page": 75
+      },
+      {
+        "name": "raltegravir potássico",
+        "strength": "400 mg",
+        "form": "comprimido",
+        "page": 75
+      }
+    ]
+  }
+}
