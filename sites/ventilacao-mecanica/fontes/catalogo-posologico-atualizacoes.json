@@ -1,0 +1,1011 @@
+[
+  {
+    "medication_number": 1,
+    "row_ids": [
+      "pdf-001-row-01"
+    ],
+    "title": "Revisão de 13/09/2026 — Contraindicações adicionais da bula brasileira",
+    "text": "A bula brasileira consultada também contraindica acebrofilina em úlcera péptica ativa, história de convulsões e hipersensibilidade à acebrofilina, outras xantinas ou ambroxol. Essas restrições complementam as já transcritas no PDF; não modificam a dose.",
+    "sources": [
+      {
+        "title": "Geolab — bula profissional de acebrofilina",
+        "url": "https://www.geolab.com.br/wp-content/uploads/2021/04/ACEBROFILINA-Bula-Profissional-1.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 2,
+    "row_ids": [
+      "pdf-002-row-01",
+      "pdf-002-row-02",
+      "pdf-002-row-03",
+      "pdf-002-row-04",
+      "pdf-002-row-05",
+      "pdf-002-row-06",
+      "pdf-002-row-07"
+    ],
+    "title": "Revisão de 13/09/2026 — Precauções adicionais da acetazolamida",
+    "text": "O SmPC britânico também contraindica acetazolamida em insuficiência suprarrenal e em cirrose, pelo risco de encefalopatia. Contraindica ainda administração prolongada no glaucoma crônico não congestivo de ângulo fechado; o uso adjuvante na crise aguda não deve ser transformado em manutenção indefinida. Essa informação complementa a transcrição e precisa ser vinculada à bula do produto brasileiro utilizado.",
+    "sources": [
+      {
+        "title": "DIAMOX 250 mg Tablets — SmPC",
+        "url": "https://www.medicines.org.uk/emc/product/2785/smpc"
+      }
+    ]
+  },
+  {
+    "medication_number": 17,
+    "title": "Revisão de 13/09/2026 — Observação após adrenalina nebulizada",
+    "text": "No crupe, o PCH orienta observação por pelo menos 3 horas após a nebulização, pela possibilidade de recorrência dos sintomas. A nebulização para crupe e a adrenalina IM para anafilaxia têm vias, objetivos e limites próprios.",
+    "sources": [
+      {
+        "title": "PCH — Adrenaline",
+        "url": "https://pch.health.wa.gov.au/~/media/Files/Hospitals/PCH/General-documents/Health-professionals/MedicationMonographs/Adrenaline.pdf"
+      }
+    ],
+    "row_ids": [
+      "pdf-017-row-05"
+    ]
+  },
+  {
+    "medication_number": 25,
+    "title": "Revisão de 13/09/2026 — Apresentação brasileira de 20 mcg e fonte de 500 mcg/mL",
+    "text": "O novo PDF já distingue a apresentação brasileira de 20 mcg da solução de 500 mcg/mL usada na bula internacional do esquema neonatal. A bula brasileira consultada para 20 mcg é de produto com indicação adulta; não confirma preparo neonatal equivalente. Não transpor diluente, estabilidade ou reconstituição da solução de 500 mcg/mL para o produto de 20 mcg. O esquema clínico permanece vinculado à fonte e à formulação correspondente.",
+    "sources": [
+      {
+        "title": "DailyMed — Alprostadil, bula revisada em abril de 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dea460fa-d05e-4191-8461-f185a711ad89"
+      },
+      {
+        "title": "Aché — Alprostadil 20 mcg, bula brasileira",
+        "url": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-prostavasin.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 39,
+    "row_ids": [
+      "pdf-039-row-02"
+    ],
+    "title": "Revisão de 13/09/2026 — Tempo de infusão da meningite neonatal",
+    "text": "Na versão NeoMedQ de 2025, doses de ampicilina maiores que 50 mg/kg são infundidas em 30 minutos. Para o regime de meningite neonatal do PDF, manter 100 mg/kg/dose e os intervalos por dia de vida, com concentração final de 25 mg/mL e infusão EV em 30 minutos. A expressão original de 15–30 minutos corresponde à versão anterior. Para uma dose D em mg: volume final = D/25 mL; velocidade = 2 × D/25 mL/h; checagem reversa = velocidade × 0,5 h × 25 mg/mL = D. O preparo por frasco precisa respeitar a bula da apresentação utilizada.",
+    "sources": [
+      {
+        "title": "Queensland Health — Neonatal medicine: Ampicillin",
+        "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0026/852209/nmq-ampicillin.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 104,
+    "row_ids": [
+      "pdf-104-row-01",
+      "pdf-104-row-02",
+      "pdf-104-row-03",
+      "pdf-104-row-04"
+    ],
+    "title": "Revisão de 13/09/2026 — Contraindicações neonatais e preparo com lidocaína",
+    "text": "O SmPC britânico consultado classifica como contraindicações o uso em prematuros até a idade pós-menstrual de 41 semanas e, em neonatos a termo até 28 dias, hiperbilirrubinemia, icterícia, hipoalbuminemia ou acidose, além de cálcio EV em uso ou previsto, inclusive nutrição parenteral. Confirmar a aplicabilidade na bula brasileira do produto escolhido. Solução de ceftriaxona preparada com lidocaína é exclusivamente IM: nunca administrar EV. Não misturar com soluções contendo cálcio.",
+    "sources": [
+      {
+        "title": "Synchrony Pharma — Ceftriaxone 1 g SmPC",
+        "url": "https://www.medicines.org.uk/emc/product/15077/smpc"
+      }
+    ]
+  },
+  {
+    "medication_number": 104,
+    "row_ids": [
+      "pdf-104-row-03"
+    ],
+    "title": "Revisão de 13/09/2026 — Dose depende da infecção agrupada",
+    "text": "A linha do PDF reúne pielonefrite, pneumonia com derrame/empiema e celulite orbitária numa faixa de 50–100 mg/kg/dia. Essa faixa não determina uma dose única para todas essas doenças. Para celulite orbitária, o protocolo RCH citado usa 100 mg/kg/dia, máximo 4 g/dia; as demais indicações precisam do seu próprio protocolo de dose e duração. Não aplicar automaticamente a dose de meningite ou de celulite orbitária a todas as infecções agrupadas.",
+    "sources": [
+      {
+        "title": "Royal Children’s Hospital — Antibiotic prescribing in children",
+        "url": "https://www.rch.org.au/clinicalguide/guideline_index/Antibiotics/"
+      },
+      {
+        "title": "Synchrony Pharma — Ceftriaxone 1 g SmPC",
+        "url": "https://www.medicines.org.uk/emc/product/15077/smpc"
+      }
+    ]
+  },
+  {
+    "medication_number": 107,
+    "title": "Revisão de 13/09/2026 — Asma: regime específico ainda não estabelecido",
+    "text": "Asma refratária (off-label): escetamina apresenta efeito broncodilatador, mas não foi confirmado regime pediátrico específico de infusão subdissociativa. A dose anestésica e os estudos de cetamina racêmica não podem ser convertidos automaticamente neste esquema.",
+    "sources": [
+      {
+        "title": "Kalceks — Esketamine 5 mg/mL, SmPC",
+        "url": "https://www.medicines.org.uk/emc/product/13194/smpc"
+      },
+      {
+        "title": "Qiao et al. Comparison of the effects of esketamine/midazolam and remifentanil/midazolam on respiratory mechanics in mechanically ventilated patients with ARDS",
+        "url": "https://link.springer.com/article/10.1186/s12871-025-03211-x"
+      }
+    ],
+    "row_ids": [
+      "pdf-107-row-03"
+    ]
+  },
+  {
+    "medication_number": 107,
+    "title": "Revisão de 13/09/2026 — Escetamina injetável, spray nasal e diferença entre bulas",
+    "text": "O novo PDF já separa escetamina injetável de spray nasal. O spray não é apresentação para indução anestésica, manutenção anestésica ou asma. As doses da monografia britânica diferem das doses da bula brasileira injetável consultada; não foram reconciliadas como equivalentes. Manter produto, via, população e fonte identificados. Escetamina e cetamina racêmica não são intercambiáveis por simples troca de nome.",
+    "sources": [
+      {
+        "title": "Kalceks — Escetamina injetável, SmPC",
+        "url": "https://www.medicines.org.uk/emc/product/13194/smpc"
+      },
+      {
+        "title": "Cristália — Escetamina injetável, bula profissional",
+        "url": "https://www.cristalia.com.br/produto/112/bula-profissional"
+      }
+    ]
+  },
+  {
+    "medication_number": 129,
+    "title": "Revisão de 13/09/2026 — Stents: evidência pediátrica histórica",
+    "text": "Após stent (off-label): há série pediátrica histórica que sugeriu início de 1 mg/kg/dia VO. A duração observada de 1–6 meses e as doses maiores do estudo não definem uma regra para todos os dispositivos. Especificar plano da cardiologia quanto à dose, associação antiagregante e duração.",
+    "sources": [
+      {
+        "title": "Finkelstein et al. Clopidogrel use in children. J Pediatr.147: 657–661",
+        "url": "https://doi.org/10.1016/j.jpeds.2005.05.006"
+      },
+      {
+        "title": "University of Virginia — Clopidogrel for Platelet Inhibition in Pediatric Patients",
+        "url": "https://med.virginia.edu/pediatrics/wp-content/uploads/sites/237/2015/12/201005.pdf"
+      }
+    ],
+    "row_ids": [
+      "pdf-129-row-02"
+    ]
+  },
+  {
+    "medication_number": 131,
+    "title": "Revisão de 13/09/2026 — Solução a 2,7% não equivale à solução a 3%",
+    "text": "O esquema NICE de encefalopatia hiponatrêmica citado no PDF utiliza cloreto de sódio a 2,7%. Se a apresentação selecionada for 3%, não reutilizar automaticamente o mesmo volume por kg: são concentrações diferentes. A apresentação nasal não pode ser usada por via intravenosa. O limite de correção de sódio deve permanecer vinculado ao protocolo identificado no esquema.",
+    "sources": [
+      {
+        "title": "RCH — Fluidos intravenosos",
+        "url": "https://www.rch.org.au/clinicalguide/guideline_index/Intravenous_fluids/"
+      },
+      {
+        "title": "NICE NG29 — Fluidoterapia intravenosa pediátrica",
+        "url": "https://www.nice.org.uk/guidance/NG29/chapter/recommendations"
+      }
+    ]
+  },
+  {
+    "medication_number": 133,
+    "title": "Revisão de 13/09/2026 — Coreia de Sydenham: limites do esquema histórico",
+    "text": "Coreia de Sydenham (off-label): uso histórico descrito, com maior risco de distonia e parkinsonismo. O estudo disponível utilizou 2 mg/kg/dia VO, mas não definiu fracionamento, teto ou duração; esse dado isolado não constitui esquema prescritivo completo. Seleção terapêutica com neurologia/reumatologia, considerando opções com melhor respaldo atual.",
+    "sources": [
+      {
+        "title": "Kulkarni ML, Anees S. Sydenham's chorea. Indian Pediatrics. 1996; 33: 112–115.",
+        "url": "https://www.indianpediatrics.net/feb1996/112.pdf"
+      },
+      {
+        "title": "Evaluation, Diagnosis, and Treatment of Sydenham Chorea: Consensus Guidelines. Pediatrics.156(6): e 2025072466.",
+        "url": "https://publications.aap.org/pediatrics/article/156/6/e2025072466/205465/Evaluation-Diagnosis-and-Treatment-of-Sydenham"
+      }
+    ],
+    "row_ids": [
+      "pdf-133-row-03"
+    ]
+  },
+  {
+    "medication_number": 145,
+    "title": "Revisão de 13/09/2026 — Síndrome neuroléptica maligna: regime adjuvante qualificado",
+    "text": "Síndrome neuroléptica maligna grave (off-label): considerar dantroleno 1 mg/kg IV; alguns protocolos admitem 1–2,5 mg/kg inicialmente. Se houver redução de rigidez/hipertermia, continuar 1 mg/kg/dose IV a cada 6 h, infundido em 1 h; máximo 10 mg/kg/dia. Duração não estabelecida. Suspender se não houver melhora objetiva. Suspender agente causal e manter suporte intensivo. Velocidade da dose inicial exige definição por toxicologia devido à divergência entre fontes. Para o frasco brasileiro de 20 mg, reconstituir com 60 mL de água para injetáveis sem conservante (20/60 mg/mL); não usar SF ou SG5% na reconstituição. Na manutenção de 1 mg/kg em 1 hora, volume = 3 × peso em kg mL e velocidade = 3 × peso mL/h; checagem reversa: mL/h × 1 h × (20/60 mg/mL) ÷ peso = 1 mg/kg. Contabilizar ataque e manutenção no limite diário. Monitorar função hepática, CK, rim, eletrólitos e ventilação; evitar associação com verapamil/diltiazem. O conflito de velocidade do ataque impede uma ordem automática completa.",
+    "sources": [
+      {
+        "title": "Dantrolen 20 mg — bula profissional Cristália",
+        "url": "https://www.cristalia.com.br/produto/76/bula-profissional"
+      },
+      {
+        "title": "Red de Antídotos — Dantroleno 20 mg",
+        "url": "https://redantidotos.org/wp-content/uploads/2018/04/Dantroleno_Red-Antidotos_2021.pdf"
+      },
+      {
+        "title": "Utility of Dantrolene in Treating Neuroleptic Malignant Syndrome — University of Utah Poison Control",
+        "url": "https://poisoncontrol.utah.edu/news/2025/05/utility-of-dantrolene-treating-neuroleptic-malignant-syndrome-0"
+      },
+      {
+        "title": "Red de Antídotos — Dantroleno 120 mg",
+        "url": "https://redantidotos.org/antidoto/dantroleno/"
+      }
+    ],
+    "row_ids": [
+      "pdf-145-row-03"
+    ]
+  },
+  {
+    "medication_number": 195,
+    "title": "Revisão de 13/09/2026 — Limites simultâneos da velocidade EV",
+    "text": "No ramo CHEO, respeitar simultaneamente infusão em pelo menos 20 minutos, velocidade ≤1 mg/kg/min e ≤30 mg/min. Para dose D em mg e peso W em kg, tempo mínimo em minutos = maior valor entre 20, D/W e D/30. Não combinar o teto cumulativo CHEO com os tetos alternativos ANMF/AEP descritos no PDF.",
+    "sources": [
+      {
+        "title": "CHEO — Phenobarbital",
+        "url": "https://outreach.cheo.on.ca/manual/1675"
+      }
+    ],
+    "row_ids": [
+      "pdf-195-row-01"
+    ]
+  },
+  {
+    "medication_number": 195,
+    "row_ids": [
+      "pdf-195-row-02",
+      "pdf-195-row-03"
+    ],
+    "title": "Revisão de 13/09/2026 — Produto brasileiro: recém-nascidos e sal/base",
+    "text": "A bula brasileira de fenobarbital sódico injetável consultada declara 100 mg/mL de sal, equivalentes a 91,35 mg/mL de fenobarbital base, e contraindica esse produto específico em recém-nascidos. O regime neonatal internacional do PDF não elimina essa restrição da formulação. Isso não é contraindicação universal do princípio ativo nas crises neonatais. Identificar produto e excipientes; manter explícita a unidade prescrita, sem converter automaticamente entre mg de sal e mg de base quando a referência não define essa correspondência.",
+    "sources": [
+      {
+        "title": "Cristália — bula profissional de fenobarbital sódico injetável (Fenocris)",
+        "url": "https://www.cristalia.com.br/produto/215/bula-profissional"
+      },
+      {
+        "title": "CHEO — Phenobarbital",
+        "url": "https://outreach.cheo.on.ca/manual/1675"
+      }
+    ]
+  },
+  {
+    "medication_number": 216,
+    "row_ids": [
+      "pdf-216-row-01"
+    ],
+    "title": "Revisão de 13/09/2026 — Hipotermia terapêutica neonatal",
+    "text": "A ANMF especifica gentamicina 5 mg/kg/dose EV a cada 36 horas na hipotermia terapêutica, com nível de vale antes de cada dose. Se vale ≥2 mg/L, adiar a dose, repetir a dosagem e redefinir intervalo ou antibiótico com a equipe assistente. Esse ramo é distinto dos intervalos por idade pós-menstrual e do acréscimo de 12 horas com indometacina/ibuprofeno; não somar ajustes automaticamente. O nível de 22 horas após a segunda dose do algoritmo geral não equivale ao vale pré-dose.",
+    "sources": [
+      {
+        "title": "ANMF — Gentamicin",
+        "url": "https://www.anmfonline.org/wp-content/uploads/2024/04/Gentamicin_ANMFv4.0_20240424.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 276,
+    "title": "Revisão de 13/09/2026 — Errata de apresentação e via antiarrítmica",
+    "text": "O novo PDF corrige a expressão antiga “vasoespasmo” para “vasoconstritor”. A apresentação apropriada ao uso antiarrítmico EV/IO é sem vasoconstritor e deve ser adequada à via parenteral. Formulações com vasoconstritor, spray, geleia, pomada e emplastro não podem ser convertidas em dose EV/IO. Os limites de anestesia local e de antiarritmia pertencem a contextos diferentes.",
+    "sources": [
+      {
+        "title": "IWK — Lidocaine, doses pediátricas",
+        "url": "https://www.dir.iwk.nshealth.ca/Home/DDGDetails/deb378f4-f4ae-e911-80f4-005056b200d2?PatientPopulation=Ped"
+      }
+    ]
+  },
+  {
+    "medication_number": 332,
+    "title": "Revisão de 13/09/2026 — Radioterapia: escopo da evidência pediátrica",
+    "text": "Radioterapia: há uso pediátrico documentado, inclusive irradiação corporal total. A escolha do esquema deve identificar campo irradiado, fracionamento e risco emetogênico; os regimes de quimioterapia não são transferidos automaticamente. A literatura recuperada não permite fixar um único regime completo para todos esses cenários.",
+    "sources": [
+      {
+        "title": "Jürgens H, McQuade B. Ondansetron as prophylaxis for chemotherapy and radiotherapy-induced emesis in children",
+        "url": "https://doi.org/10.1159/000227057"
+      },
+      {
+        "title": "HPRA — ondansetron SmPC",
+        "url": "https://assets.hpra.ie/products/Human/16427/Licence_PA0281-126-001_08122022101142.pdf"
+      },
+      {
+        "title": "University of Virginia — The Use of 5-HT 3 Antagonists in the Prevention of Nausea and Vomiting in Children",
+        "url": "https://med.virginia.edu/pediatrics/wp-content/uploads/sites/237/2015/12/199709.pdf"
+      }
+    ],
+    "row_ids": [
+      "pdf-332-row-04"
+    ]
+  },
+  {
+    "medication_number": 368,
+    "title": "Revisão de 13/09/2026 — Anestesia geral e sedação da UTIP",
+    "text": "O novo PDF já corrige a associação indevida entre a faixa anestésica de 9–15 mg/kg/h e a sedação da UTIP. A recomendação PANDEM para uso selecionado na UTIP tem limites estritos: menos de 4 mg/kg/h e menos de 48 horas, com evidência baixa e caráter off-label em relação à restrição pediátrica brasileira consultada. 4 mg/kg/h equivale a 66,666… mcg/kg/min; arredondar para 67 mcg/kg/min ultrapassaria esse limite. Não converter o limite em dose inicial automática.",
+    "sources": [
+      {
+        "title": "Cristália — Propofol, bula profissional",
+        "url": "https://www.cristalia.com.br/produto/203/bula-profissional"
+      },
+      {
+        "title": "SCCM — Diretrizes PANDEM 2022",
+        "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/pandem-guidelines-for-infants-and-children/"
+      }
+    ]
+  },
+  {
+    "medication_number": 401,
+    "title": "Revisão de 13/09/2026 — Gastrite erosiva: lacuna específica",
+    "text": "Gastrite erosiva (off-label): não foi confirmado esquema pediátrico específico completo de sucralfato. Não utilizar automaticamente a dose profilática de úlcera de estresse para tratar gastrite; definir a causa e a estratégia de proteção/cicatrização com gastroenterologia.",
+    "sources": [
+      {
+        "title": "EDQM/Council of Europe — Evidence-based classification review for sucralfate",
+        "url": "https://www.edqm.eu/documents/52006/299893/Evidence-based%2Bclassification%2Breview%2Bfor%2Bsucralfate%2B%282026%29.pdf/ed7a74c2-5d2e-712e-a605-1e15f2f2358b?t=1780665408838"
+      }
+    ],
+    "row_ids": [
+      "pdf-401-row-03"
+    ]
+  },
+  {
+    "medication_number": 439,
+    "row_ids": [
+      "pdf-439-row-01"
+    ],
+    "title": "Revisão de 13/09/2026 — Concentração final da infusão intermitente",
+    "text": "No regime PCH de vancomicina intermitente, usar concentração final usual ≤5 mg/mL. A concentração de 10 mg/mL é uma exceção para restrição hídrica, com acesso venoso central. Não confundir solução reconstituída de 50 mg/mL com solução final de infusão. Tempo mínimo = maior valor entre 60 minutos e dose em mg ÷ 10 mg/min. Volume final = dose/concentração final; mL/h = volume × 60/tempo em minutos. Preservar ajuste por exposição, função renal e níveis; a concentração não define a dose.",
+    "sources": [
+      {
+        "title": "Perth Children’s Hospital — Vancomycin",
+        "url": "https://www.pch.health.wa.gov.au/~/media/Files/Hospitals/PCH/General-documents/Health-professionals/ChAMP-Monographs/Vancomycin.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 442,
+    "title": "Revisão de 13/09/2026 — Hipertensão/angina em adolescentes acima de 50 kg",
+    "text": "Hipertensão — adolescentes> 50 kg: 120–480 mg/dia VO de liberação imediata, divididos em 3 tomadas 8/8 h. Angina/isquemia — adolescentes> 50 kg: 120–480 mg/dia VO em 3–4 tomadas 8/8 h ou 6/6 h. Máximo de tratamento prolongado 480 mg/dia. Uso contínuo com reavaliação; não extrapolar para crianças/outros pesos. Peso >50 kg, isoladamente, não define adolescência. A faixa diária corresponde a 40–160 mg por dose em 3 tomadas; em 4 tomadas, 30–120 mg por dose, somente para angina. A apresentação escolhida deve permitir a dose sem fracionamento não autorizado. Monitorar ECG/condução AV, FC, PA e função ventricular; excluir via acessória com FA/flutter, bloqueio AV relevante, choque ou disfunção ventricular importante.",
+    "sources": [
+      {
+        "title": "Abbott — Dilacoron 80 mg, bula profissionalBU 10",
+        "url": "https://dam.abbott.com/pt-br/documents/pdfs/nossas-bulas/D/BU%2010_Dilacoron%2080mg_Bula_Profissional_FINAL.pdf"
+      },
+      {
+        "title": "Aché/Biosintética — cloridrato de verapamil 80 mg, bula do paciente",
+        "url": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf"
+      }
+    ],
+    "row_ids": [
+      "pdf-442-row-03-hta",
+      "pdf-442-row-03-angina"
+    ]
+  },
+  {
+    "medication_number": 450,
+    "title": "Revisão de 13/09/2026 — Pânico: contraindicação etária brasileira",
+    "text": "Transtorno do pânico: indicação adulta no catálogo original. Para menores de 18 anos, a bula brasileira consultada contraindica o medicamento e não há regime pediátrico específico confirmado nesta revisão. Não gerar posologia a partir da dose adulta nem de ensaios de outras condições.",
+    "sources": [
+      {
+        "title": "Viatris — Efexor XR, bula profissional",
+        "url": "https://www.viatris.com.br/-/media/project/common/viatriscombr/pdf/leaflets_legacy_myl_brazil/efexor-xr_bula_profissional.pdf"
+      }
+    ],
+    "row_ids": [
+      "pdf-450-row-04"
+    ]
+  },
+  {
+    "medication_number": 477,
+    "title": "Revisão de 13/09/2026 — Concentração de fósforo e aporte de potássio por produto",
+    "text": "A revisão das bulas distingue o produto VMG, com 1,1 mmol de fósforo/mL e 2 mEq de potássio/mL, do produto Isofarma, cuja composição informa 1,12 mmol de fósforo/mL e 2,02 mEq de potássio/mL. Não arredondar ambos para 1 mmol/mL nem usar o nome nominal “2 mEq/mL” como substituto da composição exata. A bula Isofarma contém menção internamente inconsistente a 3 mmol/mL no preparo; conferir rótulo/composição antes de converter. Calcular fósforo e potássio separadamente e somar o K de outras fontes. Doses e tetos VMG, RCH e NPT permanecem em ramos distintos.",
+    "sources": [
+      {
+        "title": "VMG — Fosfato de potássio, bula brasileira",
+        "url": "https://vmgfarmaceutica.com.br/wp-content/uploads/2023/08/Fosfato-de-Potassio-Bula-Paciente_v4.pdf"
+      },
+      {
+        "title": "RCH — Hipofosfatemia",
+        "url": "https://www.rch.org.au/clinicalguide/guideline_index/Hypophosphataemia/"
+      },
+      {
+        "title": "Isofarma/Halex Istar — Fosfato de potássio, bula profissional",
+        "url": "https://halexistar.com.br/wp-content/uploads/2025/10/fosfato-de-potssio-2-meq-ml-bula-profissional-818191117.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 483,
+    "title": "Revisão de 13/09/2026 — Advertência de hipofosfatemia e condições de infusão",
+    "text": "A bula FDA de agosto de 2026 destaca hipofosfatemia grave ou prolongada, inclusive sem fatores de risco evidentes. Corrigir hipofosfatemia prévia; verificar fósforo antes de novo curso em pacientes de risco ou em qualquer paciente com repetição em menos de 3 meses. No preparo FDA, não exceder 250 mL de diluente, manter concentração ≥2 mg de ferro/mL e infusão por pelo menos 15 minutos. A aprovação FDA a partir de 1 ano não altera o caráter off-label pediátrico da bula brasileira consultada.",
+    "sources": [
+      {
+        "title": "FDA — Carboximaltose férrica, bula de agosto de 2026",
+        "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/203565s030lbl.pdf"
+      },
+      {
+        "title": "Blanver — Carboximaltose férrica, bula brasileira",
+        "url": "https://blanver.com.br/wp-content/uploads/2026/07/01_Ferinject_Bula_Paciente.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 496,
+    "title": "Revisão de 13/09/2026 — DRC: dose estudada em sal, não cálcio elementar",
+    "text": "Em estudo de crianças/adolescentes de 2–18 anos com DRC e hiperfosfatemia, o acetato de cálcio foi iniciado em 60,03 mg de SAL/kg/dia VO, dividido entre 3 refeições: 20,01 mg de sal/kg/refeição. Isso correspondeu a 15,21 mg de cálcio elementar/kg/dia. A formulação estrangeira estudada continha 133,4 mg de sal/mL e 33,8 mg de cálcio/mL: 0,45 mL/kg/dia × 133,4 = 60,03 mg de sal/kg/dia; reversa 60,03/133,4 = 0,45 mL/kg/dia. Aumento por eficácia em intervalos ≥14 dias, guiado por fósforo/cálcio; reduzir ou suspender diante de hipercalcemia. Limites do estudo: até 166,75 mg de sal/kg/dia em peso ≤35 kg ou 5.869,6 mg de sal/dia acima de 35 kg; não são doses-alvo. A duração depende do controle bioquímico, não das 34 semanas do estudo. Esse regime é especializado e off-label; não comprova disponibilidade da solução no Brasil nem permite converter para comprimidos sem conferir sal/elemento no produto real. Monitorar cálcio, fósforo, PTH e carga cálcica total.",
+    "sources": [
+      {
+        "title": "Greenbaum et al. Safety and efficacy of sucroferric oxyhydroxide in pediatric patients with chronic kidney disease",
+        "url": "https://link.springer.com/article/10.1007/s00467-020-04805-y"
+      },
+      {
+        "title": "Vifor — Clinical protocol PA-CL-PED-01/NCT 02688764 v 2.0",
+        "url": "https://cdn.clinicaltrials.gov/large-docs/64/NCT02688764/Prot_000.pdf"
+      },
+      {
+        "title": "Pediatric Renal Nutrition Taskforce — dietary management of calcium and phosphate in children with CKD 2–5 D",
+        "url": "https://link.springer.com/article/10.1007/s00467-019-04370-z"
+      }
+    ],
+    "row_ids": [
+      "pdf-496-row-01",
+      "pdf-496-row-02"
+    ]
+  },
+  {
+    "medication_number": 36,
+    "row_ids": [
+      "pdf-036-row-01",
+      "pdf-036-row-02"
+    ],
+    "title": "Revisão de 14/09/2026 — Formulação da dose alta e teto da suspensão",
+    "text": "A calculadora de suspensão oral usa 600 + 42,9 mg/5 mL (14:1), 45 mg/kg/dose de amoxicilina 12/12 h e teto usual UCSF de 1 g/dose em peso <40 kg. Não substituir por 4:1 ou 7:1 com a mesma dose de amoxicilina. Na sinusite, a orientação UCSF de máximos reserva 2 g/dose ao ramo XR de alto risco. A ES tem indicação de bula brasileira para OMA recorrente/persistente; sua utilização na sinusite é qualificada pela diretriz e não por essa indicação de bula. 0,375 mL/kg/dose × 120 mg/mL = 45 mg/kg/dose de amoxicilina; × 8,58 mg/mL × 2 = 6,435 mg/kg/dia de ácido clavulânico, antes do teto (bula: valor nominal 6,4).",
+    "sources": [
+      {
+        "title": "GSK Brasil — Clavulin ES, bula profissional, seções 1 e 8",
+        "url": "https://br.gsk.com/media/o31pswrk/clavulin-es-suspens%C3%A3o-oral.pdf"
+      },
+      {
+        "title": "UCSF — Otite média aguda",
+        "url": "https://idmp.ucsf.edu/content/acute-otitis-media"
+      },
+      {
+        "title": "UCSF — Máximos e formulações de amoxicilina/clavulanato",
+        "url": "https://idmp.ucsf.edu/content/maximum-dosing-for-amoxicillin-and-amoxicillin-clavulanate-0"
+      },
+      {
+        "title": "UCSF — Rinossinusite bacteriana aguda",
+        "url": "https://idmp.ucsf.edu/guidelines-empiric-therapy-categories/respiratory-head-and-neck-infections"
+      }
+    ]
+  },
+  {
+    "medication_number": 390,
+    "row_ids": [
+      "pdf-390-row-05"
+    ],
+    "title": "Revisão de 14/09/2026 — PIG: confirmação brasileira e calculadora",
+    "text": "A bula brasileira de Genotropin confirma 0,035 mg/kg/dia para PIG sem recuperação estatural nos primeiros quatro anos. A calculadora agora separa PIG, Turner e DRC. O ramo FDA descrito no PDF continua distinto; não somar esquemas nem extrapolar seus critérios. A dose é calculada em mg; as equivalências arredondadas em UI da tabela não substituem a graduação do dispositivo.",
+    "sources": [
+      {
+        "title": "Pfizer Brasil — Genotropin, bula do paciente de 10/09/2025, tabela posológica",
+        "url": "https://www.pfizer.com.br/files/Genotropin_Paciente_22.pdf"
+      },
+      {
+        "title": "EMA — Omnitrope, SmPC, seções 4.1–4.4",
+        "url": "https://www.ema.europa.eu/en/documents/product-information/omnitrope-epar-product-information_en.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 412,
+    "title": "Revisão de 14/09/2026 — HAP: indicação independente na calculadora",
+    "text": "As indicações adultas transcritas acima continuam sem esquema pediátrico. Para HAP classes funcionais II–III, a calculadora usa a referência europeia ADCIRCA: 2 a <18 anos, 20 mg uma vez ao dia se peso <40 kg; 40 mg uma vez ao dia se peso ≥40 kg. Exige especialista e avaliação renal/hepática; início reduzido pode ser necessário. Não associar a nitratos ou riociguate. A autorização pediátrica brasileira não foi confirmada nesta revisão.",
+    "sources": [
+      {
+        "title": "EMA — ADCIRCA, SmPC atualizado em 27/01/2026, seções 4.1–4.4",
+        "url": "https://www.ema.europa.eu/en/documents/product-information/adcirca-epar-product-information_en.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 298,
+    "title": "Revisão de 14/09/2026 — Base, éster e regimes da calculadora",
+    "text": "Na suspensão brasileira EMS, 40 mg/mL de benzoilmetronidazol correspondem a 25 mg/mL de metronidazol base. A conversão da dose em base para volume usa 25 mg/mL. Na calculadora EV, o protocolo UCSF de 10 mg/kg/dose 8/8 h tem teto 500 mg/dose; apendicite tem ramo próprio de 30 mg/kg/dose 24/24 h, teto 1.500 mg/dose. Ambos se destinam a idade acima de 1 mês. O regime PCH do PDF continua distinto e não é substituído por uma faixa combinada. O clone EV odontogênico foi retirado do cálculo: o esquema periodontal AAPD é oral e específico.",
+    "sources": [
+      {
+        "title": "UCSF — doses antimicrobianas para lactentes e crianças acima de 1 mês; esquema usual e apendicite distintos",
+        "url": "https://idmp.ucsf.edu/pediatric-antimicrobial-dosing-benioff-childrens-hospitals"
+      },
+      {
+        "title": "PCH ChAMP — metronidazol, revisão novembro/2024: giardíase, amebíase e administração IV",
+        "url": "https://pch.health.wa.gov.au/~/media/Files/Hospitals/PCH/General-documents/Health-professionals/ChAMP-Monographs/Metronidazole.pdf"
+      },
+      {
+        "title": "AAPD — Useful Medications for Oral Conditions: doença periodontal e ausência de recomendação infantil para infecção odontogênica genérica",
+        "url": "https://www.aapd.org/globalassets/media/policies_guidelines/r_usefulmeds.pdf"
+      },
+      {
+        "title": "EMS — página oficial de benzoilmetronidazol e acesso à bula digital",
+        "url": "https://www.ems.com.br/medicamentos/benzoilmetronidazol/"
+      },
+      {
+        "title": "EMS — bula digital vinculada pelo fabricante: 40 mg do éster equivalem a 25 mg de metronidazol por mL",
+        "url": "https://www.sara.com.br/bula-do-paciente-benzoilmetronidazol-40mg-ml-suspensao-oral-com-120ml-copo-dosador-ems/7896004702049/pdf"
+      },
+      {
+        "title": "AEP — Parasitosis intestinales, protocolo 2022: duração de 10 dias na colite e no abscesso hepático amebianos",
+        "url": "https://staging.static.aeped.es/11_parasitosis_c5d7ded232.pdf"
+      },
+      {
+        "title": "Hospital Sírio-Libanês — metronidazol: infusão padrão de 60 minutos e equivalência base/éster",
+        "url": "https://guiafarmaceutico.hsl.org.br/metronidazol"
+      }
+    ]
+  },
+  {
+    "medication_number": 107,
+    "title": "Identidade farmacêutica e infusão",
+    "text": "Atualização dirigida de 13/09/2026. No contexto do produto e da população indicados, esta revisão tem precedência sobre\nas conversões anteriores. Textos de outros contextos e lacunas permanecem. Esta atualização não representa revisão\nclínica integral das 498 monografias.\n\nEscetamina e cetamina racêmica são princípios ativos distintos para fins de dose e conversão. Não renomear\numa infusão racêmica como escetamina mantendo a mesma dose. A bula brasileira consultada descreve a\ninfusão de 0,1–0,5 mg/min em adultos com diazepam; isso não valida infusão pediátrica em mg/kg/h. A dose\nde escetamina para asma permanece não validada nesta pesquisa. Spray nasal de 28 mg tem indicação\nadulta própria e não equivale à solução injetável.",
+    "sources": [
+      {
+        "title": "Cristália — bula profissional da escetamina",
+        "url": "https://www.cristalia.com.br/produto/112/bula-profissional"
+      }
+    ]
+  },
+  {
+    "medication_number": 130,
+    "title": "Conversão do cloreto de potássio 19,1%",
+    "text": "Atualização dirigida de 13/09/2026. No contexto do produto e da população indicados, esta revisão tem precedência sobre\nas conversões anteriores. Textos de outros contextos e lacunas permanecem. Esta atualização não representa revisão\nclínica integral das 498 monografias.\n\nKCl 19,1% corresponde a 191 mg/mL; a concentração em mEq/mL deve ser a declarada no produto. Quando o\nrótulo informa 2,56 mEq/mL, 10 mEq exigem 3,90625 mL. Para bolsa FINAL de 500 mL a 20 mEq/L: retirar o\nmesmo volume da bolsa e adicionar o KCl, homogeneizar e rotular. 3,91 mL fornecem aproximadamente\n10,0096 mEq; não confundir com uma formulação rotulada 2,5 mEq/mL. Nunca administrar KCl em bolus. Esta\né conferência dimensional, sem alterar os limites por indicação da ficha.",
+    "sources": [
+      {
+        "title": "Catálogo posológico — ficha original e rótulo do produto disponível (referência interna: ficha original na página 142 deste\ndocumento). A potência em mEq/mL deve ser conferida no rótulo do produto disponível.",
+        "url": "https://emergencia-pediatrica-doses.iagovalmeida.chatgpt.site/fontes/catalogo-posologico-pediatrico.pdf#page=142"
+      }
+    ]
+  },
+  {
+    "medication_number": 220,
+    "title": "Cálcio elementar: produto brasileiro e dose por indicação",
+    "text": "Atualização dirigida de 13/09/2026. No contexto do produto e da população indicados, esta revisão tem precedência sobre\nas conversões anteriores. Textos de outros contextos e lacunas permanecem. Esta atualização não representa revisão\nclínica integral das 498 monografias.\n\nGluconato de cálcio 10% (100 mg/mL do sal); formulação Fresenius: 0,465 mEq/mL = 0,2325 mmol/mL de\ncálcio elementar, ampola de 10 mL.\nPara crianças/adolescentes, hipocalcemia sintomática: dose documental de 0,11 mmol/kg, máximo 4,4 mmol;\nhipercalemia com alteração de ECG: 0,15 mmol/kg, máximo 6,6 mmol. Volume aspirado = dose em mmol ÷\n0,2325. Os fatores internacionais 0,5 e 0,68 mL/kg não são fatores universais de todo gluconato 10%.\nHipocalcemia em acesso periférico: completar a dose com SF 0,9% para 0,044 mmol/mL. Volume final = dose\nem mmol ÷ 0,044; volume de diluente = volume final − volume aspirado. O exemplo 10 mL + 40 mL do\nproduto internacional 0,22 mmol/mL não se aplica ao Fresenius 0,2325 mmol/mL.\nNa hipercalemia, definir acesso e diluição pelo protocolo de emergência; não improvisar injeção periférica\nconcentrada.\nHipercalemia com alteração de ECG: protocolo RCH de 2–5 min se instável ou 15–20 min se estável.\nA bula Fresenius limita a velocidade a 5 mL/min do produto; o tempo nunca deve ser inferior ao volume de\nestoque dividido por 5. No teto de 6,6 mmol, são 28,387 mL e pelo menos 5,678 min por esse limite. Definir\ntempo e acesso antes de administrar; ECG contínuo.\nHipocalcemia: 5–10 min conforme ficha; repetir/continuar somente conforme cálcio ionizado e resposta.\nNeonatos mantêm o esquema neonatal separado da ficha. Cálcio não reduz o potássio.",
+    "sources": [
+      {
+        "title": "Fresenius Kabi — composição e velocidade do produto brasileiro",
+        "url": "https://www.fresenius-kabi.com/content/dam/fresenius-kabi/br/documents/bulas/medicamentos/Gliconato%20de%20C%C3%A1lcio%20-%20Bula%20Profissional%20de%20sa%C3%BAde%20%28259%20KB%29.pdf.coredownload.inline.pdf"
+      },
+      {
+        "title": "RCH — hipercalemia pediátrica",
+        "url": "https://www.rch.org.au/clinicalguide/guideline_index/Hyperkalaemia/"
+      }
+    ]
+  },
+  {
+    "medication_number": 276,
+    "title": "Formulações com e sem vasoconstritor",
+    "text": "Atualização dirigida de 13/09/2026. No contexto do produto e da população indicados, esta revisão tem precedência sobre\nas conversões anteriores. Textos de outros contextos e lacunas permanecem. Esta atualização não representa revisão\nclínica integral das 498 monografias.\n\nNas apresentações para anestesia local, o termo farmacêutico correto é vasoconstritor. Para tratamento IV\nantiarrítmico, usar formulação sem vasoconstritor. Não aplicar a concentração tópica, dose por jato ou\nformulação com adrenalina ao cálculo IV. A palavra vasoespasmo no catálogo farmacológico anterior não\ndescreve uma apresentação.",
+    "sources": [
+      {
+        "title": "Cristália — lidocaína antiarrítmica, bula profissional",
+        "url": "https://www.cristalia.com.br/produto/183/bula-profissional"
+      }
+    ]
+  },
+  {
+    "medication_number": 324,
+    "title": "Noradrenalina: base, sal e preparo",
+    "text": "Atualização dirigida de 13/09/2026. No contexto do produto e da população indicados, esta revisão tem precedência sobre\nas conversões anteriores. Textos de outros contextos e lacunas permanecem. Esta atualização não representa revisão\nclínica integral das 498 monografias.\n\nNa apresentação Hypofarma consultada, 4 mL contêm 8 mg de hemitartarato, equivalentes a 4 mg de\nnoradrenalina base. Para solução FINAL de 40 mcg/mL: 4 mL desse produto + 96 mL de SG 5% = 100 mL.\nProteger da luz. A bula recomenda diluente com glicose e não recomenda SF isolado. Expressar doses em\nbase e recalcular se o rótulo tiver composição diferente. A bula consultada é de uso adulto; as doses\npediátricas da ficha provêm de diretrizes pediátricas e são off-label em relação a essa bula.",
+    "sources": [
+      {
+        "title": "Hypofarma — bula profissional da noradrenalina",
+        "url": "https://hypofarma.com.br/wp-content/uploads/2025/05/Hemit.-de-Norepinefrina_-Bula_Profissional.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 368,
+    "title": "Propofol: apresentação e contexto",
+    "text": "Atualização dirigida de 13/09/2026. No contexto do produto e da população indicados, esta revisão tem precedência sobre\nas conversões anteriores. Textos de outros contextos e lacunas permanecem. Esta atualização não representa revisão\nclínica integral das 498 monografias.\n\nNão usar automaticamente a apresentação 2% para bolus de indução na configuração brasileira adotada\nnesta revisão. A seleção de bolus da Folha de Parada usa 1% (10 mg/mL). A existência da apresentação 2%\nnão autoriza todas as vias, idades ou indicações. Sedação contínua em UTI pediátrica tem restrições próprias;\na aprovação de indução anestésica não deve ser interpretada como aprovação de sedação em UTI.",
+    "sources": [
+      {
+        "title": "Cristália — bula profissional do propofol",
+        "url": "https://www.cristalia.com.br/produto/203/bula-profissional"
+      }
+    ]
+  },
+  {
+    "medication_number": 400,
+    "title": "Succinilcolina: origem do teto intravenoso",
+    "text": "Atualização dirigida de 13/09/2026. No contexto do produto e da população indicados, esta revisão tem precedência sobre\nas conversões anteriores. Textos de outros contextos e lacunas permanecem. Esta atualização não representa revisão\nclínica integral das 498 monografias.\n\nO teto de 150 mg na linha intramuscular original não é, por si só, fonte de um teto intravenoso. O protocolo\ninstitucional CHEO, revisto em novembro de 2025, informa 1–2 mg/kg IV inicialmente, máximo 150 mg/dose.\nA Folha de Parada mantém esse teto IV com atribuição ao CHEO. A seleção de 1 ou 2 mg/kg continua\ndependente da faixa clínica descrita na ficha; não inventar limiar etário. Bloqueio neuromuscular exige\nindução adequada e ventilação disponível.",
+    "sources": [
+      {
+        "title": "CHEO — succinylcholine chloride, novembro de 2025",
+        "url": "https://outreach.cheo.on.ca/manual/1710"
+      }
+    ]
+  },
+  {
+    "medication_number": 408,
+    "title": "Asma grave: preparo e velocidade completos",
+    "text": "Atualização dirigida de 13/09/2026. No contexto do produto e da população indicados, esta revisão tem precedência sobre as conversões anteriores. Textos de outros contextos e\nlacunas permanecem. Esta atualização não representa revisão clínica integral das 498 monografias.\n\nPara o esquema BCEHS descrito nesta ficha: sulfato de magnésio 50 mg/kg, máximo 2.000 mg, EV em 15 minutos. Definir M = menor valor entre 50 × peso (kg) e\n2.000 mg.\nCom ampola 50% (500 mg/mL), aspirar M/500 mL; com 10% (100 mg/mL), aspirar M/100 mL. Completar com SF 0,9% para M/40 mL (40 mg/mL). Diluente =\nvolume final − volume aspirado.\nBomba = 4 × volume final em mL/h; encerrar após 15 minutos. Conferência reversa: vazão × 0,25 h × 40 mg/mL = M.\nNo teto: 4 mL da solução 50% + 46 mL de SF, ou 20 mL da solução 10% + 30 mL de SF; ambas totalizam 50 mL, a 200 mL/h. Monitorizar pressão, ventilação e\nfunção renal. Não usar o tempo de PCR/torsades na asma.",
+    "sources": [
+      {
+        "title": "BCEHS — Magnesium sulfate",
+        "url": "https://handbook.bcehs.ca/drug-monographs/magnesium-sulfate/"
+      }
+    ]
+  },
+  {
+    "medication_number": 442,
+    "row_ids": [
+      "pdf-442-row-03-hta",
+      "pdf-442-row-03-angina"
+    ],
+    "title": "Revisão dirigida dos nove esquemas — 14/09/2026",
+    "text": "Hipertensão e angina foram separadas. Nove lacunas resultam em um esquema de bula, três ramos assistidos e seis omissões prescritivas; justificativas e textos anteriores preservados no histórico nove-esquemas-historico-2026-09-14.json. Não representa validação integral do catálogo.",
+    "sources": [
+      {
+        "title": "Aché — verapamil de liberação imediata",
+        "url": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 107,
+    "row_ids": [
+      "pdf-107-row-03"
+    ],
+    "title": "Complemento dirigido sobre Emergência v105 / Prescrição v194 — 14/09/2026",
+    "text": "Sem regime pediátrico específico confirmado de infusão broncodilatadora de escetamina. A referência Pfizer de novembro/2023 descreve intubação no status asmático, uma indicação distinta; não valida BIC subdissociativa. Não converter doses de cetamina racêmica nem de sedação.",
+    "sources": [
+      {
+        "title": "Qiao et al. Comparison of the effects of esketamine/midazolam and remifentanil/midazolam on respiratory mechanics in mechanically ventilated patients with ARDS",
+        "url": "https://link.springer.com/article/10.1186/s12871-025-03211-x"
+      },
+      {
+        "title": "Janssen - escetamina nasal, bula brasileira",
+        "url": "https://assets.jnjlabels.com/innovativemedicine/latam/brasil/spravato-pub-vp.pdf"
+      },
+      {
+        "title": "Revisão dirigida em 14/09/2026",
+        "url": "https://www.cristalia.com.br/produto/341/bula-profissional"
+      },
+      {
+        "title": "Pfizer — Ketanest S, informação profissional alemã (intubação no status asmático; não BIC broncodilatadora)",
+        "url": "https://figi.pfizer.de/sites/default/files/FI-1435.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 129,
+    "row_ids": [
+      "pdf-129-row-02"
+    ],
+    "title": "Complemento dirigido sobre Emergência v105 / Prescrição v194 — 14/09/2026",
+    "text": "Cardíaco: série retrospectiva de 2005 e referência SEFH de 2017 documentam uso histórico e suspensão magistral, mas não completam a seleção de dose, associação e duração por dispositivo. Neurovascular: consenso de 11/06/2026 identificado, sem íntegra recuperada. Não aplicar 1 mg/kg/dia universalmente, extrapolar PICOLO ou fracionar comprimidos. Os dados históricos permanecem na auditoria.",
+    "sources": [
+      {
+        "title": "Finkelstein et al. Clopidogrel use in children. J Pediatr.147: 657–661",
+        "url": "https://doi.org/10.1016/j.jpeds.2005.05.006"
+      },
+      {
+        "title": "University of Virginia — Clopidogrel for Platelet Inhibition in Pediatric Patients",
+        "url": "https://med.virginia.edu/pediatrics/wp-content/uploads/sites/237/2015/12/201005.pdf"
+      },
+      {
+        "title": "Consenso neurointervencionista pediátrico — íntegra não recuperada",
+        "url": "https://doi.org/10.1136/jnis-2026-025420"
+      },
+      {
+        "title": "SEFH — suspensão magistral de clopidogrel 5 mg/mL; não estabelece regime por dispositivo",
+        "url": "https://gruposdetrabajo.sefh.es/farmacotecnia/images/stories/PN_Formulas/C/CLOPIDOGREL_5mg_ml_SUSP_PNT.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 133,
+    "row_ids": [
+      "pdf-133-row-03"
+    ],
+    "title": "Complemento dirigido sobre Emergência v105 / Prescrição v194 — 14/09/2026",
+    "text": "Registro histórico de 2 mg/kg/dia não define sozinho intervalo e teto; consenso de 2025 alerta para efeitos adversos dos antipsicóticos antigos. Não usar dose de agitação.",
+    "sources": [
+      {
+        "title": "Kulkarni ML, Anees S. Sydenham's chorea. Indian Pediatrics. 1996; 33: 112–115.",
+        "url": "https://www.indianpediatrics.net/feb1996/112.pdf"
+      },
+      {
+        "title": "Evaluation, Diagnosis, and Treatment of Sydenham Chorea: Consensus Guidelines. Pediatrics.156(6): e 2025072466.",
+        "url": "https://publications.aap.org/pediatrics/article/156/6/e2025072466/205465/Evaluation-Diagnosis-and-Treatment-of-Sydenham"
+      },
+      {
+        "title": "Revisão dirigida em 14/09/2026",
+        "url": "https://eprints.gla.ac.uk/372852/1/372852.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 145,
+    "row_ids": [
+      "pdf-145-row-03"
+    ],
+    "title": "Complemento dirigido sobre Emergência v105 / Prescrição v194 — 14/09/2026",
+    "text": "Pode causar fraqueza/comprometimento ventilatório e hepatotoxicidade. Evitar associação com verapamil/diltiazem na crise. Doses em mg/kg, não mcg/kg. SNM: monitorar ventilação, função hepática, CK, função renal e acesso/extravasamento. Solução reconstituída: até 6 horas a 15–30 °C, protegida da luz; não misturar com soluções ácidas, SF ou SG. Dupla checagem da dose acumulada antes de cada infusão; sem ajuste numérico renal/hepático inventado.",
+    "sources": [
+      {
+        "title": "Cristália — Dantrolen 20 mg, bula profissional (histórico 28/10/2025)",
+        "url": "https://www.cristalia.com.br/produto/76/bula-profissional"
+      },
+      {
+        "title": "Red de Antídotos — Dantroleno 20 mg",
+        "url": "https://redantidotos.org/wp-content/uploads/2018/04/Dantroleno_Red-Antidotos_2021.pdf"
+      },
+      {
+        "title": "Utah Poison Control — dantroleno na SNM, 30/05/2025",
+        "url": "https://poisoncontrol.utah.edu/news/2025/05/utility-of-dantrolene-treating-neuroleptic-malignant-syndrome"
+      },
+      {
+        "title": "Bula/referência reaberta em 14/09/2026",
+        "url": "https://redantidotos.org/wp-content/uploads/2018/04/Dantroleno_Red-Antidotos_2021.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 332,
+    "row_ids": [
+      "pdf-332-row-04"
+    ],
+    "title": "Complemento dirigido sobre Emergência v105 / Prescrição v194 — 14/09/2026",
+    "text": "4 mg VO a cada 8 horas = 1 comprimido orodispersível de 4 mg/dose, total 12 mg/dia. Primeira dose 1–2 horas antes da radioterapia; continuar conforme modalidade e planejamento radioterápico, incluindo 1–2 dias após o término. A bula também inicia o ramo adulto aos 11 anos: manter aqui a dose pediátrica durante os 11 anos completos, sem aumento automático. Insuficiência hepática grave: teto 8 mg/dia, portanto bloquear este esquema de 12 mg/dia. Contraindicado com apomorfina; rever risco emético, QT, eletrólitos e interações. Não converter para EV. A ausência de ensaios pediátricos de radioterapia em outras monografias não anula a descrição da bula brasileira nem demonstra eficácia universal.",
+    "sources": [
+      {
+        "title": "Jürgens H, McQuade B. Ondansetron as prophylaxis for chemotherapy and radiotherapy-induced emesis in children",
+        "url": "https://doi.org/10.1159/000227057"
+      },
+      {
+        "title": "University of Virginia — The Use of 5-HT 3 Antagonists in the Prevention of Nausea and Vomiting in Children",
+        "url": "https://med.virginia.edu/pediatrics/wp-content/uploads/sites/237/2015/12/199709.pdf"
+      },
+      {
+        "title": "Biolab — bula brasileira de ondansetrona; Anvisa 05/12/2025",
+        "url": "https://cdn.biolabfarma.com.br/imagens/7896241296523-Bula.Pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 401,
+    "row_ids": [
+      "pdf-401-row-03"
+    ],
+    "title": "Complemento dirigido sobre Emergência v105 / Prescrição v194 — 14/09/2026",
+    "text": "Pediamécum lista gastrite crônica, mas não fornece regime específico para gastrite erosiva pediátrica. Não extrapolar a posologia de sangramento, úlcera ou esofagite.",
+    "sources": [
+      {
+        "title": "EDQM/Council of Europe — Evidence-based classification review for sucralfate",
+        "url": "https://www.edqm.eu/documents/52006/299893/Evidence-based%2Bclassification%2Breview%2Bfor%2Bsucralfate%2B%282026%29.pdf/ed7a74c2-5d2e-712e-a605-1e15f2f2358b?t=1780665408838"
+      },
+      {
+        "title": "Revisão dirigida em 14/09/2026",
+        "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/sucralfato"
+      }
+    ]
+  },
+  {
+    "medication_number": 442,
+    "row_ids": [
+      "pdf-442-row-03-hta",
+      "pdf-442-row-03-angina"
+    ],
+    "title": "Complemento dirigido sobre Emergência v105 / Prescrição v194 — 14/09/2026",
+    "text": "Evitar EV em <1 ano por risco de colapso cardiovascular. Contraindicado em disfunção ventricular importante, bloqueio AV sem marca-passo e FA com via acessória. Associação com betabloqueador EV pode causar parada. Nos ramos orais para hipertensão/angina: monitorar PA, FC, ECG e função ventricular; excluir choque cardiogênico, insuficiência cardíaca importante, bloqueio AV sem marca-passo, FA com via acessória e uso de ivabradina. Individualizar em disfunção hepática/renal. Comprimido IR de 80 mg não pode ser partido; não trocar por liberação prolongada.",
+    "sources": [
+      {
+        "title": "Abbott — Dilacoron 80 mg, bula profissionalBU 10",
+        "url": "https://dam.abbott.com/pt-br/documents/pdfs/nossas-bulas/D/BU%2010_Dilacoron%2080mg_Bula_Profissional_FINAL.pdf"
+      },
+      {
+        "title": "Aché/Biosintética — cloridrato de verapamil 80 mg, bula do paciente",
+        "url": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf"
+      },
+      {
+        "title": "Bula/referência reaberta em 14/09/2026",
+        "url": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 450,
+    "row_ids": [
+      "pdf-450-row-04"
+    ],
+    "title": "Complemento dirigido sobre Emergência v105 / Prescrição v194 — 14/09/2026",
+    "text": "MEDICAÇÃO NÃO INDICADA PARA IDADE: a bula brasileira consultada contraindica venlafaxina abaixo de 18 anos.",
+    "sources": [
+      {
+        "title": "Viatris — Efexor XR, bula profissional",
+        "url": "https://www.viatris.com.br/-/media/project/common/viatriscombr/pdf/leaflets_legacy_myl_brazil/efexor-xr_bula_profissional.pdf"
+      },
+      {
+        "title": "Revisão dirigida em 14/09/2026",
+        "url": "https://www.viatris.com.br/-/media/project/common/viatriscombr/pdf/leaflets_legacy_myl_brazil/efexor-xr_bula_profissional.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 496,
+    "row_ids": [
+      "pdf-496-row-01"
+    ],
+    "title": "Complemento dirigido sobre Emergência v105 / Prescrição v194 — 14/09/2026",
+    "text": "Dose do estudo esclarecida: 0,45 mL/kg/dia da solução estrangeira com 133,4 mg de sal/mL e 33,8 mg de cálcio elementar/mL = 60,03 mg de sal/kg/dia e 15,21 mg de cálcio/kg/dia, em três refeições. Titulação: 0,1–0,2 mL/kg/dia; incrementos de 0,5 mL são arredondamento das tomadas. O total e sua distribuição devem respeitar as tabelas do estudo. Produto, composição e administrabilidade brasileiros ainda não confirmados: sem cálculo clínico. Não converter para comprimidos nem transferir tetos do estudo dependentes de propilenoglicol e carga cálcica.",
+    "sources": [
+      {
+        "title": "Greenbaum et al. Safety and efficacy of sucroferric oxyhydroxide in pediatric patients with chronic kidney disease",
+        "url": "https://link.springer.com/article/10.1007/s00467-020-04805-y"
+      },
+      {
+        "title": "Vifor — Clinical protocol PA-CL-PED-01/NCT 02688764 v 2.0",
+        "url": "https://cdn.clinicaltrials.gov/large-docs/64/NCT02688764/Prot_000.pdf"
+      },
+      {
+        "title": "Pediatric Renal Nutrition Taskforce — dietary management of calcium and phosphate in children with CKD 2–5 D",
+        "url": "https://link.springer.com/article/10.1007/s00467-019-04370-z"
+      },
+      {
+        "title": "Revisão dirigida em 14/09/2026",
+        "url": "https://cdn.clinicaltrials.gov/large-docs/64/NCT02688764/Prot_000.pdf"
+      },
+      {
+        "title": "FDA — Phoslyra, bula histórica 04/2015; 667 mg de sal = 169 mg de cálcio/5 mL",
+        "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/022581s006lbl.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 129,
+    "row_ids": [
+      "pdf-129-row-02"
+    ],
+    "title": "Fechamento por delta — 14/09/2026",
+    "text": "Cenário genérico de stents/dispositivos: sem regime universal seguro. Há evidência C histórica específica para flow diverter intracraniano: séries AJNR 2017 e SNI 2022 usaram clopidogrel 75 mg VO/dia em pacientes >45 kg, iniciado cinco dias antes. Associação com AAS e continuação após seis meses diferem entre séries; houve hiper-resposta plaquetária. Idades individuais por peso não recuperadas e consenso de 2026 sem íntegra: manter fora do seletor automático até definição individual pela neurointervenção. Não extrapolar para stents cardíacos, PICOLO, dose mg/kg ou fracionamento do comprimido.",
+    "sources": [
+      {
+        "title": "Barburoglu e Arat — flow diverters pediátricos; série histórica, AJNR 2017",
+        "url": "https://www.ajnr.org/content/38/1/113"
+      },
+      {
+        "title": "Santos-Franco et al. — flow diverters pediátricos, SNI 2022;13:522",
+        "url": "https://surgicalneurologyint.com/surgicalint-articles/intracranial-aneurysms-in-pediatric-population-treated-with-flow-diverters-a-single-center-experience/"
+      },
+      {
+        "title": "Novartis — clopidogrel, bula profissional brasileira; comprimido inteiro de 75 mg base",
+        "url": "https://portal.novartis.com.br/medicamentos/wp-content/uploads/2022/11/Bula-BISSULFATO-DE-CLOPIDOGREL-Comprimido-revestido-Medico.pdf"
+      }
+    ]
+  },
+  {
+    "medication_number": 145,
+    "row_ids": [
+      "pdf-145-row-03"
+    ],
+    "title": "Acesso para dantroleno — revisão por delta em 14/09/2026",
+    "text": "Preferir acesso central; veia periférica calibrosa é alternativa sob vigilância contínua de extravasamento.",
+    "sources": [
+      {
+        "title": "Utah Poison Control, 2025",
+        "url": "https://poisoncontrol.utah.edu/news/2025/05/utility-of-dantrolene-treating-neuroleptic-malignant-syndrome"
+      },
+      {
+        "title": "Red Antídotos, 2021",
+        "url": "https://redantidotos.org/wp-content/uploads/2018/04/Dantroleno_Red-Antidotos_2021.pdf"
+      }
+    ]
+  },
+  {
+    "id": "soberania-20260930-acetato-calcio-nct02688764-historico",
+    "medication_number": 496,
+    "row_ids": [
+      "pdf-496-row-01",
+      "pdf-496-row-02"
+    ],
+    "title": "Acetato de cálcio — contexto histórico do estudo NCT02688764; adendo documental de 30/09/2026",
+    "status": "QUARENTENA",
+    "clinical_calculator_enabled": false,
+    "scope": "Histórico consultivo do catálogo posológico já existente em Ventilação Mecânica; estado do estudo atribuído ao registro original, sem alteração do motor clínico ou da disponibilidade das seleções.",
+    "text": "O esquema documental da monografia 496 provém do estudo NCT02688764 (PA-CL-PED-01), que comparou PA21/Velphoro com acetato de cálcio/Phoslyra. O registro original ClinicalTrials.gov, consultado em 30/09/2026, informa TERMINATED (encerrado precocemente), com data efetiva de término de 21/02/2019 e última postagem de atualização em 10/09/2019. O motivo declarado é a alteração dos requisitos do estudo pela FDA dos Estados Unidos e pela Agência Europeia de Medicamentos. Esse status, por si só, não comprova toxicidade nem falha de eficácia do acetato de cálcio; também não é uma retração da publicação científica. O protocolo hospedado no registro é a versão 2.0, de 22/09/2015, e permanece uma fonte histórica de pesquisa, não um protocolo pediátrico brasileiro vigente. O registro não confirma apresentação, composição, administrabilidade ou registro sanitário de um produto brasileiro. Não transpor a solução estrangeira estudada para comprimidos ou preparações locais, nem converter sal em cálcio elementar usando uma fração aproximada como se fosse composição exata. Este adendo integra somente o histórico consultivo já existente neste projeto. Não altera doses, tetos, apresentações, PDFs, motor clínico, seleção ou receita. O registro histórico da pesquisa não resolve a confirmação de produto e composição brasileiros nem valida automaticamente um esquema clínico individual.",
+    "trial_record": {
+      "trial_id": "NCT02688764",
+      "status": "TERMINATED",
+      "completion_date": "2019-02-21",
+      "completion_date_type": "ACTUAL",
+      "last_update_posted_date": "2019-09-10",
+      "why_stopped": "The study was prematurely ended due to the modification of study requirements by the US Food and Drug Administration and the European Medicines Agency",
+      "protocol_version": "2.0",
+      "protocol_date": "2015-09-22",
+      "protocol_url": "https://cdn.clinicaltrials.gov/large-docs/64/NCT02688764/Prot_000.pdf"
+    },
+    "reopening_condition": "Qualquer futura proposta de cálculo ou seleção exige reconciliar o produto brasileiro exato, composição, forma, administrabilidade, indicação, população, via, dose, limites, titulação e monitorização com evidência aplicável, além das conferências clínica/documental, farmacêutica, matemática e reversa e dos testes do contrato específico do destino. Este adendo não muda as regras operacionais existentes.",
+    "applicability_exclusions": [
+      {
+        "information": "Status histórico de término do estudo estrangeiro",
+        "destination": "Liberação automática de cálculo, seleção ou receita neste projeto",
+        "status": "NAO_APLICAVEL",
+        "reason": "Status de pesquisa não confirma produto brasileiro, composição nem contrato clínico individual."
+      },
+      {
+        "information": "Comparador Phoslyra do protocolo histórico",
+        "destination": "Comprimidos ou preparações brasileiras do catálogo",
+        "status": "NAO_APLICAVEL",
+        "reason": "A formulação estrangeira não documenta equivalência de apresentação, composição ou administrabilidade brasileira."
+      }
+    ],
+    "sources": [
+      {
+        "title": "An Open-label, Randomised, Active-controlled, Parallel Group, Multicentre, Phase 3 Study to Investigate the Safety and Efficacy of PA21 (Velphoro®) and Calcium Acetate (Phoslyra®) in Paediatric and Adolescent CKD Patients With Hyperphosphataemia — registro NCT02688764",
+        "entity": "ClinicalTrials.gov / US National Library of Medicine; informações de registro fornecidas pelo patrocinador Vifor Fresenius Medical Care Renal Pharma",
+        "url": "https://clinicaltrials.gov/api/v2/studies/NCT02688764",
+        "publisher_context_url": "https://clinicaltrials.gov/study/NCT02688764",
+        "version_date": "2019-09-10",
+        "checked_at": "2026-09-30T23:31:15.444849+00:00",
+        "examined": true,
+        "source_sha256": "a06a95f2bd55060e0833c80bb1efe25b6191d510ead394d743aac2d719322eb9",
+        "locator": "protocolSection.identificationModule.nctId; protocolSection.statusModule.overallStatus, whyStopped, completionDateStruct, lastUpdatePostDateStruct; documentSection.largeDocumentModule.largeDocs",
+        "excerpt": "overallStatus: TERMINATED; completionDateStruct: 2019-02-21, ACTUAL; lastUpdatePostDateStruct: 2019-09-10; whyStopped: The study was prematurely ended due to the modification of study requirements by the US Food and Drug Administration and the European Medicines Agency",
+        "reliability": "Registro primário da pesquisa em repositório oficial da NLM, com identificador, patrocinador, estado, datas e motivo declarados; resposta integral examinada. Uma referência original suficiente para estes fatos atribuídos ao registro.",
+        "limitations": "Registro histórico de estudo, cuja última atualização postada é de 2019; não comprova recomendação pediátrica ou apresentação brasileira atual, nem avalia causalidade de eventos clínicos. O status de término não é declaração de retração da publicação de 2021, reprovação do medicamento ou contraindicação clínica universal."
+      }
+    ],
+    "documentary_validation_status": "VALIDADO_NO_ESCOPO_DOCUMENTAL_HISTORICO"
+  },
+  {
+    "id": "soberania-20261001-succitrat-blau2026-adendo-documental",
+    "medication_number": 400,
+    "row_ids": [
+      "pdf-400-row-01",
+      "pdf-400-row-02"
+    ],
+    "title": "Succitrat — bula profissional atual no fabricante e declaração de atualização de 2026; adendo documental de 01/10/2026",
+    "status": "VALIDADO_DOCUMENTAL",
+    "clinical_calculator_enabled": false,
+    "scope": "Atualização consultiva da referência já existente de succinilcolina neste catálogo. Validação documental atribuída à bula do fabricante; nenhuma alteração da disponibilidade ou dos contratos clínicos existentes.",
+    "text": "A bula profissional de Succitrat agora foi obtida diretamente na página atual do fabricante Blau, na categoria Anestésicos, além do espelho de 2024 examinado anteriormente. O PDF de sete páginas declara atualização conforme Bula Padrão aprovada pela Anvisa em 25/06/2026. Esta é uma declaração do documento examinado; a consulta independente ao Bulário não foi bem-sucedida. Os metadados do PDF indicam criação e modificação em 18/09/2026, uma data distinta. O histórico já existente neste projeto permanece preservado; a análise documental de 2024 foi registrada no PPS. As novas passagens explicitam que a agulha deve ser adquirida separadamente e recomendam bisel longo para aspirar o produto. Também acrescentam cautela no aleitamento ou na doação de leite humano, com avaliação e acompanhamento clínico. Os dizeres legais passam a declarar uso restrito a estabelecimentos de saúde. Essas orientações são atribuídas à bula e não criam preparo automático. As apresentações de 100 mg e 500 mg, as quatro concentrações da tabela de reconstituição e as restrições pediátricas já documentadas permanecem iguais. A bula ainda não identifica o diluente da reconstituição inicial em 2–10 mL nem fornece uma fronteira numérica entre crianças pequenas e maiores. Os exemplos de dextrose 5% e NaCl 0,9% referem-se à diluição subsequente e não definem automaticamente o diluente inicial. O limite de 150 mg permanece exclusivamente intramuscular. A infusão intravenosa contínua continua não considerada segura em neonatos e crianças. Mantêm-se as contraindicações e a monitorização. As divergências textuais hipocalemia sob o título Hipercalemia e lactantes na seção Crianças continuam presentes e não fundamentam novas condutas. Este adendo resolve a ausência de uma fonte direta atual do fabricante para os fatos documentais descritos. A atualização permanece apenas consultiva neste destino e preserva seus próprios contratos e critérios prévios; o adendo não libera nem desativa cálculos existentes.",
+    "reopening_condition": "Qualquer futura proposta de alteração clínica depende do produto, preparo, população, via e contrato específico deste projeto, com validação documental, matemática, dimensional e reversa. Este adendo não altera regras, liberações ou bloqueios já existentes.",
+    "sources": [
+      {
+        "url": "https://blau.com/media/leaflet/53781999-1597-4219-9900-33b7624c86a5-a512246d-7d8b-44be-a186-3b7feebad45b/Bula_d_shE45OH.pdf",
+        "publisher_context_url": "https://blau.com/produtos/todos-os-produtos/anestesicos/",
+        "entity": "Blau Farmacêutica S.A. — site oficial do fabricante",
+        "title": "Succitrat (cloreto de suxametônio) — bula profissional, pó para solução injetável de 100 mg e 500 mg",
+        "version_date": "O documento declara atualização conforme Bula Padrão aprovada pela Anvisa em 25/06/2026; o PDF foi criado e modificado em 18/09/2026. São datas distintas. A aprovação não foi confirmada independentemente na ANVISA.",
+        "checked_at": "2026-10-01T01:28:09.916931+00:00",
+        "examined": true,
+        "source_sha256": "99c7d9e924ce85664c77a888d156202c242ada1999bef7e207a6d9dfd364b095",
+        "bytes": 220903,
+        "pages": 7,
+        "locator": "Páginas 2–7: identidade, composição, contraindicações, precauções, pediatria, reconstituição e dizeres legais. Texto integral das sete páginas lido; páginas 5, 6 e 7 conferidas visualmente.",
+        "excerpt": "Página 7: Esta bula foi atualizada conforme Bula Padrão aprovada pela Anvisa em 25/06/2026. Página 5: adquirir agulha separadamente; recomenda agulha com bisel longo para aspiração; cautela no aleitamento ou doação de leite humano. Página 6: infusão IV contínua não considerada segura em neonatos e crianças; limite de 150 mg no uso IM.",
+        "reliability": "Bula profissional original obtida no domínio oficial atual Blau.com, ligada como bula para médico de Succitrat na categoria Anestésicos. Identidade do produto, composição, registro declarado 1.1637.0078, entidade, CNPJ e corpo clínico coerentes nas sete páginas. Uma fonte original é suficiente para estes fatos atribuídos.",
+        "integrity": "HTTP 200, application/pdf, 220903 bytes, sete páginas legíveis, não criptografado e sem JavaScript. O título de template reaproveitado de N-acetilcisteína está registrado; o corpo integral corresponde a Succitrat.",
+        "retraction_or_supersession_check": "Bula diretamente ligada na página atual do fabricante consultada em 01/10/2026. Nenhuma indicação de retirada foi observada nessa página ou documento. Não se afirma estoque, registro ativo no Bulário nem vigilância universal de erratas.",
+        "applicability": "Adendo consultivo da monografia 400 e dos seus consumidores existentes. Não libera cálculo, população com fronteira numérica, escolha do diluente inicial, teto IV ou infusão.",
+        "local_document_path": "/fontes/soberania/2026-10-01-succitrat-bula-fabricante.pdf"
+      }
+    ],
+    "source_anomalies": [
+      {
+        "locator": "PDF metadados",
+        "observed": "Título de templateN-acetilcisteína; corpo éSuccitrat.",
+        "decision": "Identificação pelo corpo coerente; não inventar autenticação criptográfica."
+      },
+      {
+        "locator": "Página4Hipercalemia",
+        "observed": "Frase ainda usa hipocalemia;seções4/5Pediatria explícitas alertam hipercalemia.",
+        "decision": "Não copiar a frase divergente para conduta nem afirmar errata oficial."
+      },
+      {
+        "locator": "Página6Crianças",
+        "observed": "Lactantes e crianças pequenas,sem idade numérica.",
+        "decision": "Não inferir corteetário automático."
+      }
+    ],
+    "applicability_exclusions": [
+      {
+        "information": "Infusão contínua adulta",
+        "destination": "Motor pediátrico/neonatal",
+        "status": "NAO_APLICAVEL",
+        "reason": "População distinta e alerta pediátrico explícito de infusão insegura."
+      },
+      {
+        "information": "Orientação maternal de aleitamento/doaçãoleitehumano",
+        "destination": "Regra de dose para criança receptora de leite",
+        "status": "NAO_APLICAVEL",
+        "reason": "Recomendação sobre a usuária lactante,sem dose automática neonatal ou mudança dos critérios pediátricos."
+      }
+    ],
+    "created_at": "2026-10-01T01:32:59.457751+00:00",
+    "documentary_validation_status": "VALIDADO_DOCUMENTAL_NO_ESCOPO_ATRIBUIDO",
+    "target_context": "appgprj_6a7674b1eb4c8191881fcced25db6d91"
+  }
+]
