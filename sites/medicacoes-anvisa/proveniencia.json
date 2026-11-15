@@ -1,0 +1,33 @@
+{
+  "extraido_em": "2026-10-23",
+  "fontes": [
+    {
+      "arquivo": "anvisa.csv",
+      "url": "https://dados.anvisa.gov.br/dados/DADOS_ABERTOS_MEDICAMENTOS.csv",
+      "sha256": "f0b546e2d3a737a90fbc866348356cd766344bd2f4b8f488a43d66a0d7a30877",
+      "bytes": 45920138,
+      "linhas": 228869,
+      "encoding": "ISO-8859-1"
+    },
+    {
+      "arquivo": "apresentacoes.csv",
+      "url": "https://dados.anvisa.gov.br/dados/CONSULTAS/PRODUTOS/TA_CONSULTA_MEDICAMENTOS.CSV",
+      "sha256": "265d70ed13343db18d92f31d95e9c425c99b15203ec47d10b18c60ec116fcfc3",
+      "bytes": 114433406,
+      "linhas": 228869,
+      "encoding": "ISO-8859-1"
+    },
+    {
+      "arquivo": "cmed.csv",
+      "url": "https://dados.anvisa.gov.br/dados/TA_PRECO_MEDICAMENTO.csv",
+      "sha256": "e843e1ba8cbe781692101282ac4e7dee10ae66ad262a620aa03abc781918c7cf",
+      "bytes": 17148070,
+      "linhas": 26635,
+      "encoding": "UTF-8"
+    }
+  ],
+  "denominacoes": 6575,
+  "registros": 228869,
+  "apresentacoes_cmed": 26635,
+  "nota": "Reprodução independente de dados oficiais. Situação por registro de produto não confirma situação individual de apresentação. Sem validação de posologia ou indicação clínica."
+}
