@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --font-elegant-body: "Raleway", "Avenir Next", "Segoe UI", Arial, sans-serif;
+  --font-metrolic-title: "Poiret One", "Century Gothic", "Avenir Next", "Segoe UI Light", sans-serif;
+}
+
+html[data-site-typography="metrolic-elegant"],
+html[data-site-typography="metrolic-elegant"] body,
+html[data-site-typography="metrolic-elegant"] button,
+html[data-site-typography="metrolic-elegant"] input,
+html[data-site-typography="metrolic-elegant"] select,
+html[data-site-typography="metrolic-elegant"] textarea,
+html[data-site-typography="metrolic-elegant"] summary {
+  font-family: var(--font-elegant-body) !important;
+}
+
+html[data-site-typography="metrolic-elegant"] body :where(*) {
+  font-family: var(--font-elegant-body) !important;
+}
+
+html[data-site-typography="metrolic-elegant"][lang] body .posology-library.posology-library :is(
+  p,
+  span,
+  strong,
+  small,
+  summary,
+  label,
+  caption,
+  th,
+  td,
+  button,
+  input,
+  select
+) {
+  font-family: var(--font-elegant-body) !important;
+}
+
+html[data-site-typography="metrolic-elegant"] :is(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .section-title,
+  .medication-section__title,
+  .airway-panel__title,
+  .ventilation-section__title,
+  .posology-heading,
+  .posology-monograph-heading,
+  .posology-regimen-heading
+) {
+  font-family: var(--font-metrolic-title) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.025em;
+}
+
+html[data-site-typography="metrolic-elegant"][lang] body .posology-library.posology-library :is(h2, h3, h4, h5) {
+  font-family: var(--font-metrolic-title) !important;
+}
+
+html[data-site-typography="metrolic-elegant"] :is(code, pre, kbd, samp) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+
+@media print {
+  html[data-site-typography="metrolic-elegant"] body {
+    font-family: var(--font-elegant-body) !important;
+  }
+}
