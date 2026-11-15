@@ -1,0 +1,2127 @@
+{
+  "kind": "historical_not_current_guidance",
+  "baseline": {
+    "emergencia": 105,
+    "prescricao": 194
+  },
+  "audit": {
+    "verifiedAt": "14/09/2026",
+    "baselineVersion": 104,
+    "baselineCommit": "e81bfde6c77e87b77bb88dfea0834664d9920031",
+    "implemented": [
+      {
+        "id": "ondansetrona-radio",
+        "drug": "ondansetrona",
+        "indication": "Radioterapia — prevenção de náuseas e vômitos (VO)",
+        "presentation": "Comprimido orodispersível 4 mg",
+        "classification": "Bula brasileira — 2 a 11 anos; sobreposição aos 11 anos",
+        "source": "https://cdn.biolabfarma.com.br/imagens/7896241296523-Bula.Pdf"
+      },
+      {
+        "id": "verapamil-hta",
+        "drug": "verapamil",
+        "indication": "Hipertensão — adolescente >50 kg (VO, liberação imediata)",
+        "presentation": "Comprimido revestido 80 mg — liberação imediata; inteiro",
+        "classification": "Bula brasileira — cálculo assistido após decisão cardiológica",
+        "source": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf"
+      },
+      {
+        "id": "verapamil-angina",
+        "drug": "verapamil",
+        "indication": "Angina / isquemia miocárdica — adolescente >50 kg (VO, liberação imediata)",
+        "presentation": "Comprimido revestido 80 mg — liberação imediata; inteiro",
+        "classification": "Bula brasileira — cálculo assistido após decisão cardiológica",
+        "source": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf"
+      },
+      {
+        "id": "dantroleno-snm",
+        "drug": "dantroleno",
+        "indication": "Síndrome neuroléptica maligna — manutenção após resposta (EV intermitente)",
+        "presentation": "Dantroleno sódico 20 mg/frasco — reconstituir com 60 mL de água para injetáveis",
+        "classification": "Off-label — cálculo assistido hospitalar; evidência pediátrica limitada",
+        "source": "https://redantidotos.org/wp-content/uploads/2018/04/Dantroleno_Red-Antidotos_2021.pdf"
+      }
+    ],
+    "omitted": [
+      {
+        "drug": "escetamina",
+        "pattern": "asma|broncoespasmo",
+        "indication": "Asma refratária — infusão subdissociativa",
+        "reason": "Não confirmado regime broncodilatador pediátrico específico de escetamina. Estudos de cetamina racêmica e doses de sedação não validam esse ramo.",
+        "source": "https://www.cristalia.com.br/produto/341/bula-profissional"
+      },
+      {
+        "drug": "clopidogrel",
+        "pattern": "stent|dispositivo|antiagrega|adolescente",
+        "indication": "Stents/dispositivos em crianças maiores",
+        "reason": "Sem vínculo completo entre cenário cardíaco/neurovascular, idade, regime e apresentação administrável. Consenso de 11/06/2026 localizado, mas texto integral indisponível nesta revisão; resumo não valida dose. Retiradas as linhas genéricas que extrapolavam lactentes ou adultos.",
+        "source": "https://doi.org/10.1136/jnis-2026-025420"
+      },
+      {
+        "drug": "clorpromazina",
+        "pattern": "sydenham|coreia",
+        "indication": "Coreia de Sydenham",
+        "reason": "Registro histórico de 2 mg/kg/dia não define sozinho intervalo e teto; consenso de 2025 alerta para efeitos adversos dos antipsicóticos antigos. Não usar dose de agitação.",
+        "source": "https://eprints.gla.ac.uk/372852/1/372852.pdf"
+      },
+      {
+        "drug": "sucralfato",
+        "pattern": "gastrite|doenca erosiva",
+        "indication": "Gastrite erosiva",
+        "reason": "Pediamécum lista gastrite crônica, mas não fornece regime específico para gastrite erosiva pediátrica. Não extrapolar a posologia de sangramento, úlcera ou esofagite.",
+        "source": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/sucralfato"
+      },
+      {
+        "drug": "venlafaxina",
+        "pattern": "panico",
+        "indication": "Transtorno do pânico em menores de 18 anos",
+        "reason": "MEDICAÇÃO NÃO INDICADA PARA IDADE: a bula brasileira consultada contraindica venlafaxina abaixo de 18 anos.",
+        "source": "https://www.viatris.com.br/-/media/project/common/viatriscombr/pdf/leaflets_legacy_myl_brazil/efexor-xr_bula_profissional.pdf"
+      },
+      {
+        "drug": "acetato de calcio",
+        "pattern": "hiperfosfat|titulacao|manutencao|quelante",
+        "indication": "Hiperfosfatemia na DRC",
+        "reason": "Estudo: solução estrangeira com 133,4 mg de sal/mL e 33,8 mg de cálcio elementar/mL; início 0,45 mL/kg/dia = 60,03 mg de sal/kg/dia em três refeições. Titulação de 0,1–0,2 mL/kg/dia; 0,5 mL é arredondamento das tomadas. Produto brasileiro e administrabilidade não confirmados; não converter esse regime para comprimidos nem transferir tetos dependentes de propilenoglicol.",
+        "source": "https://cdn.clinicaltrials.gov/large-docs/64/NCT02688764/Prot_000.pdf"
+      }
+    ],
+    "scope": "Revisão clínica original no Emergência Pediátrica v104; propagação documental por delta para este catálogo. Cálculos assistidos disponíveis apenas no Emergência Pediátrica e Prescrição Pediátrica Segura.",
+    "sourceDates": {
+      "ondansetrona": "Bula aprovada Anvisa 05/12/2025",
+      "verapamil": "Bula Aché 02/2021",
+      "dantroleno": "Red Antídotos 2021; Utah 05/2025; bula Cristália consultada 14/09/2026",
+      "acetato_de_calcio": "Protocolo NCT02688764; publicação 2020; solução estudada estrangeira",
+      "venlafaxina": "Bula Viatris 11/2025",
+      "sucralfato": "Pediamécum 12/2020",
+      "clorpromazina": "Consenso 2025; regime histórico sem intervalo validado",
+      "clopidogrel": "Consenso 11/06/2026, somente resumo acessível"
+    }
+  },
+  "metadata": {
+    "source_sha256": "05fe9049f35a85e767c88888fafbe5cafee072b83c61d2f2a2f3da194f880e9a",
+    "source_bytes": 4306622,
+    "pages": 510,
+    "status_counts": {
+      "supported": 993,
+      "restricted": 265,
+      "omitted": 6,
+      "assisted": 3
+    },
+    "format_notes": [
+      "A tabela não tem colunas independentes de via, intervalo, duração, teto ou restrições; esses elementos estão no texto da dose e nas notas.",
+      "Não há seção geral de apresentações nas monografias do PDF posológico; as apresentações abaixo têm proveniência separada no catálogo farmacológico anterior.",
+      "supported/restricted/unresolved são classificações declaradas pelo documento gerador, não certificação clínica desta extração."
+    ],
+    "monographs": 498,
+    "regimen_rows": 1266,
+    "source_entries": 1009,
+    "unique_source_urls": 939,
+    "presentations_general_sections_in_posology_pdf": 0,
+    "identities_equal_to_previous_catalog": true,
+    "external_sources_reopened_by_extractor": false,
+    "original_source_sha256": "386416f908d22a5c1d73698de155582c9734c75d43ae395f99e009f9ec6f3e5b",
+    "revision_date": "2026-09-14",
+    "revision_scope": "Correções focais documentadas; preservação das demais monografias. Não equivale a nova validação clínica universal.",
+    "correction_log": "correcoes-fontes-delta.json",
+    "original_status_counts_preserved": {
+      "supported": 992,
+      "restricted": 262,
+      "unresolved": 9
+    },
+    "source_filename": "Catalogo_Posologico_Pediatrico_Corrigido.pdf",
+    "source_path": "/workspace/scratch/30e51231e13b/revision/output/pdf/Catalogo_Posologico_Pediatrico_Corrigido.pdf",
+    "original_generator_comparison": {
+      "same_text_pages": 510,
+      "same_word_geometry_pages": 510,
+      "same_uri_annotations_pages": 510
+    },
+    "corrected_page_field_inventory_verified": true,
+    "presentations_source_sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf",
+    "current_library_baseline_sha256": "3f76ad4b8694dd1cd51dcb1c476f86d33c73ee9903e0b4e157a9f6fc32936d51",
+    "latest_library_reconciliation": {
+      "current_library_version": 2,
+      "current_library_sha256": "e3923a004bf2626e3e38cde007f1d182d40f7648ad9616ab18fb4ab696692df7",
+      "existing_correction_notes_compared": 26,
+      "new_clinical_changes_requiring_merge": 0,
+      "decision": "Preservar PDFs corrigidos congelados: todas as mudanças da versão 2 já estão integradas aos campos; não reintroduzir notas redundantes nem conteúdo substituído."
+    },
+    "original_regimen_rows_preserved": 1263,
+    "revision_added_regimen_rows": 3,
+    "delta_review": {
+      "verifiedAt": "14/09/2026",
+      "sourceBaselineVersion": 104,
+      "omitted": 6,
+      "assisted": 3,
+      "supported": 1,
+      "note": "Verapamil foi dividido em duas indicações. Classificações antigas não significam validação global."
+    }
+  },
+  "entries": [
+    {
+      "number": 107,
+      "id": "pdf-107",
+      "name": "Escetamina",
+      "page": 119,
+      "indications_original": "Escetamina injetável: sedoanalgesia para procedimentos dolorosos e indução/manutenção anestésica; asma grave refratária (off-label, sem regime pediátrico específico de infusão subdissociativa confirmado). Spray nasal: transtorno depressivo maior em adultos nos cenários definidos na bula; não indicado para anestesia ou asma e não deve ser usado em menores de 18 anos.",
+      "presentations_original": "Solução injetável 50 mg/mL; spray nasal 28 mg por dispositivo, de uso adulto para depressão conforme bula (não intercambiável com a solução anestésica).",
+      "presentations_source": {
+        "document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Corrigido.pdf",
+        "page": 18,
+        "present_in_new_posology_pdf_as_general_section": false,
+        "original_document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Final.pdf",
+        "sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf"
+      },
+      "regimens": [
+        {
+          "id": "pdf-107-row-01",
+          "row_index": 0,
+          "indication": "Sedação para procedimentos dolorosos; indução de anestesia",
+          "population": "Pediatria, exclusivamente anestesiologia; evidência por idade limitada",
+          "dose_text": "Referência internacional para ESCETAMINA INJETÁVEL: 0,5-1 mg/kg EV lentamente ou 2-4 mg/kg IM para indução; se necessário, repetir metade da dose inicial após 10-15 minutos. Duração: procedimento, titulada à resposta.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "A monografia declara investigação pediátrica insuficiente e uso pediátrico sob especialista. Existe divergência importante com doses da bula brasileira; reconciliação institucional obrigatória antes de incorporar o esquema.",
+          "notes": "A monografia declara investigação pediátrica insuficiente e uso pediátrico sob especialista. Existe divergência importante com doses da bula brasileira; reconciliação institucional obrigatória antes de incorporar o esquema.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "S2"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              125.84796142578125,
+              561.2755737304688,
+              306.27593994140625
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Sedação para",
+              "procedimentos",
+              "dolorosos; indução",
+              "de anestesia"
+            ],
+            "population": [
+              "Pediatria,",
+              "exclusivamente",
+              "anestesiologia;",
+              "evidência por idade",
+              "limitada"
+            ],
+            "dose_notes_refs": [
+              "Referência internacional para ESCETAMINA INJETÁVEL: 0,5-1 mg/kg",
+              "EV lentamente ou 2-4 mg/kg IM para indução; se necessário, repetir",
+              "metade da dose inicial após 10-15 minutos. Duração: procedimento,",
+              "titulada à resposta. ",
+              "[S1]",
+              "A monografia declara investigação pediátrica insuficiente e uso",
+              "pediátrico sob especialista. Existe divergência importante com doses",
+              "da bula brasileira; reconciliação institucional obrigatória antes de",
+              "incorporar o esquema."
+            ]
+          }
+        },
+        {
+          "id": "pdf-107-row-02",
+          "row_index": 1,
+          "indication": "Manutenção anestésica",
+          "population": "Pediatria sob anestesiologista",
+          "dose_text": "ESCETAMINA INJETÁVEL: infusão EV de 0,5-3 mg/kg/h, titulada à profundidade anestésica e aos fármacos associados; interromper ao término do procedimento. Pode ser diluída em SF 0,9% ou SG 5% para concentração final de 1 ou 2 mg/mL.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Faixa da monografia internacional com ressalva pediátrica; não é esquema de spray nasal.",
+          "notes": "Faixa da monografia internacional com ressalva pediátrica; não é esquema de spray nasal.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "S2"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              306.27593994140625,
+              561.2755737304688,
+              420.6419372558594
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Manutenção",
+              "anestésica"
+            ],
+            "population": [
+              "Pediatria sob",
+              "anestesiologista"
+            ],
+            "dose_notes_refs": [
+              "ESCETAMINA INJETÁVEL: infusão EV de 0,5-3 mg/kg/h, titulada à",
+              "profundidade anestésica e aos fármacos associados; interromper ao",
+              "término do procedimento. Pode ser diluída em SF 0,9% ou SG 5%",
+              "para concentração final de 1 ou 2 mg/mL. ",
+              "[S1]",
+              "Faixa da monografia internacional com ressalva pediátrica; não é",
+              "esquema de spray nasal."
+            ]
+          }
+        },
+        {
+          "id": "pdf-107-row-03",
+          "row_index": 2,
+          "indication": "Asma refratária - infusão subdissociativa",
+          "population": "Pediatria",
+          "dose_text": "Esquema omitido da prescrição automática.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Não confirmado regime broncodilatador pediátrico específico de escetamina. Estudos de cetamina racêmica e doses de sedação não validam esse ramo.",
+          "notes": "Não confirmado regime broncodilatador pediátrico específico de escetamina. Estudos de cetamina racêmica e doses de sedação não validam esse ramo.",
+          "status": "omitted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "R1",
+            "S2",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              420.6419372558594,
+              561.2755737304688,
+              535.0079345703125
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Asma refratária -",
+              "infusão",
+              "subdissociativa"
+            ],
+            "population": [
+              "Pediatria"
+            ],
+            "dose_notes_refs": [
+              "Não foi identificado esquema pediátrico específico suficientemente",
+              "respaldado para ESCETAMINA nesta indicação nas fontes abertas",
+              "consultadas. Não importar automaticamente dose de cetamina",
+              "racêmica. ",
+              "[S1]",
+              "Indicação preservada do original; requer protocolo específico e",
+              "decisão do intensivista."
+            ]
+          }
+        }
+      ],
+      "monitoring_and_precautions": "Monitorização cardiorrespiratória contínua e recursos de ventilação. Distinguir escetamina base, cloridrato, cetamina racêmica e spray nasal. Não coadministrar xantinas segundo a monografia internacional; considerar esta interação na asma. O spray nasal de 28 mg tem indicação adulta para depressão em cenários definidos na bula e não deve ser usado em menores de 18 anos; não é apresentação para indução, manutenção anestésica ou asma. As doses das bulas britânica e brasileira injetáveis diferem e não foram reconciliadas como equivalentes. A bula brasileira descreve infusão de 0,1-0,5 mg/min em adultos com diazepam; esse regime não valida infusão pediátrica em mg/kg/h.",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "eMC - Esketamine injetável, Kalceks",
+          "url": "https://www.medicines.org.uk/emc/product/13194/smpc",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S2",
+          "title": "Cristália - Ketamin, bula profissional",
+          "url": "https://www.cristalia.com.br/produto/112/bula-profissional",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "title": "Qiao et al. Comparison of the effects of esketamine/midazolam and remifentanil/midazolam on respiratory mechanics in mechanically ventilated patients with ARDS",
+          "url": "https://link.springer.com/article/10.1186/s12871-025-03211-x",
+          "id": "R1",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "Janssen - escetamina nasal, bula brasileira",
+          "url": "https://assets.jnjlabels.com/innovativemedicine/latam/brasil/spravato-pub-vp.pdf",
+          "id": "R2",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "id": "DELTA",
+          "title": "Revisão dirigida em 14/09/2026",
+          "url": "https://www.cristalia.com.br/produto/341/bula-profissional"
+        }
+      ],
+      "clinical_validation_status": "sourced_focal_revision_not_universal_clinical_certification"
+    },
+    {
+      "number": 129,
+      "id": "pdf-129",
+      "name": "Clopidogrel",
+      "page": 141,
+      "indications_original": "Prevenção de eventos aterotrombóticos em adultos; antiagregação após cirurgias de cardiopatias congênitas e stents em pediatria (off-label).",
+      "presentations_original": "Comprimidos revestidos 75 mg.",
+      "presentations_source": {
+        "document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Corrigido.pdf",
+        "page": 21,
+        "present_in_new_posology_pdf_as_general_section": false,
+        "original_document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Final.pdf",
+        "sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf"
+      },
+      "regimens": [
+        {
+          "id": "pdf-129-row-01",
+          "row_index": 0,
+          "indication": "Cardiopatias congênitas/circulação com shunt - antiagregação selecionada",
+          "population": "0-24 meses - off-label",
+          "dose_text": "Regime farmacodinâmico estudado: 0,2 mg/kg/dose VO uma vez ao dia, sem ataque. Duração deve ser definida pela cardiologia segundo dispositivo e risco trombótico; estudo PICOLO avaliou efeito após 7-28 dias, não uma duração universal de tratamento.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "A inibição plaquetária demonstrada não prova prevenção de eventos em todas as cardiopatias; não usar como rotina automática.",
+          "notes": "A inibição plaquetária demonstrada não prova prevenção de eventos em todas as cardiopatias; não usar como rotina automática.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              125.84799194335938,
+              561.2755737304688,
+              264.6689758300781
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Cardiopatias congêni",
+              "tas/circulação com",
+              "shunt -",
+              "antiagregação",
+              "selecionada"
+            ],
+            "population": [
+              "0-24 meses - off-label"
+            ],
+            "dose_notes_refs": [
+              "Regime farmacodinâmico estudado: 0,2 mg/kg/dose VO uma vez ao",
+              "dia, sem ataque. Duração deve ser definida pela cardiologia segundo",
+              "dispositivo e risco trombótico; estudo PICOLO avaliou efeito após",
+              "7-28 dias, não uma duração universal de tratamento. ",
+              "[S1]",
+              "A inibição plaquetária demonstrada não prova prevenção de eventos",
+              "em todas as cardiopatias; não usar como rotina automática."
+            ]
+          }
+        },
+        {
+          "id": "pdf-129-row-02",
+          "row_index": 1,
+          "indication": "Stents e outros dispositivos em crianças maiores",
+          "population": "Crianças/adolescentes - off-label",
+          "dose_text": "Esquema omitido da prescrição automática.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Sem vínculo completo entre cenário cardíaco/neurovascular, idade, regime e apresentação administrável. Consenso de 11/06/2026 localizado, mas texto integral indisponível nesta revisão; resumo não valida dose. Retiradas as linhas genéricas que extrapolavam lactentes ou adultos.",
+          "notes": "Sem vínculo completo entre cenário cardíaco/neurovascular, idade, regime e apresentação administrável. Consenso de 11/06/2026 localizado, mas texto integral indisponível nesta revisão; resumo não valida dose. Retiradas as linhas genéricas que extrapolavam lactentes ou adultos.",
+          "status": "omitted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "R1",
+            "R2",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              264.6689758300781,
+              561.2755737304688,
+              389.6209716796875
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Stents e outros",
+              "dispositivos em",
+              "crianças maiores"
+            ],
+            "population": [
+              "Crianças/adolescentes -",
+              "off-label"
+            ],
+            "dose_notes_refs": [
+              "Não há esquema pediátrico universal validado por idade/tipo de",
+              "stent nas fontes primárias abertas. Necessita plano individual da",
+              "cardiologia e hematologia. ",
+              "[S1]",
+              "Indicação mantida; não extrapolar dose adulta 75 mg/dia nem carga",
+              "300-600 mg."
+            ]
+          }
+        },
+        {
+          "id": "pdf-129-row-03",
+          "row_index": 2,
+          "indication": "Prevenção aterotrombótica",
+          "population": "Indicação adulta do original",
+          "dose_text": "Não constitui indicação pediátrica habitual; sem esquema pediátrico padronizado.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Preservação documental, sem extrapolação.",
+          "notes": "Preservação documental, sem extrapolação.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              389.6209716796875,
+              561.2755737304688,
+              500.7039794921875
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Prevenção",
+              "aterotrombótica"
+            ],
+            "population": [
+              "Indicação adulta do",
+              "original"
+            ],
+            "dose_notes_refs": [
+              "Não constitui indicação pediátrica habitual; sem esquema pediátrico",
+              "padronizado. ",
+              "[S1]",
+              "Preservação documental, sem extrapolação."
+            ]
+          }
+        }
+      ],
+      "monitoring_and_precautions": "Monitorar sangramento, hemograma e interações CYP 2C19; associação com AAS aumenta risco. Dose baixa de lactentes exige manipulação/concentração validada.",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "PICOLO - ensaio primário de dose pediátrica de clopidogrel",
+          "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.107.715821",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "title": "Finkelstein et al. Clopidogrel use in children. J Pediatr.147: 657–661",
+          "url": "https://doi.org/10.1016/j.jpeds.2005.05.006",
+          "id": "R1",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "University of Virginia — Clopidogrel for Platelet Inhibition in Pediatric Patients",
+          "url": "https://med.virginia.edu/pediatrics/wp-content/uploads/sites/237/2015/12/201005.pdf",
+          "id": "R2",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "id": "DELTA",
+          "title": "Revisão dirigida em 14/09/2026",
+          "url": "https://doi.org/10.1136/jnis-2026-025420"
+        }
+      ],
+      "clinical_validation_status": "sourced_focal_revision_not_universal_clinical_certification"
+    },
+    {
+      "number": 133,
+      "id": "pdf-133",
+      "name": "Clorpromazina",
+      "page": 145,
+      "indications_original": "Agitação psicomotora grave, soluços intratáveis, náuseas e vômitos refratários; coreia de Sydenham (off-label).",
+      "presentations_original": "Gotas 40 mg/mL; comprimidos 25 mg e 100 mg; solução injetável IM 5 mg/mL.",
+      "presentations_source": {
+        "document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Corrigido.pdf",
+        "page": 21,
+        "present_in_new_posology_pdf_as_general_section": false,
+        "original_document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Final.pdf",
+        "sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf"
+      },
+      "regimens": [
+        {
+          "id": "pdf-133-row-01",
+          "row_index": 0,
+          "indication": "Agitação importante; náuseas/vômitos refratários",
+          "population": "6 meses-12 anos",
+          "dose_text": "ADMINISTRAR 0,55 mg/kg/dose VO a cada 4-6 h conforme necessidade. Reavaliar antes de repetir e usar pelo menor período possível.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Conversão da bula 0,25 mg/libra. A fonte oral não define teto pediátrico uniforme; doses psiquiátricas elevadas do texto não constituem teto de emergência.",
+          "notes": "Conversão da bula 0,25 mg/libra. A fonte oral não define teto pediátrico uniforme; doses psiquiátricas elevadas do texto não constituem teto de emergência.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              125.84799194335938,
+              561.2755737304688,
+              250.7999725341797
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Agitação",
+              "importante;",
+              "náuseas/vômitos",
+              "refratários"
+            ],
+            "population": [
+              "6 meses-12 anos"
+            ],
+            "dose_notes_refs": [
+              "ADMINISTRAR 0,55 mg/kg/dose VO a cada 4-6 h conforme",
+              "necessidade. Reavaliar antes de repetir e usar pelo menor período",
+              "possível. ",
+              "[S1]",
+              "Conversão da bula 0,25 mg/libra. A fonte oral não define teto",
+              "pediátrico uniforme; doses psiquiátricas elevadas do texto não",
+              "constituem teto de emergência."
+            ]
+          }
+        },
+        {
+          "id": "pdf-133-row-02",
+          "row_index": 1,
+          "indication": "Soluço intratável",
+          "population": "Pediatria",
+          "dose_text": "Sem posologia pediátrica estabelecida na bula aberta; não transpor 25-50 mg por tomada do adulto.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "A própria bula contraindica extrapolar para condições sem dose pediátrica definida.",
+          "notes": "A própria bula contraindica extrapolar para condições sem dose pediátrica definida.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              250.7999725341797,
+              561.2755737304688,
+              336.489990234375
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Soluço intratável"
+            ],
+            "population": [
+              "Pediatria"
+            ],
+            "dose_notes_refs": [
+              "Sem posologia pediátrica estabelecida na bula aberta; não transpor",
+              "25-50 mg por tomada do adulto. ",
+              "[S1]",
+              "A própria bula contraindica extrapolar para condições sem dose",
+              "pediátrica definida."
+            ]
+          }
+        },
+        {
+          "id": "pdf-133-row-03",
+          "row_index": 2,
+          "indication": "Coreia de Sydenham",
+          "population": "Pediatria - indicação off-label do original",
+          "dose_text": "Esquema omitido da prescrição automática.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Registro histórico de 2 mg/kg/dia não define sozinho intervalo e teto; consenso de 2025 alerta para efeitos adversos dos antipsicóticos antigos. Não usar dose de agitação.",
+          "notes": "Registro histórico de 2 mg/kg/dia não define sozinho intervalo e teto; consenso de 2025 alerta para efeitos adversos dos antipsicóticos antigos. Não usar dose de agitação.",
+          "status": "omitted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "R1",
+            "R2",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              336.489990234375,
+              561.2755737304688,
+              433.7039794921875
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Coreia de Sydenham"
+            ],
+            "population": [
+              "Pediatria - indicação",
+              "off-label do original"
+            ],
+            "dose_notes_refs": [
+              "Não identificado esquema pediátrico atual suficientemente",
+              "respaldado para clorpromazina nesta pesquisa; manter avaliação",
+              "neurológica/reumatológica. ",
+              "[S1]",
+              "Não substituir o nome por haloperidol nem copiar sua dose."
+            ]
+          }
+        }
+      ],
+      "monitoring_and_precautions": "Monitorar pressão, ECG/QT, distonia, sedação e síndrome neuroléptica maligna. Não usar para mascarar vômitos por doença neurológica/obstrução; maior sensibilidade em lactentes.",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "DailyMed - clorpromazina oral",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=472e9a45-4060-3b2a-e063-6294a90a716a&type=display",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "title": "Kulkarni ML, Anees S. Sydenham's chorea. Indian Pediatrics. 1996; 33: 112–115.",
+          "url": "https://www.indianpediatrics.net/feb1996/112.pdf",
+          "id": "R1",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "Evaluation, Diagnosis, and Treatment of Sydenham Chorea: Consensus Guidelines. Pediatrics.156(6): e 2025072466.",
+          "url": "https://publications.aap.org/pediatrics/article/156/6/e2025072466/205465/Evaluation-Diagnosis-and-Treatment-of-Sydenham",
+          "id": "R2",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "id": "DELTA",
+          "title": "Revisão dirigida em 14/09/2026",
+          "url": "https://eprints.gla.ac.uk/372852/1/372852.pdf"
+        }
+      ],
+      "clinical_validation_status": "sourced_focal_revision_not_universal_clinical_certification"
+    },
+    {
+      "number": 145,
+      "id": "pdf-145",
+      "name": "Dantroleno Sódico",
+      "page": 157,
+      "indications_original": "Tratamento de resgate da hipertermia maligna anestésica; síndrome neuroléptica maligna grave (off-label).",
+      "presentations_original": "Pó para solução injetável IV frasco de 20 mg.",
+      "presentations_source": {
+        "document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Corrigido.pdf",
+        "page": 23,
+        "present_in_new_posology_pdf_as_general_section": false,
+        "original_document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Final.pdf",
+        "sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf"
+      },
+      "regimens": [
+        {
+          "id": "pdf-145-row-01",
+          "row_index": 0,
+          "indication": "Hipertermia maligna - crise",
+          "population": "Todas as idades",
+          "dose_text": "Administrar dantroleno 2,5 mg/kg EV rapidamente. Repetir conforme hipercapnia, rigidez e taquicardia; MHAUS orienta nova dose se ausência de resposta em 10-15 minutos, ou mais cedo se instável/crise acelerando. Doses totais >10 mg/kg podem ser necessárias; sem resposta, reconsiderar diagnóstico.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "Dantrium/Revonto: 20 mg + 60 mL de água para injeção sem conservante. Ryanodex: 250 mg + 5 mL de água para injeção. Preparações distintas; não substituir diluente por SF.",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "S4"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              125.84799194335938,
+              561.2755737304688,
+              268.88995361328125
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Hipertermia maligna",
+              "- crise"
+            ],
+            "population": [
+              "Todas as idades"
+            ],
+            "dose_notes_refs": [
+              "Administrar dantroleno 2,5 mg/kg EV rapidamente. Repetir conforme",
+              "hipercapnia, rigidez e taquicardia; MHAUS orienta nova dose se",
+              "ausência de resposta em 10-15 minutos, ou mais cedo se",
+              "instável/crise acelerando. Doses totais >10 mg/kg podem ser",
+              "necessárias; sem resposta, reconsiderar diagnóstico. ",
+              "[S1, S4]",
+              "Dantrium/Revonto: 20 mg + 60 mL de água para injeção sem",
+              "conservante. Ryanodex: 250 mg + 5 mL de água para injeção.",
+              "Preparações distintas; não substituir diluente por SF."
+            ]
+          }
+        },
+        {
+          "id": "pdf-145-row-02",
+          "row_index": 1,
+          "indication": "Hipertermia maligna - prevenção de recrudescência",
+          "population": "Todas as idades após controlar crise",
+          "dose_text": "ADMINISTRAR 1 mg/kg EV a cada 4-6 h por pelo menos 24 h. Interromper/alongar intervalo apenas com estabilidade metabólica 24 h, temperatura <38°C, CK em queda, ausência de mioglobinúria e rigidez.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "Monitorar em UTI.",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S2"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              268.88995361328125,
+              561.2755737304688,
+              368.91796875
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Hipertermia maligna",
+              "- prevenção de",
+              "recrudescência"
+            ],
+            "population": [
+              "Todas as idades após",
+              "controlar crise"
+            ],
+            "dose_notes_refs": [
+              "ADMINISTRAR 1 mg/kg EV a cada 4-6 h por pelo menos 24 h.",
+              "Interromper/alongar intervalo apenas com estabilidade metabólica",
+              "24 h, temperatura <38°C, CK em queda, ausência de mioglobinúria",
+              "e rigidez. ",
+              "[S2]",
+              "Monitorar em UTI."
+            ]
+          }
+        },
+        {
+          "id": "pdf-145-row-03",
+          "row_index": 2,
+          "indication": "Síndrome neuroléptica maligna — manutenção após resposta",
+          "population": "Pediatria - off-label, evidência limitada",
+          "dose_text": "Cálculo assistido off-label: 1 mg/kg/dose EV a cada 6 horas, em uma hora, somente após resposta objetiva. Frasco brasileiro 20 mg + 60 mL de água para injetáveis sem conservante = 20/60 mg/mL; volume e bomba = 3 × peso em mL e mL/h. Interromper a bomba ao final de uma hora; infusão intermitente.",
+          "route": "EV intermitente",
+          "interval": "6/6 h após resposta",
+          "duration": null,
+          "limits": "10 mg/kg/24 h acumulados",
+          "restrictions": "Suspender o agente causal e manter suporte intensivo. Frasco brasileiro de 20 mg: reconstituir em 60 mL de água para injetáveis sem conservante (20/60 mg/mL), nunca SF ou SG 5%. Manutenção de 1 mg/kg em 1 h: volume = 3 × peso (kg) mL; bomba = 3 × peso mL/h; reversa: mL/h × 1 h × (20/60 mg/mL) ÷ peso = 1 mg/kg. Monitorar função hepática, CK, rim, eletrólitos e ventilação. Evidência pediátrica limitada; não autoriza ordem automática completa do ataque.",
+          "notes": "Máximo 10 mg/kg/24 h incluindo ataque e todas as manutenções; informar dose prévia e recalcular antes de cada administração. Ataque não automatizado: Red Antídotos 2021 descreve 3 min/frasco; Utah 2025 descreve ≥1 h para formulações convencionais. Não há duração fixa. Não usar SF/SG. Monitorar ventilação, fígado, CK, rim e extravasamento; evitar bloqueadores de cálcio. Evidência pediátrica limitada.",
+          "status": "assisted",
+          "status_source": "reviewed_specific_regimen_2026_09_14",
+          "source_refs": [
+            "S3",
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              368.91796875,
+              561.2755737304688,
+              483.2839660644531
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Síndrome",
+              "neuroléptica maligna"
+            ],
+            "population": [
+              "Pediatria - off-label,",
+              "evidência limitada"
+            ],
+            "dose_notes_refs": [
+              "Dantroleno é opção especializada, porém a fonte de emergência",
+              "aberta não oferece validação pediátrica específica independente.",
+              "Não converter o esquema de hipertermia maligna em prescrição",
+              "automática para esta síndrome. ",
+              "[S3]",
+              "Suspender agente desencadeante e suporte intensivo são",
+              "essenciais; posologia individual pela toxicologia."
+            ]
+          }
+        }
+      ],
+      "monitoring_and_precautions": "Pode causar fraqueza/comprometimento ventilatório e hepatotoxicidade. Evitar associação com verapamil/diltiazem na crise. Doses em mg/kg, não mcg/kg.",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "MHAUS - Dosing and reconstituting dantrolene",
+          "url": "https://www.mhaus.org/cfw/index.cfm?action=view-article&controller=kb&key=95B081F2-5118-4109-8FBB-C1800C5302AD&seoTitle=dosing-and-reconstituting-dantrolene",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S2",
+          "title": "MHAUS - Dantrolene after an MH event",
+          "url": "https://www.mhaus.org/healthcare-professionals/mhaus-recommendations/dantrolene-administration-after-an-mh-event/",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S3",
+          "title": "EmergencyCareBC - Neuroleptic malignant syndrome",
+          "url": "https://emergencycarebc.ca/clinical_resource/clinical-summary/neuroleptic-malignant-syndrome-diagnosis-treatment/",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S4",
+          "title": "MHAUS - tratamento da crise de hipertermia maligna",
+          "url": "https://www.mhaus.org/healthcare-professionals/managing-a-crisis/",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "title": "Dantrolen 20 mg — bula profissional Cristália",
+          "url": "https://www.cristalia.com.br/produto/76/bula-profissional",
+          "id": "R1",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "Red de Antídotos — Dantroleno 20 mg",
+          "url": "https://redantidotos.org/wp-content/uploads/2018/04/Dantroleno_Red-Antidotos_2021.pdf",
+          "id": "R2",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "Utility of Dantrolene in Treating Neuroleptic Malignant Syndrome — University of Utah Poison Control",
+          "url": "https://poisoncontrol.utah.edu/news/2025/05/utility-of-dantrolene-treating-neuroleptic-malignant-syndrome-0",
+          "id": "R3",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "Red de Antídotos — Dantroleno 120 mg",
+          "url": "https://redantidotos.org/antidoto/dantroleno/",
+          "id": "R4",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "id": "DELTA",
+          "title": "Bula/referência reaberta em 14/09/2026",
+          "url": "https://redantidotos.org/wp-content/uploads/2018/04/Dantroleno_Red-Antidotos_2021.pdf"
+        }
+      ],
+      "clinical_validation_status": "sourced_focal_revision_not_universal_clinical_certification"
+    },
+    {
+      "number": 332,
+      "id": "pdf-332",
+      "name": "Ondansetrona",
+      "page": 344,
+      "indications_original": "Prevenção e tratamento de náuseas e vômitos induzidos por quimioterapia, radioterapia e no pós-operatório; vômitos na gastroenterite aguda (off-label).",
+      "presentations_original": "Comprimidos e filmes orodispersíveis 4 e 8 mg; solução oral 0,8 mg/mL; gotas 4 mg/mL e 8 mg/mL; solução injetável 2 mg/mL.",
+      "presentations_source": {
+        "document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Corrigido.pdf",
+        "page": 43,
+        "present_in_new_posology_pdf_as_general_section": false,
+        "original_document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Final.pdf",
+        "sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf"
+      },
+      "regimens": [
+        {
+          "id": "pdf-332-row-01",
+          "row_index": 0,
+          "indication": "Quimioterapia - prevenção de náuseas/vômitos",
+          "population": "≥6 meses",
+          "dose_text": "Alternativas: 0,15 mg/kg/dose EV antes da quimioterapia, repetir 4 e 8 h depois (máximo 8 mg/dose); OU 5 mg/m² EV uma vez, máximo 8 mg. Após 12 h: VO ≤10 kg 2 mg 12/12 h; >10 kg 4 mg 12/12 h, até 5 dias. Pela superfície: <0,6 m²2 mg 12/12 h; ≥0,6 m²4 mg 12/12 h. Não combinar cálculos de peso e superfície.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              125.84799194335938,
+              561.2755737304688,
+              211.5379638671875
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Quimioterapia -",
+              "prevenção de",
+              "náuseas/vômitos"
+            ],
+            "population": [
+              "≥6 meses"
+            ],
+            "dose_notes_refs": [
+              "Alternativas: 0,15 mg/kg/dose EV antes da quimioterapia, repetir 4 e",
+              "8 h depois (máximo 8 mg/dose); OU 5 mg/m² EV uma vez, máximo 8",
+              "mg. Após 12 h: VO ≤10 kg 2 mg 12/12 h; >10 kg 4 mg 12/12 h, até 5",
+              "dias. Pela superfície: <0,6 m²2 mg 12/12 h; ≥0,6 m²4 mg 12/12 h.",
+              "Não combinar cálculos de peso e superfície. ",
+              "[S1]"
+            ]
+          }
+        },
+        {
+          "id": "pdf-332-row-02",
+          "row_index": 1,
+          "indication": "Náuseas/vômitos pós-operatórios",
+          "population": "≥1 mês",
+          "dose_text": "0,1 mg/kg EV uma vez, máximo 4 mg, antes/durante/após indução; mesma dose única se sintomas estabelecidos. Administrar lentamente ≥30 s. Repetir rotineiramente após falha não mostra benefício. Alternativa VO off-label em ≥40 kg: 4 mg 1 h antes da anestesia e 4 mg após 12 h.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "S2"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              211.5379638671875,
+              561.2755737304688,
+              297.22796630859375
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Náuseas/vômitos",
+              "pós-operatórios"
+            ],
+            "population": [
+              "≥1 mês"
+            ],
+            "dose_notes_refs": [
+              "0,1 mg/kg EV uma vez, máximo 4 mg, antes/durante/após indução;",
+              "mesma dose única se sintomas estabelecidos. Administrar",
+              "lentamente ≥30 s. Repetir rotineiramente após falha não mostra",
+              "benefício. Alternativa VO off-label em ≥40 kg: 4 mg 1 h antes da",
+              "anestesia e 4 mg após 12 h. ",
+              "[S1, S2]"
+            ]
+          }
+        },
+        {
+          "id": "pdf-332-row-03",
+          "row_index": 2,
+          "indication": "Vômitos na gastroenterite aguda - facilitar reidratação",
+          "population": "≥6 meses",
+          "dose_text": "VO dose única: 8-15 kg 2 mg; >15-30 kg 4 mg; >30 kg 8 mg. AlternativaEV 0,15 mg/kg uma vez, máximo 8 mg, em ambiente monitorado. Iniciar reidratação após controle do vômito.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "Evitar uso rotineiro se diarreia predominante; não mascarar obstrução.",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "S2"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              297.22796630859375,
+              561.2755737304688,
+              397.2559814453125
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Vômitos na",
+              "gastroenterite",
+              "aguda - facilitar",
+              "reidratação"
+            ],
+            "population": [
+              "≥6 meses"
+            ],
+            "dose_notes_refs": [
+              "VO dose única: 8-15 kg 2 mg; >15-30 kg 4 mg; >30 kg 8 mg.",
+              "AlternativaEV 0,15 mg/kg uma vez, máximo 8 mg, em ambiente",
+              "monitorado. Iniciar reidratação após controle do vômito. ",
+              "[S1, S2]",
+              "Evitar uso rotineiro se diarreia predominante; não mascarar",
+              "obstrução."
+            ]
+          }
+        },
+        {
+          "id": "pdf-332-row-04",
+          "row_index": 3,
+          "indication": "Náuseas/vômitos por radioterapia",
+          "population": "2 a 11 anos; sobreposição da bula aos 11 anos",
+          "dose_text": "4 mg VO a cada 8 horas = 1 comprimido orodispersível de 4 mg/dose; total 12 mg/dia. Primeira dose 1–2 horas antes da radioterapia, continuando por 1–2 dias após o término conforme plano radioterápico.",
+          "route": "VO",
+          "interval": "8/8 h",
+          "duration": null,
+          "limits": "12 mg/dia neste esquema; insuficiência hepática grave: 8 mg/dia",
+          "restrictions": "A bula HPRA explicita ausência de dados de ensaios controlados pediátricos para radioterapia; decisão por oncologia, sem copiar dose adulta.",
+          "notes": "Bula brasileira: insuficiência hepática grave limita a 8 mg/dia e impede este regime. Contraindicado com apomorfina. Rever QT, eletrólitos e interações. Não converter para EV nem selecionar dose adulta automaticamente aos 11 anos.",
+          "status": "supported",
+          "status_source": "reviewed_specific_regimen_2026_09_14",
+          "source_refs": [
+            "S3",
+            "R1",
+            "R2",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              397.2559814453125,
+              561.2755737304688,
+              511.6219787597656
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Náuseas/vômitos por",
+              "radioterapia"
+            ],
+            "population": [
+              "Pediatria"
+            ],
+            "dose_notes_refs": [
+              "A fonte pediátrica não estabelece regime específico de radioterapia;",
+              "individualizar por área irradiada e emetogenicidade com oncologia.",
+              "Não transpor automaticamente sequência de quimioterapia. ",
+              "[S3]",
+              "A bula HPRA explicita ausência de dados de ensaios controlados",
+              "pediátricos para radioterapia; decisão por oncologia, sem copiar",
+              "dose adulta."
+            ]
+          }
+        }
+      ],
+      "monitoring_and_precautions": "Risco QT/torsades: corrigir K+/Mg 2+, avaliar ECG/interações e evitar QT longo congênito. Hepatopatia grave: teto 8 mg/DIA na bula adulta, aplicar cautela pediátrica. Não administrar 32 mg EV em dose única.",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "AEP/Pediamécum - ondansetron",
+          "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/ondansetron",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S2",
+          "title": "IWK - ondansetron",
+          "url": "https://www.dir.iwk.nshealth.ca/Home/DDGDetails/18ac8ea3-f5b2-e911-80f4-005056b200d2?PatientPopulation=Ped",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S3",
+          "title": "HPRA - ondansetrona, SmPC 2022",
+          "url": "https://assets.hpra.ie/products/Human/16427/Licence_PA0281-126-001_08122022101142.pdf",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "title": "Jürgens H, McQuade B. Ondansetron as prophylaxis for chemotherapy and radiotherapy-induced emesis in children",
+          "url": "https://doi.org/10.1159/000227057",
+          "id": "R1",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "University of Virginia — The Use of 5-HT 3 Antagonists in the Prevention of Nausea and Vomiting in Children",
+          "url": "https://med.virginia.edu/pediatrics/wp-content/uploads/sites/237/2015/12/199709.pdf",
+          "id": "R2",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "id": "DELTA",
+          "title": "Bula/referência reaberta em 14/09/2026",
+          "url": "https://cdn.biolabfarma.com.br/imagens/7896241296523-Bula.Pdf"
+        }
+      ],
+      "clinical_validation_status": "sourced_focal_revision_not_universal_clinical_certification"
+    },
+    {
+      "number": 401,
+      "id": "pdf-401",
+      "name": "Sucralfato",
+      "page": 413,
+      "indications_original": "Tratamento de úlceras gástricas e duodenais, gastrites erosivas e profilaxia de úlcera de estresse.",
+      "presentations_original": "Suspensão oral 200 mg/mL; comprimidos mastigáveis 1 g; flaconetes.",
+      "presentations_source": {
+        "document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Corrigido.pdf",
+        "page": 50,
+        "present_in_new_posology_pdf_as_general_section": false,
+        "original_document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Final.pdf",
+        "sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf"
+      },
+      "regimens": [
+        {
+          "id": "pdf-401-row-01",
+          "row_index": 0,
+          "indication": "Úlcera gástrica ou duodenal benigna",
+          "population": "15-17 anos",
+          "dose_text": "Sucralfato VO 2 g 12/12 h ou 1 g 6/6 h, por 4-6 semanas; refratária pode exigir até 12 semanas. Esquemas usuais totalizam 4 g/dia; limite de bula citado pelo formulário: 8 g/dia, apenas por decisão especializada.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "Fonte complementar BNFC e regime ponderal BCCH nas linhas seguintes ampliam a cobertura para crianças menores.",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              125.84783935546875,
+              807.8897705078125,
+              228.287841796875
+            ],
+            "column_split_x": 239.08078918457034
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Úlcera gástrica ou duodenal",
+              "benigna"
+            ],
+            "population": [
+              "15-17 anos"
+            ],
+            "dose_notes_refs": [
+              "Sucralfato VO 2 g 12/12 h ou 1 g 6/6 h, por 4-6 semanas; refratária pode exigir até 12 semanas.",
+              "Esquemas usuais totalizam 4 g/dia; limite de bula citado pelo formulário: 8 g/dia, apenas por",
+              "decisão especializada. ",
+              "[S1]",
+              "Fonte complementar BNFC e regime ponderal BCCH nas linhas seguintes ampliam a cobertura para",
+              "crianças menores."
+            ]
+          }
+        },
+        {
+          "id": "pdf-401-row-02",
+          "row_index": 1,
+          "indication": "Profilaxia de úlcera de estresse",
+          "population": "Crianças em UTI com indicação específica; off-label",
+          "dose_text": "20 mg/kg/dose por sonda nasogástrica 6/6 h; manter apenas enquanto persistir risco de sangramento. O protocolo pediátrico não informa teto absoluto: confirmar teto local antes de prescrever a crianças de maior peso.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Não administrar pela sonda nasojejunal; regime específico para profilaxia, não dose comprovada para cicatrização de gastrite.",
+          "notes": "Não administrar pela sonda nasojejunal; regime específico para profilaxia, não dose comprovada para cicatrização de gastrite.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S2"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              228.287841796875,
+              807.8897705078125,
+              330.72784423828125
+            ],
+            "column_split_x": 239.08078918457034
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Profilaxia de úlcera de",
+              "estresse"
+            ],
+            "population": [
+              "Crianças em UTI com indicação",
+              "específica; off-label"
+            ],
+            "dose_notes_refs": [
+              "20 mg/kg/dose por sonda nasogástrica 6/6 h; manter apenas enquanto persistir risco de",
+              "sangramento. O protocolo pediátrico não informa teto absoluto: confirmar teto local antes de",
+              "prescrever a crianças de maior peso. ",
+              "[S2]",
+              "Não administrar pela sonda nasojejunal; regime específico para profilaxia, não dose comprovada",
+              "para cicatrização de gastrite."
+            ]
+          }
+        },
+        {
+          "id": "pdf-401-row-03",
+          "row_index": 2,
+          "indication": "Gastrite erosiva",
+          "population": "Crianças",
+          "dose_text": "Esquema omitido da prescrição automática.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Pediamécum lista gastrite crônica, mas não fornece regime específico para gastrite erosiva pediátrica. Não extrapolar a posologia de sangramento, úlcera ou esofagite.",
+          "notes": "Pediamécum lista gastrite crônica, mas não fornece regime específico para gastrite erosiva pediátrica. Não extrapolar a posologia de sangramento, úlcera ou esofagite.",
+          "status": "omitted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "S2",
+            "R1",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              330.72784423828125,
+              807.8897705078125,
+              418.4278259277344
+            ],
+            "column_split_x": 239.08078918457034
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Gastrite erosiva"
+            ],
+            "population": [
+              "Crianças"
+            ],
+            "dose_notes_refs": [
+              "As fontes abertas não estabeleceram um esquema pediátrico específico de sucralfato para esta",
+              "indicação. Avaliar causa, sangramento e opção de supressão ácida; não reutilizar automaticamente",
+              "dose profilática de UTI. ",
+              "[S1, S2]",
+              "Indicação documental preservada; lacuna de esquema terapêutico pediátrico específico."
+            ]
+          }
+        },
+        {
+          "id": "pdf-401-row-04",
+          "row_index": 3,
+          "indication": "Úlcera gástrica/duodenal - alternativa por idade",
+          "population": "1 mês-14 anos; off-label",
+          "dose_text": "VO: 1 mês-<2 anos 250 mg/dose; 2-11 anos 500 mg/dose; 12-14 anos 1 g/dose; 4-6 vezes/dia em intervalos regulares. Duração guiada por cicatrização e avaliação de gastroenterologia; fonte não fixa curso em menores de 15 anos.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "Administrar 1 h antes da alimentação. Não somar ao regime ponderal alternativo.",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S3"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              418.4278259277344,
+              807.8897705078125,
+              506.1278076171875
+            ],
+            "column_split_x": 239.08078918457034
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Úlcera gástrica/duodenal -",
+              "alternativa por idade"
+            ],
+            "population": [
+              "1 mês-14 anos; off-label"
+            ],
+            "dose_notes_refs": [
+              "VO: 1 mês-<2 anos 250 mg/dose; 2-11 anos 500 mg/dose; 12-14 anos 1 g/dose; 4-6 vezes/dia em",
+              "intervalos regulares. Duração guiada por cicatrização e avaliação de gastroenterologia; fonte não",
+              "fixa curso em menores de 15 anos. ",
+              "[S3]",
+              "Administrar 1 h antes da alimentação. Não somar ao regime ponderal alternativo."
+            ]
+          }
+        },
+        {
+          "id": "pdf-401-row-05",
+          "row_index": 4,
+          "indication": "Profilaxia de úlcera de estresse - alternativa BNFC",
+          "population": "1 mês-17 anos em UTI, quando indicada",
+          "dose_text": "VO: 1 mês-<2 anos 250 mg/dose; 2-11 anos 500 mg/dose; 12-14 anos 1 g/dose; 4-6 vezes/dia. 15-17 anos 1 g 6 vezes/dia, máximo 8 g/dia. Manter só durante risco.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "Escolher uma alternativa; não combinar com 20 mg/kg 6/6 h do protocolo Calgary.",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S3"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              506.1278076171875,
+              807.8897705078125,
+              591.4828491210938
+            ],
+            "column_split_x": 239.08078918457034
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Profilaxia de úlcera de",
+              "estresse - alternativa BNFC"
+            ],
+            "population": [
+              "1 mês-17 anos em UTI, quando",
+              "indicada"
+            ],
+            "dose_notes_refs": [
+              "VO: 1 mês-<2 anos 250 mg/dose; 2-11 anos 500 mg/dose; 12-14 anos 1 g/dose; 4-6 vezes/dia.",
+              "15-17 anos 1 g 6 vezes/dia, máximo 8 g/dia. Manter só durante risco. ",
+              "[S3]",
+              "Escolher uma alternativa; não combinar com 20 mg/kg 6/6 h do protocolo Calgary."
+            ]
+          }
+        },
+        {
+          "id": "pdf-401-row-06",
+          "row_index": 5,
+          "indication": "Proteção/cicatrização de úlcera gastrointestinal - alternativa ponderal",
+          "population": "Crianças; >12 anos",
+          "dose_text": "15 mg/kg/dose VO 4 vezes/dia; >12 anos 1 g 4 vezes/dia. Reavaliar cicatrização e duração por gastroenterologia.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "Formulário reflete prática BCCH; não constitui regime específico validado para toda gastrite erosiva.",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S4"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              591.4828491210938,
+              807.8897705078125,
+              676.8378295898438
+            ],
+            "column_split_x": 239.08078918457034
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Proteção/cicatrização de úlcera",
+              "gastrointestinal - alternativa",
+              "ponderal"
+            ],
+            "population": [
+              "Crianças; >12 anos"
+            ],
+            "dose_notes_refs": [
+              "15 mg/kg/dose VO 4 vezes/dia; >12 anos 1 g 4 vezes/dia. Reavaliar cicatrização e duração por",
+              "gastroenterologia. ",
+              "[S4]",
+              "Formulário reflete prática BCCH; não constitui regime específico validado para toda gastrite erosiva."
+            ]
+          }
+        }
+      ],
+      "monitoring_and_precautions": "Contém alumínio: cautela importante na insuficiência renal. Separar outros medicamentos enterais devido à ligação/adsorção; risco de bezoar em pacientes críticos. Não usar como proteção automática de toda criança internada.",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "NHS Somerset - Ulcer healing drugs",
+          "url": "https://www.somersetformulary.nhs.uk/chaptersSubDetails.asp?FormularySectionID=1&SubSectionID=A100&SubSectionRef=01.03",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S2",
+          "title": "Alberta Children’s Hospital - Stress ulcer prophylaxis, 2024",
+          "url": "https://achpccg.com/wp-content/uploads/2024/05/tms-picuc-physician-stress-ulcer-prophylaxis.pdf",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S3",
+          "title": "BNFC/NICE - Sucralfate",
+          "url": "https://bnfc.nice.org.uk/drugs/sucralfate/",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S4",
+          "title": "PedMed - formulário com prática do BC Children’s Hospital",
+          "url": "https://pedmed.org/pedshowdrug.php?drugID=392",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "title": "EDQM/Council of Europe — Evidence-based classification review for sucralfate",
+          "url": "https://www.edqm.eu/documents/52006/299893/Evidence-based%2Bclassification%2Breview%2Bfor%2Bsucralfate%2B%282026%29.pdf/ed7a74c2-5d2e-712e-a605-1e15f2f2358b?t=1780665408838",
+          "id": "R1",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "id": "DELTA",
+          "title": "Revisão dirigida em 14/09/2026",
+          "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/sucralfato"
+        }
+      ],
+      "clinical_validation_status": "sourced_focal_revision_not_universal_clinical_certification"
+    },
+    {
+      "number": 442,
+      "id": "pdf-442",
+      "name": "Verapamil",
+      "page": 454,
+      "indications_original": "Tratamento de taquiarritmias supraventriculares, hipertensão arterial e angina do peito.",
+      "presentations_original": "Comprimidos 80 mg; comprimidos de liberação prolongada 120 mg.",
+      "presentations_source": {
+        "document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Corrigido.pdf",
+        "page": 55,
+        "present_in_new_posology_pdf_as_general_section": false,
+        "original_document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Final.pdf",
+        "sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf"
+      },
+      "regimens": [
+        {
+          "id": "pdf-442-row-01",
+          "row_index": 0,
+          "indication": "Taquiarritmia supraventricular - reversão",
+          "population": "1-16 anos",
+          "dose_text": "0,1-0,3 mg/kg EV lento em ≥2 min; máximo 5 mg na primeira dose. Se necessário repetir após 30 min, máximo 10 mg na repetição; ECG/pressão contínuos.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              125.84799194335938,
+              561.2755737304688,
+              209.19297790527344
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Taquiarritmia",
+              "supraventricular -",
+              "reversão"
+            ],
+            "population": [
+              "1-16 anos"
+            ],
+            "dose_notes_refs": [
+              "0,1-0,3 mg/kg EV lento em ≥2 min; máximo 5 mg na primeira dose.",
+              "Se necessário repetir após 30 min, máximo 10 mg na repetição;",
+              "ECG/pressão contínuos. ",
+              "[S1]"
+            ]
+          }
+        },
+        {
+          "id": "pdf-442-row-02",
+          "row_index": 1,
+          "indication": "Taquiarritmia supraventricular - manutenção",
+          "population": "Crianças selecionadas por cardiologia",
+          "dose_text": "2-8 mg/kg/dia VO divididos a cada 8 h; tratamento contínuo enquanto indicado, com reavaliação do ritmo e condução.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "Não é adequado para FA pré-excitada/WPW nem para TSV indiferenciada. Fonte não fixa teto absoluto pediátrico.",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S2"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              209.19297790527344,
+              561.2755737304688,
+              306.406982421875
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Taquiarritmia",
+              "supraventricular -",
+              "manutenção"
+            ],
+            "population": [
+              "Crianças selecionadas",
+              "por cardiologia"
+            ],
+            "dose_notes_refs": [
+              "2-8 mg/kg/dia VO divididos a cada 8 h; tratamento contínuo",
+              "enquanto indicado, com reavaliação do ritmo e condução. ",
+              "[S2]",
+              "Não é adequado para FA pré-excitada/WPW nem para TSV",
+              "indiferenciada. Fonte não fixa teto absoluto pediátrico."
+            ]
+          }
+        },
+        {
+          "id": "pdf-442-row-03-hta",
+          "row_index": 2,
+          "indication": "Hipertensão arterial",
+          "population": "Adolescentes >50 kg; operação conservadora ≥12 e <18 anos",
+          "dose_text": "Liberação imediata: 120–480 mg/dia VO, em 3 tomadas. Dose escolhida pela cardiologia, não pelo peso. Teto deste cálculo: 480 mg/dia.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Em 3 tomadas: 40-160 mg/dose. Em 4 tomadas: 30-120 mg/dose, somente para angina. Selecionar apresentação que permita a dose sem fracionamento não autorizado. Monitorar ECG/condução AV, FC, PA e função ventricular; excluir via acessória com FA/flutter, bloqueio AV relevante, choque ou disfunção ventricular importante.",
+          "notes": "Cálculo assistido com comprimidos inteiros de 80 mg; dose não divisível em comprimidos inteiros não é emitida nem arredondada. Peso exatamente 50 kg não é elegível. Não intercambiar liberação imediata/prolongada. Monitorar PA, FC, ECG e função ventricular; excluir contraindicações e interações da bula. Duração individualizada.",
+          "status": "assisted",
+          "status_source": "reviewed_specific_regimen_2026_09_14",
+          "source_refs": [
+            "S1",
+            "R1",
+            "R2",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              306.406982421875,
+              561.2755737304688,
+              403.6209716796875
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Hipertensão arterial;",
+              "angina"
+            ],
+            "population": [
+              "Pediatria"
+            ],
+            "dose_notes_refs": [
+              "Indicações preservadas; fontes abertas não estabelecem esquema",
+              "pediátrico específico para estes dois cenários. Não transferir a dose",
+              "antiarrítmica indiscriminadamente. ",
+              "[S1]"
+            ]
+          }
+        },
+        {
+          "id": "pdf-442-row-03-angina",
+          "row_index": 2,
+          "indication": "Angina / isquemia miocárdica",
+          "population": "Adolescentes >50 kg; operação conservadora ≥12 e <18 anos",
+          "dose_text": "Liberação imediata: 120–480 mg/dia VO, em 3 ou 4 tomadas. Dose escolhida pela cardiologia, não pelo peso. Teto deste cálculo: 480 mg/dia.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Em 3 tomadas: 40-160 mg/dose. Em 4 tomadas: 30-120 mg/dose, somente para angina. Selecionar apresentação que permita a dose sem fracionamento não autorizado. Monitorar ECG/condução AV, FC, PA e função ventricular; excluir via acessória com FA/flutter, bloqueio AV relevante, choque ou disfunção ventricular importante.",
+          "notes": "Cálculo assistido com comprimidos inteiros de 80 mg; dose não divisível em comprimidos inteiros não é emitida nem arredondada. Peso exatamente 50 kg não é elegível. Não intercambiar liberação imediata/prolongada. Monitorar PA, FC, ECG e função ventricular; excluir contraindicações e interações da bula. Duração individualizada.",
+          "status": "assisted",
+          "status_source": "reviewed_specific_regimen_2026_09_14",
+          "source_refs": [
+            "S1",
+            "R1",
+            "R2",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              306.406982421875,
+              561.2755737304688,
+              403.6209716796875
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Hipertensão arterial;",
+              "angina"
+            ],
+            "population": [
+              "Pediatria"
+            ],
+            "dose_notes_refs": [
+              "Indicações preservadas; fontes abertas não estabelecem esquema",
+              "pediátrico específico para estes dois cenários. Não transferir a dose",
+              "antiarrítmica indiscriminadamente. ",
+              "[S1]"
+            ]
+          }
+        }
+      ],
+      "monitoring_and_precautions": "Evitar EV em <1 ano por risco de colapso cardiovascular. Contraindicado em disfunção ventricular importante, bloqueio AV sem marca-passo e FA com via acessória. Associação com betabloqueador EV pode causar parada.",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "Verapamil HC l",
+          "url": "https://outreach.cheo.on.ca/manual/1732",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S2",
+          "title": "Consenso italiano - taquicardia/WPW pediátrico",
+          "url": "https://doi.org/10.2459/jcm.0000000000001484",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "title": "Abbott — Dilacoron 80 mg, bula profissionalBU 10",
+          "url": "https://dam.abbott.com/pt-br/documents/pdfs/nossas-bulas/D/BU%2010_Dilacoron%2080mg_Bula_Profissional_FINAL.pdf",
+          "id": "R1",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "Aché/Biosintética — cloridrato de verapamil 80 mg, bula do paciente",
+          "url": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf",
+          "id": "R2",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "id": "DELTA",
+          "title": "Bula/referência reaberta em 14/09/2026",
+          "url": "https://www.ache.com.br/wp-content/uploads/application/pdf/bula-paciente-cloridrato-de-verapamil-1.pdf"
+        }
+      ],
+      "clinical_validation_status": "sourced_focal_revision_not_universal_clinical_certification"
+    },
+    {
+      "number": 450,
+      "id": "pdf-450",
+      "name": "Venlafaxina",
+      "page": 462,
+      "indications_original": "Tratamento da depressão, transtorno de ansiedade generalizada, ansiedade social e pânico (uso adulto).",
+      "presentations_original": "Comprimidos de liberação imediata 37,5 e 75 mg; cápsulas de liberação prolongada 37,5, 75 e 150 mg.",
+      "presentations_source": {
+        "document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Corrigido.pdf",
+        "page": 56,
+        "present_in_new_posology_pdf_as_general_section": false,
+        "original_document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Final.pdf",
+        "sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf"
+      },
+      "regimens": [
+        {
+          "id": "pdf-450-row-01",
+          "row_index": 0,
+          "indication": "Depressão resistente a ISRS - uso off-label",
+          "population": "12-18 anos",
+          "dose_text": "Venlafaxina ER VO diária: semanas 1/2/3/4: 37,5/75/112,5/150 mg/dia. Na semana 6, pode aumentar até 225 mg/dia se necessário. Ensaio de 12 semanas; manutenção posterior individualizada e retirada gradual.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Não mostrou superioridade à troca para outro ISRS; maior efeito sobre pressão/pulso.",
+          "notes": "Não mostrou superioridade à troca para outro ISRS; maior efeito sobre pressão/pulso.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S2"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              125.84799194335938,
+              561.2755737304688,
+              240.2139892578125
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Depressão",
+              "resistente a ISRS -",
+              "uso off-label"
+            ],
+            "population": [
+              "12-18 anos"
+            ],
+            "dose_notes_refs": [
+              "Venlafaxina ER VO diária: semanas 1/2/3/4: 37,5/75/112,5/150",
+              "mg/dia. Na semana 6, pode aumentar até 225 mg/dia se necessário.",
+              "Ensaio de 12 semanas; manutenção posterior individualizada e",
+              "retirada gradual. ",
+              "[S2]",
+              "Não mostrou superioridade à troca para outro ISRS; maior efeito",
+              "sobre pressão/pulso."
+            ]
+          }
+        },
+        {
+          "id": "pdf-450-row-02",
+          "row_index": 1,
+          "indication": "Ansiedade generalizada - uso off-label",
+          "population": "6-17 anos e ≥50 kg para o teto aqui documentado",
+          "dose_text": "Iniciar 37,5 mg de ER VO a cada 24 h; titular por resposta/tolerância, máximo 225 mg/dia no subgrupo ≥50 kg. Curso estudado 8 semanas, depois reavaliar.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Ensaio incluiu ≥25 kg, mas a tabela com tetos de 25-<50 kg não foi recuperada integralmente; não aplicar 225 mg a eles.",
+          "notes": "Ensaio incluiu ≥25 kg, mas a tabela com tetos de 25-<50 kg não foi recuperada integralmente; não aplicar 225 mg a eles.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S3"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              240.2139892578125,
+              561.2755737304688,
+              379.03497314453125
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Ansiedade",
+              "generalizada - uso",
+              "off-label"
+            ],
+            "population": [
+              "6-17 anos e ≥50 kg",
+              "para o teto aqui",
+              "documentado"
+            ],
+            "dose_notes_refs": [
+              "Iniciar 37,5 mg de ER VO a cada 24 h; titular por resposta/tolerância,",
+              "máximo 225 mg/dia no subgrupo ≥50 kg. Curso estudado 8",
+              "semanas, depois reavaliar. ",
+              "[S3]",
+              "Ensaio incluiu ≥25 kg, mas a tabela com tetos de 25-<50 kg não foi",
+              "recuperada integralmente; não aplicar 225 mg a eles."
+            ]
+          }
+        },
+        {
+          "id": "pdf-450-row-03",
+          "row_index": 2,
+          "indication": "Ansiedade social - uso off-label",
+          "population": "8-17 anos",
+          "dose_text": "ER VO: iniciar 37,5 mg/dia e titular conforme resposta/tolerância até máximo estudado 225 mg/dia; ensaio 16 semanas. Reavaliar continuidade, sintomas suicidas e pressão.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Resumo primário não detalha todos passos de titulação; máximo estudado não é dose-alvo de toda criança.",
+          "notes": "Resumo primário não detalha todos passos de titulação; máximo estudado não é dose-alvo de toda criança.",
+          "status": "restricted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S4"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              379.03497314453125,
+              561.2755737304688,
+              479.06298828125
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Ansiedade social -",
+              "uso off-label"
+            ],
+            "population": [
+              "8-17 anos"
+            ],
+            "dose_notes_refs": [
+              "ER VO: iniciar 37,5 mg/dia e titular conforme resposta/tolerância até",
+              "máximo estudado 225 mg/dia; ensaio 16 semanas. Reavaliar",
+              "continuidade, sintomas suicidas e pressão. ",
+              "[S4]",
+              "Resumo primário não detalha todos passos de titulação; máximo",
+              "estudado não é dose-alvo de toda criança."
+            ]
+          }
+        },
+        {
+          "id": "pdf-450-row-04",
+          "row_index": 3,
+          "indication": "Transtorno do pânico",
+          "population": "<18 anos",
+          "dose_text": "Esquema omitido da prescrição automática.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "MEDICAÇÃO NÃO INDICADA PARA IDADE: a bula brasileira consultada contraindica venlafaxina abaixo de 18 anos.",
+          "notes": "MEDICAÇÃO NÃO INDICADA PARA IDADE: a bula brasileira consultada contraindica venlafaxina abaixo de 18 anos.",
+          "status": "omitted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "R1",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              479.06298828125,
+              561.2755737304688,
+              576.2769775390625
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Transtorno do",
+              "pânico"
+            ],
+            "population": [
+              "<18 anos"
+            ],
+            "dose_notes_refs": [
+              "Não foi identificado regime pediátrico estabelecido para esta",
+              "indicação; não transferir doses dos ensaios de outras condições. ",
+              "[S1]"
+            ]
+          }
+        }
+      ],
+      "monitoring_and_precautions": "Vigiar suicidabilidade, ativação, pressão/pulso, peso/crescimento; ajustar função renal/hepática. Retirada gradual; evitar IMAO e combinações serotoninérgicas.",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "EFFEXOR- venlafaxine tablet - Daily Med - NIH",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3423487c-80e3-6bff-e054-00144ff88e88",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S2",
+          "title": "TORDIA - depressão resistente 12-18 anos",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2277341/",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S3",
+          "title": "Ensaio primário - ansiedade generalizada 6-17 anos",
+          "url": "https://psychiatryonline.org/doi/full/10.1176/ajp.2007.164.2.290",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S4",
+          "title": "Ensaio primário - ansiedade social 8-17 anos",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17553467/",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "title": "Viatris — Efexor XR, bula profissional",
+          "url": "https://www.viatris.com.br/-/media/project/common/viatriscombr/pdf/leaflets_legacy_myl_brazil/efexor-xr_bula_profissional.pdf",
+          "id": "R1",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "id": "DELTA",
+          "title": "Revisão dirigida em 14/09/2026",
+          "url": "https://www.viatris.com.br/-/media/project/common/viatriscombr/pdf/leaflets_legacy_myl_brazil/efexor-xr_bula_profissional.pdf"
+        }
+      ],
+      "clinical_validation_status": "sourced_focal_revision_not_universal_clinical_certification"
+    },
+    {
+      "number": 496,
+      "id": "pdf-496",
+      "name": "Acetato de Cálcio",
+      "page": 508,
+      "indications_original": "Agente quelante de fósforo intestinal para controle da hiperfosfatemia em crianças com doença renal crônica.",
+      "presentations_original": "Comprimidos 500 mg e 667 mg.",
+      "presentations_source": {
+        "document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Corrigido.pdf",
+        "page": 61,
+        "present_in_new_posology_pdf_as_general_section": false,
+        "original_document": "Catalogo_Farmacologico_Pediatrico_Consolidado_Final.pdf",
+        "sha256": "330bb37018ec1a3de32339a2a55169f9d927b22305c0b34f391a1c9c1367daaf"
+      },
+      "regimens": [
+        {
+          "id": "pdf-496-row-01",
+          "row_index": 0,
+          "indication": "Hiperfosfatemia na DRC - quelante intestinal",
+          "population": "2-18 anos com DRC e hiperfosfatemia; estudo especializado off-label",
+          "dose_text": "Esquema omitido da prescrição automática.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": "Estudo: solução estrangeira com 133,4 mg de sal/mL e 33,8 mg de cálcio elementar/mL; início 0,45 mL/kg/dia = 60,03 mg de sal/kg/dia em três refeições. Titulação de 0,1–0,2 mL/kg/dia; 0,5 mL é arredondamento das tomadas. Produto brasileiro e administrabilidade não confirmados; não converter esse regime para comprimidos nem transferir tetos dependentes de propilenoglicol.",
+          "notes": "Estudo: solução estrangeira com 133,4 mg de sal/mL e 33,8 mg de cálcio elementar/mL; início 0,45 mL/kg/dia = 60,03 mg de sal/kg/dia em três refeições. Titulação de 0,1–0,2 mL/kg/dia; 0,5 mL é arredondamento das tomadas. Produto brasileiro e administrabilidade não confirmados; não converter esse regime para comprimidos nem transferir tetos dependentes de propilenoglicol.",
+          "status": "omitted",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S1",
+            "S2",
+            "R1",
+            "R2",
+            "R3",
+            "DELTA"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              125.84796142578125,
+              561.2755737304688,
+              283.22796630859375
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Hiperfosfatemia na",
+              "DRC - quelante",
+              "intestinal"
+            ],
+            "population": [
+              "Crianças; off-label,",
+              "nefrologia"
+            ],
+            "dose_notes_refs": [
+              "Administrar VO junto às refeições, com quantidade individualizada",
+              "pelo fósforo ingerido, fosfatemia e carga total de cálcio. A diretriz",
+              "atual não fixa dose pediátrica universal em mg/kg; o valor de 50",
+              "mg/kg/dia do consenso antigo não explicita inequivocamente sal",
+              "versus elemento e não é convertido aqui em prescrição. ",
+              "[S1, S2]",
+              "Se a nefrologia definir a quantidade de cálcio elementar permitida",
+              "no quelante, calcular a massa de acetato pela fração real do produto",
+              "(aproximadamente 25% de cálcio). Reavaliar exames e manter",
+              "enquanto necessário ao controle da hiperfosfatemia."
+            ]
+          }
+        },
+        {
+          "id": "pdf-496-row-02",
+          "row_index": 1,
+          "indication": "Limite de carga cálcica e ajuste",
+          "population": "Crianças com DRC",
+          "dose_text": "Somar cálcio elementar de dieta, suplementos e quelante: manter dentro da ingestão sugerida para idade e, em geral, ≤2 vezes essa referência. Reduzir/suspender se hipercalcemia; rever estratégia. Acetato de cálcio contém aproximadamente 25% de cálcio, mas o cálculo deve usar o teor exato declarado para o produto.",
+          "route": null,
+          "interval": null,
+          "duration": null,
+          "limits": null,
+          "restrictions": null,
+          "notes": "Carga exata na solução estudada: mg de cálcio = volume (mL) ×33,8 mg/mL; ou mg de sal ×(33,8/133,4). Não usar 0,25 como fração exata universal nem confundir sal com cálcio elementar.",
+          "status": "supported",
+          "status_source": "document_declared_not_independently_clinically_validated",
+          "source_refs": [
+            "S2",
+            "R1",
+            "R2",
+            "R3"
+          ],
+          "original_geometry": {
+            "row_bbox": [
+              34,
+              283.22796630859375,
+              561.2755737304688,
+              397.5939636230469
+            ],
+            "column_split_x": 173.72802703857423
+          },
+          "original_exact_pdf_lines": {
+            "indication": [
+              "Limite de carga",
+              "cálcica e ajuste"
+            ],
+            "population": [
+              "Crianças com DRC"
+            ],
+            "dose_notes_refs": [
+              "Acetato contém ≈25% de cálcio elementar. Somar cálcio da",
+              "dieta+suplementos+quelante: manter dentro da ingestão sugerida",
+              "para idade e, em geral, ≤2 vezes essa referência. Reduzir/suspender",
+              "se hipercalcemia; rever estratégia de quelante. ",
+              "[S2]",
+              "Fórmula de carga: mg Ca do acetato=mg de acetato × 0,25; não",
+              "confundir sal com elementar."
+            ]
+          }
+        }
+      ],
+      "monitoring_and_precautions": "Monitorar cálcio, fósforo, PTH, fosfatase alcalina e 25-OHD. Separar ferro/antibióticos que quelam; excesso de cálcio favorece calcificação vascular. Não usar para suplementar fósforo.",
+      "sources": [
+        {
+          "id": "S1",
+          "title": "Consenso ESPN - osteodistrofia renal pediátrica 2006",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1766475/",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "id": "S2",
+          "title": "Pediatric Renal Nutrition Taskforce 2019",
+          "url": "https://doi.org/10.1007/s00467-019-04370-z",
+          "accessed_as_declared": "2026-09-13"
+        },
+        {
+          "title": "Greenbaum et al. Safety and efficacy of sucroferric oxyhydroxide in pediatric patients with chronic kidney disease",
+          "url": "https://link.springer.com/article/10.1007/s00467-020-04805-y",
+          "id": "R1",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "Vifor — Clinical protocol PA-CL-PED-01/NCT 02688764 v 2.0",
+          "url": "https://cdn.clinicaltrials.gov/large-docs/64/NCT02688764/Prot_000.pdf",
+          "id": "R2",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "title": "Pediatric Renal Nutrition Taskforce — dietary management of calcium and phosphate in children with CKD 2–5 D",
+          "url": "https://link.springer.com/article/10.1007/s00467-019-04370-z",
+          "id": "R3",
+          "accessed_as_declared": "2026-09-14"
+        },
+        {
+          "id": "DELTA",
+          "title": "Revisão dirigida em 14/09/2026",
+          "url": "https://cdn.clinicaltrials.gov/large-docs/64/NCT02688764/Prot_000.pdf"
+        }
+      ],
+      "clinical_validation_status": "sourced_focal_revision_not_universal_clinical_certification"
+    }
+  ]
+}
