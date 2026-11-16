@@ -10,6 +10,10 @@ export default {
       const r = await fetch('https://api.openai.com/v1/responses', { method: 'POST', headers: { Authorization: 'Bearer sk-dono' }, body: '{"input":"oi"}' });
       return new Response(await r.text(), { status: r.status });
     }
+    if (url.pathname === '/api/fundo') {
+      const r = await fetch('https://api.openai.com/v1/responses', { method: 'POST', headers: { Authorization: 'Bearer ' + ctx.chave, 'Content-Type': 'application/json', 'Content-Length': '999' }, body: JSON.stringify({ model: 'gpt-5.5', background: true, input: 'laudo' }) });
+      return new Response(await r.text(), { status: r.status });
+    }
     if (url.pathname === '/api/consulta') {
       const r = await fetch('https://api.openai.com/v1/responses/' + url.searchParams.get('id'), { headers: { Authorization: 'Bearer ' + ctx.chave } });
       return new Response(await r.text(), { status: r.status });
