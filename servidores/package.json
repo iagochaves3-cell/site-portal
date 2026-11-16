@@ -1,0 +1,16 @@
+{
+  "name": "servidores-sites-pediatria",
+  "private": true,
+  "type": "module",
+  "description": "Adaptador e serviço de acesso dos sites com servidor próprio (Cloudflare Workers).",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "for t in t1-acesso t2-dermatologia t3-abordagem t4-guideliness t5-laboratorio t6-revisao t7-atlas; do node teste/$t.mjs || exit 1; done",
+    "test:navegador": "node teste/e1-entrada.mjs && node teste/e2-ia.mjs"
+  },
+  "dependencies": {
+    "esbuild": "0.25.10",
+    "miniflare": "^4.20260730.0",
+    "zod": "3.25.76"
+  }
+}
