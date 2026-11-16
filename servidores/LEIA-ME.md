@@ -17,8 +17,10 @@ o lado de servidor a seis sites que, na cópia de 15/11/2026, só tinham as pág
 | `laboratorioeradiografia` | https://laboratorioeradiografia.sites-pediatria.workers.dev/ | Páginas + `/api/upload`, `/api/report`, `/api/file` |
 | `revisao-pediatrica-continua` | https://revisao-pediatrica-continua.sites-pediatria.workers.dev/ | Páginas + `/api/workspace` |
 
-- As **páginas** continuam vindo do repositório (`sites/<site>/`), com as mesmas regras de antes
-  (`src/estatico.mjs` é o mesmo programa usado nos demais sites).
+- As **páginas** continuam vindo do repositório (`sites/<site>/`), com as mesmas regras de antes:
+  `src/estatico.mjs` reproduz o programa estático que estes seis sites já usavam (o de 2.819 bytes, com
+  os tipos xlsx/docx/gz). O teste `teste/t8-estatico.mjs` compara, arquivo por arquivo, as respostas do
+  programa anterior com as dos pacotes novos.
 - As **rotas de servidor** são atendidas pelo **código original** de cada site (o mesmo que rodava
   no ChatGPT Sites), montado junto com o adaptador (`src/adaptador.mjs`).
 - Nada foi mudado nas páginas, no layout ou na organização dos sites.
@@ -116,7 +118,7 @@ Para remontar:
    `guideliness/guideliness/source`, `laboratorioeradiografia/laboratorioeradiografia/codigo_publicado`,
    `revisao-pediatrica-continua`, `atlas-preservacao`.
 2. `npm install` e `PACOTES=<pasta> node build.mjs` → gera `dist/<worker>.js`.
-3. `CLONE=<clone deste repositório> PACOTES=<pasta> npm test` (60 verificações) e, com Chrome e Playwright,
+3. `CLONE=<clone deste repositório> PACOTES=<pasta> npm test` (60 verificações de servidor e a comparação de 508 respostas estáticas com o programa anterior) e, com Chrome e Playwright,
    `python3 teste/gerar-arquivos.py && npm run test:navegador` (13 verificações com as telas reais dos sites e
    a OpenAI simulada).
 4. Enviar pela API da Cloudflare (`PUT /accounts/{conta}/workers/scripts/{worker}`), **sempre** com
@@ -136,8 +138,25 @@ Para remontar:
   celular, telas reais publicadas, OpenAI simulada): entrada e saída por senha, sessão única para todos os
   sites, identidade forjada recusada, pesquisa/análise/laudo de ponta a ponta, envio de PDF de 1,9 MB em
   partes e leitura idêntica do arquivo, gravação nos bancos e bloqueios de origem.
+- Parte estática: 508 respostas comparadas (todos os arquivos publicados dos seis sites e casos de borda,
+  com GET, HEAD e POST) entre o programa anterior e os pacotes novos — todas idênticas.
 - Na Cloudflare: páginas dos seis sites carregando; rotas sem entrada respondendo 401/503 com as mensagens
   esperadas; com uma sessão de teste (criada e desfeita na hora), cada rota chegou ao ponto "falta a chave"
   ou devolveu os dados do banco. Não foi feita nenhuma chamada real à OpenAI (ainda não há chave).
 - Carga: 15 requisições de teste de 0,4 a 5 MB (o tamanho de uma análise com 5 fotografias) passaram sem
   corte por limite de processamento.
+
+## 10. Programas implantados em 16/11/2026
+
+Para conferir se o que está na Cloudflare é o que foi testado (`GET …/workers/scripts/<worker>/content/v2`,
+SHA-256 do arquivo `worker.js`):
+
+| Worker | Bytes | SHA-256 (início) |
+|---|---|---|
+| `acesso-sites` | 13.970 | `7383edbeab7b0ff7…` |
+| `dermatologia` | 223.947 | `da8a6584111a02d0…` |
+| `abordagem-clinica` | 86.049 | `4f5ca87960106868…` |
+| `guideliness` | 445.246 | `3d4aa11b1d7d78ee…` |
+| `laboratorioeradiografia` | 579.283 | `e33c0aefd9d9ed99…` |
+| `revisao-pediatrica-continua` | 170.737 | `e203ecf1740b7d53…` |
+| `atlas-preservacao` | 135.279 | `a4cdb20b7fe0277f…` |
