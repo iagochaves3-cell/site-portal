@@ -21,6 +21,7 @@ export const SITES = {
   'laboratorioeradiografia': { kv: true },
   'revisao-pediatrica-continua': { d1: true, migracoes: ['revisao-pediatrica-continua/drizzle/0000_cooing_satana.sql'] },
   'atlas-preservacao': { d1: true, migracoes: ['atlas-preservacao/drizzle/0000_strong_jane_foster.sql'] },
+  'prescricao-integral': { d1: true, migracoes: ['prescricao-integral/prescricao-integral/codigo_publicado/drizzle/0000_dear_dakota_north.sql', 'prescricao-integral/prescricao-integral/codigo_publicado/drizzle/0001_easy_norman_osborn.sql'], segredos: { WHATSAPP_DATA_KEY: '0123456789abcdef'.repeat(4) } },
 };
 export const SQL_ACESSO = 'CREATE TABLE IF NOT EXISTS tentativas (id TEXT PRIMARY KEY NOT NULL, janela TEXT NOT NULL, total INTEGER NOT NULL DEFAULT 0, atualizado TEXT NOT NULL)';
 
