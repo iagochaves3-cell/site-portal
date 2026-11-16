@@ -112,6 +112,9 @@ Data de compatibilidade `2026-05-15`, com `nodejs_compat` (a mesma dos sites ori
 Modelos: são os padrões do código original — `gpt-5.4-2026-03-05` (Dermatologia), `gpt-6.1-sol`
 (Abordagens Clínicas), `gpt-5.5` (Guideliness) e `gpt-5.6` (Laboratório e Raio X). Para trocar sem mexer no
 código: variável de texto `OPENAI_MODEL` (ou `OPENAI_REPORT_MODEL` no Laboratório) no Worker do site.
+Em 16/11/2026, a chave cadastrada não aceitou o nome curto `gpt-5.6` (404 `model_not_found`); o Laboratório
+passou a usar `OPENAI_REPORT_MODEL=gpt-5.6-sol`, o modelo para o qual esse nome curto aponta. Os demais modelos
+(`gpt-6.1-sol`, `gpt-5.5`, `gpt-5.4-2026-03-05`) estão liberados para a chave.
 
 ## 6. Limites conhecidos
 
