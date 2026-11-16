@@ -209,11 +209,22 @@ própria conta, sem custo, e continua usando a chave da OpenAI quando ela existi
   visão `@cf/google/gemma-4-26b-a4b-it` (rápida `@cf/meta/llama-4-scout-17b-16e-instruct`; reserva
   `@cf/mistralai/mistral-small-3.1-24b-instruct`). Variáveis `IA_MODELO_*` no `ia-sites` trocam os padrões.
 
+**Pausa da chave paga (16/11/2026).** Se a OpenAI recusar por conta (sem crédito, chave inválida ou
+desativada: HTTP 401/403 ou códigos `credit_balance_exhausted`, `insufficient_quota` e semelhantes), a chave
+fica 10 minutos sem uso e o proprietário é atendido direto pelo `ia-sites`. A pausa fica no Durable Object do
+`ia-sites` (instância `estado-openai`, rota interna `/estado-openai`), por impressão da chave (8 bytes do
+SHA-256, nunca a chave): uma chave nova volta a ser usada na hora. Antes de um pedido em segundo plano, a
+chave é sondada com uma chamada mínima (`max_output_tokens: 16`, `store: false`), porque a OpenAI aceita o
+pedido (`queued`) e só depois o falha; uma resposta em segundo plano que falhe por conta também pausa a chave.
+
 **Variáveis dos sites:** `IA_ALTERNATIVA` (`ligada`|`desligada`), `IA_RESERVA` (`ligada`|`desligada`),
 `ACESSO_LIVRE` (`sim`|`nao`), `DONO_ID`, `DONO_EMAIL`, `DONO_NOME`.
 
-**Conferência de 16/11/2026.** Locais: 16 verificações da ponte (`t9-ia`), 13 do envoltório (`t10-envoltorio`)
+**Conferência de 16/11/2026.** Locais: 17 verificações da ponte (`t9-ia`), 18 do envoltório (`t10-envoltorio`)
 e 10 da Prescrição Integral no `workerd` (`t8-prescricao-integral`). Na Cloudflare: texto, visão, função, busca
 no PubMed e segundo plano respondendo; laudo do Laboratório e Raio X concluído de ponta a ponta pelo site;
 Prescrição Integral com `/api/protocols` 200, `/api/whatsapp/status` 200 (banco pronto) e `/api/clinical` 200.
+Com a chave real cadastrada (conta sem crédito, `credit_balance_exhausted`), num site de teste temporário com o
+envoltório publicado: 1ª chamada pela chave paga → recusa → resposta do Workers AI e pausa de 10 minutos;
+2ª chamada direto pela chave interna; pedido em segundo plano concluído pela ponte (`resp_wai…`).
 

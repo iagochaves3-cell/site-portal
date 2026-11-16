@@ -15,6 +15,8 @@ globalThis.fetch = async (u, o) => {
     vistosOpenAI.push({ url: String(u), aut, corpo: typeof o?.body === 'string' ? o.body : '' });
     if (aut === 'Bearer sk-sem-credito') return Response.json({ error: { type: 'insufficient_quota', code: 'insufficient_quota', message: 'sem crédito' } }, { status: 429 });
     if (aut === 'Bearer sk-rede') throw new TypeError('falha de rede simulada');
+    if (aut === 'Bearer sk-zerada' && (o?.method || 'GET') === 'POST') return Response.json({ error: { type: 'insufficient_quota', code: 'credit_balance_exhausted', message: 'sem saldo' } }, { status: 429 });
+    if (aut === 'Bearer sk-falha-fundo' && (o?.method || 'GET') === 'GET') return Response.json({ id: 'resp_x', status: 'failed', error: { code: 'credit_balance_exhausted', message: 'sem saldo' } });
     return Response.json({ origem: 'openai' });
   }
   return fetchReal(u, o);
@@ -22,7 +24,17 @@ globalThis.fetch = async (u, o) => {
 const { default: worker } = await import(pathToFileURL(saida).href + '?v=' + Date.now());
 let ok = 0; const t = async (n, f) => { await f(); ok++; console.log('ok', n); };
 const recebidos = [];
-const IA = { fetch: async (req) => { recebidos.push({ url: req.url, corpo: await req.text(), site: req.headers.get('x-site') }); return Response.json({ origem: 'ia-sites' }); } };
+const estados = new Map();
+const IA = { fetch: async (req) => {
+  const u = new URL(req.url);
+  if (u.pathname === '/estado-openai') {
+    const c = u.searchParams.get('chave');
+    if (req.method === 'POST') { estados.set(c, await req.json()); return Response.json({ ok: true }); }
+    return Response.json(estados.get(c) || {});
+  }
+  recebidos.push({ url: req.url, corpo: await req.text(), site: req.headers.get('x-site') });
+  return Response.json({ origem: 'ia-sites' });
+} };
 const acesso = (estado) => ({ contexto: async () => ({ usuario: estado.usuario || null, chave: estado.chave || null, senha: !!estado.senha }) });
 const base = { IA, IA_CHAVE_INTERNA: 'wai_interna_123', SITE_NOME: 'laboratorio' };
 const req = (p) => new Request('https://lab.exemplo.dev' + p, { method: 'POST' });
@@ -134,6 +146,51 @@ await t('chave paga usada em requisição sem sessão (process.env trocado por r
   // a rota simulada lê a chave paga "de fora" do contexto da requisição
   const r = await (await worker.fetch(new Request('https://lab.exemplo.dev/api/chave-de-fora', { method: 'POST' }), env, {})).json();
   assert.equal(r.origem, 'ia-sites'); assert.equal(paraOpenAI, antes); assert.equal(recebidos.length, n + 1);
+});
+
+const fundo = (chave) => ({ ...base, ACESSO: acesso({ chave, senha: true, usuario: { id: 'proprietario' } }) });
+const pedirFundo = env => worker.fetch(new Request('https://lab.exemplo.dev/api/fundo', { method: 'POST' }), env, {});
+
+await t('segundo plano com saldo: sonda uma vez, envia à OpenAI e não sonda de novo em 10 minutos', async () => {
+  const antes = paraOpenAI; const n = recebidos.length;
+  const r1 = await (await pedirFundo(fundo('sk-dono'))).json();
+  assert.equal(r1.origem, 'openai'); assert.equal(paraOpenAI, antes + 2); assert.equal(recebidos.length, n);
+  assert.equal(JSON.parse(vistosOpenAI.at(-2).corpo).store, false, 'a sondagem não guarda resposta');
+  assert.equal(JSON.parse(vistosOpenAI.at(-1).corpo).background, true);
+  await pedirFundo(fundo('sk-dono'));
+  assert.equal(paraOpenAI, antes + 3);
+});
+
+await t('segundo plano sem saldo: a sondagem recusa, o pedido vai ao ia-sites e a chave fica pausada', async () => {
+  const antes = paraOpenAI; const n = recebidos.length;
+  const r = await (await pedirFundo(fundo('sk-zerada'))).json();
+  assert.equal(r.origem, 'ia-sites'); assert.equal(paraOpenAI, antes + 1); assert.equal(recebidos.length, n + 1);
+  assert.equal(JSON.parse(recebidos.at(-1).corpo).background, true);
+  const pausa = [...estados.values()].find(v => /credit_balance_exhausted/.test(v.motivo));
+  assert.ok(pausa && pausa.ate > Date.now() + 9 * 60 * 1000);
+});
+
+await t('chave pausada: o pedido seguinte nem tenta a OpenAI (vai direto ao ia-sites, com a identidade do proprietário)', async () => {
+  const antes = paraOpenAI;
+  const r = await (await worker.fetch(req('/api/report'), fundo('sk-zerada'), {})).json();
+  assert.equal(r.origem, 'ia-sites'); assert.equal(paraOpenAI, antes);
+  const q = await (await worker.fetch(req('/quem'), fundo('sk-zerada'), {})).json();
+  assert.equal(q.usuario.id, 'proprietario');
+});
+
+await t('chave nova não herda a pausa da antiga', async () => {
+  const antes = paraOpenAI;
+  const r = await (await worker.fetch(req('/api/report'), fundo('sk-dono'), {})).json();
+  assert.equal(r.origem, 'openai'); assert.equal(paraOpenAI, antes + 1);
+});
+
+await t('resposta em segundo plano que falha por falta de saldo pausa a chave', async () => {
+  const env = fundo('sk-falha-fundo');
+  const r = await (await worker.fetch(new Request('https://lab.exemplo.dev/api/consulta?id=resp_x', { method: 'GET' }), env, {})).json();
+  assert.equal(r.status, 'failed');
+  const antes = paraOpenAI;
+  const r2 = await (await worker.fetch(req('/api/report'), env, {})).json();
+  assert.equal(r2.origem, 'ia-sites'); assert.equal(paraOpenAI, antes);
 });
 
 console.log(`\n${ok} verificações do envoltório: todas passaram.`);

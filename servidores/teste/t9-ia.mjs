@@ -204,4 +204,19 @@ await t('citações 【n†url】 viram endereço simples', async () => {
   assert.equal(nucleo.limparCitacoes('Dose 0,6 mg/kg\u30107\u2020https://pubmed.ncbi.nlm.nih.gov/3285638/\u3011. Fim\u3010L1-L3\u3011'), 'Dose 0,6 mg/kg https://pubmed.ncbi.nlm.nih.gov/3285638/. Fim');
 });
 
+await t('pausa da chave paga: grava e lê por impressão; corpo inválido e falta de impressão recusados', async () => {
+  const url = c => 'https://ia.interno/estado-openai' + (c ? '?chave=' + c : '');
+  assert.deepEqual(await (await interno.fetch(new Request(url('ab12cd34ab12cd34')))).json(), {});
+  const ate = Date.now() + 10 * 60 * 1000;
+  const g = await (await interno.fetch(new Request(url('ab12cd34ab12cd34'), { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ate, motivo: '429 credit_balance_exhausted' }) }))).json();
+  assert.equal(g.ok, true); assert.equal(g.ate, ate);
+  const l = await (await interno.fetch(new Request(url('ab12cd34ab12cd34')))).json();
+  assert.equal(l.ate, ate); assert.equal(l.motivo, '429 credit_balance_exhausted');
+  assert.deepEqual(await (await interno.fetch(new Request(url('ffff0000ffff0000')))).json(), {});
+  assert.equal((await interno.fetch(new Request(url('')))).status, 400);
+  assert.equal((await interno.fetch(new Request(url('ab12'), { method: 'POST', body: 'x' }))).status, 400);
+  const longe = await (await interno.fetch(new Request(url('ab12'), { method: 'POST', body: JSON.stringify({ ate: Date.now() + 999 * 3600000 }) }))).json();
+  assert.ok(longe.ate <= Date.now() + 3600000 + 1000, 'pausa limitada a 1 hora');
+});
+
 console.log(`\n${ok} verificações da ponte de IA: todas passaram.`);

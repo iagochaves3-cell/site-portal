@@ -91,6 +91,11 @@ export class TrabalhoIA extends DurableObject {
     return base;
   }
 
+  // Pausa da chave paga (instância "estado-openai"): guarda, por impressão da chave (hash
+  // parcial, nunca a chave), até quando a OpenAI fica pulada após recusar por crédito ou chave.
+  async lerEstado(chave) { return (await this.ctx.storage.get('estado:' + chave)) || null; }
+  async gravarEstado(chave, valor) { await this.ctx.storage.put('estado:' + chave, valor); }
+
   async guardarTeste(texto) { await this.ctx.storage.put('teste', texto); }
   async obterTeste() { return (await this.ctx.storage.get('teste')) || null; }
 
@@ -127,6 +132,20 @@ async function atender(env, request) {
       try { pedido = JSON.parse(texto); } catch { return erro(400, 'invalid_json', 'Corpo JSON inválido.'); }
       if (!pedido || typeof pedido !== 'object') return erro(400, 'invalid_request', 'Pedido inválido.');
       return json(await criar(env, pedido, texto));
+    }
+    if (caminho === '/estado-openai') {
+      const chave = (url.searchParams.get('chave') || '').toLowerCase().replace(/[^0-9a-f]/g, '').slice(0, 32);
+      if (!chave) return erro(400, 'invalid_request', 'Falta a impressão da chave.');
+      const stub = env.TRABALHOS.get(env.TRABALHOS.idFromName('estado-openai'));
+      if (metodo === 'GET') return json((await stub.lerEstado(chave)) || {});
+      if (metodo === 'POST') {
+        let v;
+        try { v = await request.json(); } catch { return erro(400, 'invalid_json', 'Corpo JSON inválido.'); }
+        const ate = Math.min(Number(v && v.ate) || 0, Date.now() + 60 * 60 * 1000);
+        await stub.gravarEstado(chave, { ate, motivo: String((v && v.motivo) || '').slice(0, 120), quando: Date.now() });
+        return json({ ok: true, ate });
+      }
+      return erro(405, 'method_not_allowed', 'Método não permitido.');
     }
     const m = /^\/v1\/responses\/(resp_[A-Za-z0-9_-]+)(\/cancel)?$/.exec(caminho);
     if (m) {
