@@ -1,0 +1,1 @@
+Ramo auxiliar de transporte (16/11/2026): pacotes em base64 da ponte de IA (ia-sites) e do envoltório dos sites, lidos pela Cloudflare na implantação. Não unir ao main. O código-fonte está em servidores/src/ia/ no ramo principal.
