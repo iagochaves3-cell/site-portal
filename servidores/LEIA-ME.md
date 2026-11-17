@@ -139,7 +139,10 @@ Para remontar:
   sites, identidade forjada recusada, pesquisa/análise/laudo de ponta a ponta, envio de PDF de 1,9 MB em
   partes e leitura idêntica do arquivo, gravação nos bancos e bloqueios de origem.
 - Parte estática: 508 respostas comparadas (todos os arquivos publicados dos seis sites e casos de borda,
-  com GET, HEAD e POST) entre o programa anterior e os pacotes novos — todas idênticas.
+  com GET, HEAD e POST) entre o programa anterior e os pacotes novos — todas idênticas. Casos que os
+  arquivos publicados não cobrem (tipos xlsx/docx/gz/traineddata e colisão `nome.html` × `nome/index.html`)
+  ficam em `teste/t9-estatico-casos.mjs`, com árvore sintética; o teste falha se qualquer um dos dois
+  comportamentos for desfeito (conferido).
 - Na Cloudflare: páginas dos seis sites carregando; rotas sem entrada respondendo 401/503 com as mensagens
   esperadas; com uma sessão de teste (criada e desfeita na hora), cada rota chegou ao ponto "falta a chave"
   ou devolveu os dados do banco. Não foi feita nenhuma chamada real à OpenAI (ainda não há chave).
@@ -160,3 +163,13 @@ SHA-256 do arquivo `worker.js`):
 | `laboratorioeradiografia` | 579.283 | `e33c0aefd9d9ed99…` |
 | `revisao-pediatrica-continua` | 170.737 | `e203ecf1740b7d53…` |
 | `atlas-preservacao` | 135.279 | `a4cdb20b7fe0277f…` |
+
+## 11. Versão do zod
+
+Os programas implantados foram montados e testados com **zod 3.25.76**, a versão declarada pelos sites
+originais. Existe aviso de segurança para versões anteriores à 4.6.6 (GHSA-mrhx-c7xc-m3w5: consumo de
+memória ao validar listas muito grandes). Aqui o risco é baixo: em todas as rotas que usam zod a validação
+só acontece depois da entrada por senha (ou da checagem de sessão do código original), e cada requisição
+roda isolada com limite de memória. Passar para zod 4 exige adaptar o código original dos sites (a API
+mudou) e refazer todos os testes; por isso o `package.json` continua em 3.25.76 — trocar só o número
+aqui não mudaria o que está na Cloudflare.
