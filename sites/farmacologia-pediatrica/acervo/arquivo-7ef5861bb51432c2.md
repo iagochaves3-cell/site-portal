@@ -12312,7 +12312,8 @@ Tratamento de micoses sistêmicas endêmicas (paracoccidioidomicose, histoplasmo
 refratárias.
 FONTES DO ESQUEMA • CONSULTA EM 13/09/2026
 [S1] MS - paracoccidioidomicose: tratamento (gov.br)
-[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)
+[S2] AEP/Pediamécum - itraconazol (aeped.es)
+[S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)
 [S3] SESA-PR - manejo de esporotricose (www 3.maringa.pr.gov.br)
 [S4] Guía-ABE 2025 - dermatofitoses pediátricas (guia-abe.es)
 FICHA 260 / 498 • REFERÊNCIAS CLICÁVEIS • 13/09/2026
@@ -16011,8 +16012,8 @@ secundária
 ou adjuvante
 VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10
 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante
-30-46 mg/kg/dia; máximo 60 mg/kg/dia. A bula não define teto pediátrico
-em mg/dia; o limite é 60 mg/kg/dia, igual para suspensão e
+30-46 mg/kg/dia; máximo 60 mg/kg/dia. Não exceder 2.400 mg/dia (dose máxima
+usual do adulto na bula); teto igual para suspensão e
 comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e
 tolerabilidade. [S1]
 Dose da bula brasileira de 2026; retirada gradual. Não converter
@@ -16814,7 +16815,7 @@ ocular, SNC ou
 sistêmico
 Crianças,
 especialmente com HIV
-Ataque 2 mg/kg VO 1 vez/dia por 3 dias (máx. 50 mg/dia);
+Ataque 1 mg/kg/dose VO 12/12 h por 3 dias (máx. 50 mg/dose);
 depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido
 folínico; indução ≥6 semanas, seguida de manutenção se
 imunossupressão persistente. [S2]
@@ -22309,14 +22310,18 @@ juvenil
 ≥2 anos e ≥15 kg
 SC nas semanas 0,1,2,3,4; depois a cada 4 semanas: 15-<50 kg 75
 mg/dose; ≥50 kg 150 mg/dose. [S1]
+Espondilite
+anquilosante juvenil
+≥12 anos na FDA (abr/2026)
+SC nas semanas 0,1,2,3,4; depois a cada 4 semanas: <50 kg 75
+mg/dose; ≥50 kg 150 mg/dose. [S2]
 Artrite relacionada à
 entesite (ERA)
-≥4 anos e ≥15 kg na FDA (dez/2021)
+≥4 anos e ≥15 kg na FDA
 SC nas semanas 0,1,2,3,4; depois a cada 4 semanas: 15-<50 kg 75
-mg/dose; ≥50 kg 150 mg/dose. [S2]
-Espondilite anquilosante e nr-axSpA: aprovadas só em adultos
-(FDA); sem esquema pediátrico. Abaixo de 15 kg: sem dose
-declarada.
+mg/dose; ≥50 kg 150 mg/dose. Abaixo de 15 kg: sem dose
+declarada. [S2]
+nr-axSpA: aprovada só em adultos (FDA).
 Ampliação internacional; confirmar correspondência da bula
 brasileira.
 MONITORIZAÇÃO E PRECAUÇÕES Rastrear TB e candidíase; pode agravar doença inflamatória
