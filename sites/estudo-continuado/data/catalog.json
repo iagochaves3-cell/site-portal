@@ -15718,7 +15718,7 @@
       "category": "Toxicologia · Pediatria · Emergência",
       "population": "Todas as idades; crianças têm maior risco de gravidade",
       "description": "Classificação clínica, soroterapia brasileira e manejo cardiopulmonar do envenenamento por Tityus.",
-      "takeaway": "Dor isolada é forma leve; qualquer manifestação sistêmica exige classificação rápida. Soro precoce: 2–3 ampolas no moderado e 4–6 no grave, por via IV em ambiente hospitalar.",
+      "takeaway": "Dor isolada é forma leve; qualquer manifestação sistêmica exige classificação rápida. Soro precoce: 3 ampolas no moderado e 6 no grave (não exceder 6; PCDT Acidentes Escorpiônicos, Portaria SECTICS/MS nº 59/2025), por via IV em ambiente hospitalar.",
       "version": "1.0.0",
       "firstPublished": "2026-10-10",
       "verifiedAt": "2026-10-10",
@@ -15894,7 +15894,7 @@
           "number": 16,
           "title": "Tratamento etiológico/definitivo",
           "bullets": [
-            "Soro antiescorpiônico preferencial; soro antiaracnídico é alternativa quando SAEsc indisponível ou Phoneutria/Tityus indistinguíveis. Administrar IV o mais cedo possível: moderado 2–3 ampolas; grave 4–6, iguais em adultos/crianças."
+            "Soro antiescorpiônico preferencial; soro antiaracnídico é alternativa quando SAEsc indisponível ou Phoneutria/Tityus indistinguíveis. Administrar IV o mais cedo possível: moderado 3 ampolas; grave 6, sem exceder 6 (PCDT Acidentes Escorpiônicos, Portaria SECTICS/MS nº 59/2025), iguais em adultos/crianças."
           ],
           "refs": [
             1,
@@ -16005,7 +16005,7 @@
       "copyBlocks": [
         {
           "title": "Classificação e soro — Escorpionismo",
-          "text": "ESCORPIONISMO\n• Leve: dor/parestesia local → analgesia e observação.\n• Moderado: manifestações sistêmicas leves → 2–3 ampolas IV.\n• Grave: vômitos profusos, IC, edema, choque, convulsão/coma → 4–6 ampolas IV + UTI.\n• Criança ≤10 anos: acesso rápido ao polo de soro.\n• Notificar no Sinan."
+          "text": "ESCORPIONISMO\n• Leve: dor/parestesia local → analgesia e observação.\n• Moderado: manifestações sistêmicas leves → 3 ampolas IV.\n• Grave: vômitos profusos, IC, edema, choque, convulsão/coma → 6 ampolas IV (máximo 6; PCDT 2025) + UTI.\n• Criança ≤10 anos: acesso rápido ao polo de soro.\n• Notificar no Sinan."
         }
       ],
       "references": [
