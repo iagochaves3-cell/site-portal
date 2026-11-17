@@ -59396,7 +59396,7 @@
           "row_index": 0,
           "indication": "Envenenamento escorpiônico moderado por Tityus",
           "population": "Crianças",
-          "dose_text": "Soro antiescorpiônico 2-3 frascos-ampola EV, em administração única precoce.",
+          "dose_text": "Soro antiescorpiônico 3 frascos-ampola EV (PCDT 2025), em administração única precoce.",
           "route": null,
           "interval": null,
           "duration": null,
@@ -59427,7 +59427,7 @@
               "Crianças"
             ],
             "dose_notes_refs": [
-              "Soro antiescorpiônico 2-3 frascos-ampola EV, em administração",
+              "Soro antiescorpiônico 3 frascos-ampola EV (PCDT 2025), em administração",
               "única precoce. ",
               "[S1]",
               "Moderado: dor local intensa com náusea/vômitos,",
@@ -59441,7 +59441,7 @@
           "row_index": 1,
           "indication": "Envenenamento escorpiônico grave por Tityus",
           "population": "Crianças",
-          "dose_text": "4-6 frascos-ampola EV em administração única.",
+          "dose_text": "6 frascos-ampola EV em administração única; não exceder 6 (PCDT Acidentes Escorpiônicos, Portaria SECTICS/MS nº 59/2025: moderado 3, grave 6).",
           "route": null,
           "interval": null,
           "duration": null,
@@ -59472,7 +59472,7 @@
               "Crianças"
             ],
             "dose_notes_refs": [
-              "4-6 frascos-ampola EV em administração única. ",
+              "6 frascos-ampola EV em administração única; não exceder 6 (PCDT Acidentes Escorpiônicos, Portaria SECTICS/MS nº 59/2025: moderado 3, grave 6). ",
               "[S1]",
               "Grave: vômitos incoercíveis, sudorese/sialorreia intensas,",
               "prostração, convulsão, coma, bradicardia, insuficiência cardíaca,",

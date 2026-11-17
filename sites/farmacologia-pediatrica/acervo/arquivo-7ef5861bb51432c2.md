@@ -18987,7 +18987,7 @@ Envenenamento
 escorpiônico
 moderado por Tityus
 Crianças
-Soro antiescorpiônico 2-3 frascos-ampola EV, em administração
+Soro antiescorpiônico 3 frascos-ampola EV (PCDT 2025), em administração
 única precoce. [S1]
 Moderado: dor local intensa com náusea/vômitos,
 sudorese/sialorreia discretas, agitação, taquipneia/taquicardia.
@@ -18996,7 +18996,7 @@ Envenenamento
 escorpiônico grave
 por Tityus
 Crianças
-4-6 frascos-ampola EV em administração única. [S1]
+6 frascos-ampola EV em administração única; não exceder 6 (PCDT Acidentes Escorpiônicos, Portaria SECTICS/MS nº 59/2025: moderado 3, grave 6). [S1]
 Grave: vômitos incoercíveis, sudorese/sialorreia intensas,
 prostração, convulsão, coma, bradicardia, insuficiência cardíaca,
 edema pulmonar ou choque. Diluir emSF 0,9% ouSG 5%1:2-1:5;
