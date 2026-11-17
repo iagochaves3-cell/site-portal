@@ -20,8 +20,10 @@ o lado de servidor a sete sites que, na cópia de 15/11/2026, só tinham as pág
 | `prescricao-integral` | https://prescricao-integral.sites-pediatria.workers.dev/ | Páginas + `/api/clinical`, `/api/protocols`, `/api/whatsapp/*` |
 | `ia-sites` | (sem página pública; só ligação interna) | Ponte de IA: atende as chamadas à OpenAI com Cloudflare Workers AI quando não há chave paga ou quando a OpenAI recusa |
 
-- As **páginas** continuam vindo do repositório (`sites/<site>/`), com as mesmas regras de antes
-  (`src/estatico.mjs` é o mesmo programa usado nos demais sites).
+- As **páginas** continuam vindo do repositório (`sites/<site>/`), com as mesmas regras de antes:
+  `src/estatico.mjs` reproduz o programa estático que estes seis sites já usavam (o de 2.819 bytes, com
+  os tipos xlsx/docx/gz). O teste `teste/t11-estatico.mjs` compara, arquivo por arquivo, as respostas do
+  programa anterior com as dos pacotes novos.
 - As **rotas de servidor** são atendidas pelo **código original** de cada site (o mesmo que rodava
   no ChatGPT Sites), montado junto com o adaptador (`src/adaptador.mjs`).
 - Nada foi mudado nas páginas, no layout ou na organização dos sites.
@@ -150,7 +152,7 @@ Para remontar:
    `guideliness/guideliness/source`, `laboratorioeradiografia/laboratorioeradiografia/codigo_publicado`,
    `revisao-pediatrica-continua`, `atlas-preservacao`, `prescricao-integral/prescricao-integral/codigo_publicado`.
 2. `npm install` e `PACOTES=<pasta> node build.mjs` → gera `dist/<worker>.js`.
-3. `CLONE=<clone deste repositório> PACOTES=<pasta> npm test` (60 verificações) e, com Chrome e Playwright,
+3. `CLONE=<clone deste repositório> PACOTES=<pasta> npm test` (60 verificações de servidor e a comparação de 508 respostas estáticas com o programa anterior) e, com Chrome e Playwright,
    `python3 teste/gerar-arquivos.py && npm run test:navegador` (13 verificações com as telas reais dos sites e
    a OpenAI simulada).
 4. Enviar pela API da Cloudflare (`PUT /accounts/{conta}/workers/scripts/{worker}`), **sempre** com
@@ -178,6 +180,11 @@ Para remontar:
   celular, telas reais publicadas, OpenAI simulada): entrada e saída por senha, sessão única para todos os
   sites, identidade forjada recusada, pesquisa/análise/laudo de ponta a ponta, envio de PDF de 1,9 MB em
   partes e leitura idêntica do arquivo, gravação nos bancos e bloqueios de origem.
+- Parte estática: 508 respostas comparadas (todos os arquivos publicados dos seis sites e casos de borda,
+  com GET, HEAD e POST) entre o programa anterior e os pacotes novos — todas idênticas. Casos que os
+  arquivos publicados não cobrem (tipos xlsx/docx/gz/traineddata e colisão `nome.html` × `nome/index.html`)
+  ficam em `teste/t12-estatico-casos.mjs`, com árvore sintética; o teste falha se qualquer um dos dois
+  comportamentos for desfeito (conferido).
 - Na Cloudflare: páginas dos seis sites carregando; rotas sem entrada respondendo 401/503 com as mensagens
   esperadas; com uma sessão de teste (criada e desfeita na hora), cada rota chegou ao ponto "falta a chave"
   ou devolveu os dados do banco. Não foi feita nenhuma chamada real à OpenAI (ainda não há chave).
@@ -228,3 +235,12 @@ Com a chave real cadastrada (conta sem crédito, `credit_balance_exhausted`), nu
 envoltório publicado: 1ª chamada pela chave paga → recusa → resposta do Workers AI e pausa de 10 minutos;
 2ª chamada direto pela chave interna; pedido em segundo plano concluído pela ponte (`resp_wai…`).
 
+## 11. Versão do zod
+
+Os programas foram montados e testados com **zod 3.25.76**, a versão declarada pelos sites
+originais. Existe aviso de segurança para versões anteriores à 4.6.6 (GHSA-mrhx-c7xc-m3w5: consumo de
+memória ao validar listas muito grandes). Aqui o risco é baixo: em todas as rotas que usam zod a validação
+só acontece depois da entrada por senha (ou da checagem de sessão do código original), e cada requisição
+roda isolada com limite de memória. Passar para zod 4 exige adaptar o código original dos sites (a API
+mudou) e refazer todos os testes; por isso o `package.json` continua em 3.25.76 — trocar só o número
+aqui não mudaria o que está na Cloudflare.
