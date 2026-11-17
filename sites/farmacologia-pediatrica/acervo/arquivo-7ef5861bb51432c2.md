@@ -16012,8 +16012,8 @@ secundária
 ou adjuvante
 VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10
 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante
-30-46 mg/kg/dia; máximo 60 mg/kg/dia. Não exceder 2.400 mg/dia (maior dose
-diária da bula); teto igual para suspensão e
+30-46 mg/kg/dia; máximo 60 mg/kg/dia. Não exceder 2.400 mg/dia (dose máxima
+usual do adulto na bula); teto igual para suspensão e
 comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e
 tolerabilidade. [S1]
 Dose da bula brasileira de 2026; retirada gradual. Não converter
