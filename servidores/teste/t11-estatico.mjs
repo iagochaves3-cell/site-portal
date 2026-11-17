@@ -17,9 +17,10 @@ const saida = async request => {
   try { const corpo = await readFile(path.join(CLONE, m[1])); return new Response(request.method === 'HEAD' ? null : corpo, { status: 200, headers: { 'content-type': 'text/plain; charset=utf-8', etag: '"teste"' } }); }
   catch { return new Response('404: Not Found', { status: 404 }); }
 };
-const nomes = Object.keys(SITES);
+// SITES_TESTE=a,b limita os sites (útil quando falta o código original de algum deles).
+const nomes = process.env.SITES_TESTE ? process.env.SITES_TESTE.split(',') : Object.keys(SITES);
 const ref = new Miniflare({ cachePersist: false, workers: nomes.map(n => ({ name: 'ref-' + n, modules: true, scriptPath: new URL('./estatico-v2-referencia.js', import.meta.url).pathname, compatibilityDate: '2025-01-01', routes: [n + '.' + DOMINIO + '/*'], bindings: { REPO: 'iagochaves3-cell/site-portal', REF: 'main/sites/' + n }, outboundService: saida })) });
-const novo = await criarAmbiente();
+const novo = await criarAmbiente({ sites: nomes });
 async function listar(dir, base = '') { const out = []; for (const e of await readdir(dir, { withFileTypes: true })) { const p = base + '/' + e.name; if (e.isDirectory()) out.push(...await listar(path.join(dir, e.name), p)); else out.push(p); } return out; }
 const resumo = async r => ({ status: r.status, tipo: r.headers.get('content-type'), cache: r.headers.get('cache-control'), nosniff: r.headers.get('x-content-type-options'), referrer: r.headers.get('referrer-policy'), etag: r.headers.get('etag'), local: r.headers.get('location'), sha: createHash('sha256').update(Buffer.from(await r.arrayBuffer())).digest('hex') });
 try {

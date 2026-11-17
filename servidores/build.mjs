@@ -16,6 +16,7 @@ const FONTES = {
   'laboratorioeradiografia': path.join(PKG, 'laboratorioeradiografia/laboratorioeradiografia/codigo_publicado'),
   'revisao-pediatrica-continua': path.join(PKG, 'revisao-pediatrica-continua'),
   'atlas-preservacao': path.join(PKG, 'atlas-preservacao'),
+  'prescricao-integral': path.join(PKG, 'prescricao-integral/prescricao-integral/codigo_publicado'),
 };
 
 const substitutos = {
