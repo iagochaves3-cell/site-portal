@@ -60373,8 +60373,12 @@
               "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
             },
             {
-              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
               "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
+            },
+            {
+              "text": "[S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+              "url": "https://clinicalinfo.hiv.gov/en/node/9336"
             },
             {
               "text": "[S4] Guía-ABE 2025 - dermatofitoses pediátricas (guia-abe.es)",
@@ -60413,8 +60417,12 @@
               "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
             },
             {
-              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
               "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
+            },
+            {
+              "text": "[S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+              "url": "https://clinicalinfo.hiv.gov/en/node/9336"
             },
             {
               "text": "[S3] SESA-PR - manejo de esporotricose (www 3.maringa.pr.gov.br)",
@@ -60437,8 +60445,12 @@
               "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
             },
             {
-              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
               "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
+            },
+            {
+              "text": "[S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+              "url": "https://clinicalinfo.hiv.gov/en/node/9336"
             },
             {
               "text": "[S4] Guía-ABE 2025 - dermatofitoses pediátricas (guia-abe.es)",
@@ -60539,8 +60551,12 @@
               "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
             },
             {
-              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
               "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
+            },
+            {
+              "text": "[S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+              "url": "https://clinicalinfo.hiv.gov/en/node/9336"
             },
             {
               "text": "[S4] Guía-ABE 2025 - dermatofitoses pediátricas (guia-abe.es)",
@@ -60562,8 +60578,12 @@
           "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
         },
         {
-          "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+          "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
           "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
+        },
+        {
+          "text": "[S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+          "url": "https://clinicalinfo.hiv.gov/en/node/9336"
         },
         {
           "text": "[S3] SESA-PR - manejo de esporotricose (www 3.maringa.pr.gov.br)",
@@ -60599,8 +60619,12 @@
             "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
           },
           {
-            "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+            "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
             "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
+          },
+          {
+            "text": "[S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
+            "url": "https://clinicalinfo.hiv.gov/en/node/9336"
           },
           {
             "text": "[S4] Guía-ABE 2025 - dermatofitoses pediátricas (guia-abe.es)",
@@ -76681,7 +76705,7 @@
           "population": "≥1 mês; monoterapia ou adjuvante",
           "tags": "",
           "paragraphs": [
-            "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. A bula não define teto pediátrico em mg/dia; o limite é 60 mg/kg/dia, igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e tolerabilidade. [S1]",
+            "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. Não exceder 2.400 mg/dia (maior dose diária da bula); teto igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e tolerabilidade. [S1]",
             "Dose da bula brasileira de 2026; retirada gradual. Não converter mg/kg/dia em mg/kg/dose."
           ]
         }
@@ -76740,7 +76764,7 @@
           "regimen_index": 0,
           "tags": "",
           "items": [
-            "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. A bula não define teto pediátrico em mg/dia; o limite é 60 mg/kg/dia, igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e tolerabilidade. [S1]",
+            "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. Não exceder 2.400 mg/dia (maior dose diária da bula); teto igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e tolerabilidade. [S1]",
             "Dose da bula brasileira de 2026; retirada gradual. Não converter mg/kg/dia em mg/kg/dose."
           ],
           "status": "documented"
@@ -80365,7 +80389,7 @@
           "population": "Crianças, especialmente com HIV",
           "tags": "",
           "paragraphs": [
-            "Ataque 2 mg/kg VO 1 vez/dia por 3 dias (máx. 50 mg/dia); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente. [S2]",
+            "Ataque 1 mg/kg/dose VO 12/12 h por 3 dias (máx. 50 mg/dose); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente. [S2]",
             "Linfadenopatia isolada em imunocompetente não recebe automaticamente este esquema."
           ]
         }
@@ -80446,7 +80470,7 @@
           "regimen_index": 2,
           "tags": "",
           "items": [
-            "Ataque 2 mg/kg VO 1 vez/dia por 3 dias (máx. 50 mg/dia); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente. [S2]"
+            "Ataque 1 mg/kg/dose VO 12/12 h por 3 dias (máx. 50 mg/dose); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente. [S2]"
           ],
           "status": "documented"
         }

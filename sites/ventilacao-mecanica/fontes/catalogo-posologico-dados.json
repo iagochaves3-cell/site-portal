@@ -50118,7 +50118,7 @@
           "row_index": 0,
           "indication": "Crises epilépticas focais, com ou sem generalização secundária",
           "population": "≥1 mês; monoterapia ou adjuvante",
-          "dose_text": "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. A bula não define teto pediátrico em mg/dia; o limite é 60 mg/kg/dia, igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e tolerabilidade.",
+          "dose_text": "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. Não exceder 2.400 mg/dia (maior dose diária da bula); teto igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e tolerabilidade.",
           "route": null,
           "interval": null,
           "duration": null,
@@ -50153,7 +50153,7 @@
             "dose_notes_refs": [
               "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10",
               "mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante",
-              "30-46 mg/kg/dia; máximo 60 mg/kg/dia. A bula não define teto pediátrico em mg/dia; o limite é 60 mg/kg/dia, igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e",
+              "30-46 mg/kg/dia; máximo 60 mg/kg/dia. Não exceder 2.400 mg/dia (maior dose diária da bula); teto igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e",
               "tolerabilidade. ",
               "[S1]",
               "Dose da bula brasileira de 2026; retirada gradual. Não converter",
@@ -52628,7 +52628,7 @@
           "row_index": 2,
           "indication": "Toxoplasmose adquirida com acometimento ocular, SNC ou sistêmico",
           "population": "Crianças, especialmente com HIV",
-          "dose_text": "Ataque 2 mg/kg VO 1 vez/dia por 3 dias (máx. 50 mg/dia); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente.",
+          "dose_text": "Ataque 1 mg/kg/dose VO 12/12 h por 3 dias (máx. 50 mg/dose); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente.",
           "route": null,
           "interval": null,
           "duration": null,
@@ -52662,7 +52662,7 @@
               "especialmente com HIV"
             ],
             "dose_notes_refs": [
-              "Ataque 2 mg/kg VO 1 vez/dia por 3 dias (máx. 50 mg/dia);",
+              "Ataque 1 mg/kg/dose VO 12/12 h por 3 dias (máx. 50 mg/dose);",
               "depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido",
               "folínico; indução ≥6 semanas, seguida de manutenção se",
               "imunossupressão persistente. ",
