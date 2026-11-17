@@ -60309,7 +60309,7 @@
           "population": "Crianças; especialmente HIV/imunossupressão",
           "tags": "",
           "paragraphs": [
-            "VO 2-5 mg/kg/dose 8/8 h por 3 dias; depois 2-5 mg/kg/dose 12/12 h, máximo 400 mg/dia na manutenção, por 12 meses; envolvimento SNC exige ≥12 meses após indução apropriada. [S2] AEP também descreve 6-8 mg/kg/dia divididos 12/12 h; ajustar por nível sérico e formulação."
+            "VO 2-5 mg/kg/dose (máx. 200 mg/dose) 8/8 h por 3 dias; depois 2-5 mg/kg/dose (máx. 200 mg/dose = 400 mg/dia) 12/12 h na manutenção, por 12 meses; envolvimento SNC exige ≥12 meses após indução apropriada. [S2] [S5] AEP também descreve 6-8 mg/kg/dia divididos 12/12 h; ajustar por nível sérico e formulação."
           ]
         },
         {
@@ -60373,7 +60373,7 @@
               "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
             },
             {
-              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
+              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
               "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
             },
             {
@@ -60413,7 +60413,7 @@
               "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
             },
             {
-              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
+              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
               "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
             },
             {
@@ -60437,7 +60437,7 @@
               "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
             },
             {
-              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
+              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
               "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
             },
             {
@@ -60482,7 +60482,7 @@
           "regimen_index": 1,
           "tags": "",
           "items": [
-            "VO 2-5 mg/kg/dose 8/8 h por 3 dias; depois 2-5 mg/kg/dose 12/12 h, máximo 400 mg/dia na manutenção, por 12 meses; envolvimento SNC exige ≥12 meses após indução apropriada. [S2] AEP também descreve 6-8 mg/kg/dia divididos 12/12 h; ajustar por nível sérico e formulação."
+            "VO 2-5 mg/kg/dose (máx. 200 mg/dose) 8/8 h por 3 dias; depois 2-5 mg/kg/dose (máx. 200 mg/dose = 400 mg/dia) 12/12 h na manutenção, por 12 meses; envolvimento SNC exige ≥12 meses após indução apropriada. [S2] [S5] AEP também descreve 6-8 mg/kg/dia divididos 12/12 h; ajustar por nível sérico e formulação."
           ],
           "status": "documented"
         },
@@ -60539,7 +60539,7 @@
               "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
             },
             {
-              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
+              "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
               "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
             },
             {
@@ -60562,7 +60562,7 @@
           "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
         },
         {
-          "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
+          "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
           "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
         },
         {
@@ -60599,7 +60599,7 @@
             "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/pcm/tratamento"
           },
           {
-            "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es)",
+            "text": "[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)",
             "url": "https://www.aeped.es/comites/cm/pediamecum/principios-activos/itraconazol"
           },
           {
@@ -76681,7 +76681,7 @@
           "population": "≥1 mês; monoterapia ou adjuvante",
           "tags": "",
           "paragraphs": [
-            "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. Respeitar simultaneamente teto da apresentação: suspensão oral 1.200 mg/dia; comprimidos 2.400 mg/dia. Tratamento contínuo, reavaliando crises e tolerabilidade. [S1]",
+            "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. A bula não define teto pediátrico em mg/dia; o limite é 60 mg/kg/dia, igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e tolerabilidade. [S1]",
             "Dose da bula brasileira de 2026; retirada gradual. Não converter mg/kg/dia em mg/kg/dose."
           ]
         }
@@ -76740,7 +76740,7 @@
           "regimen_index": 0,
           "tags": "",
           "items": [
-            "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. Respeitar simultaneamente teto da apresentação: suspensão oral 1.200 mg/dia; comprimidos 2.400 mg/dia. Tratamento contínuo, reavaliando crises e tolerabilidade. [S1]",
+            "VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante 30-46 mg/kg/dia; máximo 60 mg/kg/dia. A bula não define teto pediátrico em mg/dia; o limite é 60 mg/kg/dia, igual para suspensão e comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e tolerabilidade. [S1]",
             "Dose da bula brasileira de 2026; retirada gradual. Não converter mg/kg/dia em mg/kg/dose."
           ],
           "status": "documented"
@@ -80365,7 +80365,7 @@
           "population": "Crianças, especialmente com HIV",
           "tags": "",
           "paragraphs": [
-            "Ataque 1 mg/kg/dose VO 12/12 h por 3 dias (máx. 50 mg/dose); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente. [S2]",
+            "Ataque 2 mg/kg VO 1 vez/dia por 3 dias (máx. 50 mg/dia); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente. [S2]",
             "Linfadenopatia isolada em imunocompetente não recebe automaticamente este esquema."
           ]
         }
@@ -80446,7 +80446,7 @@
           "regimen_index": 2,
           "tags": "",
           "items": [
-            "Ataque 1 mg/kg/dose VO 12/12 h por 3 dias (máx. 50 mg/dose); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente. [S2]"
+            "Ataque 2 mg/kg VO 1 vez/dia por 3 dias (máx. 50 mg/dia); depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido folínico; indução ≥6 semanas, seguida de manutenção se imunossupressão persistente. [S2]"
           ],
           "status": "documented"
         }
@@ -92927,7 +92927,7 @@
           "population": "Crianças ≤10 anos",
           "tags": "",
           "paragraphs": [
-            "Zinco ELEMENTAR 5 mg VO uma vez/dia por até 14 dias, associado à reidratação e alimentação. [S1]",
+            "Zinco ELEMENTAR 5 mg VO uma vez/dia por 10-14 dias, associado à reidratação e alimentação. [S1]",
             "Recomendação condicional, certeza baixa para a dose; atualização difere do material brasileiro tradicional."
           ]
         },
@@ -93041,7 +93041,7 @@
           "regimen_index": 0,
           "tags": "",
           "items": [
-            "Zinco ELEMENTAR 5 mg VO uma vez/dia por até 14 dias, associado à reidratação e alimentação. [S1]"
+            "Zinco ELEMENTAR 5 mg VO uma vez/dia por 10-14 dias, associado à reidratação e alimentação. [S1]"
           ],
           "status": "documented"
         },
@@ -108851,7 +108851,7 @@
           "population": "≥2 anos; rim normal",
           "tags": "",
           "paragraphs": [
-            "Iniciar 1,2 mg/kg/dose VO a cada 8 h (=3,6 mg/kg/dia). Aumentar com intervalo ≥36 h entre etapas; máximo 2,4 mg/kg/dose a cada 8 h (=7,2 mg/kg/dia). Tratamento contínuo, titulado pelo QTc/frequência e resposta. [S1]"
+            "Iniciar 30 mg/m²/dose VO a cada 8 h (=90 mg/m²/dia). Aumentar com intervalo ≥36 h entre etapas; máximo 60 mg/m²/dose a cada 8 h (=180 mg/m²/dia, ≈360 mg/dia do adulto). Dose por superfície corporal, não por peso. Tratamento contínuo, titulado pelo QTc/frequência e resposta. [S1]"
           ]
         },
         {
@@ -108859,8 +108859,8 @@
           "population": "Lactentes/neonatos",
           "tags": "RESTRIÇÃO / CONTEXTO ESPECÍFICO",
           "paragraphs": [
-            "Multiplicar a dose de ≥2 anos pelo fator etário da curva específica da bula. Exemplos da bula: 1 mês fator 0,7; 1 semana fator 0,3. Não interpolar idade gestacional/pós-natal sem farmacologia clínica. [S1]",
-            "Não aplicar 1,2 mg/kg a cada 8 h integral ao neonato; fonte não fornece equação contínua para todas idades."
+            "Multiplicar a dose de ≥2 anos pelo fator etário da curva específica da bula. Exemplos da bula: 20 meses fator 0,97; 1 mês fator 0,68 (≈20 mg/m²/dose); 1 semana fator 0,3 (9 mg/m²/dose). Não interpolar idade gestacional/pós-natal sem farmacologia clínica. [S1]",
+            "Não aplicar 30 mg/m² a cada 8 h integral ao neonato; estado de equilíbrio pode levar ≥1 semana; fonte não fornece equação contínua para todas idades."
           ]
         }
       ],
@@ -108872,7 +108872,7 @@
         {
           "title": "Mesmas indicações em menores de 2 anos — Lactentes/neonatos",
           "items": [
-            "Não aplicar 1,2 mg/kg a cada 8 h integral ao neonato; fonte não fornece equação contínua para todas idades."
+            "Não aplicar 30 mg/m² a cada 8 h integral ao neonato; estado de equilíbrio pode levar ≥1 semana; fonte não fornece equação contínua para todas idades."
           ],
           "sources": [
             {
@@ -108889,7 +108889,7 @@
           "regimen_index": 0,
           "tags": "",
           "items": [
-            "Iniciar 1,2 mg/kg/dose VO a cada 8 h (=3,6 mg/kg/dia). Aumentar com intervalo ≥36 h entre etapas; máximo 2,4 mg/kg/dose a cada 8 h (=7,2 mg/kg/dia). Tratamento contínuo, titulado pelo QTc/frequência e resposta. [S1]"
+            "Iniciar 30 mg/m²/dose VO a cada 8 h (=90 mg/m²/dia). Aumentar com intervalo ≥36 h entre etapas; máximo 60 mg/m²/dose a cada 8 h (=180 mg/m²/dia, ≈360 mg/dia do adulto). Dose por superfície corporal, não por peso. Tratamento contínuo, titulado pelo QTc/frequência e resposta. [S1]"
           ],
           "status": "documented"
         },
@@ -108899,8 +108899,8 @@
           "regimen_index": 1,
           "tags": "RESTRIÇÃO / CONTEXTO ESPECÍFICO",
           "items": [
-            "Multiplicar a dose de ≥2 anos pelo fator etário da curva específica da bula. Exemplos da bula: 1 mês fator 0,7; 1 semana fator 0,3. Não interpolar idade gestacional/pós-natal sem farmacologia clínica. [S1]",
-            "Não aplicar 1,2 mg/kg a cada 8 h integral ao neonato; fonte não fornece equação contínua para todas idades."
+            "Multiplicar a dose de ≥2 anos pelo fator etário da curva específica da bula. Exemplos da bula: 20 meses fator 0,97; 1 mês fator 0,68 (≈20 mg/m²/dose); 1 semana fator 0,3 (9 mg/m²/dose). Não interpolar idade gestacional/pós-natal sem farmacologia clínica. [S1]",
+            "Não aplicar 30 mg/m² a cada 8 h integral ao neonato; estado de equilíbrio pode levar ≥1 semana; fonte não fornece equação contínua para todas idades."
           ],
           "status": "documented"
         }

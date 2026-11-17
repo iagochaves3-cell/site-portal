@@ -12264,9 +12264,9 @@ Histoplasmose
 disseminada
 Crianças; especialmente
 HIV/imunossupressão
-VO 2-5 mg/kg/dose 8/8 h por 3 dias; depois 2-5 mg/kg/dose 12/12 h, máximo
-400 mg/dia na manutenção, por 12 meses; envolvimento SNC exige ≥12
-meses após indução apropriada. [S2]
+VO 2-5 mg/kg/dose (máx. 200 mg/dose) 8/8 h por 3 dias; depois 2-5 mg/kg/dose
+(máx. 200 mg/dose = 400 mg/dia) 12/12 h na manutenção, por 12 meses; envolvimento SNC exige ≥12
+meses após indução apropriada. [S2] [S5]
 AEP também descreve 6-8 mg/kg/dia divididos 12/12 h; ajustar por nível
 sérico e formulação.
 Esporotricose
@@ -12312,7 +12312,7 @@ Tratamento de micoses sistêmicas endêmicas (paracoccidioidomicose, histoplasmo
 refratárias.
 FONTES DO ESQUEMA • CONSULTA EM 13/09/2026
 [S1] MS - paracoccidioidomicose: tratamento (gov.br)
-[S2] AEP/Pediamécum - itraconazol (aeped.es)
+[S2] AEP/Pediamécum - itraconazol (aeped.es) [S5] NIH/CDC/PIDS - Histoplasmosis, pediatric OIs (clinicalinfo.hiv.gov)
 [S3] SESA-PR - manejo de esporotricose (www 3.maringa.pr.gov.br)
 [S4] Guía-ABE 2025 - dermatofitoses pediátricas (guia-abe.es)
 FICHA 260 / 498 • REFERÊNCIAS CLICÁVEIS • 13/09/2026
@@ -16011,9 +16011,9 @@ secundária
 ou adjuvante
 VO: iniciar 8-10 mg/kg/dia divididos em 2 tomadas. Aumentar até 10
 mg/kg/dia a intervalos aproximadamente semanais. Alvo adjuvante
-30-46 mg/kg/dia; máximo 60 mg/kg/dia. Respeitar simultaneamente
-teto da apresentação: suspensão oral 1.200 mg/dia; comprimidos
-2.400 mg/dia. Tratamento contínuo, reavaliando crises e
+30-46 mg/kg/dia; máximo 60 mg/kg/dia. A bula não define teto pediátrico
+em mg/dia; o limite é 60 mg/kg/dia, igual para suspensão e
+comprimido (bioequivalentes). Tratamento contínuo, reavaliando crises e
 tolerabilidade. [S1]
 Dose da bula brasileira de 2026; retirada gradual. Não converter
 mg/kg/dia em mg/kg/dose.
@@ -16814,7 +16814,7 @@ ocular, SNC ou
 sistêmico
 Crianças,
 especialmente com HIV
-Ataque 1 mg/kg/dose VO 12/12 h por 3 dias (máx. 50 mg/dose);
+Ataque 2 mg/kg VO 1 vez/dia por 3 dias (máx. 50 mg/dia);
 depois 1 mg/kg/dia (máx. 25 mg/dia). Associar sulfadiazina e ácido
 folínico; indução ≥6 semanas, seguida de manutenção se
 imunossupressão persistente. [S2]
@@ -19603,7 +19603,7 @@ aguda ou persistente
 - recomendação OMS
 2024
 Crianças ≤10 anos
-Zinco ELEMENTAR 5 mg VO uma vez/dia por até 14 dias, associado à
+Zinco ELEMENTAR 5 mg VO uma vez/dia por 10-14 dias, associado à
 reidratação e alimentação. [S1]
 Recomendação condicional, certeza baixa para a dose; atualização
 difere do material brasileiro tradicional.
@@ -20636,9 +20636,9 @@ graves por agentes
 sensíveis
 ≥4 semanas; função
 renal normal
-4 semanas-<10 anos: 7,5 mg/kg/dose EV a cada 24 h, máximo 320
-mg/dose. 10-<18 anos: 6-7 mg/kg/dose a cada 24 h, máximo 560
-mg/dose; faixa alta para choque/UTI. Infundir em 20-60 min.
+≥4 semanas: 7 mg/kg/dose EV/IM a cada 24 h, máximo 560
+mg/dose; aumento acima disso só com infectologia/farmácia clínica;
+obeso: peso ajustado. Infundir em 20-60 min.
 Individualizar por função renal/AUC. Duração conforme foco,
 sensibilidade e resposta. [S2]
 Não confundir dose EV com dose inalatória.
@@ -22309,11 +22309,14 @@ juvenil
 ≥2 anos e ≥15 kg
 SC nas semanas 0,1,2,3,4; depois a cada 4 semanas: 15-<50 kg 75
 mg/dose; ≥50 kg 150 mg/dose. [S1]
-Espondilite
-anquilosante juvenil
-≥12 anos na FDA atual
-SC nas semanas 0,1,2,3,4; depois a cada 4 semanas: <50 kg 75
+Artrite relacionada à
+entesite (ERA)
+≥4 anos e ≥15 kg na FDA (dez/2021)
+SC nas semanas 0,1,2,3,4; depois a cada 4 semanas: 15-<50 kg 75
 mg/dose; ≥50 kg 150 mg/dose. [S2]
+Espondilite anquilosante e nr-axSpA: aprovadas só em adultos
+(FDA); sem esquema pediátrico. Abaixo de 15 kg: sem dose
+declarada.
 Ampliação internacional; confirmar correspondência da bula
 brasileira.
 MONITORIZAÇÃO E PRECAUÇÕES Rastrear TB e candidíase; pode agravar doença inflamatória
@@ -23407,9 +23410,10 @@ es/supraventriculare
 s complexas -
 manutenção
 ≥2 anos; rim normal
-Iniciar 1,2 mg/kg/dose VO a cada 8 h (=3,6 mg/kg/dia). Aumentar
-com intervalo ≥36 h entre etapas; máximo 2,4 mg/kg/dose a cada 8
-h (=7,2 mg/kg/dia). Tratamento contínuo, titulado pelo
+Iniciar 30 mg/m²/dose VO a cada 8 h (=90 mg/m²/dia). Aumentar
+com intervalo ≥36 h entre etapas; máximo 60 mg/m²/dose a cada 8
+h (=180 mg/m²/dia, ≈360 mg/dia do adulto). Dose por superfície
+corporal, não por peso. Tratamento contínuo, titulado pelo
 QTc/frequência e resposta. [S1]
 Mesmas indicações
 em menores de 2
@@ -23418,9 +23422,9 @@ Lactentes/neonatos
 RESTRIÇÃO / CONTEXTO
 ESPECÍFICO
 Multiplicar a dose de ≥2 anos pelo fator etário da curva específica da
-bula. Exemplos da bula: 1 mês fator 0,7; 1 semana fator 0,3. Não
+bula. Exemplos da bula: 20 meses fator 0,97; 1 mês fator 0,68 (≈20 mg/m²/dose); 1 semana fator 0,3 (9 mg/m²/dose). Não
 interpolar idade gestacional/pós-natal sem farmacologia clínica. [S1]
-Não aplicar 1,2 mg/kg a cada 8 h integral ao neonato; fonte não
+Não aplicar 30 mg/m² a cada 8 h integral ao neonato; estado de equilíbrio pode levar ≥1 semana; fonte não
 fornece equação contínua para todas idades.
 MONITORIZAÇÃO E PRECAUÇÕES Iniciar/reiniciar em hospital com ECG e eletrólitos corrigidos; QT
 ≥500 ms exige redução/aumento do intervalo/suspensão. Eliminação renal: intervalo e dose devem
