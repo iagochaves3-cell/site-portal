@@ -1,1 +1,0 @@
-teste unicode: · Á Ã Í × Ú à á â ã ç é ê í ó õ ÷ ú – — “ ” → `template` ${x}
