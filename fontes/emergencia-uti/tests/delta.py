@@ -20,11 +20,11 @@ def contem(a, b, tol=0.051):
 
 # Motivo de cada diferença (campo -> texto). Campos sem diferença não precisam constar.
 MOTIVO = {
-    "altCopy": "Receita refeita: gotas calculadas (o original dava paracetamol em mL sem gotas, intervalo de 6–8 h e ibuprofeno para qualquer idade, sem alerta de dengue).",
+    "altCopy": "Receita refeita: gotas calculadas (o original dava paracetamol em mL sem gotas, intervalo de 6–8 h e ibuprofeno para qualquer idade, sem alerta de dengue). Dipirona de 10 mg/kg/dose (0,4 gota/kg), como no Manual PPS do autor.",
     "altPeso": "Só formato (18,0 kg → 18 kg).", "altIdade": "Idade passa a ser lida e normalizada (dias, meses, anos).",
     "atbSind": "Lista de síndromes ampliada e reordenada; a primeira passou a ser sepse comunitária.",
-    "atbTit": "Idem.", "atbTab": "Coluna Dose total passou a ser calculada (o original repetia a dose máxima); doses revistas por síndrome.",
-    "cartaDrogas": "Mesmas doses onde o original estava certo; corrigidos o volume da atropina (mostrava a dose em mg como mL), tetos ausentes e 4 linhas acrescentadas (adrenalina ET, adenosina 1ª e 2ª, naloxona).",
+    "atbTit": "Idem.", "atbTab": "Coluna Dose total passou a ser calculada (o original repetia a dose máxima); doses revistas por síndrome. Amoxicilina de 80–90 mg/kg/dia como 1ª linha na pneumonia e na otite (Manual PPS); benzatina com os dois cortes de peso.",
+    "cartaDrogas": "Mesmas doses onde o original estava certo; corrigidos o volume da atropina (mostrava a dose em mg como mL), tetos ausentes e 4 linhas acrescentadas (adrenalina ET, adenosina 1ª e 2ª, naloxona). Volumes nas duas apresentações de atropina, lidocaína e magnésio (folha ABRAMEDE-MG).",
     "chAlvo": "Alvos passam a depender da idade (o original usava alvos de adulto para todos).",
     "chDetail": "Conduta revista (SSC 2026, AHA 2025).", "chRecon": "Idem (critérios Phoenix).",
     "chExp": "Mostra a faixa de 10–20 mL/kg por alíquota e limita a 1.000 mL; recém-nascido 10 mL/kg.",
@@ -40,7 +40,7 @@ MOTIVO = {
     "dvCap": "Mostra concentração e preparo; removido 'gotas/min'.", "dvDose": "Dose inicial passa a ser o mínimo da faixa do fármaco.",
     "dvOut": "Idem (0,05 em vez de 0,1 mcg/kg/min); mesma fórmula.", "dvDrug": "Lista ampliada.",
     "dvTable": "Soluções padronizadas e conferidas (o original trazia dexmedetomidina 10 vezes mais concentrada e dopamina com massa impossível em 50 mL).",
-    "equipTab": "Tamanhos por faixa de peso (o original repetia fórmulas e trazia agulha intraóssea errada).",
+    "equipTab": "Tamanhos por faixa de peso (o original repetia fórmulas e trazia agulha intraóssea errada). Quatro itens acrescentados da folha ABRAMEDE-MG do autor: cateter central, cateter arterial, descompressão torácica e bougie.",
     "fcRef": "Faixas por idade em vigília e sono (PALS).", "frRef": "Faixas por idade (MS 2023).",
     "formDose": "Só formato.", "formVol": "Só formato.",
     "intoxTab": "Tetos acrescentados, pralidoxima na apresentação brasileira, insulina diluída a 1 U/mL (o original pedia 0,1 mL de insulina pura) e 7 antídotos acrescentados.",
@@ -70,7 +70,7 @@ MOTIVO = {
     "trTr": "Mostra 10–20 mL/kg.", "trTxa": "Teto de 1 g e manutenção limitada a 125 mg/h.", "trVol": "Só formato; limite de 1.000 mL.",
     "tubCm": "Profundidade por idade (idade ÷ 2 + 12); o original usava 3 × tubo, que superestima na criança maior.",
     "viaCom": "ERRO CORRIGIDO: campo ficava vazio.", "viaProf": "Idem.", "viaSem": "Idem.",
-    "viaTab": "ERRO CORRIGIDO: a tabela de indução e bloqueio não era preenchida no original.",
+    "viaTab": "ERRO CORRIGIDO: a tabela de indução e bloqueio não era preenchida no original. Conferida com a folha ABRAMEDE-MG: etomidato 0,2–0,3, propofol 1–2,5, succinilcolina por idade, cisatracúrio e atropina nas ampolas de 0,5 e 0,25 mg/mL.",
     "vmPeso": "ERRO CORRIGIDO: o original aplicava peso predito de adulto a crianças (18 kg virava 36,9 kg).",
     "vmVt": "Idem: 221 mL para uma criança de 18 kg; o correto é 108 mL.", "vmTab": "Parâmetros por faixa revistos.",
     "vnE": "Valores iniciais por idade.", "vnI": "Idem.", "wBtns": "Rótulos sem a casa decimal.",

@@ -1,0 +1,59 @@
+{
+ "gerado": "25/11/2026",
+ "grupos": [
+  {
+   "k": "proto",
+   "n": "Protocolos clínicos por diagnóstico",
+   "origem": "Estudo Continuado",
+   "url": "https://estudo-continuado.sites-pediatria.workers.dev/",
+   "obs": "Temas no modelo de 25 componentes, com referências. Adulto e pediatria.",
+   "itens": 110
+  },
+  {
+   "k": "tera",
+   "n": "Terapêuticas pediátricas",
+   "origem": "Terapêuticas (PedWB)",
+   "url": "https://terapeuticas.sites-pediatria.workers.dev/",
+   "obs": "Temas pediátricos por especialidade e anexos operacionais.",
+   "itens": 362
+  },
+  {
+   "k": "neo",
+   "n": "Neonatologia",
+   "origem": "Neonatologia: cuidados com o RN",
+   "url": "https://neonatologia.sites-pediatria.workers.dev/",
+   "obs": "Compêndio neonatal por áreas, edição de 05/11/2026.",
+   "itens": 87
+  },
+  {
+   "k": "pps",
+   "n": "Manual de Prescrição Pediátrica Segura",
+   "origem": "Manual Integral PPS, versão de 15/08/2026",
+   "url": "",
+   "obs": "Linhas farmacológicas do manual do autor, por princípio ativo: indicação, via, apresentação, dose, máximo, intervalo e cautelas.",
+   "itens": 266
+  },
+  {
+   "k": "mono",
+   "n": "Monografias pediátricas",
+   "origem": "Catálogo posológico pediátrico, revisão de 14/09/2026",
+   "url": "https://medicacoes-pediatricas.sites-pediatria.workers.dev/",
+   "obs": "Monografias com indicações, apresentações, esquemas por indicação, cautelas e fontes.",
+   "itens": 498
+  },
+  {
+   "k": "esc",
+   "n": "Escores clínicos",
+   "origem": "Escores Clínicos, catálogo de novembro de 2026",
+   "url": "https://scores-clinicos.sites-pediatria.workers.dev/",
+   "obs": "Critérios, pontuação, faixas de interpretação, limites e fontes; a calculadora original abre dentro da aba.",
+   "itens": 486
+  }
+ ],
+ "total": 1809,
+ "manual": {
+  "linhas": 577,
+  "farmacos": 265,
+  "diagnosticos": 315
+ }
+}

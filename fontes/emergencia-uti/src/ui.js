@@ -63,9 +63,13 @@ function calcItem(it) {
   var c = doseCalc(it.d, P);
   var dose = doseTxt(c) + (c.cap ? " (teto)" : "") + (c.minAp ? " (dose mínima)" : "");
   var vol;
-  if (it.c) {
+  if (it.cs) {
+    var ps = [];
+    for (var j = 0; j < it.cs.length; j++) ps.push(volTxt(c, it.cs[j][0]) + " (" + it.cs[j][1] + ")");
+    vol = ps.join(" ou ");
+    if (c.hi / it.c < 0.2) vol += "; volume pequeno: seringa de 1 mL ou diluir";
+  } else if (it.c) {
     vol = volTxt(c, it.c);
-    if (it.c2) vol += " da ampola 50% ou " + volTxt(c, it.c2) + " da ampola 10%";
     if (c.hi / it.c < 0.2) vol += " (volume pequeno: seringa de 1 mL ou diluir)";
   } else vol = c.u === "mL" ? doseTxt(c) : "—";
   return { c: c, dose: dose, vol: vol, kg: porKgTxt(it.d, P) };
@@ -246,7 +250,7 @@ function cMal() {
   set("mIV", dv({ k: [0.1, 0.2], max: 10 }, 5, "da ampola 5 mg/mL"));
   if (ehNeo(P)) { set("mDzIV", "Evitar no recém-nascido: preferir fenobarbital ou midazolam"); set("mRet", "Evitar no recém-nascido: preferir fenobarbital ou midazolam"); }
   else {
-    set("mDzIV", dv({ k: [0.2, 0.3], max: 10 }, 5, "da ampola 5 mg/mL, sem diluir, lento"));
+    set("mDzIV", dv({ k: [0.15, 0.2], max: 10 }, 5, "da ampola 5 mg/mL, sem diluir, lento"));
     set("mRet", dv({ k: 0.5, max: 20 }, 5, "da ampola 5 mg/mL"));
   }
   set("mLev", dv({ k: [40, 60], max: 4500 }, 100, "do frasco 100 mg/mL"));
@@ -494,7 +498,7 @@ function cCorr() {
   var maxDia = agua * 8;
   set("coVel", "Até " + num(maxDia) + " mEq em 24 h = " + mlh(maxDia / 0.513 / 24) + " de NaCl 3%");
   set("coBolus", faixaTxt(Math.min(3 * kg, 150), Math.min(5 * kg, 150), mlNum) + " mL em 10–20 min (3–5 mL/kg, teto de 150 mL)");
-  var base = "NaCl 3% = 0,513 mEq/mL. Preparo: 15 mL de NaCl 20% + 85 mL de água destilada.";
+  var base = "NaCl 3% = 0,513 mEq/mL. Preparo de 100 mL: 15 mL de NaCl 20% + 85 mL de água destilada, ou 30 mL de NaCl 10% + 70 mL de água destilada.";
   if (!isFinite(na) || !isFinite(alvo)) {
     set("coDef", "—"); set("coVol3", "—"); set("coAviso", "Informe sódio atual e sódio alvo. " + base);
   } else if (alvo <= na) {
@@ -622,7 +626,7 @@ function linhaParacetamol() {
 }
 function linhaDipirona() {
   if (P.idade < 0.25 || P.peso < 5) return null;
-  var n = Math.max(1, Math.min(Math.round(0.6 * P.peso), 40));
+  var n = Math.max(1, Math.min(Math.round(0.4 * P.peso), 40));
   return "Dipirona gotas 500 mg/mL: dar " + n + (n === 1 ? " gota" : " gotas") + " pela boca a cada 6 horas se houver febre ou dor.";
 }
 function linhasFebre(L) {
@@ -786,6 +790,7 @@ function cPrint() {
 var CALCS = [["Painel", cPainel], ["Estabilização", cEstab], ["Sala vermelha", cSala], ["Via aérea", cVia], ["PCR", cPcr], ["Choques", cChoque],
   ["Estado de mal", cMal], ["Trauma", cTrauma], ["Intoxicações", cIntox], ["Metabólicos", cMetab], ["Diluições", cDil], ["Repertório", cRep],
   ["Antibióticos", cAtb], ["Posologias", cPos], ["Soroterapia", cSoro], ["Correção", cCorr], ["Ventilação", cVm], ["VNI", cVni],
+  ["Sedação para procedimento", cProced], ["Doses tóxicas", cToxicos], ["Modos ventilatórios", cModos],
   ["Gasometria", cGaso], ["Receita de alta", cAlta], ["Documentos", cDocs], ["Impressão", cPrint]];
 window.__erros = [];
 function recalc() {
@@ -851,7 +856,10 @@ function pesoRapido(kg) {
 
 /* ---------- navegação ---------- */
 function mostrarAba(id, foco) {
-  if (!$(id) || !ROTULOS[id]) id = "t-painel";
+  var r = rota(id);
+  if (r.g) { var abg = abaDoGrupo(r.g); if (abg) r.aba = abg; }
+  id = r.aba;
+  if (!$(id) || !ROTULOS[id]) { id = "t-painel"; r.g = null; }
   abaAtual = id;
   cada(document.querySelectorAll("section.tab"), function (s) { s.className = s.id === id ? "tab active" : "tab"; });
   cada($("navGroups").getElementsByTagName("a"), function (a) {
@@ -864,7 +872,12 @@ function mostrarAba(id, foco) {
   fecharMenu();
   window.scrollTo(0, 0);
   try { cPrint(); } catch (e2) {}
-  if (foco) { var h = $(id).getElementsByTagName("h1")[0]; if (h) { h.setAttribute("tabindex", "-1"); try { h.focus({ preventScroll: true }); } catch (e3) { h.focus(); } } }
+  if (foco && !r.g) { var h = $(id).getElementsByTagName("h1")[0]; if (h) { h.setAttribute("tabindex", "-1"); try { h.focus({ preventScroll: true }); } catch (e3) { h.focus(); } } }
+  if (AC.est[id]) {
+    var pend = AC.pendente; AC.pendente = null;
+    acervoAtivar(id, pend);
+    if (r.g) acervoAbrir(id, r.g, r.id, foco);
+  }
 }
 function abrirMenu() { $("side").className = "side no-print open"; mostra($("veu"), true); $("btnMenu").setAttribute("aria-expanded", "true"); }
 function fecharMenu() { $("side").className = "side no-print"; mostra($("veu"), false); $("btnMenu").setAttribute("aria-expanded", "false"); }
@@ -881,6 +894,7 @@ function filtrarNav() {
     mostra(g, vis > 0);
   });
   mostra($("navVazio"), total === 0);
+  acervoNav($("navSearch").value);
   return primeiro;
 }
 
@@ -950,7 +964,7 @@ function aplicarTema(t, salvar) {
   document.documentElement.setAttribute("data-theme", t);
   set("btnTema", t === "dark" ? "Tema claro" : "Tema escuro");
   var mt = document.querySelector('meta[name="theme-color"]');
-  if (mt) mt.setAttribute("content", t === "dark" ? "#121A23" : "#FFFFFF");
+  if (mt) mt.setAttribute("content", t === "dark" ? "#111921" : "#1B2631");
   if (salvar) try { localStorage.setItem("eu.tema", t); } catch (e) {}
 }
 
@@ -1002,6 +1016,10 @@ function montar() {
   h = "";
   for (i = 0; i < SINAIS.length; i++) h += '<label><input type="checkbox" value="' + SINAIS[i].id + '"> ' + esc(SINAIS[i].l) + "</label>";
   setH("diagChecks", h);
+  h = "";
+  for (i = 0; i < MODOS.length; i++) h += '<option value="' + MODOS[i].id + '">' + esc(MODOS[i].n) + "</option>";
+  setH("modoSel", h);
+  acervoMontar();
   cada(document.querySelectorAll("table.ref tbody"), rotular);
 }
 function ligar() {
@@ -1014,7 +1032,9 @@ function ligar() {
   $("atbSind").onchange = cAtb;
   $("soNa").oninput = cSoro; $("soK").oninput = cSoro;
   $("coNa").oninput = function () { cCorr(); cMetab(); }; $("coNaAlvo").oninput = function () { cCorr(); cMetab(); };
-  $("vmAlt").oninput = cVm;
+  $("vmAlt").oninput = function () { cVm(); cModos(); };
+  $("modoSel").onchange = cModos;
+  ligarAcervo();
   cada(["gaNa", "gaCl", "gaHco", "gaGlic"], function (id) { $(id).oninput = cGaso; });
   $("diagChecks").onchange = cDiag;
   $("diagLimpar").onclick = function () { cada($("diagChecks").getElementsByTagName("input"), function (c) { c.checked = false; }); cDiag(); };

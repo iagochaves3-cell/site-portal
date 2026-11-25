@@ -6,7 +6,7 @@
 <title>Emergência &amp; UTI — Referência Clínica Integrada</title>
 <meta name="description" content="Referência clínica de emergência e terapia intensiva, adulto e pediátrica: doses, diluições, vazões e condutas calculadas pelo peso e pela idade. Uso profissional.">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#1B2631">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2313212E'/%3E%3Crect x='4' y='6' width='4' height='20' fill='%23F2A2BC'/%3E%3Crect x='8' y='6' width='4' height='20' fill='%23D5303B'/%3E%3Crect x='12' y='6' width='4' height='20' fill='%23F0C02C'/%3E%3Crect x='16' y='6' width='4' height='20' fill='%23FFFFFF'/%3E%3Crect x='20' y='6' width='4' height='20' fill='%232E7DCE'/%3E%3Crect x='24' y='6' width='4' height='20' fill='%233C9A4D'/%3E%3C/svg%3E">
 <script>(function(){try{var t=localStorage.getItem("eu.tema");if(t!=="dark"&&t!=="light")t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <style>
@@ -26,12 +26,14 @@
   --display: "Barlow Semi Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --side: 276px;
+  --chrome: #1B2631; --chrome2: #26343F; --chrome-ink: #E8EEF4; --chrome-ink2: #A3B3C4; --chrome-line: #0F171E; --chrome-line2: #45576A; --chrome-acc: #8CC3F2;
   color-scheme: light;
 }
 [data-theme="dark"] {
   --bg: #0B1118; --sheet: #121A23; --sheet2: #18222D; --ink: #E7EDF3; --ink2: #9DB0C2; --line: #2A3846;
   --calc: #7CC4F5; --calc-bg: #12283A; --crit: #FF7A72; --crit-bg: #3A1719;
   --ok: #56C794; --warn: #F2C14E; --warn-bg: #33290F;
+  --chrome: #10171E; --chrome2: #19232D; --chrome-line: #070B0F; --chrome-line2: #33424F;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -237,6 +239,83 @@ table.ref td.calc { min-width: 5.5em; }
   h1 { font-size: 17pt; }
   a { color: #000; text-decoration: none; }
   textarea { border: 0; min-height: 0; height: auto; }
+  .acervo { display: block; }
+  .ac-leitor { border: 0; padding: 0; }
+  .ac-frame { display: none; }
+}
+
+/* =====================================================================
+   Cromado escuro metálico: barra lateral e barra do paciente.
+   O conteúdo continua em papel claro; o contraste entre os dois
+   separa navegação de leitura.
+   ===================================================================== */
+.side { background: linear-gradient(180deg, var(--chrome2) 0, var(--chrome) 340px); color: var(--chrome-ink); border-right: 1px solid var(--chrome-line); box-shadow: inset -1px 0 0 rgba(255, 255, 255, .05); }
+.side .marca { color: #FFFFFF; }
+.side .marca-sub, .side .helper, .side .nav-vazio { color: var(--chrome-ink2); }
+.side .search-box { background: #0C131A; border-color: var(--chrome-line2); color: var(--chrome-ink); }
+.side .search-box::placeholder { color: #93A5B7; opacity: 1; }
+.side .nav-g h2 { color: var(--chrome-ink2); }
+.side .nav-g a { color: var(--chrome-ink); }
+.side .nav-g a:hover { background: rgba(255, 255, 255, .07); }
+.side .nav-g a.active { border-left-color: var(--chrome-acc); background: rgba(140, 195, 242, .14); color: #FFFFFF; }
+.side .btn-m { background: transparent; color: var(--chrome-ink); border-color: var(--chrome-line2); }
+.side .btn-m:hover { background: rgba(255, 255, 255, .07); }
+.side :focus-visible, .topbar :focus-visible { outline-color: var(--chrome-acc); }
+.nav-acervo { margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--chrome-line2); }
+.nav-acervo a small { display: block; font-size: .78rem; color: var(--chrome-ink2); font-weight: 400; }
+.nav-acervo a.ac-todos { font-weight: 650; }
+.topbar { background: linear-gradient(180deg, var(--chrome2), var(--chrome)); color: var(--chrome-ink); border-bottom: 1px solid var(--chrome-line); box-shadow: 0 1px 0 rgba(255, 255, 255, .05) inset, 0 2px 8px rgba(8, 14, 20, .18); }
+.topbar .zona-bar { border-bottom-color: var(--chrome-line); }
+.topbar label, .topbar .rotulo, .topbar .pac-info, .topbar .cap-big { color: var(--chrome-ink2); }
+.topbar input[type="number"], .topbar input[type="text"], .topbar select { background: var(--sheet); color: var(--ink); border-color: var(--chrome-line2); }
+.topbar #peso { color: var(--calc); }
+.topbar input.invalido { background: var(--crit-bg); border-color: var(--crit); }
+.topbar .selo i { border-color: var(--chrome-ink2); }
+.topbar .fita { border-color: var(--chrome-line); }
+.topbar .icon-btn { background: transparent; color: var(--chrome-ink); border-color: var(--chrome-line2); }
+.topbar .icon-btn:hover { background: rgba(255, 255, 255, .08); }
+.topbar .pac-resumo { background: rgba(255, 255, 255, .06); border-color: var(--chrome-line2); color: var(--chrome-ink); }
+.topbar .pac-resumo b { color: var(--chrome-acc); }
+.topbar .pac-resumo span { color: var(--chrome-ink2); }
+.topbar .aviso { color: var(--ink); }
+
+/* ---------- painéis acrescentados ---------- */
+table.ref tr.obs td, table.ref tr.obs td:first-child { color: var(--ink2); font: 400 .86rem/1.45 var(--body); padding-top: 2px; }
+.modo-out h4, .ac-leitor h4 { font: 600 1.06rem/1.25 var(--display); margin: 16px 0 4px; }
+.modo-out p { max-width: 80ch; }
+
+/* ---------- acervo integrado ---------- */
+.aviso-acervo { background: var(--warn-bg); color: var(--ink); border-left: 4px solid var(--warn); padding: 8px 12px; border-radius: 0 6px 6px 0; font-size: .9rem; margin: 0 0 14px; max-width: 100ch; }
+.acervo { display: grid; gap: 14px; align-items: start; }
+.ac-busca { background: var(--sheet); border: 1px solid var(--line); border-radius: 6px; padding: 14px; min-width: 0; }
+.ac-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 6px; }
+.ac-chips button { min-height: 44px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 22px; background: var(--sheet2); color: var(--ink); cursor: pointer; font-size: .88rem; }
+.ac-chips button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+.ac-lista { list-style: none; margin: 6px 0 8px; padding: 0; }
+.ac-lista li { margin: 0 0 6px; }
+.ac-lista button { display: block; width: 100%; min-height: 44px; text-align: left; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--sheet); color: var(--ink); cursor: pointer; line-height: 1.3; }
+.ac-lista button:hover { background: var(--sheet2); }
+.ac-lista button[aria-current="true"] { border-color: var(--calc); background: var(--calc-bg); }
+.ac-lista small { display: block; color: var(--ink2); font-size: .8rem; margin-top: 2px; }
+.ac-leitor { background: var(--sheet); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; min-width: 0; overflow-wrap: anywhere; }
+.ac-leitor:focus { outline: none; }
+.ac-cab { border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 8px; }
+.ac-leitor h2 { font-size: 1.55rem; line-height: 1.2; font-weight: 600; margin: 0 0 8px; }
+.ac-leitor h3 { margin-top: 18px; }
+.ac-leitor h5 { font-size: .98rem; margin: 12px 0 4px; }
+.ac-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+.chip { display: inline-block; background: var(--sheet2); border: 1px solid var(--line); border-radius: 4px; padding: 2px 8px; font-size: .82rem; color: var(--ink2); }
+.ac-st { font-size: .86rem; color: var(--warn); margin: 0 0 8px; }
+.ac-acoes { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 4px; }
+a.btn-m { display: inline-flex; align-items: center; text-decoration: none; color: var(--ink); }
+.ac-frame { display: block; width: 100%; height: 78vh; min-height: 480px; border: 1px solid var(--line); border-radius: 6px; background: #FFFFFF; margin-top: 10px; }
+.ac-refs li { margin-bottom: 6px; font-size: .9rem; }
+.ac-pre { white-space: pre-wrap; background: var(--sheet2); border: 1px solid var(--line); border-radius: 6px; padding: 12px; font-size: .88rem; line-height: 1.45; overflow-x: auto; }
+.ac-leitor img { display: block; width: 100%; max-width: 640px; height: auto; background: #FFFFFF; border: 1px solid var(--line); border-radius: 6px; }
+.ac-leitor blockquote { border-left: 3px solid var(--line); margin: 0 0 10px; padding: 2px 12px; color: var(--ink2); }
+@media screen and (min-width: 1001px) {
+  .acervo { grid-template-columns: minmax(250px, 330px) minmax(0, 1fr); }
+  .ac-lista { max-height: 64vh; overflow-y: auto; }
 }
 
 </style>
@@ -252,6 +331,7 @@ table.ref td.calc { min-width: 5.5em; }
 <input class="search-box" id="navSearch" type="search" placeholder="Buscar seção ou termo" autocomplete="off">
 <p class="helper cap-big">Filtra as abas pelo título e pelo conteúdo. Enter abre a primeira.</p>
 <nav id="navGroups" aria-label="Seções"></nav>
+<div class="nav-g nav-acervo" id="navAcervo" hidden></div>
 <div class="nav-g"><button class="btn-m" id="btnTema" type="button">Tema escuro</button></div>
 </aside>
 <div class="veu no-print" id="veu" hidden></div>
@@ -430,6 +510,31 @@ table.ref td.calc { min-width: 5.5em; }
 <tbody id="viaTab"></tbody>
 </table></div>
 </div>
+<div class="panel">
+<h3>Sedação e analgesia para procedimento</h3>
+<p class="helper">Doses iniciais para o peso, a titular pelo efeito. Volume calculado com a apresentação indicada.</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Fármaco</th><th>Dose por kg</th><th>Dose</th><th>Volume</th><th>Apresentação e observações</th></tr></thead>
+<tbody id="procTab"></tbody>
+</table></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Antes de sedar</h3><p class="helper">Sedação moderada ou profunda fora do centro cirúrgico.</p>
+<ul>
+<li>Classificar o risco: no pronto-socorro, pacientes ASA I e II. ASA III ou mais, via aérea difícil prevista ou lactente abaixo de 6 meses: considerar o anestesista.</li>
+<li>Jejum: na urgência, o tempo de jejum não deve atrasar a sedação (ACEP). No procedimento eletivo: 2 h para líquidos claros, 4 h para leite materno e 6 h para fórmula e refeição leve.</li>
+<li>Monitorização contínua com oximetria, capnografia, frequência cardíaca e pressão arterial; um profissional dedicado à sedação e outro ao procedimento.</li>
+<li>Material pronto: aspirador, oxigênio, bolsa-válvula-máscara, cânulas, dispositivo supraglótico, material de intubação e antagonistas.</li>
+</ul></div>
+<div class="panel"><h3>Escolha pelo procedimento</h3><p class="helper">Somar analgesia e sedação conforme a dor esperada.</p>
+<ul>
+<li>Doloroso e curto (redução de fratura, sutura extensa, drenagem): cetamina IV ou IM; alternativa, propofol com fentanil.</li>
+<li>Exame de imagem sem dor: dexmedetomidina intranasal, ou midazolam oral ou intranasal.</li>
+<li>Ansiedade com dor leve: midazolam intranasal com anestesia local, ou fentanil intranasal.</li>
+<li>Cardioversão no adolescente e no adulto: etomidato ou propofol em dose pequena.</li>
+<li>Alta com o nível de consciência prévio, sinais vitais estáveis, sem náusea importante e com acompanhante.</li>
+</ul></div>
+</div>
 <div class="grid">
 <div class="panel"><h3>Pré-oxigenação e posição</h3><p class="helper">Otimizar antes da laringoscopia.</p>
 <ul>
@@ -533,7 +638,7 @@ table.ref td.calc { min-width: 5.5em; }
 <div class="kv"><span>Midazolam intranasal, 0,2 mg/kg (máx. 10 mg)</span><span id="mIN" class="calc">—</span></div>
 <div class="kv"><span>Midazolam bucal, 0,3 mg/kg (máx. 10 mg)</span><span id="mBuc" class="calc">—</span></div>
 <div class="kv"><span>Midazolam IV, 0,1–0,2 mg/kg (máx. 10 mg)</span><span id="mIV" class="calc">—</span></div>
-<div class="kv"><span>Diazepam IV, 0,2–0,3 mg/kg (máx. 10 mg)</span><span id="mDzIV" class="calc">—</span></div>
+<div class="kv"><span>Diazepam IV, 0,15–0,2 mg/kg (máx. 10 mg)</span><span id="mDzIV" class="calc">—</span></div>
 <div class="kv"><span>Diazepam retal, 0,5 mg/kg (máx. 20 mg)</span><span id="mRet" class="calc">—</span></div>
 </div>
 <div class="panel"><h3>20–40 min: 2ª linha</h3><p class="helper">Um dos fármacos abaixo, em dose plena. Eficácia semelhante entre eles.</p>
@@ -590,6 +695,15 @@ table.ref td.calc { min-width: 5.5em; }
 <tbody id="intoxTab"></tbody>
 </table></div>
 </div>
+<div class="panel">
+<h3>Doses tóxicas por peso</h3>
+<p class="helper">Ingestão aguda única, para o peso informado. Abaixo do primeiro limiar, sem sintomas, sem intenção autolesiva e sem suspeita de maus-tratos, a observação em casa costuma ser segura; na dúvida, ligar para o CIATox.</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Limiar por kg</th><th>Para este paciente</th><th>Equivale a</th></tr></thead>
+<tbody id="toxTab"></tbody>
+</table></div>
+</div>
+<div class="light"><h3>Uma dose pode ser fatal em criança pequena</h3><p class="helper">Um comprimido ou um gole destes agentes pode matar uma criança de 10 kg: sempre observar no hospital.</p><ul id="toxUm"></ul></div>
 <div class="grid">
 <div class="panel"><h3>Descontaminação</h3><p class="helper">Carvão ativado em até 1–2 h da ingestão, com via aérea protegida.</p>
 <div class="kv"><span>Carvão ativado, 1 g/kg (máx. 50 g)</span><span id="itCarv" class="calc">—</span></div>
@@ -800,6 +914,9 @@ table.ref td.calc { min-width: 5.5em; }
 </div>
 <div class="panel"><h3>Parâmetros iniciais por faixa</h3><p class="helper">A linha destacada corresponde à idade informada. Ajustar pela gasometria, pela curva e pelo conforto.</p>
 <div class="tbl"><table class="ref"><thead><tr><th>Faixa</th><th>VC (mL/kg)</th><th>PEEP</th><th>FR</th><th>Tempo inspiratório</th><th>Fluxo</th><th>FiO₂</th><th>Gatilho</th></tr></thead><tbody id="vmTab"></tbody></table></div></div>
+<div class="panel"><h3>Abordagem por modo ventilatório</h3><p class="helper">Escolha o modo: funcionamento, indicação, ajuste inicial calculado para o paciente, monitorização e armadilhas.</p>
+<div class="field" style="max-width:460px"><label for="modoSel">Modo ventilatório</label><select id="modoSel"></select></div>
+<div id="modoOut" class="modo-out"></div></div>
 <div class="grid">
 <div class="panel"><h3>Modos</h3><p class="helper">Escolher o modo que a equipe domina.</p>
 <ul><li>Volume controlado (VCV) e pressão controlada (PCV): suporte total. Em PCV, conferir o volume corrente obtido.</li><li>Pressão regulada com volume controlado (PRVC): volume garantido com pressão limitada.</li><li>SIMV com pressão de suporte e PSV: suporte parcial e desmame.</li><li>APRV e alta frequência: resgate na SDRA refratária, em centro experiente.</li></ul></div>
@@ -814,6 +931,12 @@ table.ref td.calc { min-width: 5.5em; }
 <ul><li>Frequência baixa e tempo expiratório longo (relação I:E de 1:3 a 1:5).</li><li>Hipercapnia permissiva com pH acima de 7,20.</li><li>Medir a auto-PEEP e a pressão de platô; hipotensão súbita: desconectar e deixar exalar, pensar em pneumotórax.</li></ul></div>
 <div class="panel"><h3>SDRA pediátrica (PALICC-2, 2023)</h3><p class="helper">Índice de oxigenação = FiO₂ × pressão média de vias aéreas × 100 ÷ PaO₂. Com oximetria: trocar PaO₂ por SpO₂ (até 97%).</p>
 <ul><li>Em ventilação invasiva: índice de oxigenação a partir de 4, ou de saturação a partir de 5.</li><li>Leve a moderada: índice de oxigenação abaixo de 16 (saturação abaixo de 12). Grave: 16 ou mais (12 ou mais), após 4 h de ventilação.</li><li>Em ventilação não invasiva: PaO₂/FiO₂ até 300 ou SpO₂/FiO₂ até 250.</li><li>Volume corrente de 6–8 mL/kg (4–6 se a complacência for muito baixa), platô até 28 cmH₂O, pressão de distensão até 15 cmH₂O.</li><li>Grave: posição prona e bloqueio neuromuscular a considerar; ECMO na falha refratária.</li><li>SpO₂ 92–97% na forma leve a moderada; 88–92% na grave com PEEP otimizada.</li></ul></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Posição prona</h3><p class="helper">Na SDRA moderada a grave, depois de otimizar volume, PEEP e sedação.</p>
+<ul><li>Adulto: PaO₂/FiO₂ abaixo de 150 com FiO₂ de 0,6 ou mais e PEEP de 5 cmH₂O ou mais; começar nas primeiras 36 h, em sessões de pelo menos 16 h (PROSEVA).</li><li>Criança: opção na SDRA pediátrica grave (índice de oxigenação de 16 ou mais), sem benefício de mortalidade demonstrado (PALICC-2).</li><li>Manter em supino quando a PaO₂/FiO₂ ficar em 150 ou mais, com PEEP até 10 cmH₂O e FiO₂ até 0,6, por 4 h após a sessão.</li><li>Contraindicações: coluna instável, hipertensão intracraniana, tórax aberto ou esterno instável, instabilidade hemodinâmica grave.</li><li>Equipe de 4 a 5 pessoas; proteger tubo, olhos e pontos de pressão; pausar a dieta antes de virar.</li></ul></div>
+<div class="panel"><h3>ECMO</h3><p class="helper">Discutir cedo com o centro de referência: o transporte exige estabilidade.</p>
+<ul><li>Adulto (EOLIA), apesar de FiO₂ de 0,8 ou mais, volume de 6 mL/kg e PEEP de 10 cmH₂O ou mais: PaO₂/FiO₂ abaixo de 50 por mais de 3 h, abaixo de 80 por mais de 6 h, ou pH abaixo de 7,25 com PaCO₂ de 60 mmHg ou mais por mais de 6 h.</li><li>Criança: falha progressiva apesar da terapia otimizada, em doença reversível; referências usuais são índice de oxigenação acima de 40, PaO₂/FiO₂ abaixo de 60 ou acidose respiratória persistente com pH abaixo de 7,0–7,25, como na asma refratária (ELSO).</li><li>Recém-nascido: índice de oxigenação acima de 40 por mais de 4 h, ou acima de 20 sem melhora após 24 h de terapia máxima (ELSO).</li><li>Pesam contra: muitos dias de ventilação com parâmetros altos (mais de 7 no adulto), dano neurológico grave, doença sem possibilidade de recuperação ou de transplante.</li></ul></div>
 </div>
 </section>
 
@@ -1020,6 +1143,8 @@ table.ref td.calc { min-width: 5.5em; }
 <!-- ============ 26. NOVIDADES ============ -->
 <section class="tab" id="t-novidades" data-title="novidades atualizações diretrizes Surviving Sepsis 2026 AHA AAP 2025 PADIS Phoenix PALICC dengue VSR nirsevimabe ISPAD fontes referências" data-copiar="Copiar novidades">
 <div class="hero-head"><div><h1>Novidades e fontes</h1><p class="sub">O que mudou nas diretrizes recentes e as referências usadas nesta revisão.</p></div></div>
+<div class="light"><h3>Esta versão: acervo do autor integrado (25 de novembro de 2026)</h3><p class="helper">Junção com o projeto do agente Adapta e com os sites e documentos do autor.</p>
+<ul style="margin-bottom:0"><li>Quatro abas novas: protocolos por diagnóstico, monografias e Manual PPS, calculadoras de escores, e acervo e fontes, com 1.809 itens pesquisáveis.</li><li>Núcleo conferido com o Manual Integral PPS e a folha ABRAMEDE-MG 2022 pediátrica: atropina e lidocaína nas duas apresentações, indução e bloqueio ajustados, cisatracúrio, amoxicilina de 80–90 mg/kg/dia na pneumonia e na otite, dipirona de 10 mg/kg na receita e quatro itens de equipamento.</li><li>Painéis novos: sedação para procedimento, doses tóxicas por peso, abordagem por modo ventilatório, posição prona e ECMO.</li><li>Plano C do Ministério da Saúde (2023) conferido: 30 mL/kg e 70 mL/kg, em 1 h e 5 h abaixo de 1 ano e em 30 min e 2 h 30 min a partir de 1 ano.</li></ul></div>
 <div class="light"><h3>Surviving Sepsis Campaign, crianças, 2026</h3><p class="helper">Publicada em 23 de março de 2026, na Pediatric Critical Care Medicine e na Intensive Care Medicine. São 61 enunciados; adota os critérios Phoenix.</p>
 <ul style="margin-bottom:0"><li>Antibiótico em até 1 h no choque séptico; na sepse provável sem choque, após avaliação rápida, em até 3 h.</li><li>Lactato na avaliação inicial passou a recomendação forte.</li><li>Fluidos: com UTI disponível, até 40–60 mL/kg na primeira hora em alíquotas de 10–20 mL/kg; sem UTI, bolus apenas se houver hipotensão (até 40 mL/kg). Cristaloide balanceado preferido.</li><li>Sem preferência definida entre adrenalina e noradrenalina; iniciar em veia periférica em vez de atrasar; vasopressina quando a catecolamina está em dose alta.</li><li>Ultrassom à beira do leito sugerido para guiar a ressuscitação, onde houver treinamento.</li><li>Sugere não usar etomidato e não usar hidrocortisona quando fluido e vasoativo restauram a estabilidade.</li><li>Alvo conservador de SpO₂ (88–92%) após a ressuscitação nas crianças intubadas, exceto anemia, hemoglobinopatia e cardiopatia cianótica.</li><li>Seção nova sobre seguimento após a UTI, com reabilitação precoce.</li></ul></div>
 <div class="light"><h3>American Heart Association e American Academy of Pediatrics, 2025</h3><p class="helper">Publicadas em 22 de outubro de 2025.</p>
@@ -1037,7 +1162,7 @@ table.ref td.calc { min-width: 5.5em; }
 <div class="light"><h3>Cetoacidose, ISPAD 2022</h3><p style="margin:0">Bicarbonato abaixo de 18 mmol/L entra no diagnóstico; bolus inicial em 20–30 min; déficit reposto em 24–48 h; insulina de 0,05–0,1 U/kg/h ao menos 1 h após iniciar a hidratação.</p></div>
 <div class="light"><h3>Pneumonia, SBP 2022</h3><p style="margin:0">Amoxicilina 50 mg/kg/dia como primeira escolha ambulatorial, por 7 dias; ampicilina ou penicilina cristalina no internado; internar com SpO₂ abaixo de 92%.</p></div>
 </div>
-<div class="panel"><h3>Fontes consultadas</h3><p class="helper">Revisão clínica e técnica desta versão em 24 de novembro de 2026. Conferir sempre a fonte oficial e o protocolo da instituição.</p>
+<div class="panel"><h3>Fontes consultadas</h3><p class="helper">Revisão clínica e técnica desta versão em 25 de novembro de 2026. Conferir sempre a fonte oficial e o protocolo da instituição.</p>
 <ol class="fontes">
 <li>Weiss SL e colaboradores. Surviving Sepsis Campaign international guidelines for the management of sepsis and septic shock in children 2026. Pediatr Crit Care Med. 2026. <a href="https://doi.org/10.1097/PCC.0000000000003927" target="_blank" rel="noopener">doi:10.1097/PCC.0000000000003927</a>; <a href="https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-the-management-of-sepsis-and-septic-shock-in" target="_blank" rel="noopener">página da SCCM</a>.</li>
 <li>American Heart Association e American Academy of Pediatrics. Guidelines for cardiopulmonary resuscitation and emergency cardiovascular care 2025: suporte de vida em pediatria. Circulation. 2025;152(16 supl. 2). <a href="https://doi.org/10.1161/CIR.0000000000001370" target="_blank" rel="noopener">doi:10.1161/CIR.0000000000001370</a>.</li>
@@ -1058,11 +1183,64 @@ table.ref td.calc { min-width: 5.5em; }
 <li>Sociedade Brasileira de Pediatria. Abordagem diagnóstica e terapêutica das pneumonias adquiridas na comunidade não complicadas. 2022. <a href="https://www.sbp.com.br/fileadmin/user_upload/sbp/2022/agosto/03/23358e-DC-Pneumonias_Adquiridas_Nao_Complicadas.pdf" target="_blank" rel="noopener">Documento científico</a>.</li>
 <li>Bulário eletrônico da ANVISA: apresentações, concentrações, gotas por mL e restrições de idade dos medicamentos citados.</li>
 <li>Centro de Informação e Assistência Toxicológica de Minas Gerais (CIATox-MG), Hospital João XXIII, FHEMIG.</li>
+<li>Godwin SA e colaboradores. Clinical policy: procedural sedation and analgesia in the emergency department. Ann Emerg Med. 2014.</li>
+<li>Dart RC e colaboradores. Acetaminophen poisoning: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2006.</li>
+<li>Chyka PA e colaboradores. Salicylate poisoning: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2007.</li>
+<li>Manoguerra AS e colaboradores. Iron ingestion: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2005.</li>
+<li>Woolf AD e colaboradores. Tricyclic antidepressant poisoning: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2007.</li>
+<li>Scharman EJ e colaboradores. Diphenhydramine and dimenhydrinate poisoning: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2006. <a href="https://doi.org/10.1080/15563650600585920" target="_blank" rel="noopener noreferrer">doi:10.1080/15563650600585920</a></li>
+<li>Guérin C e colaboradores. Prone positioning in severe acute respiratory distress syndrome (PROSEVA). N Engl J Med. 2013.</li>
+<li>Combes A e colaboradores. Extracorporeal membrane oxygenation for severe acute respiratory distress syndrome (EOLIA). N Engl J Med. 2018.</li>
+<li>Maratta C e colaboradores. Extracorporeal Life Support Organization: 2020 pediatric respiratory ELSO guideline. ASAIO J. 2020.</li>
+<li>Lalgudi Ganesan S e colaboradores. Airway pressure release ventilation in pediatric acute respiratory distress syndrome: a randomized controlled trial. Am J Respir Crit Care Med. 2018.</li>
+<li>Ferguson ND e colaboradores (OSCILLATE) e Young D e colaboradores (OSCAR). High-frequency oscillation in early acute respiratory distress syndrome. N Engl J Med. 2013.</li>
+<li>Ministério da Saúde. Manejo do paciente com diarreia: avaliação do estado de hidratação e planos A, B e C. Brasília, 2023.</li>
+<li>Almeida IV. Prescrição Pediátrica Segura: manual integral, versão consolidada de 15 de agosto de 2026. Documento do autor.</li>
+<li>Folha de Emergência ABRAMEDE-MG 2022, pediátrica, variante 9, corrigida em 15 de novembro de 2026. Documento do autor.</li>
 </ol></div>
 </section>
 
+
+<!-- ============ 27. PROTOCOLOS ============ -->
+<section class="tab" id="t-proto" data-title="acervo protocolos por diagnóstico temas condutas estudo continuado terapêuticas PedWB neonatologia recém-nascido" data-copiar="Copiar o tema aberto" data-imprimir="Imprimir o tema aberto">
+<div class="hero-head"><div><h1>Protocolos por diagnóstico</h1><p class="sub">Os temas do Estudo Continuado, das Terapêuticas e da Neonatologia, com busca e leitura aqui mesmo.</p></div></div>
+<p class="aviso-acervo">Conteúdo do acervo do autor, reproduzido como está na origem, com a situação de revisão que ela declara. As doses do acervo não passam pelo cálculo nem pela conferência desta ferramenta: para dose calculada, use as abas de Estabilização e de Fármacos.</p>
+<div class="acervo" data-aba="t-proto"></div>
+</section>
+
+<!-- ============ 28. MONOGRAFIAS ============ -->
+<section class="tab" id="t-mono" data-title="acervo monografias medicamentos manual PPS prescrição pediátrica segura catálogo posológico bula apresentações esquemas" data-copiar="Copiar o item aberto" data-imprimir="Imprimir o item aberto">
+<div class="hero-head"><div><h1>Monografias e Manual PPS</h1><p class="sub">As 577 linhas farmacológicas do Manual de Prescrição Pediátrica Segura e as 498 monografias do catálogo posológico pediátrico.</p></div></div>
+<p class="aviso-acervo">Conteúdo do acervo do autor, reproduzido como está na origem, com a situação de revisão que ela declara. As doses do acervo não passam pelo cálculo nem pela conferência desta ferramenta: para dose calculada, use as abas de Estabilização e de Fármacos.</p>
+<div class="acervo" data-aba="t-mono"></div>
+</section>
+
+<!-- ============ 29. CALCULADORAS ============ -->
+<section class="tab" id="t-calc" data-title="acervo escores calculadoras critérios pontuação faixas Glasgow Westley Phoenix PEWS escore clínico" data-copiar="Copiar o escore aberto" data-imprimir="Imprimir o escore aberto">
+<div class="hero-head"><div><h1>Calculadoras de escores</h1><p class="sub">Os 486 escores do site Escores Clínicos: critérios, pontuação e faixas, com a calculadora completa aberta aqui.</p></div></div>
+<p class="aviso-acervo">Conteúdo do site Escores Clínicos do autor, reproduzido como está na origem. Os escores mais usados no plantão também estão, calculados, na aba Escores.</p>
+<div class="acervo" data-aba="t-calc"></div>
+<p class="no-print" style="margin-top:12px"><a class="btn-m" href="acervo/escores/index.html" target="_blank" rel="noopener">Abrir o catálogo completo de escores em nova aba</a></p>
+</section>
+
+<!-- ============ 30. ACERVO E FONTES ============ -->
+<section class="tab" id="t-acervo" data-title="acervo e fontes integração sites do autor Google Drive manual PPS folha ABRAMEDE conferência proveniência camadas" data-copiar="Copiar acervo e fontes">
+<div class="hero-head"><div><h1>Acervo e fontes</h1><p class="sub">O que foi integrado, de onde veio, como foi conferido e onde consultar o restante.</p></div></div>
+<div class="grid">
+<div class="panel"><h3>Duas camadas de conteúdo</h3><p class="helper">Saber de qual camada vem cada informação.</p>
+<ul><li>Núcleo calculado: as abas de Estabilização, Fármacos, Suporte, Raciocínio e Alta. Cada dose e volume é recalculado pelo peso e pela idade e conferido por um cálculo independente a cada versão.</li><li>Acervo integrado: protocolos, monografias, Manual PPS e escores dos sites e documentos do autor, reproduzidos como estão na origem, com a situação de revisão declarada por ela.</li><li>Onde o núcleo e o acervo divergem, vale o núcleo, que traz a fonte de cada dose; as divergências encontradas estão na tabela de conferência.</li></ul></div>
+<div class="panel"><h3>Conteúdo integrado</h3><p class="helper">Coleções pesquisáveis nas abas do acervo.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Coleção</th><th>Origem</th><th>Itens</th><th>Aba</th></tr></thead><tbody id="acGrupos"></tbody></table></div></div>
+</div>
+<div class="panel"><h3>Conferência com o manual e a folha de emergência do autor</h3><p class="helper">Doses do núcleo comparadas com o Manual Integral PPS (15/08/2026) e a folha ABRAMEDE-MG 2022 pediátrica (corrigida em 15/11/2026). Os demais itens comparados coincidem.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Item</th><th>Antes</th><th>Fonte do autor</th><th>Decisão</th></tr></thead><tbody id="acRecon"></tbody></table></div></div>
+<div class="panel"><h3>Sites do autor</h3><p class="helper">Abrem em nova aba.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Site</th><th>Conteúdo</th><th>Neste site</th></tr></thead><tbody id="acSites"></tbody></table></div></div>
+<div class="panel"><h3>Documentos do Google Drive</h3><p class="helper">Documentos consultados na pasta do autor. Só entra no site o que está descrito abaixo.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Documento</th><th>Onde está</th><th>Como entrou</th></tr></thead><tbody id="acDrive"></tbody></table></div></div>
+</section>
 </main>
-<footer class="footer-bar">Emergência &amp; UTI: referência clínica integrada. Revisão de 24 de novembro de 2026. Apoio à decisão: não substitui o protocolo da instituição, a bula nem o julgamento clínico. Nenhum dado do paciente é salvo ou enviado.</footer>
+<footer class="footer-bar">Emergência &amp; UTI: referência clínica integrada. Revisão de 25 de novembro de 2026. Apoio à decisão: não substitui o protocolo da instituição, a bula nem o julgamento clínico. Nenhum dado do paciente é salvo ou enviado.</footer>
 </div>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
@@ -1373,9 +1551,9 @@ var CARTA = [
     ap: "Ampola 1 mg/mL pura (0,1 mL/kg) + 5 mL de SF e 5 ventilações. Só se não houver acesso IV/IO." },
   { id: "amio", n: "Amiodarona", d: { k: 5, max: 300, unica: true }, c: 50, crit: true,
     ap: "Ampola 50 mg/mL (0,1 mL/kg). FV/TV sem pulso refratária; pode repetir até 3 doses (máx. 15 mg/kg/dia)." },
-  { id: "lido", n: "Lidocaína 2% sem vasoconstritor", d: { k: 1, max: 100, unica: true }, c: 20, crit: false,
-    ap: "Ampola 20 mg/mL (0,05 mL/kg). Alternativa à amiodarona; manutenção 20–50 mcg/kg/min." },
-  { id: "mg", n: "Sulfato de magnésio", d: { k: 50, max: 2000, unica: true }, c: 500, c2: 100, crit: true,
+  { id: "lido", n: "Lidocaína sem vasoconstritor", d: { k: 1, max: 100, unica: true }, c: 20, cs: [[20, "ampola 2%"], [10, "ampola 1%"]], crit: false,
+    ap: "Ampola 2% = 20 mg/mL (0,05 mL/kg); ampola 1% = 10 mg/mL (0,1 mL/kg). Alternativa à amiodarona; manutenção 20–50 mcg/kg/min." },
+  { id: "mg", n: "Sulfato de magnésio", d: { k: 50, max: 2000, unica: true }, c: 500, cs: [[500, "ampola 50%"], [100, "ampola 10%"]], crit: true,
     ap: "Ampola 50% (500 mg/mL) ou 10% (100 mg/mL). Torsades e hipomagnesemia: 25–50 mg/kg; em bolus se sem pulso, em 10–20 min se com pulso." },
   { id: "bic", n: "Bicarbonato de sódio 8,4%", d: { k: 1, max: 50, u: "mEq", unica: true }, c: 1, crit: false,
     ap: "Ampola 8,4% = 1 mEq/mL; diluir 1:1 com água destilada em menores de 2 anos. Não é rotina na PCR: hipercalemia, tricíclicos, acidose grave documentada." },
@@ -1383,8 +1561,8 @@ var CARTA = [
     ap: "Ampola 10% = 100 mg/mL (0,6 mL/kg), lento. Hipocalcemia, hipercalemia, hipermagnesemia, bloqueador de canal de cálcio. Não é rotina na PCR." },
   { id: "cacl", n: "Cloreto de cálcio 10%", d: { k: 20, max: 1000, unica: true }, c: 100, crit: false,
     ap: "Ampola 10% = 100 mg/mL (0,2 mL/kg), lento, de preferência em acesso central. A AHA admite até 2 g por dose." },
-  { id: "atro", n: "Atropina", d: { k: 0.02, min: 0.1, max: function (p) { return p.idade >= 12 ? 1 : 0.5; }, unica: true }, c: 0.25, crit: true,
-    ap: "Ampola 0,25 mg/mL (conferir: há ampola de 0,5 mg/mL). Bradicardia por tônus vagal ou bloqueio AV; pode repetir uma vez." },
+  { id: "atro", n: "Atropina", d: { k: 0.02, min: 0.1, max: function (p) { return p.idade >= 12 ? 1 : 0.5; }, unica: true }, c: 0.5, cs: [[0.5, "ampola 0,5 mg/mL"], [0.25, "ampola 0,25 mg/mL"]], crit: true,
+    ap: "Ampolas de 0,5 mg/mL e de 0,25 mg/mL: conferir o rótulo antes de aspirar. Bradicardia por tônus vagal ou bloqueio AV; pode repetir uma vez." },
   { id: "ade1", n: "Adenosina — 1ª dose", d: { k: 0.1, max: 6, unica: true }, c: 3, crit: false,
     ap: "Ampola 3 mg/mL. Bolus rápido em acesso proximal + flush de 5–10 mL de SF (técnica das duas seringas)." },
   { id: "ade2", n: "Adenosina — 2ª dose", d: { k: 0.2, max: 12, unica: true }, c: 3, crit: false,
@@ -1392,31 +1570,33 @@ var CARTA = [
   { id: "nalox", n: "Naloxona", d: { k: 0.1, max: 2, unica: true }, c: 0.4, crit: false,
     ap: "Ampola 0,4 mg/mL. Depressão respiratória por opioide; repetir a cada 2–3 min." },
   { id: "g10", n: "Glicose 10%", d: { k: function (p) { return p.idade * 365.25 < 28 ? 2 : 5; }, max: 250, u: "mL", unica: true }, c: null, crit: false,
-    ap: "5 mL/kg = 0,5 g/kg (recém-nascido: 2 mL/kg). Preparo: 10 mL de glicose 50% + 40 mL de água destilada = 50 mL a 10%." },
+    ap: "5 mL/kg = 0,5 g/kg (recém-nascido: 2 mL/kg). Preparo a partir da glicose 50%: 1 mL/kg de G50% + 4 mL/kg de água destilada (10 mL + 40 mL = 50 mL a 10%)." },
   { id: "sf", n: "Cristaloide (expansão)", d: { k: function (p) { return p.idade * 365.25 < 28 ? 10 : 20; }, max: 1000, u: "mL", unica: true }, c: null, crit: false,
     ap: "SF 0,9% ou Ringer lactato, 20 mL/kg em 5–20 min; 10 mL/kg em recém-nascido, cardiopata e cetoacidose. Reavaliar a cada alíquota." }
 ];
 
 /* ---------- 2. Sequência rápida (aba Via aérea) ---------- */
 var VIA = [
-  { id: "vAtro", g: "Pré-medicação", n: "Atropina", d: { k: 0.02, max: 0.5, unica: true }, c: 0.25,
-    ap: "Ampola 0,25 mg/mL. Considerar em lactentes, bradicardia ou 2ª dose de succinilcolina. Sem dose mínima na pré-medicação (AHA 2025)." },
+  { id: "vAtro", g: "Pré-medicação", n: "Atropina", d: { k: 0.02, max: 0.5, unica: true }, c: 0.5, cs: [[0.5, "ampola 0,5 mg/mL"], [0.25, "ampola 0,25 mg/mL"]],
+    ap: "Ampolas de 0,5 mg/mL e de 0,25 mg/mL: conferir o rótulo. Considerar em lactentes, bradicardia ou 2ª dose de succinilcolina. Sem dose mínima na pré-medicação (AHA 2025)." },
   { id: "vFent", g: "Pré-medicação", n: "Fentanil", d: { k: [1, 3], max: 150, u: "mcg", unica: true }, c: 50,
     ap: "Ampola 50 mcg/mL. Lento (1–2 min): risco de rigidez torácica e hipotensão." },
   { id: "vMida", g: "Indução", n: "Midazolam", d: { k: [0.1, 0.3], max: 10, unica: true }, c: 5,
     ap: "Ampola 5 mg/mL. Hipotensão; evitar como agente único no choque." },
   { id: "vCet", g: "Indução", n: "Cetamina", d: { k: [1, 2], max: 200, unica: true }, c: 50,
     ap: "Frasco 50 mg/mL. Primeira escolha no choque e no broncoespasmo." },
-  { id: "vEto", g: "Indução", n: "Etomidato", d: { k: 0.3, max: 40, unica: true }, c: 2,
-    ap: "Ampola 2 mg/mL (10 mL). Evitar na sepse: supressão adrenal (SSC 2026 sugere não usar)." },
-  { id: "vProp", g: "Indução", n: "Propofol", d: { k: [1, 2], max: 200, unica: true }, c: 10,
-    ap: "Frasco 10 mg/mL. Hipotensão e apneia; só no paciente hemodinamicamente estável." },
-  { id: "vSucc", g: "Bloqueio", n: "Succinilcolina (suxametônio)", d: { k: function (p) { return p.idade < 2 ? 2 : 1.5; }, max: 200, unica: true }, c: 10,
-    ap: "Frasco-ampola 100 mg (pó): reconstituir com 10 mL = 10 mg/mL. Lactente 2 mg/kg; criança e adulto 1–1,5 mg/kg. Contraindicada em hipercalemia, queimadura ou esmagamento > 48 h, doença neuromuscular, hipertermia maligna." },
+  { id: "vEto", g: "Indução", n: "Etomidato", d: { k: [0.2, 0.3], max: 40, unica: true }, c: 2,
+    ap: "Ampola 2 mg/mL (10 mL). A folha ABRAMEDE-MG usa 0,2 mg/kg. Evitar na sepse: supressão adrenal (SSC 2026 sugere não usar)." },
+  { id: "vProp", g: "Indução", n: "Propofol", d: { k: [1, 2.5], max: 200, unica: true }, c: 10,
+    ap: "Frasco 10 mg/mL. Hipotensão e apneia; só no paciente hemodinamicamente estável. A folha ABRAMEDE-MG usa 2,5 mg/kg; começar pela dose menor e titular." },
+  { id: "vSucc", g: "Bloqueio", n: "Succinilcolina (suxametônio)", d: { k: function (p) { return p.idade < 2 ? 2 : [1, 1.5]; }, max: 200, unica: true }, c: 10,
+    ap: "Frasco-ampola 100 mg (pó): reconstituir com 10 mL = 10 mg/mL. Menor de 2 anos: 2 mg/kg; criança maior e adulto: 1–1,5 mg/kg (a folha ABRAMEDE-MG usa 1 mg/kg). Contraindicada em hipercalemia, queimadura ou esmagamento > 48 h, doença neuromuscular, hipertermia maligna." },
   { id: "vRoc", g: "Bloqueio", n: "Rocurônio", d: { k: [1, 1.2], max: 120, unica: true }, c: 10,
     ap: "Ampola 10 mg/mL. Início em 45–60 s; duração 30–60 min. Reversão: sugamadex 16 mg/kg." },
   { id: "vVec", g: "Bloqueio", n: "Vecurônio", d: { k: [0.1, 0.2], max: 20, unica: true }, c: 1,
     ap: "Frasco 4 mg ou 10 mg (pó): reconstituir para 1 mg/mL. Início lento (2–3 min): só se não houver rocurônio ou succinilcolina." },
+  { id: "vCis", g: "Bloqueio", n: "Cisatracúrio", d: { k: [0.1, 0.2], max: 20, unica: true }, c: 2,
+    ap: "Ampola 2 mg/mL. Início em 2–3 min; eliminação independente de rim e fígado. A folha ABRAMEDE-MG usa 0,15 mg/kg." },
   { id: "vSug", g: "Reversão", n: "Sugamadex", d: { k: 16, unica: true }, c: 100,
     ap: "Frasco 100 mg/mL. Reversão imediata do rocurônio ou vecurônio em não intubo, não ventilo." }
 ];
@@ -1427,7 +1607,7 @@ var ANTIDOTOS = [
     obs: "Repetir a cada 2–3 min. Dependente de opioide ou sem PCR: 0,01 mg/kg. Efeito curto: vigiar recorrência." },
   { id: "iFlu", n: "Flumazenil", ind: "Benzodiazepínicos", d: { k: 0.01, max: 0.2, unica: true }, c: 0.1, ap: "Ampola 0,1 mg/mL",
     obs: "Repetir a cada minuto até 1 mg no total. Evitar em uso crônico, epilepsia e coingestão de tricíclico (convulsão)." },
-  { id: "iAtr", n: "Atropina", ind: "Organofosforado e carbamato", d: { k: [0.02, 0.05], max: 3, unica: true }, c: 0.25, ap: "Ampola 0,25 mg/mL",
+  { id: "iAtr", n: "Atropina", ind: "Organofosforado e carbamato", d: { k: [0.02, 0.05], max: 3, unica: true }, c: 0.5, cs: [[0.5, "ampola 0,5 mg/mL"], [0.25, "ampola 0,25 mg/mL"]], ap: "Ampola 0,5 mg/mL ou 0,25 mg/mL",
     obs: "Dobrar a dose a cada 5 min até secar a secreção brônquica. Taquicardia não contraindica." },
   { id: "iPra", n: "Pralidoxima", ind: "Organofosforado", d: { k: [20, 40], max: 2000, unica: true }, c: 20, ap: "Contrathion® 200 mg (pó) + 10 mL de SF = 20 mg/mL",
     obs: "EV em 15–30 min, o mais cedo possível, sempre com atropina. Manutenção 10–20 mg/kg/h." },
@@ -1497,7 +1677,7 @@ var REPERTORIO = [
   { n: "Paracetamol", c: "Analgésico e antitérmico", ap: "Gotas 200 mg/mL; suspensão 32 mg/mL ou 100 mg/mL; comprimido 500 e 750 mg",
     ind: "Febre e dor", via: "VO", int: "4–6 h (máx. 5 doses/dia)", dur: "Enquanto houver sintoma; reavaliar em 48–72 h",
     d: { k: [10, 15], max: function (p) { return p.idade < 12 ? 466 : 1000; }, maxDia: function (p) { return Math.min((p.idade * 365.25 < 28 ? 60 : 75) * p.peso, 4000); } },
-    v: [{ r: "gotas 200 mg/mL", c: 200, g: 15 }, { r: "suspensão 32 mg/mL", c: 32 }],
+    v: [{ r: "gotas 200 mg/mL", c: 200, g: 15 }, { r: "suspensão 32 mg/mL", c: 32 }, { r: "suspensão 100 mg/mL", c: 100 }],
     obs: "Bula: 1 gota/kg, até 35 gotas (≈ 466 mg) por dose em menores de 12 anos; abaixo de 2 anos ou 11 kg, só com orientação médica. Recém-nascido: intervalo de 6–8 h e até 60 mg/kg/dia. Hepatotoxicidade acima de 150 mg/kg em dose única.", pos: true },
   { n: "Dipirona (oral)", c: "Analgésico e antitérmico", ap: "Gotas 500 mg/mL; solução oral 50 mg/mL; comprimido 500 mg e 1 g",
     ind: "Febre e dor", via: "VO", int: "6 h", dur: "Enquanto houver sintoma",
@@ -1588,8 +1768,8 @@ var REPERTORIO = [
     }, obs: "Pouco sedativo.", pos: true },
   { n: "Prometazina", c: "Anti-histamínico", ap: "Ampola 25 mg/mL",
     ind: "Reação alérgica, sem via oral", via: "IM profundo", int: "Dose única; 6–8 h se preciso", dur: "Curta",
-    d: { k: 0.5, max: 25 }, v: [{ r: "ampola 25 mg/mL", c: 25 }],
-    obs: "Contraindicada em menores de 2 anos (depressão respiratória). Não substitui a adrenalina na anafilaxia.", pos: true },
+    d: { k: [0.25, 0.5], max: 25 }, v: [{ r: "ampola 25 mg/mL", c: 25 }],
+    obs: "Contraindicada em menores de 2 anos (depressão respiratória). Não substitui a adrenalina na anafilaxia. Manual PPS: 0,25 mg/kg na alergia e 0,25–0,5 mg/kg na náusea.", pos: true },
 
   /* --- corticoides --- */
   { n: "Prednisolona", c: "Corticoide", ap: "Solução 3 mg/mL (também 1 mg/mL e gotas 11 mg/mL)",
@@ -1633,8 +1813,8 @@ var REPERTORIO = [
     }, obs: "Sem benefício comprovado depois da primeira hora.", pos: true },
   { n: "Sulfato de magnésio (asma)", c: "Broncodilatador", ap: "Ampola 10% (100 mg/mL) ou 50% (500 mg/mL)",
     ind: "Crise grave sem resposta na 1ª hora", via: "EV em 20 min", int: "Dose única", dur: "1 dose",
-    d: { k: [25, 75], max: 2000 }, v: [{ r: "ampola 10%", c: 100 }, { r: "ampola 50%", c: 500 }],
-    obs: "Diluir até 60 mg/mL ou menos. Monitorar pressão arterial; dose habitual 50 mg/kg.", pos: true },
+    d: { k: [25, 50], max: 2000 }, v: [{ r: "ampola 10%", c: 100 }, { r: "ampola 50%", c: 500 }],
+    obs: "Diluir até 60 mg/mL ou menos. Monitorar pressão arterial. Manual PPS: 25–50 mg/kg; algumas diretrizes aceitam até 75 mg/kg.", pos: true },
   { n: "Adrenalina para nebulização", c: "Emergência", ap: "Ampola 1 mg/mL",
     ind: "Crupe moderado a grave; edema de via aérea", via: "Nebulização", int: "Repetir em 15–20 min se preciso", dur: "Observar 2–4 h (efeito rebote)",
     d: { k: 0.5, max: 5, u: "mL" }, v: [],
@@ -1662,13 +1842,13 @@ var REPERTORIO = [
 
   /* --- antibióticos de pronto atendimento --- */
   { n: "Amoxicilina (dose padrão)", c: "Antibiótico", ap: "Suspensão 250 mg/5 mL (50 mg/mL) e 400 mg/5 mL (80 mg/mL); cápsula 500 mg",
-    ind: "Pneumonia comunitária (SBP), otite, sinusite, faringoamigdalite", via: "VO", int: "8 h (ou 12 h)", dur: "5–10 dias conforme o foco",
+    ind: "Alternativa de 50 mg/kg/dia (SBP 2022) na pneumonia e na otite sem fator de risco; faringoamigdalite", via: "VO", int: "8 h (ou 12 h)", dur: "5–10 dias conforme o foco",
     d: { k: 50, per: "dia", n: 3, max: 500 }, v: [{ r: "suspensão 50 mg/mL", c: 50 }],
     obs: "Pneumonia: 7 dias (SBP 2022). Faringoamigdalite estreptocócica: 50 mg/kg/dia em 1–2 tomadas (máx. 1 g/dia) por 10 dias.", pos: true },
   { n: "Amoxicilina (dose alta)", c: "Antibiótico", ap: "Suspensão 400 mg/5 mL (80 mg/mL)",
-    ind: "Otite com fator de risco ou falha; suspeita de pneumococo resistente", via: "VO", int: "12 h", dur: "5–10 dias",
+    ind: "Otite média, rinossinusite bacteriana e pneumonia comunitária: esquema do Manual PPS", via: "VO", int: "12 h", dur: "5–10 dias",
     d: { k: [80, 90], per: "dia", n: 2, maxDia: 4000 }, v: [{ r: "suspensão 80 mg/mL", c: 80 }],
-    obs: "Fatores de risco: menor de 2 anos, creche, antibiótico nos últimos 30 dias.", pos: true },
+    obs: "Manual PPS e AAP/IDSA: 80–90 mg/kg/dia de 12/12 h, máx. 4 g/dia. A SBP 2022 aceita 50 mg/kg/dia na pneumonia não grave.", pos: true },
   { n: "Amoxicilina + clavulanato", c: "Antibiótico", ap: "Suspensão 400 + 57 mg/5 mL (80 mg/mL de amoxicilina); 250 + 62,5 mg/5 mL; ES 600 + 42,9 mg/5 mL",
     ind: "Falha da amoxicilina, mordedura, sinusite ou otite recorrente, celulite periorbitária", via: "VO", int: "12 h", dur: "7–10 dias",
     d: { k: 50, per: "dia", n: 2, max: 875 }, v: [{ r: "suspensão 80 mg/mL (400 + 57)", c: 80 }],
@@ -1683,7 +1863,7 @@ var REPERTORIO = [
   { n: "Azitromicina", c: "Antibiótico", ap: "Suspensão 200 mg/5 mL (40 mg/mL); comprimido 500 mg",
     ind: "Pneumonia atípica, coqueluche, alergia grave à penicilina, disenteria (MS 2023)", via: "VO", int: "24 h", dur: "3–5 dias",
     d: { k: 10, per: "dia", n: 1, maxDia: 500 }, v: [{ r: "suspensão 40 mg/mL", c: 40 }],
-    obs: "Pneumonia atípica: 5 dias. Disenteria (até 30 kg): 10 mg/kg no 1º dia e 5 mg/kg/dia por mais 4 dias.", pos: true },
+    obs: "Pneumonia atípica: 10 mg/kg/dia por 5 dias, ou 10 mg/kg no 1º dia (máx. 500 mg) e 5 mg/kg/dia do 2º ao 5º dia (máx. 250 mg), como no Manual PPS. Disenteria (até 30 kg): 10 mg/kg no 1º dia e 5 mg/kg/dia por mais 4 dias.", pos: true },
   { n: "Claritromicina", c: "Antibiótico", ap: "Suspensão 25 mg/mL e 50 mg/mL; comprimido 500 mg",
     ind: "Pneumonia atípica, alergia à penicilina", via: "VO", int: "12 h", dur: "7–10 dias",
     d: { k: 15, per: "dia", n: 2, max: 500 }, v: [{ r: "suspensão 50 mg/mL", c: 50 }, { r: "suspensão 25 mg/mL", c: 25 }], obs: "Muitas interações (CYP3A4); prolonga o QT.", pos: true },
@@ -1695,8 +1875,10 @@ var REPERTORIO = [
     ind: "Faringoamigdalite estreptocócica, escarlatina, impetigo", via: "IM profundo", int: "Dose única", dur: "1 dose",
     f: function (p) {
       if (p.peso < 10) return porFaixa(num(50000 * p.peso) + " UI", "fração do frasco de 600.000 UI", "abaixo de 10 kg: 50.000 UI/kg", "600.000 UI");
-      return p.peso < 20 ? porFaixa("600 000 UI", "1 frasco de 600.000 UI", "< 20 kg: 600.000 UI; ≥ 20 kg: 1.200.000 UI", "1.200.000 UI")
-        : porFaixa("1 200 000 UI", "1 frasco de 1.200.000 UI", "< 20 kg: 600.000 UI; ≥ 20 kg: 1.200.000 UI", "1.200.000 UI");
+      var corte = "até 20 kg: 600.000 UI; a partir de 27 kg: 1.200.000 UI; entre 20 e 27 kg as fontes divergem";
+      if (p.peso < 20) return porFaixa("600 000 UI", "1 frasco de 600.000 UI", corte, "1.200.000 UI");
+      if (p.peso < 27) return porFaixa("600 000 UI (corte de 27 kg: Manual PPS e AAP) ou 1 200 000 UI (corte de 20 kg: Ministério da Saúde)", "1 frasco de 600.000 UI ou de 1.200.000 UI", corte, "1.200.000 UI");
+      return porFaixa("1 200 000 UI", "1 frasco de 1.200.000 UI", corte, "1.200.000 UI");
     }, obs: "Nunca por via endovenosa.", pos: true },
   { n: "Ceftriaxona", c: "Antibiótico", ap: "Frasco 500 mg e 1 g (pó). EV: 1 g + 10 mL = 100 mg/mL. IM: 1 g + 3,5 mL de lidocaína 1% ≈ 250 mg/mL",
     ind: "Infecção grave, infecção urinária febril, pneumonia grave", via: "EV ou IM", int: "24 h (12 h na meningite)", dur: "Conforme o foco",
@@ -1795,7 +1977,7 @@ var REPERTORIO = [
     obs: "IM e intranasal 0,2 mg/kg; bucal 0,3–0,5 mg/kg; EV 0,1–0,2 mg/kg. Ter material de via aérea e flumazenil.", pos: true },
   { n: "Diazepam", c: "Anticonvulsivante", ap: "Ampola 5 mg/mL (2 mL)",
     ind: "Crise convulsiva", via: "EV lento ou retal", int: "Repetir uma vez em 5 min", dur: "Até 2 doses",
-    d: { k: [0.2, 0.3], max: 10 }, v: [{ r: "ampola 5 mg/mL", c: 5 }],
+    d: { k: [0.15, 0.2], max: 10 }, v: [{ r: "ampola 5 mg/mL", c: 5 }],
     obs: "Retal: 0,5 mg/kg (máx. 20 mg) com a solução injetável. Não usar por via IM (absorção errática).", pos: true },
   { n: "Fenitoína", c: "Anticonvulsivante", ap: "Ampola 50 mg/mL (5 mL)",
     ind: "Estado de mal — 2ª linha", via: "EV", int: "Dose única de ataque", dur: "20–30 min",
@@ -1923,19 +2105,19 @@ var CHOQUES = {
 };
 
 /* ---------- equipamentos por zona de peso ---------- */
-var EQUIP_ITENS = ["Tubo traqueal sem cuff", "Tubo traqueal com cuff", "Lâmina do laringoscópio", "Cânula orofaríngea", "Máscara laríngea", "Sonda de aspiração", "Sonda gástrica", "Sonda vesical", "Dreno de tórax", "Cateter venoso", "Bolsa-válvula-máscara", "Agulha intraóssea (EZ-IO®)", "Pás do desfibrilador"];
+var EQUIP_ITENS = ["Tubo traqueal sem cuff", "Tubo traqueal com cuff", "Lâmina do laringoscópio", "Cânula orofaríngea", "Máscara laríngea", "Sonda de aspiração", "Sonda gástrica", "Sonda vesical", "Dreno de tórax", "Cateter venoso periférico", "Bolsa-válvula-máscara", "Agulha intraóssea (EZ-IO®)", "Pás do desfibrilador", "Cateter venoso central", "Cateter arterial", "Cateter para descompressão torácica", "Guia bougie"];
 var EQUIP = {
-  sub:      ["2,5–3,0 mm", "não usar", "Reta nº 0", "30–40 mm", "nº 1", "5–6 Fr", "5 Fr", "5 Fr", "8–10 Fr", "24 G", "Neonatal (250 mL)", "Agulha manual 18 G (EZ-IO® não indicada abaixo de 3 kg)", "Infantis"],
-  cinza:    ["3,0–3,5 mm", "3,0 mm", "Reta nº 0–1", "40–50 mm", "nº 1", "6–8 Fr", "5–8 Fr", "5–8 Fr", "10–12 Fr", "22–24 G", "Lactente (450–500 mL)", "15 mm (rosa)", "Infantis"],
-  rosa:     ["3,5 mm", "3,0 mm", "Reta nº 1", "50 mm", "nº 1,5", "8 Fr", "5–8 Fr", "8 Fr", "10–12 Fr", "22–24 G", "Lactente (450–500 mL)", "15 mm (rosa)", "Infantis"],
-  vermelha: ["3,5 mm", "3,0 mm", "Reta nº 1", "50 mm", "nº 1,5", "8 Fr", "5–8 Fr", "8 Fr", "10–12 Fr", "22–24 G", "Criança (450–500 mL)", "15 mm (rosa)", "Infantis"],
-  roxa:     ["4,0 mm", "3,5 mm", "Reta nº 1", "60 mm", "nº 2", "8–10 Fr", "8–10 Fr", "8–10 Fr", "16–20 Fr", "20–24 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto (acima de 10 kg)"],
-  amarela:  ["4,5 mm", "4,0 mm", "Reta nº 2", "60 mm", "nº 2", "10 Fr", "10 Fr", "10 Fr", "20–24 Fr", "18–22 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto"],
-  branca:   ["5,0 mm", "4,5 mm", "Reta ou curva nº 2", "60 mm", "nº 2", "10 Fr", "10 Fr", "10–12 Fr", "20–24 Fr", "18–22 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto"],
-  azul:     ["5,5 mm", "5,0 mm", "Reta ou curva nº 2", "70 mm", "nº 2–2,5", "10 Fr", "12–14 Fr", "10–12 Fr", "24–32 Fr", "18–20 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto"],
-  laranja:  ["preferir com cuff", "5,5–6,0 mm", "Reta ou curva nº 2", "80 mm", "nº 2,5", "10 Fr", "14–18 Fr", "12 Fr", "28–32 Fr", "18–20 G", "Criança ou adulto", "15 mm (rosa)", "Adulto"],
-  verde:    ["preferir com cuff", "6,0–6,5 mm", "Reta ou curva nº 3", "80 mm", "nº 3", "10–12 Fr", "16–18 Fr", "12 Fr", "32–38 Fr", "16–20 G", "Adulto (1.600 mL)", "15 mm (rosa)", "Adulto"],
-  adulto:   ["não usar", "7,0–8,0 mm", "Curva nº 3–4", "80–100 mm", "nº 3 (30–50 kg); nº 4 (50–70 kg); nº 5 (> 70 kg)", "12–14 Fr", "14–18 Fr", "14–16 Fr", "28–36 Fr", "14–18 G", "Adulto (1.600 mL)", "25 mm (azul); 45 mm (amarela) no úmero ou com tecido espesso", "Adulto"]
+  sub:      ["2,5–3,0 mm", "não usar", "Reta nº 0", "30–40 mm", "nº 1", "5–6 Fr", "5 Fr", "5 Fr", "8–10 Fr", "24 G", "Neonatal (250 mL)", "Agulha manual 18 G (EZ-IO® não indicada abaixo de 3 kg)", "Infantis", "3 Fr (umbilical 3,5–5 Fr)", "24 G", "18–20 G (NRP) ou escalpe 23 G", "5–6 Fr"],
+  cinza:    ["3,0–3,5 mm", "3,0 mm", "Reta nº 0–1", "40–50 mm", "nº 1", "6–8 Fr", "5–8 Fr", "5–8 Fr", "10–12 Fr", "22–24 G", "Lactente (450–500 mL)", "15 mm (rosa)", "Infantis", "3–4 Fr", "24 G", "20–22 G", "5–6 Fr"],
+  rosa:     ["3,5 mm", "3,0 mm", "Reta nº 1", "50 mm", "nº 1,5", "8 Fr", "5–8 Fr", "8 Fr", "10–12 Fr", "22–24 G", "Lactente (450–500 mL)", "15 mm (rosa)", "Infantis", "4 Fr", "24 G", "20–22 G", "5–6 Fr"],
+  vermelha: ["3,5 mm", "3,0 mm", "Reta nº 1", "50 mm", "nº 1,5", "8 Fr", "5–8 Fr", "8 Fr", "10–12 Fr", "22–24 G", "Criança (450–500 mL)", "15 mm (rosa)", "Infantis", "4 Fr", "24 G", "18–20 G", "5–6 Fr"],
+  roxa:     ["4,0 mm", "3,5 mm", "Reta nº 1", "60 mm", "nº 2", "8–10 Fr", "8–10 Fr", "8–10 Fr", "16–20 Fr", "20–24 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto (acima de 10 kg)", "4 Fr", "22–24 G", "18 G", "6 Fr"],
+  amarela:  ["4,5 mm", "4,0 mm", "Reta nº 2", "60 mm", "nº 2", "10 Fr", "10 Fr", "10 Fr", "20–24 Fr", "18–22 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto", "4–5 Fr", "22 G", "18 G", "10 Fr"],
+  branca:   ["5,0 mm", "4,5 mm", "Reta ou curva nº 2", "60 mm", "nº 2", "10 Fr", "10 Fr", "10–12 Fr", "20–24 Fr", "18–22 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto", "5 Fr", "22 G", "16–18 G", "10 Fr"],
+  azul:     ["5,5 mm", "5,0 mm", "Reta ou curva nº 2", "70 mm", "nº 2–2,5", "10 Fr", "12–14 Fr", "10–12 Fr", "24–32 Fr", "18–20 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto", "5 Fr", "22 G", "16–18 G", "10 Fr"],
+  laranja:  ["preferir com cuff", "5,5–6,0 mm", "Reta ou curva nº 2", "80 mm", "nº 2,5", "10 Fr", "14–18 Fr", "12 Fr", "28–32 Fr", "18–20 G", "Criança ou adulto", "15 mm (rosa)", "Adulto", "5 Fr", "22 G", "16 G", "10 Fr"],
+  verde:    ["preferir com cuff", "6,0–6,5 mm", "Reta ou curva nº 3", "80 mm", "nº 3", "10–12 Fr", "16–18 Fr", "12 Fr", "32–38 Fr", "16–20 G", "Adulto (1.600 mL)", "15 mm (rosa)", "Adulto", "5–7 Fr", "20–22 G", "14–16 G", "10 Fr (15 Fr se o tubo for 6,0 ou maior)"],
+  adulto:   ["não usar", "7,0–8,0 mm", "Curva nº 3–4", "80–100 mm", "nº 3 (30–50 kg); nº 4 (50–70 kg); nº 5 (> 70 kg)", "12–14 Fr", "14–18 Fr", "14–16 Fr", "28–36 Fr", "14–18 G", "Adulto (1.600 mL)", "25 mm (azul); 45 mm (amarela) no úmero ou com tecido espesso", "Adulto", "7 Fr (duplo ou triplo lúmen)", "20 G", "14 G com 8 cm ou toracostomia digital", "15 Fr"]
 };
 
 // Tuberculose: mg/kg até 10 anos; a partir daí, comprimido de dose fixa (linha E).
@@ -1965,8 +2147,8 @@ var SINDROMES = {
     { l: "4ª", n: "Meropenem", d: { k: [20, 40] }, int: "8/8 h (12/12 h se < 14 dias e < 32 semanas)", via: "EV", dur: "Conforme cultura", renal: "Sim", esp: "Gram-negativo resistente; 40 mg/kg/dose na meningite" },
     { l: "5ª", n: "Polimixina B", d: { k: [15000, 40000], per: "dia", n: 2, u: "UI" }, int: "12/12 h", via: "EV", dur: "Conforme cultura", renal: "Não (nefrotóxica)", esp: "Gram-negativo multirresistente, só com a comissão de infecção. Fora do período neonatal: 15.000–25.000 UI/kg/dia" }
   ]},
-  pneu: { t: "Pneumonia comunitária", nota: "SBP 2022. Menores de 2 meses: internar e tratar com ampicilina ou penicilina cristalina + gentamicina 7,5 mg/kg/dia. Internar se SpO₂ < 92%, desconforto moderado a grave, recusa alimentar ou toxemia.", linhas: [
-    { l: "1ª", n: "Amoxicilina", d: { k: 50, per: "dia", n: 3, maxDia: 4000 }, int: "8/8 h (ou 12/12 h)", via: "VO", dur: "7 dias (5 se não grave e com boa evolução)", renal: "Sim", esp: "Pneumococo. Ambulatorial, de 2 meses a 5 anos e também nos maiores" },
+  pneu: { t: "Pneumonia comunitária", nota: "Amoxicilina: o Manual PPS e a AAP/IDSA usam 80–90 mg/kg/dia de 12/12 h; a SBP 2022 aceita 50 mg/kg/dia de 8/8 h na pneumonia não grave. Menores de 2 meses: internar e tratar com ampicilina ou penicilina cristalina + gentamicina 7,5 mg/kg/dia. Internar se SpO₂ < 92%, desconforto moderado a grave, recusa alimentar ou toxemia.", linhas: [
+    { l: "1ª", n: "Amoxicilina", d: { k: [80, 90], per: "dia", n: 2, maxDia: 4000 }, int: "12/12 h", via: "VO", dur: "7 dias (5 se não grave e com boa evolução)", renal: "Sim", esp: "Pneumococo. Ambulatorial, a partir de 2 meses. Alternativa da SBP 2022: 50 mg/kg/dia de 8/8 h" },
     { l: "2ª", comp: [{ n: "Ampicilina", d: { k: 50, max: 2000 } }, { n: "ou penicilina cristalina", d: { k: 150000, per: "dia", n: 4, u: "UI" } }], int: "6/6 h", via: "EV", dur: "7–10 dias; passar para via oral ao melhorar", renal: "Sim", esp: "Primeira escolha no internado" },
     { l: "3ª", n: "Ceftriaxona", d: { k: [50, 100], per: "dia", n: 1, max: 2000, maxDia: 4000 }, int: "24 h (ou 12/12 h)", via: "EV ou IM", dur: "7–10 dias", renal: "Não", esp: "Grave, vacinação incompleta, HIV, falha em 48–72 h" },
     { l: "4ª", n: "Azitromicina", d: { k: 10, per: "dia", n: 1, maxDia: 500 }, int: "24 h", via: "VO", dur: "5 dias", renal: "Não", esp: "Suspeita de Mycoplasma ou Chlamydophila: associar ou substituir. Claritromicina 15 mg/kg/dia ÷ 2 por 7–10 dias" },
@@ -2041,7 +2223,9 @@ var SINDROMES = {
   ]},
   faringo: { t: "Faringoamigdalite estreptocócica", nota: "Tratar com teste rápido ou cultura positivos, ou quadro típico acima de 3 anos. Objetivo principal: prevenir febre reumática.", linhas: [
     { l: "1ª", n: "Penicilina G benzatina", f: function (p) {
-        return p.peso < 20 ? { kg: "< 20 kg: 600.000 UI", dose: "600 000 UI", teto: "1.200.000 UI" } : { kg: "≥ 20 kg: 1.200.000 UI", dose: "1 200 000 UI", teto: "1.200.000 UI" };
+        if (p.peso < 20) return { kg: "até 20 kg: 600.000 UI", dose: "600 000 UI", teto: "1.200.000 UI" };
+        if (p.peso < 27) return { kg: "entre 20 e 27 kg as fontes divergem", dose: "600 000 UI (corte de 27 kg: Manual PPS e AAP) ou 1 200 000 UI (corte de 20 kg: Ministério da Saúde)", teto: "1.200.000 UI" };
+        return { kg: "a partir de 27 kg: 1.200.000 UI", dose: "1 200 000 UI", teto: "1.200.000 UI" };
       }, int: "Dose única", via: "IM profundo", dur: "1 dose", renal: "Não", esp: "Garante adesão" },
     { l: "2ª", n: "Amoxicilina", d: { k: 50, per: "dia", n: 2, maxDia: 1000 }, int: "12/12 h (ou 1 vez ao dia)", via: "VO", dur: "10 dias", renal: "Sim", esp: "Estreptococo do grupo A" },
     { l: "3ª", n: "Cefalexina", d: { k: [40, 50], per: "dia", n: 2, max: 500 }, int: "12/12 h", via: "VO", dur: "10 dias", renal: "Sim", esp: "Alergia não anafilática à penicilina" },
@@ -2049,8 +2233,8 @@ var SINDROMES = {
     { l: "5ª", n: "Clindamicina", d: { k: 20, per: "dia", n: 3, max: 300 }, int: "8/8 h", via: "VO", dur: "10 dias", renal: "Não", esp: "Alergia grave; recorrência" }
   ]},
   oma: { t: "Otite média aguda e rinossinusite bacteriana", nota: "Otite: analgesia sempre; observar 48–72 h é opção acima de 2 anos, unilateral e sem gravidade. Duração: menores de 2 anos 10 dias; 2–5 anos 7 dias; maiores 5–7 dias. Sinusite: 10–14 dias.", linhas: [
-    { l: "1ª", n: "Amoxicilina", d: { k: 50, per: "dia", n: 3, max: 500 }, int: "8/8 h (ou 12/12 h)", via: "VO", dur: "Conforme idade e foco", renal: "Sim", esp: "Sem fator de risco para pneumococo resistente" },
-    { l: "2ª", n: "Amoxicilina em dose alta", d: { k: [80, 90], per: "dia", n: 2, maxDia: 4000 }, int: "12/12 h", via: "VO", dur: "Idem", renal: "Sim", esp: "Menor de 2 anos, creche, antibiótico nos últimos 30 dias" },
+    { l: "1ª", n: "Amoxicilina em dose alta", d: { k: [80, 90], per: "dia", n: 2, maxDia: 4000 }, int: "12/12 h", via: "VO", dur: "Conforme idade e foco", renal: "Sim", esp: "Esquema do Manual PPS quando o antibiótico está indicado" },
+    { l: "2ª", n: "Amoxicilina em dose padrão", d: { k: 50, per: "dia", n: 3, max: 500 }, int: "8/8 h (ou 12/12 h)", via: "VO", dur: "Idem", renal: "Sim", esp: "Alternativa acima de 2 anos, sem creche e sem antibiótico nos últimos 30 dias" },
     { l: "3ª", n: "Amoxicilina + clavulanato", d: { k: [50, 90], per: "dia", n: 2, maxDia: 4000 }, int: "12/12 h", via: "VO", dur: "Idem", renal: "Sim", esp: "Falha em 48–72 h, conjuntivite associada. 90 mg/kg/dia só com a formulação ES (600 + 42,9)" },
     { l: "4ª", n: "Ceftriaxona", d: { k: 50, per: "dia", n: 1, maxDia: 1000 }, int: "24 h", via: "IM ou EV", dur: "1–3 doses", renal: "Não", esp: "Vômitos, falha ou sem via oral" },
     { l: "5ª", comp: [{ n: "Cefuroxima axetil", d: { k: 30, per: "dia", n: 2, max: 500 } }, { n: "ou claritromicina", d: { k: 15, per: "dia", n: 2, max: 500 } }], int: "12/12 h", via: "VO", dur: "Idem", renal: "Sim", esp: "Alergia à penicilina: não grave (cefuroxima) ou grave (macrolídeo)" }
@@ -2108,7 +2292,7 @@ var SINAIS = [
   { id: "sangramento", l: "Sangramento" }, { id: "exposicao", l: "Exposição a tóxico ou medicamento" }
 ];
 var HIPOTESES = [
-  { sind: "Pneumonia", sis: "respiratório", sinais: ["febre", "tosse", "dispneia"], etio: "Pneumococo, vírus respiratórios, Mycoplasma (acima de 5 anos)", conf: "Taquipneia, crepitações, opacidade alveolar na radiografia", afasta: "Frequência respiratória normal, ausculta e radiografia limpas", exame: "Radiografia de tórax e oximetria; hemograma e proteína C reativa se for internar", prox: "Amoxicilina 50 mg/kg/dia por 7 dias; oxigênio se SpO₂ < 92%; internar conforme critérios" },
+  { sind: "Pneumonia", sis: "respiratório", sinais: ["febre", "tosse", "dispneia"], etio: "Pneumococo, vírus respiratórios, Mycoplasma (acima de 5 anos)", conf: "Taquipneia, crepitações, opacidade alveolar na radiografia", afasta: "Frequência respiratória normal, ausculta e radiografia limpas", exame: "Radiografia de tórax e oximetria; hemograma e proteína C reativa se for internar", prox: "Amoxicilina 80–90 mg/kg/dia de 12/12 h por 7 dias (Manual PPS); a SBP 2022 aceita 50 mg/kg/dia. Oxigênio se SpO₂ < 92%; internar conforme critérios" },
   { sind: "Bronquiolite ou crise de sibilância", sis: "respiratório", sinais: ["sibilo", "tosse", "dispneia"], etio: "Vírus sincicial respiratório e outros vírus (lactente); asma (maiores)", conf: "Primeiro episódio de sibilância em menor de 2 anos com pródromo viral; ou história de crises", afasta: "Febre alta persistente com toxemia; estridor", exame: "Diagnóstico clínico; oximetria. Radiografia só se grave ou atípico", prox: "Bronquiolite: suporte, oxigênio, hidratação, alto fluxo se grave. Asma: salbutamol, ipratrópio e corticoide" },
   { sind: "Crupe (laringotraqueíte viral)", sis: "respiratório", sinais: ["estridor", "tosse", "febre"], etio: "Parainfluenza e outros vírus", conf: "Tosse ladrante, rouquidão, estridor inspiratório, de 6 meses a 5 anos", afasta: "Sialorreia, postura em tripé e toxemia (epiglotite, traqueíte); início súbito sem pródromo (corpo estranho)", exame: "Diagnóstico clínico; escore de Westley", prox: "Dexametasona 0,15–0,6 mg/kg em dose única; adrenalina nebulizada se estridor em repouso" },
   { sind: "Anafilaxia", sis: "sistêmico", sinais: ["urticaria", "dispneia", "sibilo", "vomito", "estridor"], etio: "Alimentos, medicamentos, insetos, látex", conf: "Início súbito de sintomas de pele ou mucosa com comprometimento respiratório, circulatório ou gastrointestinal", afasta: "Urticária isolada sem outros sistemas", exame: "Diagnóstico clínico; não atrasar o tratamento", prox: "Adrenalina IM 0,01 mg/kg na coxa, imediatamente; observar 4–6 h" },
@@ -2172,9 +2356,645 @@ var GRUPOS = [
   { g: "Fármacos", n: 2, tabs: [["t-dil", "Diluições calculadas"], ["t-repertorio", "Repertório ANVISA"], ["t-atb", "Antibióticos por linha"], ["t-pos", "Posologias por peso"]] },
   { g: "Suporte", n: 3, tabs: [["t-soro", "Soroterapia"], ["t-corr", "Correção hidroeletrolítica"], ["t-vm", "Ventilação invasiva"], ["t-vni", "VNI e CPAP"], ["t-desmame", "Desmame e assincronia"]] },
   { g: "Raciocínio", n: 4, tabs: [["t-escores", "Escores"], ["t-diag", "Diagnóstico sindrômico"], ["t-exames", "Exames iniciais"], ["t-img", "Imagens e laudos"]] },
-  { g: "Alta e documentos", n: 5, tabs: [["t-alta", "Receita de alta"], ["t-docs", "Modelos de documentos"], ["t-novidades", "Novidades"]] }
+  { g: "Alta e documentos", n: 5, tabs: [["t-alta", "Receita de alta"], ["t-docs", "Modelos de documentos"], ["t-novidades", "Novidades"]] },
+  { g: "Acervo integrado", n: 6, tabs: [["t-proto", "Protocolos por diagnóstico"], ["t-mono", "Monografias e Manual PPS"], ["t-calc", "Calculadoras de escores"], ["t-acervo", "Acervo e fontes"]] }
 ];
 var PESOS_RAPIDOS = [3.5, 5, 9, 13, 18, 28, 50, 70];
+
+/* =====================================================================
+   Conteúdo acrescentado na integração: sedação para procedimento,
+   modos ventilatórios, doses tóxicas e o acervo integrado.
+   ===================================================================== */
+
+/* ---------- sedação e analgesia para procedimento ---------- */
+var PROCED = [
+  { id: "pKetIV", g: "Dissociativa", n: "Cetamina IV", d: { k: [1, 2], max: 100, unica: true }, c: 50,
+    ap: "Ampola 50 mg/mL, em 1–2 min. O Manual PPS usa 1–1,5 mg/kg e o ACEP, 1,5–2 mg/kg na criança. Reforço de 0,5 mg/kg a cada 5–10 min. Não usar abaixo de 3 meses." },
+  { id: "pKetIM", g: "Dissociativa", n: "Cetamina IM", d: { k: [4, 5], unica: true }, c: 50,
+    ap: "Ampola 50 mg/mL. Reforço de 2 mg/kg após 10 min. Mais vômito e recuperação mais longa que na via venosa; no adulto, preferir a via venosa." },
+  { id: "pMidIV", g: "Sedativos", n: "Midazolam IV",
+    d: { k: function (p) { return p.idade < 6 ? [0.05, 0.1] : [0.025, 0.05]; }, max: 2.5, unica: true }, c: 5,
+    ap: "Ampola 5 mg/mL; diluir para 1 mg/mL e titular a cada 2–3 min. Dose total: até 0,6 mg/kg (máx. 6 mg) de 6 meses a 5 anos; até 0,4 mg/kg (máx. 10 mg) de 6 a 12 anos." },
+  { id: "pMidIN", g: "Sedativos", n: "Midazolam intranasal", d: { k: [0.2, 0.5], max: 10, unica: true }, c: 5,
+    ap: "Ampola 5 mg/mL com atomizador, metade em cada narina (até 1 mL por narina). Arde; início em 10–15 min." },
+  { id: "pMidVO", g: "Sedativos", n: "Midazolam oral", d: { k: [0.25, 0.5], max: 20, unica: true }, c: 2,
+    ap: "Solução oral 2 mg/mL, 20–30 min antes do procedimento." },
+  { id: "pProp", g: "Sedativos", n: "Propofol IV", d: { k: 1, max: 100, unica: true }, c: 10,
+    ap: "Frasco 10 mg/mL. Reforço de 0,5 mg/kg a cada 3–5 min. Apneia e hipotensão: só com profissional habilitado em via aérea e dedicado à sedação." },
+  { id: "pEto", g: "Sedativos", n: "Etomidato IV", d: { k: [0.1, 0.2], max: 20, unica: true }, c: 2,
+    ap: "Ampola 2 mg/mL. Procedimentos curtos no adolescente e no adulto (cardioversão, redução de luxação). Mioclonias são frequentes." },
+  { id: "pDexIN", g: "Sedativos", n: "Dexmedetomidina intranasal (off label)", d: { k: [2, 3], max: 200, u: "mcg", unica: true }, c: 100,
+    ap: "Frasco 100 mcg/mL com atomizador. Início em 25–30 min; boa opção para exames de imagem. Bradicardia e hipotensão." },
+  { id: "pFenIV", g: "Analgesia", n: "Fentanil IV", d: { k: [1, 2], max: 50, u: "mcg", unica: true }, c: 50,
+    ap: "Ampola 50 mcg/mL, lento. Reforço de 0,5–1 mcg/kg a cada 3–5 min. Associado a sedativo, soma a depressão respiratória: reduzir as doses." },
+  { id: "pFenIN", g: "Analgesia", n: "Fentanil intranasal", d: { k: [1.5, 2], max: 100, u: "mcg", unica: true }, c: 50,
+    ap: "Ampola 50 mcg/mL com atomizador, dividido entre as narinas. Analgesia em 5–10 min, sem acesso venoso." },
+  { id: "pLidS", g: "Anestesia local: dose máxima", n: "Lidocaína sem vasoconstritor", d: { k: 4.5, max: 300, unica: true }, c: 10, cs: [[10, "solução a 1%"], [20, "solução a 2%"]],
+    ap: "Dose máxima por infiltração. Aspirar antes de injetar; tamponar com bicarbonato 8,4% (1 mL para cada 10 mL de lidocaína) reduz a dor." },
+  { id: "pLidC", g: "Anestesia local: dose máxima", n: "Lidocaína com adrenalina", d: { k: 7, max: 500, unica: true }, c: 10, cs: [[10, "solução a 1%"], [20, "solução a 2%"]],
+    ap: "Dose máxima por infiltração. Evitar em extremidades com perfusão comprometida." },
+  { id: "pNalT", g: "Reversão", n: "Naloxona, reversão titulada", d: { k: [0.001, 0.005], max: 0.4, unica: true }, c: 0.04, cs: [[0.04, "diluída a 0,04 mg/mL"], [0.4, "ampola 0,4 mg/mL"]],
+    ap: "Ampola 0,4 mg/mL: diluir 1 mL em 9 mL de soro fisiológico (0,04 mg/mL) e repetir a cada 2–3 min. Reversão total: 0,1 mg/kg (máx. 2 mg)." },
+  { id: "pFlu", g: "Reversão", n: "Flumazenil", d: { k: 0.01, max: 0.2, unica: true }, c: 0.1,
+    ap: "Ampola 0,1 mg/mL. Repetir a cada 1 min até 0,05 mg/kg ou 1 mg. Não usar em quem toma benzodiazepínico de uso crônico nem na suspeita de tricíclico." }
+];
+
+/* ---------- doses tóxicas por peso (ingestão aguda única) ---------- */
+// Cada limiar: k por kg; t: significado; cap: limite absoluto (na unidade u); capIdade: o limite absoluto vale a partir dessa idade.
+// ap: apresentações para converter o limiar em volume ou unidades ([quantidade por unidade, rótulo]).
+var TOXICOS = [
+  { n: "Paracetamol", u: "mg",
+    lim: [{ k: 150, t: "potencialmente tóxica", cap: 7500 }, { k: 200, t: "encaminhar sempre (AAPCC)", cap: 10000, capIdade: 6 }],
+    ap: [[200, "mL das gotas de 200 mg/mL"], [500, "comprimidos de 500 mg"], [750, "comprimidos de 750 mg"]],
+    obs: "Nível sérico a partir de 4 h e nomograma de Rumack-Matthew. Doses repetidas no menor de 6 anos: avaliar a partir de 200 mg/kg em 24 h, 150 mg/kg/dia por 48 h ou 100 mg/kg/dia por 72 h. Antídoto: N-acetilcisteína." },
+  { n: "Ácido acetilsalicílico e salicilatos", u: "mg",
+    lim: [{ k: 150, t: "encaminhar; toxicidade leve a moderada (AAPCC)", cap: 6500 }, { k: 300, t: "toxicidade grave" }, { k: 500, t: "potencialmente letal" }],
+    ap: [[100, "comprimidos de 100 mg"], [500, "comprimidos de 500 mg"]],
+    obs: "Zumbido, hiperventilação, acidose com ânion gap, hipertermia. Salicilemia seriada, alcalinização urinária, hemodiálise na forma grave. Óleo de gaultéria: 1 mL equivale a 1,4 g de ácido acetilsalicílico." },
+  { n: "Ferro elementar", u: "mg",
+    lim: [{ k: 20, t: "sintomas gastrointestinais" }, { k: 40, t: "encaminhar sempre (AAPCC)" }, { k: 60, t: "toxicidade sistêmica grave" }],
+    ap: [[25, "mL das gotas de sulfato ferroso com 25 mg/mL de ferro elementar"], [40, "comprimidos de sulfato ferroso com 40 mg de ferro elementar"]],
+    obs: "Calcular o ferro elementar: sulfato ferroso 20%, fumarato 33%, gluconato 12%. Ferro sérico em 4–6 h, radiografia de abdome, irrigação intestinal total; desferroxamina na forma grave. Carvão ativado não adsorve ferro." },
+  { n: "Ibuprofeno", u: "mg",
+    lim: [{ k: 100, t: "abaixo disso, toxicidade improvável" }, { k: 400, t: "risco de toxicidade grave" }],
+    ap: [[100, "mL das gotas de 100 mg/mL"], [50, "mL das gotas de 50 mg/mL"]],
+    obs: "Sintomas gastrointestinais na faixa intermediária. Acima de 400 mg/kg: convulsão, acidose metabólica, lesão renal e coma." },
+  { n: "Antidepressivos tricíclicos (amitriptilina, imipramina, clomipramina)", u: "mg",
+    lim: [{ k: 5, t: "encaminhar sempre (AAPCC)" }, { k: 10, t: "toxicidade grave" }],
+    ap: [[25, "comprimidos de 25 mg"]],
+    obs: "ECG seriado: QRS acima de 100 ms prediz convulsão e acima de 160 ms, arritmia ventricular. Bicarbonato de sódio 1–2 mEq/kg em bolus. Nortriptilina: encaminhar a partir de 2,5 mg/kg." },
+  { n: "Difenidramina ou dimenidrinato", u: "mg",
+    lim: [{ k: 7.5, t: "encaminhar ao pronto-socorro (AAPCC)", cap: 300, capIdade: 6 }],
+    ap: [[50, "comprimidos de 50 mg"]],
+    obs: "Síndrome anticolinérgica; convulsão e QRS alargado nas doses altas. Benzodiazepínico para agitação; bicarbonato se QRS acima de 100 ms. Sem sintomas após 4 h (difenidramina) ou 6 h (dimenidrinato), não precisa de pronto-socorro." },
+  { n: "Carbamazepina", u: "mg",
+    lim: [{ k: 20, t: "toxicidade possível" }, { k: 50, t: "toxicidade grave" }],
+    ap: [[200, "comprimidos de 200 mg"], [20, "mL da suspensão de 20 mg/mL"]],
+    obs: "Absorção errática e tardia: nível sérico seriado a cada 4–6 h. Coma flutuante, convulsão, QRS alargado. Carvão ativado em doses múltiplas; hemodiálise na forma grave." },
+  { n: "Isoniazida", u: "mg",
+    lim: [{ k: 20, t: "toxicidade possível" }, { k: 35, t: "convulsões (35–40 mg/kg)" }, { k: 80, t: "potencialmente letal" }],
+    ap: [[100, "comprimidos de 100 mg"]],
+    obs: "Convulsão refratária, acidose lática grave e coma. Antídoto: piridoxina, 1 g para cada grama de isoniazida ingerida; dose desconhecida: 70 mg/kg (máx. 5 g)." },
+  { n: "Etanol", u: "g",
+    lim: [{ k: 3, t: "potencialmente letal na criança" }],
+    ap: [[0.789 * 0.40, "mL de destilado a 40%"], [0.789 * 0.12, "mL de vinho a 12%"], [0.789 * 0.05, "mL de cerveja a 5%"]],
+    obs: "Hipoglicemia é o maior risco no lactente e no pré-escolar: glicemia capilar seriada. Hipotermia, depressão respiratória e coma. Conversão: etanol tem 0,789 g/mL." }
+];
+var TOX_UM_COMPRIMIDO = ["Bloqueadores dos canais de cálcio (verapamil, diltiazem, nifedipino, anlodipino)", "Betabloqueadores (propranolol)", "Sulfonilureias (glibenclamida, glimepirida)",
+  "Opioides (metadona, codeína, tramadol, adesivo de fentanil, buprenorfina)", "Clonidina e imidazolinas de descongestionantes e colírios (nafazolina, oximetazolina, tetrizolina)",
+  "Antidepressivos tricíclicos", "Cloroquina e hidroxicloroquina", "Antiarrítmicos (flecainida, propafenona, quinidina)", "Antipsicóticos (clorpromazina, tioridazina, clozapina, olanzapina)",
+  "Teofilina", "Cânfora", "Salicilato de metila (óleo de gaultéria)", "Benzocaína e dapsona (metemoglobinemia)", "Difenoxilato com atropina"];
+
+/* ---------- modos ventilatórios ---------- */
+var MODOS = [
+  { id: "vcv", n: "Volume controlado (VCV)",
+    como: "O ventilador entrega o volume corrente ajustado com fluxo fixo; a pressão varia com a complacência e a resistência.",
+    quando: ["Adolescente e adulto, ou criança com tubo com cuff.", "Quando o volume minuto precisa ser garantido: hipertensão intracraniana, acidose metabólica grave.", "No lactente com tubo sem cuff o escape falseia o volume: preferir pressão controlada."],
+    aj: ["vt", "fr", "ti", "peep", "fio2", ["Fluxo e pausa", "Fluxo de 40–60 L/min no adulto (onda quadrada ou desacelerada). Pausa inspiratória de 0,3–0,5 s para medir a pressão de platô."], ["Alarme de pressão de pico", "35–40 cmH₂O."]],
+    mon: ["Pressão de platô até 28–30 cmH₂O e pressão de distensão (platô − PEEP) até 15 cmH₂O.", "Auto-PEEP com pausa expiratória nos obstrutivos.", "Volume corrente expirado e capnografia."],
+    cuid: ["Pico alto com platô normal: resistência (secreção, broncoespasmo, tubo dobrado). Pico e platô altos: complacência (SDRA, pneumotórax, intubação seletiva).", "Fluxo insuficiente produz fome de fluxo, com a curva de pressão côncava: aumentar o fluxo ou trocar o modo."] },
+  { id: "pcv", n: "Pressão controlada (PCV)",
+    como: "O ventilador mantém a pressão inspiratória ajustada durante o tempo inspiratório, com fluxo desacelerado; o volume varia com a mecânica do pulmão.",
+    quando: ["Lactentes e crianças, sobretudo com tubo sem cuff, porque compensa o escape.", "SDRA e situações em que se quer limitar a pressão.", "Fluxo desacelerado, em geral mais confortável e com melhor distribuição do gás."],
+    aj: [["Pressão inspiratória", "Começar com 12–15 cmH₂O acima da PEEP (recém-nascido: pico de 15–20 cmH₂O) e titular pelo volume corrente obtido."], "vt", "fr", "ti", "peep", "fio2"],
+    mon: ["Volume corrente expirado e volume minuto, com alarmes de mínimo e de máximo ajustados.", "Capnografia contínua e gasometria em 20–30 min.", "Pressão de distensão (pressão inspiratória − PEEP) até 15 cmH₂O."],
+    cuid: ["O volume cai sem alarme de pressão quando há secreção, broncoespasmo ou pneumotórax.", "Quando o pulmão melhora, o volume sobe: reduzir a pressão para não passar de 8 mL/kg."] },
+  { id: "prvc", n: "Pressão regulada com volume controlado (PRVC, VC+, AutoFlow, volume garantido)",
+    como: "Ciclo controlado a pressão em que o ventilador ajusta a pressão a cada respiração, em pequenos passos, para entregar o volume alvo com a menor pressão possível.",
+    quando: ["Quando se quer volume garantido com fluxo desacelerado.", "Pediatria e neonatologia: no prematuro, o volume garantido reduz hipocapnia e displasia broncopulmonar.", "Complacência que muda depressa (surfactante, recrutamento)."],
+    aj: ["vt", "fr", "ti", "peep", "fio2", ["Limite de pressão", "Ajustar o alarme de pico em 30–35 cmH₂O; o ventilador trabalha até 5 cmH₂O abaixo dele."]],
+    mon: ["Pressão inspiratória que o ventilador está usando: se sobe, a mecânica piorou.", "Volume corrente expirado e porcentagem de escape."],
+    cuid: ["Paciente com esforço intenso recebe menos pressão justamente quando precisa de mais: o trabalho respiratório aumenta.", "Escape acima de 40–50% invalida o volume medido."] },
+  { id: "simv", n: "Mandatória intermitente sincronizada (SIMV) com pressão de suporte",
+    como: "Um número fixo de ciclos mandatórios, a volume ou a pressão, sincronizados com o esforço; entre eles o paciente respira com pressão de suporte.",
+    quando: ["Transição entre suporte total e parcial; ainda muito usada em pediatria e neonatologia.", "No adulto, o desmame por SIMV é mais lento que o teste diário de respiração espontânea."],
+    aj: [["Ciclos mandatórios", "Ajustar como em volume ou pressão controlada."], "vt", "fr", "ti", "peep", "fio2", ["Pressão de suporte", "8–10 cmH₂O acima da PEEP nas respirações espontâneas; tubos de 3,0–3,5 mm exigem cerca de 10."]],
+    mon: ["Frequência total e volume das respirações espontâneas.", "Sinais de fadiga: taquipneia, tiragem, respiração paradoxal, CO₂ em ascensão."],
+    cuid: ["Frequência mandatória baixa com suporte insuficiente leva à fadiga.", "Reduzir a frequência mandatória em passos e avaliar o teste de respiração espontânea, em vez de prolongar o desmame."] },
+  { id: "psv", n: "Pressão de suporte (PSV)",
+    como: "Todo ciclo é disparado pelo paciente; o ventilador mantém a pressão ajustada até o fluxo inspiratório cair a uma fração do pico (ciclagem a fluxo).",
+    quando: ["Paciente com drive respiratório preservado.", "Desmame e teste de respiração espontânea."],
+    aj: [["Pressão de suporte", "A necessária para o volume corrente alvo, em geral 8–12 cmH₂O acima da PEEP."], "vt", "peep", ["FiO₂", "0,4–0,5 ou menos para pensar em extubação."],
+      ["Ciclagem", "25% do pico de fluxo. Nos obstrutivos, 40–50% para encurtar a inspiração; nos restritivos, 10–15%."], ["Ventilação de apneia", "Sempre ligada, com frequência e pressão de resgate ajustadas."],
+      ["Teste de respiração espontânea", "PEEP de 5 cmH₂O com suporte de 5–8 cmH₂O por 30–120 min. Na criança: suporte de 10 para tubo até 3,5 mm, 8 para 4,0–4,5 mm e 6 para 5,0 mm ou mais."]],
+    mon: ["Frequência respiratória, volume corrente e índice de respiração rápida e superficial (no adulto, falha provável acima de 105).", "Sinais de esforço e de assincronia."],
+    cuid: ["Sedação excessiva causa apneia: sem a ventilação de resgate não há ciclos.", "Escape em tubo sem cuff impede a ciclagem e prolonga a inspiração: limitar o tempo inspiratório máximo."] },
+  { id: "cpap", n: "Pressão positiva contínua (CPAP)",
+    como: "Pressão constante durante todo o ciclo; toda a ventilação é espontânea. Recruta alvéolos, reduz o trabalho respiratório e mantém a via aérea aberta.",
+    quando: ["Bronquiolite moderada a grave e desconforto respiratório do recém-nascido.", "Edema agudo de pulmão cardiogênico.", "Apneia obstrutiva e suporte após a extubação."],
+    aj: [["Pressão", "5–6 cmH₂O; recém-nascido 5–8 cmH₂O (CPAP de bolhas ou nasal); edema agudo de pulmão no adulto 8–10 cmH₂O."], ["FiO₂", "A menor para SpO₂ de 92–97% (90–95% no prematuro)."],
+      ["Interface", "Pronga ou máscara nasal no recém-nascido e no lactente; máscara oronasal ou facial total nos maiores. Sonda gástrica aberta."]],
+    mon: ["Frequência respiratória, esforço e FiO₂ na primeira e na segunda hora.", "Lesão de septo e de pele, distensão gástrica."],
+    cuid: ["Falha: FiO₂ acima de 0,4–0,6, apneias, pH abaixo de 7,25 ou piora do esforço em 1–2 h. No prematuro, FiO₂ acima de 0,30–0,40 indica surfactante.", "Não atrasar a intubação quando há falha."] },
+  { id: "bipap", n: "Dois níveis de pressão (BiPAP, VNI)",
+    como: "Pressão inspiratória (IPAP) e expiratória (EPAP); a diferença entre elas é o suporte ventilatório.",
+    quando: ["Asma e DPOC com hipercapnia, doença neuromuscular, edema agudo de pulmão.", "Pneumonia e pós-extubação em casos selecionados."],
+    aj: [["IPAP", "8–10 cmH₂O na criança e 10–12 cmH₂O no adolescente e no adulto; subir 2 cmH₂O por vez até 18–20."], ["EPAP", "4–5 cmH₂O (8–10 no edema agudo de pulmão)."], "fr", ["Tempo de subida e gatilho", "Subida rápida nos obstrutivos; gatilho sensível, sem autodisparo."]],
+    mon: ["Queda da frequência respiratória e cardíaca, do esforço e do CO₂ em 1–2 h.", "Escape, volume corrente e sincronia."],
+    cuid: ["Falha em 1–2 h: sem melhora clínica, FiO₂ acima de 0,6, pH abaixo de 7,25 ou rebaixamento. Detalhes na aba VNI e CPAP.", "IPAP acima de 20–25 cmH₂O distende o estômago."] },
+  { id: "aprv", n: "Liberação de pressão nas vias aéreas (APRV)",
+    como: "CPAP alto mantido por tempo longo, com liberações muito curtas para uma pressão baixa; o paciente respira espontaneamente em qualquer fase.",
+    quando: ["Resgate na SDRA moderada a grave com hipoxemia refratária, em centro com experiência.", "Na criança não há benefício demonstrado, e um ensaio clínico foi interrompido por tendência a maior mortalidade: não é modo inicial."],
+    aj: [["Pressão alta", "Igual à pressão de platô do modo convencional, em geral 20–28 cmH₂O (máx. 30)."], ["Pressão baixa", "0 cmH₂O."],
+      ["Tempo alto", "Adulto 4–6 s; criança 3–5 s; lactente e recém-nascido 2–3 s."], ["Tempo baixo", "Adulto 0,4–0,8 s; criança 0,3–0,6 s; lactente 0,2–0,4 s. Ajustar para a expiração terminar em 75% do pico de fluxo expiratório."], "fio2"],
+    mon: ["Volume de cada liberação (6–8 mL/kg), CO₂ e hemodinâmica.", "Curva de fluxo expiratório a cada ajuste."],
+    cuid: ["Tempo baixo longo demais derrecruta o pulmão.", "Evitar na obstrução grave (asma), na instabilidade hemodinâmica, na fístula broncopleural e na hipertensão intracraniana."] },
+  { id: "vafo", n: "Alta frequência oscilatória (VAFO)",
+    como: "Volumes menores que o espaço morto, a 3–15 Hz, em torno de uma pressão média constante; a expiração é ativa.",
+    quando: ["Resgate na SDRA grave refratária e na síndrome de escape de ar.", "Recém-nascido com falha da ventilação convencional e hérnia diafragmática.", "No adulto, dois ensaios clínicos não mostraram benefício e um deles mostrou maior mortalidade."],
+    aj: [["Pressão média", "2–5 cmH₂O acima da pressão média do modo convencional."], "hz", ["Amplitude", "Subir até a vibração visível do tórax à raiz das coxas (no recém-nascido, até o umbigo)."],
+      ["Tempo inspiratório", "33%."], ["Fluxo de base", "Recém-nascido 10–15 L/min; criança 15–25 L/min; adulto 25–40 L/min."], ["FiO₂", "1,0 no início."]],
+    mon: ["Radiografia em 1–2 h: expansão de 8–9 arcos costais posteriores.", "Gasometria em 30–60 min e CO₂ transcutâneo quando disponível.", "Hemodinâmica: a pressão média alta reduz o retorno venoso."],
+    cuid: ["Oxigenação responde à pressão média e à FiO₂. CO₂ responde à amplitude; depois, reduzir a frequência em 1 Hz; por último, desinsuflar parcialmente o cuff.", "Queda súbita da vibração: secreção, tubo obstruído ou pneumotórax."] }
+];
+
+/* ---------- acervo integrado ---------- */
+var ACERVO_ABAS = {
+  "t-proto": { grupos: ["proto", "tera", "neo"], rotulo: "Buscar tema ou diagnóstico", exemplo: "Ex.: bronquiolite, cetoacidose, icterícia",
+    vazio: "Escolha um tema na lista para ler aqui. A busca procura no título, na especialidade e nas palavras-chave." },
+  "t-mono": { grupos: ["pps", "mono"], rotulo: "Buscar medicamento", exemplo: "Ex.: amoxicilina, cetamina, salbutamol",
+    vazio: "Escolha um medicamento na lista para ler as linhas do Manual PPS ou a monografia." },
+  "t-calc": { grupos: ["esc"], rotulo: "Buscar escore ou problema", exemplo: "Ex.: Glasgow, bronquiolite, sepse",
+    vazio: "Escolha um escore na lista para ver critérios, pontuação e faixas, e abrir a calculadora." }
+};
+var ACERVO_GRUPOS = {
+  proto: { n: "Protocolos por diagnóstico", o: "Estudo Continuado", itens: 110 },
+  tera: { n: "Terapêuticas pediátricas", o: "Terapêuticas (PedWB)", itens: 362 },
+  neo: { n: "Neonatologia", o: "Neonatologia: cuidados com o RN", itens: 87 },
+  pps: { n: "Manual PPS", o: "Manual Integral de Prescrição Pediátrica Segura", itens: 266 },
+  mono: { n: "Monografias", o: "Catálogo posológico pediátrico", itens: 498 },
+  esc: { n: "Escores clínicos", o: "Escores Clínicos", itens: 486 }
+};
+// [título, descrição, endereço, o que foi integrado]
+var ACERVO_SITES = [
+  ["Estudo Continuado", "Temas de estudo no modelo de 25 componentes, com referências.", "https://estudo-continuado.sites-pediatria.workers.dev/", "110 temas, em Protocolos por diagnóstico"],
+  ["Terapêuticas", "Condutas terapêuticas por diagnóstico e anexos operacionais.", "https://terapeuticas.sites-pediatria.workers.dev/", "348 temas e 14 anexos, em Protocolos por diagnóstico"],
+  ["Neonatologia", "Cuidados com o recém-nascido.", "https://neonatologia.sites-pediatria.workers.dev/", "87 capítulos, em Protocolos por diagnóstico"],
+  ["Medicações Pediátricas", "Doses conforme peso e idade.", "https://medicacoes-pediatricas.sites-pediatria.workers.dev/", "498 monografias, em Monografias e Manual PPS"],
+  ["Escores Clínicos", "Calculadoras de escores clínicos.", "https://scores-clinicos.sites-pediatria.workers.dev/", "486 escores e a calculadora completa, em Calculadoras de escores"],
+  ["Folha de Parada", "Doses e materiais de emergência por peso.", "https://folha-de-parada.sites-pediatria.workers.dev/", "Conferida com a carta de parada, a sequência rápida e os equipamentos"],
+  ["Prescrição Pediátrica Segura", "Script mestre de prescrição e terapêutica completa.", "https://prescricao-pediatrica-segura.sites-pediatria.workers.dev/", "Manual integral: 577 linhas de 265 medicamentos, em Monografias e Manual PPS"],
+  ["Receita PED", "Prescrição, medicações e Folha de Parada pediátrica.", "https://receita-ped.sites-pediatria.workers.dev/", ""],
+  ["ReceitaPediago", "Revisão clínica e governança do modelo posológico.", "https://receitapediago.sites-pediatria.workers.dev/", ""],
+  ["Orientações aos Pais", "Texto de orientação para a família a partir do diagnóstico.", "https://orientacoes-aos-pais.sites-pediatria.workers.dev/", ""],
+  ["Catálogo Posológico Pediátrico", "Acervo de monografias com atualizações.", "https://catalogo-pediatrico.sites-pediatria.workers.dev/", ""],
+  ["Emergências e Terapêutica", "Condutas de urgência e emergência pediátrica.", "https://emergencias-e-terapeutica.sites-pediatria.workers.dev/", ""],
+  ["Reidratação Pediátrica", "Calculadora de hidratação, déficit e manutenção.", "https://reidratacao.sites-pediatria.workers.dev/", ""],
+  ["Soroterapia Pediátrica", "Cálculo de fluidos, manutenção e gotejamento.", "https://soroterapia-pediatrica.sites-pediatria.workers.dev/", ""],
+  ["Infusão Contínua", "Velocidade em mL/h e titulação das drogas em bomba.", "https://infusao-bic.sites-pediatria.workers.dev/", ""],
+  ["Ventilação Mecânica", "Parâmetros ventilatórios em pediatria.", "https://ventilacao-mecanica.sites-pediatria.workers.dev/", ""],
+  ["Pediatric Flow", "Apoio à decisão em emergência pediátrica.", "https://pediatric-flow-cdss.sites-pediatria.workers.dev/", ""],
+  ["Anamnese Pediátrica Guiada", "Roteiro estruturado de anamnese e consulta.", "https://anamnese-pediatrica.sites-pediatria.workers.dev/", ""],
+  ["infosWB", "Compêndio de consulta rápida para o plantão.", "https://infoswb.sites-pediatria.workers.dev/", ""],
+  ["Medicações ANVISA", "Medicações da Anvisa e apresentações.", "https://medicacoes-anvisa.sites-pediatria.workers.dev/", ""],
+  ["Bulário Completo", "Bulário por nome genérico, com as fontes originais.", "https://bulario.sites-pediatria.workers.dev/", ""],
+  ["Farmacologia Pediátrica", "Dicionário farmacológico pediátrico.", "https://farmacologia-pediatrica.sites-pediatria.workers.dev/", ""],
+  ["Drogas CardioPapers", "Drogas cardiovasculares e doses.", "https://drogas-cardiopapers.sites-pediatria.workers.dev/", ""],
+  ["Dermatologia", "Consulta de dermatologia.", "https://dermatologia.sites-pediatria.workers.dev/", ""],
+  ["Laboratório e Raio X", "Exames laboratoriais e radiografia.", "https://laboratorioeradiografia.sites-pediatria.workers.dev/", ""],
+  ["Abordagens Clínicas", "Pesquisa de protocolos clínicos.", "https://abordagem-clinica.sites-pediatria.workers.dev/", ""],
+  ["Guideliness", "Protocolos e diretrizes.", "https://guideliness.sites-pediatria.workers.dev/", ""],
+  ["Prescrição Integral", "Prescrição integral.", "https://prescricao-integral.sites-pediatria.workers.dev/", ""],
+  ["Briefings Diários", "Resumos diários em cartões.", "https://briefings-diarios.sites-pediatria.workers.dev/", ""],
+  ["Revisão Pediátrica Contínua", "Revisão documental contínua do conteúdo pediátrico.", "https://revisao-pediatrica-continua.sites-pediatria.workers.dev/", ""]
+];
+// [documento, onde está, como entrou neste site]
+var ACERVO_DRIVE = [
+  ["Manual Integral de Prescrição Pediátrica Segura (versão de 15/08/2026, 541 páginas)", "Google Drive e repositório do portal", "Lido por inteiro: 577 linhas farmacológicas de 265 medicamentos e o catálogo de 315 diagnósticos, consultáveis em Monografias e Manual PPS. Doses de uso corrente confrontadas com o núcleo calculado."],
+  ["Folha de Emergência ABRAMEDE-MG 2022, pediátrica (variante 9, corrigida em 15/11/2026)", "Google Drive", "Lida e confrontada linha a linha com a carta de parada, a sequência rápida, as infusões e os equipamentos."],
+  ["Tabela de doses tóxicas em ingestão aguda", "Google Drive", "Lida e usada no painel Doses tóxicas por peso, em Intoxicações, junto das diretrizes da AAPCC."],
+  ["Tratado de Combinações Semiológicas e Diagnósticos em Pediatria (partes I a III)", "Google Drive", "Listado; não incorporado nesta revisão."],
+  ["Guia de Soroterapia OMS, RCH e NICE", "Google Drive", "Listado; a aba Soroterapia segue as mesmas fontes primárias."],
+  ["Planilha ANVISA Master e planilha médica completa", "Google Drive", "Listadas; consulta pelos sites Medicações ANVISA e Bulário Completo."],
+  ["Farmacologia Pediátrica, UTI COVID: guia do plantonista, Pediatric Clinical Governance", "Google Drive", "Listados; não incorporados nesta revisão."]
+];
+// [item, núcleo antes, fonte do autor, decisão]
+var RECONCILIACAO = [
+  ["Atropina: apresentação", "Volume só para 0,25 mg/mL", "Folha ABRAMEDE-MG: 0,5 mg/mL", "Volume calculado para as duas ampolas, com a de 0,5 mg/mL primeiro"],
+  ["Lidocaína na parada", "Volume só para 2%", "Folha ABRAMEDE-MG: 1%", "Volume calculado para 2% e 1%"],
+  ["Etomidato na sequência rápida", "0,3 mg/kg", "Folha ABRAMEDE-MG: 0,2 mg/kg", "Faixa de 0,2–0,3 mg/kg"],
+  ["Propofol na sequência rápida", "1–2 mg/kg", "Folha ABRAMEDE-MG: 2,5 mg/kg", "Faixa de 1–2,5 mg/kg, começando pela dose menor"],
+  ["Succinilcolina", "1,5 mg/kg a partir de 2 anos", "Folha ABRAMEDE-MG: 1 mg/kg", "2 mg/kg abaixo de 2 anos; 1–1,5 mg/kg acima"],
+  ["Cisatracúrio em bolus", "Ausente", "Folha ABRAMEDE-MG: 0,15 mg/kg", "Incluído: 0,1–0,2 mg/kg"],
+  ["Solução salina a 3%", "Preparo com NaCl 20%", "Folha ABRAMEDE-MG: NaCl 10%", "As duas receitas"],
+  ["Fenitoína", "20 mg/kg", "Folha ABRAMEDE-MG: 15 mg/kg; Manual PPS: 20 mg/kg", "Mantidos 20 mg/kg (Manual PPS e American Epilepsy Society)"],
+  ["Amoxicilina na pneumonia e na otite", "50 mg/kg/dia como 1ª linha", "Manual PPS: 80–90 mg/kg/dia de 12/12 h", "1ª linha de 80–90 mg/kg/dia; 50 mg/kg/dia (SBP 2022) como alternativa"],
+  ["Dipirona na receita de alta", "15 mg/kg/dose (0,6 gota/kg)", "Manual PPS: 10 mg/kg/dose", "10 mg/kg/dose (0,4 gota/kg), dentro da faixa da bula"],
+  ["Diazepam venoso", "0,2–0,3 mg/kg", "Manual PPS: 0,15–0,2 mg/kg", "0,15–0,2 mg/kg (máx. 10 mg)"],
+  ["Sulfato de magnésio na asma", "25–75 mg/kg", "Manual PPS: 25–50 mg/kg", "25–50 mg/kg (máx. 2 g)"],
+  ["Prometazina", "0,5 mg/kg", "Manual PPS: 0,25–0,5 mg/kg", "Faixa de 0,25–0,5 mg/kg"],
+  ["Penicilina benzatina: corte de peso", "20 kg", "Manual PPS: 27 kg", "Entre 20 e 27 kg, mostra as duas doses e a fonte de cada corte"],
+  ["Equipamentos", "13 itens por faixa", "Folha ABRAMEDE-MG: cateter central, arterial, descompressão torácica e bougie", "Quatro linhas acrescentadas"]
+];
+
+/* =====================================================================
+   Interface do conteúdo acrescentado na integração
+   ===================================================================== */
+
+/* ---------- sedação e analgesia para procedimento (aba Via aérea) ---------- */
+var PROCED_RESTR = {
+  pKetIV: function (p) { return p.idade < 0.25 ? "Não usar abaixo de 3 meses" : null; },
+  pKetIM: function (p) { return p.idade < 0.25 ? "Não usar abaixo de 3 meses" : null; }
+};
+function cProced() {
+  var h = "", g = "";
+  for (var i = 0; i < PROCED.length; i++) {
+    var it = PROCED[i], r = calcItem(it), bloq = PROCED_RESTR[it.id] ? PROCED_RESTR[it.id](P) : null;
+    if (it.g !== g) { g = it.g; h += tr([{ t: g, span: 5 }], "grp"); }
+    h += tr([it.n, r.kg, bloq ? { t: bloq, c: "critico" } : K(r.dose), bloq ? "—" : K(r.vol), it.ap]);
+  }
+  corpo("procTab", h);
+}
+
+/* ---------- doses tóxicas por peso (aba Intoxicações) ---------- */
+function qtdTox(v, u) {
+  if (u === "g") return num(v) + " g";
+  return v >= 1000 ? num(v / 1000) + " g" : num(v) + " mg";
+}
+function equivTox(v, ap) {
+  var q = v / ap[0], rot = ap[1];
+  if (/^mL /.test(rot)) return q >= 1000 ? num(q / 1000) + " L" + rot.slice(2) : mlNum(q) + " " + rot;
+  return num(q) + " " + rot;
+}
+function limiarTox(L, kg, idade) {
+  var v = L.k * kg, lim = L.cap != null && (L.capIdade == null || idade >= L.capIdade) && v > L.cap;
+  return { v: lim ? L.cap : v, lim: lim };
+}
+function cToxicos() {
+  var kg = P.peso, h = "";
+  for (var i = 0; i < TOXICOS.length; i++) {
+    var t = TOXICOS[i];
+    h += tr([{ t: t.n, span: 3 }], "grp");
+    for (var j = 0; j < t.lim.length; j++) {
+      var L = t.lim[j], x = limiarTox(L, kg, P.idade), eq = [];
+      for (var a = 0; a < t.ap.length; a++) eq.push(equivTox(x.v, t.ap[a]));
+      h += tr([num(L.k) + " " + t.u + "/kg: " + L.t, K(qtdTox(x.v, t.u) + (x.lim ? " (limite absoluto)" : "")), K(eq.join("; "))]);
+    }
+    h += tr([{ t: t.obs, span: 3 }], "obs");
+  }
+  corpo("toxTab", h);
+}
+
+/* ---------- modos ventilatórios (aba Ventilação invasiva) ---------- */
+function pesoVentilacao() {
+  var alt = valorDe("vmAlt"), temAlt = isFinite(alt) && alt >= 100 && alt <= 230;
+  if (P.idade >= 12 && (temAlt || P.idade >= 16)) {
+    var padrao = P.sexo === "F" ? 160 : 170, a = temAlt ? alt : padrao;
+    return { peso: (P.sexo === "F" ? 45.5 : 50) + 0.91 * (a - 152.4), predito: true, temAlt: temAlt, alt: a, padrao: padrao };
+  }
+  return { peso: P.peso, predito: false };
+}
+function faixaVm() {
+  var k = faixaEtaria(P.idade).k, alvo = k === "c12" ? "pre" : (k === "ado" ? "adu" : k);
+  for (var i = 0; i < VM_FAIXAS.length; i++) if (VM_FAIXAS[i][0] === alvo) return VM_FAIXAS[i];
+  return VM_FAIXAS[2];
+}
+function paramModo(cod) {
+  var f = faixaVm(), pv = pesoVentilacao(), w = pv.peso, kg = P.peso;
+  if (cod === "vt") {
+    if (f[0] === "neo") return ["Volume corrente", "4–6 mL/kg: " + faixaTxt(4 * w, 6 * w, mlNum) + " mL", "modoVt"];
+    if (f[0] === "adu") return ["Volume corrente", "6 mL/kg do peso " + (pv.predito ? "predito" : "real") + " (" + nf(w, 1) + " kg): " + ml(6 * w) + "; faixa de 4–8 mL/kg: " + faixaTxt(4 * w, 8 * w, mlNum) + " mL", "modoVt"];
+    return ["Volume corrente", "6–8 mL/kg: " + faixaTxt(6 * w, 8 * w, mlNum) + " mL (4–6 mL/kg se a complacência for muito baixa)", "modoVt"];
+  }
+  if (cod === "fr") return ["Frequência respiratória", f[4]];
+  if (cod === "ti") return ["Tempo inspiratório", f[5]];
+  if (cod === "peep") return ["PEEP", f[3]];
+  if (cod === "fio2") return ["FiO₂", f[7]];
+  if (cod === "hz") {
+    var hz = ehNeo(P) ? "10–15 Hz" : (kg < 10 ? "10–12 Hz" : (kg < 20 ? "8–10 Hz" : (kg < 30 ? "6–8 Hz" : (P.idade < 16 ? "5–6 Hz" : "4–6 Hz"))));
+    return ["Frequência de oscilação", hz + " para " + num(kg) + " kg; reduzir de 1 em 1 Hz se o CO₂ subir com a amplitude no máximo"];
+  }
+  return null;
+}
+function listaHTML(l) {
+  var h = "<ul>";
+  for (var i = 0; i < l.length; i++) h += "<li>" + nb(esc(l[i])) + "</li>";
+  return h + "</ul>";
+}
+function cModos() {
+  var sel = $("modoSel"), m = MODOS[0];
+  for (var i = 0; i < MODOS.length; i++) if (MODOS[i].id === sel.value) m = MODOS[i];
+  var aj = "";
+  for (i = 0; i < m.aj.length; i++) {
+    var calculado = typeof m.aj[i] === "string", p = calculado ? paramModo(m.aj[i]) : m.aj[i];
+    if (!p) continue;
+    aj += '<div class="kv"><span>' + esc(p[0]) + "</span><span" + (p[2] ? ' id="' + p[2] + '"' : "") + (calculado ? ' class="calc"' : "") + ">" + nb(esc(p[1])) + "</span></div>";
+  }
+  var f = faixaVm();
+  setH("modoOut", "<h4>Como funciona</h4><p>" + esc(m.como) + "</p><h4>Quando usar</h4>" + listaHTML(m.quando) +
+    "<h4>Ajuste inicial para " + esc(num(P.peso)) + " kg, " + esc(idadeNorm(P.idade)) + "</h4><p class=\"helper\">Faixa usada: " + esc(f[1]) + ". Titular pela gasometria, pela curva e pelo conforto.</p>" + aj +
+    "<h4>Monitorização</h4>" + listaHTML(m.mon) + "<h4>Cuidados e armadilhas</h4>" + listaHTML(m.cuid));
+}
+
+/* =====================================================================
+   Acervo integrado: índice e itens em JSON, carregados sob demanda
+   ===================================================================== */
+var AC = { idx: null, carregando: false, cb: [], erro: null, cache: {}, est: {} };
+var AC_PASSO = 40;
+function obterJSON(url, cb) {
+  var x;
+  try { x = new XMLHttpRequest(); x.open("GET", url, true); } catch (e) { cb(e); return; }
+  x.onreadystatechange = function () {
+    if (x.readyState !== 4) return;
+    if (x.status === 200 || (x.status === 0 && x.responseText)) {
+      var d; try { d = JSON.parse(x.responseText); } catch (e2) { cb(e2); return; }
+      cb(null, d);
+    } else cb(new Error("HTTP " + x.status));
+  };
+  try { x.send(); } catch (e3) { cb(e3); }
+}
+function acervoCarregar(cb) {
+  if (AC.idx) { if (cb) cb(); return; }
+  if (cb) AC.cb.push(cb);
+  if (AC.carregando) return;
+  AC.carregando = true; AC.erro = null;
+  obterJSON("acervo/indice.json", function (err, d) {
+    AC.carregando = false;
+    if (err || !d || !d.itens) AC.erro = "O acervo não pôde ser carregado. Ele vem do endereço publicado na web: confira a conexão e recarregue a página.";
+    else {
+      var l = [];
+      for (var i = 0; i < d.itens.length; i++) {
+        var e = d.itens[i];
+        l.push({ g: e[0], id: e[1], t: e[2], s: e[3] || "", tn: semAcento(e[2]), n: semAcento(e[2] + " " + (e[3] || "") + " " + (e[4] || "")) });
+      }
+      AC.idx = l; AC.gerado = d.gerado || ""; window.__acervoIdx = l;
+    }
+    var fila = AC.cb; AC.cb = [];
+    for (var j = 0; j < fila.length; j++) fila[j]();
+  });
+}
+function acervoBuscar(q, grupos) {
+  var qn = semAcento(q || "").replace(/^\s+|\s+$/g, ""), termos = qn ? qn.split(/\s+/) : [], out = [];
+  for (var i = 0; i < AC.idx.length; i++) {
+    var e = AC.idx[i], ok = true, j;
+    if (grupos && grupos.indexOf(e.g) < 0) continue;
+    for (j = 0; j < termos.length; j++) if (e.n.indexOf(termos[j]) < 0) { ok = false; break; }
+    if (!ok) continue;
+    var sc = 4;
+    if (qn) {
+      if (e.tn.indexOf(qn) === 0) sc = 0;
+      else if (e.tn.indexOf(qn) >= 0) sc = 1;
+      else { sc = 2; for (j = 0; j < termos.length; j++) if (e.tn.indexOf(termos[j]) < 0) { sc = 3; break; } }
+    }
+    out.push({ e: e, sc: sc });
+  }
+  out.sort(function (a, b) { return a.sc - b.sc || (a.e.tn < b.e.tn ? -1 : (a.e.tn > b.e.tn ? 1 : 0)); });
+  return out;
+}
+function abaDoGrupo(g) {
+  for (var k in ACERVO_ABAS) if (ACERVO_ABAS.hasOwnProperty(k) && ACERVO_ABAS[k].grupos.indexOf(g) >= 0) return k;
+  return null;
+}
+function acervoMontar() {
+  for (var aba in ACERVO_ABAS) {
+    if (!ACERVO_ABAS.hasOwnProperty(aba)) continue;
+    var cfg = ACERVO_ABAS[aba], box = document.querySelector('.acervo[data-aba="' + aba + '"]'), ch = "";
+    if (!box) continue;
+    AC.est[aba] = { q: "", grupos: cfg.grupos.slice(), n: AC_PASSO, aberto: null };
+    if (cfg.grupos.length > 1) {
+      ch = '<button type="button" data-ac-g="*" aria-pressed="true">Todas as origens</button>';
+      for (var i = 0; i < cfg.grupos.length; i++) ch += '<button type="button" data-ac-g="' + cfg.grupos[i] + '" aria-pressed="false">' + esc(ACERVO_GRUPOS[cfg.grupos[i]].n) + "</button>";
+    }
+    box.innerHTML = '<div class="ac-busca no-print">' +
+      '<label for="acq-' + aba + '">' + esc(cfg.rotulo) + "</label>" +
+      '<input type="search" id="acq-' + aba + '" class="ac-q" data-aba="' + aba + '" placeholder="' + esc(cfg.exemplo) + '" autocomplete="off">' +
+      (ch ? '<div class="ac-chips" role="group" aria-label="Filtrar por origem">' + ch + "</div>" : "") +
+      '<p class="helper" id="acn-' + aba + '" aria-live="polite">Abra esta aba para carregar o índice.</p>' +
+      '<ol class="ac-lista" id="acl-' + aba + '"></ol>' +
+      '<button class="btn-m ac-mais" type="button" id="acm-' + aba + '" data-aba="' + aba + '" hidden>Mostrar mais</button></div>' +
+      '<article class="ac-leitor" id="acr-' + aba + '" tabindex="-1"><p class="helper">' + esc(cfg.vazio) + "</p></article>";
+  }
+  var h = "";
+  for (i = 0; i < ACERVO_SITES.length; i++) {
+    var s = ACERVO_SITES[i];
+    h += "<tr><td><a href=\"" + esc(s[2]) + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + esc(s[0]) + "</a></td><td>" + esc(s[1]) + "</td><td>" + esc(s[3] || "Consulta no site de origem") + "</td></tr>";
+  }
+  corpo("acSites", h);
+  h = "";
+  for (i = 0; i < ACERVO_DRIVE.length; i++) h += tr(ACERVO_DRIVE[i]);
+  corpo("acDrive", h);
+  h = "";
+  for (i = 0; i < RECONCILIACAO.length; i++) h += tr(RECONCILIACAO[i]);
+  corpo("acRecon", h);
+  h = "";
+  for (var g in ACERVO_GRUPOS) if (ACERVO_GRUPOS.hasOwnProperty(g)) {
+    var G = ACERVO_GRUPOS[g], ab = abaDoGrupo(g);
+    h += "<tr><td><a href=\"#" + ab + "\">" + esc(G.n) + "</a></td><td>" + esc(G.o) + "</td><td>" + esc(num(G.itens)) + "</td><td>" + esc(ROTULOS[ab] || "") + "</td></tr>";
+  }
+  corpo("acGrupos", h);
+  h = "";
+  for (i = 0; i < TOX_UM_COMPRIMIDO.length; i++) h += "<li>" + esc(TOX_UM_COMPRIMIDO[i]) + "</li>";
+  setH("toxUm", h);
+}
+function acervoAtivar(aba, q) {
+  var st = AC.est[aba];
+  if (!st) return;
+  if (q != null) { st.q = q; $("acq-" + aba).value = q; st.n = AC_PASSO; }
+  if (AC.idx) { acervoListar(aba); return; }
+  set("acn-" + aba, "Carregando o índice do acervo…");
+  acervoCarregar(function () { acervoListar(aba); });
+}
+function acervoListar(aba) {
+  var st = AC.est[aba], n = $("acn-" + aba);
+  if (!AC.idx) { n.textContent = AC.erro || "Índice indisponível."; n.className = "helper aviso erro"; return; }
+  n.className = "helper";
+  var r = acervoBuscar(st.q, st.grupos), h = "", lim = Math.min(r.length, st.n);
+  for (var i = 0; i < lim; i++) {
+    var e = r[i].e, cur = st.aberto === e.g + "/" + e.id;
+    h += '<li><button type="button" data-ac-abrir="' + e.g + "/" + e.id + '"' + (cur ? ' aria-current="true"' : "") + ">" + esc(e.t) +
+      "<small>" + esc(ACERVO_GRUPOS[e.g].n + (e.s && e.s !== ACERVO_GRUPOS[e.g].n ? ". " + e.s : "")) + "</small></button></li>";
+  }
+  setH("acl-" + aba, h);
+  n.textContent = r.length ? (st.q ? r.length + (r.length === 1 ? " resultado" : " resultados") + " para “" + st.q + "”." : r.length + " itens em ordem alfabética.") + (lim < r.length ? " Mostrando " + lim + "." : "")
+    : "Nada encontrado para “" + st.q + "”. Tente outro termo ou outra origem.";
+  mostra($("acm-" + aba), lim < r.length);
+}
+function acervoAbrir(aba, g, id, foco) {
+  var R = $("acr-" + aba), st = AC.est[aba];
+  if (!R || !st || !/^[a-z]+$/.test(g) || !/^[a-z0-9-]+$/.test(id) || !ACERVO_GRUPOS[g]) return;
+  st.aberto = g + "/" + id;
+  cada($("acl-" + aba).getElementsByTagName("button"), function (b) { if (b.getAttribute("data-ac-abrir") === st.aberto) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current"); });
+  R.innerHTML = '<p class="helper">Carregando…</p>';
+  var mostrar = function (d) {
+    if (st.aberto !== g + "/" + id) return;
+    R.innerHTML = acervoHTML(d, g);
+    cada(R.querySelectorAll("table.ref tbody"), rotular);
+    try { if (window.history && history.replaceState) history.replaceState(null, "", "#" + aba + "/" + g + "/" + id); } catch (e) {}
+    document.title = d.t + " | Emergência & UTI";
+    if (foco) { try { R.focus({ preventScroll: true }); } catch (e2) { R.focus(); } if (window.innerWidth <= 1000) R.scrollIntoView(); }
+  };
+  if (AC.cache[st.aberto]) { mostrar(AC.cache[st.aberto]); return; }
+  obterJSON("acervo/" + g + "/" + id + ".json", function (err, d) {
+    if (err || !d || !d.t) { if (st.aberto === g + "/" + id) R.innerHTML = '<p class="aviso erro">Não foi possível abrir este item. Confira a conexão e tente de novo.</p>'; return; }
+    AC.cache[g + "/" + id] = d; mostrar(d);
+  });
+}
+function urlSegura(u) { return /^https?:\/\/[^\s"<>]+$/.test(String(u || "")); }
+function mdInline(t, g) {
+  return t.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, function (m, alt, src) {
+    var f = /^assets\/([a-z0-9-]+\.svg)$/.exec(src);
+    return g === "neo" && f ? '<img src="acervo/neo/assets/' + f[1] + '" alt="' + alt + '" loading="lazy">' : "[" + alt + "]";
+  }).replace(/\[([^\]]+)\]\((https?:\/\/[^)\s"]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[\s(])\*([^*\s][^*]*?)\*(?=[\s).,;:!?]|$)/g, "$1<em>$2</em>")
+    .replace(/`([^`]+)`/g, "<code>$1</code>");
+}
+function mdTabela(linhas, g) {
+  function cel(l) { return l.replace(/^\s*\|/, "").replace(/\|\s*$/, "").split("|"); }
+  var cab = cel(linhas[0]), resto = linhas.slice(1), h = '<div class="tbl"><table class="ref"><thead><tr>', i, j;
+  if (resto.length && /^[\s|:\-]+$/.test(resto[0])) resto = resto.slice(1);
+  for (i = 0; i < cab.length; i++) h += "<th>" + mdInline(esc(cab[i].replace(/^\s+|\s+$/g, "")), g) + "</th>";
+  h += "</tr></thead><tbody>";
+  for (i = 0; i < resto.length; i++) {
+    var c = cel(resto[i]);
+    h += "<tr>";
+    for (j = 0; j < cab.length; j++) h += "<td>" + mdInline(esc((c[j] || "").replace(/^\s+|\s+$/g, "")), g) + "</td>";
+    h += "</tr>";
+  }
+  return h + "</tbody></table></div>";
+}
+function md(txt, g) {
+  var L = String(txt).split(/\r?\n/), h = "", i = 0, lista = null, m;
+  function fecha() { if (lista) { h += "</" + lista + ">"; lista = null; } }
+  while (i < L.length) {
+    var t = L[i].replace(/^\s+|\s+$/g, "");
+    if (!t) { fecha(); i++; continue; }
+    if (t.charAt(0) === "|") {
+      fecha(); var bl = [];
+      while (i < L.length && /^\s*\|/.test(L[i])) { bl.push(L[i]); i++; }
+      h += mdTabela(bl, g); continue;
+    }
+    if ((m = /^(#{1,6})\s+(.*)$/.exec(t))) { fecha(); var n = m[1].length < 3 ? 3 : (m[1].length === 3 ? 4 : 5); h += "<h" + n + ">" + mdInline(esc(m[2]), g) + "</h" + n + ">"; i++; continue; }
+    if ((m = /^([-*+]|\d+[.)])\s+(.*)$/.exec(t))) {
+      var tipo = /\d/.test(m[1]) ? "ol" : "ul";
+      if (lista !== tipo) { fecha(); h += "<" + tipo + ">"; lista = tipo; }
+      h += "<li>" + mdInline(esc(m[2]), g) + "</li>"; i++; continue;
+    }
+    fecha();
+    if (t.charAt(0) === ">") h += "<blockquote>" + mdInline(esc(t.replace(/^>\s?/, "")), g) + "</blockquote>";
+    else h += "<p>" + mdInline(esc(t), g) + "</p>";
+    i++;
+  }
+  fecha();
+  return h;
+}
+function acervoHTML(d, g) {
+  var G = ACERVO_GRUPOS[g], h = '<header class="ac-cab"><p class="trilha">' + esc(G.n) + ". Origem: " + esc(d.o || G.o) + "</p><h2>" + esc(d.t) + "</h2>", i, j;
+  if (d.m && d.m.length) { h += '<p class="ac-meta">'; for (i = 0; i < d.m.length; i++) h += '<span class="chip">' + esc(d.m[i]) + "</span>"; h += "</p>"; }
+  if (d.st) h += '<p class="ac-st">Situação declarada na origem: ' + esc(d.st) + "</p>";
+  var acoes = "";
+  if (urlSegura(d.u)) acoes += '<a class="btn-m" href="' + esc(d.u) + '" target="_blank" rel="noopener noreferrer">Abrir no site de origem</a>';
+  if (d.calc && /^[A-Za-z0-9_-]+$/.test(d.calc)) acoes += '<button class="btn-m" type="button" data-ac-calc="' + esc(d.calc) + '" data-ac-tit="' + esc(d.t) + '">Calcular este escore aqui</button>';
+  if (acoes) h += '<div class="ac-acoes no-print">' + acoes + "</div>";
+  h += '<div class="ac-calc" hidden></div></header>';
+  var secs = d.s || [];
+  for (i = 0; i < secs.length; i++) {
+    var s = secs[i];
+    if (s.h) h += "<h3>" + esc(s.h) + "</h3>";
+    if (s.b && s.b.length) {
+      h += "<ul>";
+      for (j = 0; j < s.b.length; j++) h += "<li>" + mdInline(esc(s.b[j]), g) + "</li>";
+      h += "</ul>";
+      if (s.f && s.f.length) h += '<p class="helper">Referências: ' + esc(s.f.join(", ")) + "</p>";
+    }
+    if (s.md) h += md(s.md, g);
+    if (s.kv && s.kv.length) for (j = 0; j < s.kv.length; j++) h += '<div class="kv"><span>' + esc(s.kv[j][0]) + "</span><span>" + mdInline(esc(s.kv[j][1]), g) + "</span></div>";
+    if (s.tb && s.tb.c) {
+      h += '<div class="tbl"><table class="ref"><thead><tr>';
+      for (j = 0; j < s.tb.c.length; j++) h += "<th>" + esc(s.tb.c[j]) + "</th>";
+      h += "</tr></thead><tbody>";
+      for (j = 0; j < s.tb.r.length; j++) {
+        h += "<tr>";
+        for (var k = 0; k < s.tb.c.length; k++) h += "<td>" + mdInline(esc(s.tb.r[j][k] == null ? "" : String(s.tb.r[j][k])), g) + "</td>";
+        h += "</tr>";
+      }
+      h += "</tbody></table></div>";
+    }
+    if (s.pre) h += '<pre class="ac-pre">' + esc(s.pre) + "</pre>";
+  }
+  if (d.r && d.r.length) {
+    h += '<h3>Referências da origem</h3><ol class="ac-refs">';
+    for (i = 0; i < d.r.length; i++) {
+      var rr = d.r[i], tt = esc(rr[0] || rr[1] || "");
+      h += "<li>" + (urlSegura(rr[1]) ? '<a href="' + esc(rr[1]) + '" target="_blank" rel="noopener noreferrer">' + tt + "</a>" : tt) + "</li>";
+    }
+    h += "</ol>";
+  }
+  if (d.nota) h += '<p class="helper">' + esc(d.nota) + "</p>";
+  return h;
+}
+function acervoCalc(btn) {
+  var cab = btn.parentNode.parentNode, box = cab.querySelector(".ac-calc"), id = btn.getAttribute("data-ac-calc");
+  if (!box) return;
+  if (!box.hasAttribute("hidden")) { mostra(box, false); box.innerHTML = ""; btn.textContent = "Calcular este escore aqui"; return; }
+  box.innerHTML = '<iframe class="ac-frame" src="acervo/escores/index.html#score/' + encodeURIComponent(id) + '" title="Calculadora: ' + esc(btn.getAttribute("data-ac-tit")) + '"></iframe>' +
+    '<p class="helper">Calculadora completa do site Escores Clínicos, com os mesmos critérios e faixas da origem.</p>';
+  mostra(box, true); btn.textContent = "Fechar a calculadora";
+}
+// Busca do menu lateral: também procura no acervo.
+function acervoNav(q) {
+  var box = $("navAcervo");
+  if (!box) return;
+  q = (q || "").replace(/^\s+|\s+$/g, "");
+  if (q.length < 3) { mostra(box, false); box.innerHTML = ""; return; }
+  if (!AC.idx) {
+    mostra(box, false);
+    acervoCarregar(function () { if (AC.idx && $("navSearch").value.replace(/^\s+|\s+$/g, "") === q) acervoNav(q); });
+    return;
+  }
+  var r = acervoBuscar(q, null), h = "<h2>No acervo integrado</h2>", lim = Math.min(r.length, 6);
+  if (!r.length) { mostra(box, false); box.innerHTML = ""; return; }
+  for (var i = 0; i < lim; i++) {
+    var e = r[i].e, ab = abaDoGrupo(e.g);
+    h += '<a href="#' + ab + "/" + e.g + "/" + e.id + '">' + esc(e.t) + "<small>" + esc(ACERVO_GRUPOS[e.g].n) + "</small></a>";
+  }
+  if (r.length > lim) {
+    var cont = {}, mais = "";
+    for (i = 0; i < r.length; i++) { var a2 = abaDoGrupo(r[i].e.g); cont[a2] = (cont[a2] || 0) + 1; }
+    for (var k in cont) if (cont.hasOwnProperty(k)) mais += '<a class="ac-todos" href="#' + k + '" data-ac-q="' + esc(q) + '">Ver ' + cont[k] + " em " + esc(ROTULOS[k]) + "</a>";
+    h += mais;
+  }
+  box.innerHTML = h; mostra(box, true);
+}
+function ligarAcervo() {
+  document.addEventListener("click", function (e) {
+    var b = e.target;
+    while (b && b !== document && !(b.getAttribute && (b.getAttribute("data-ac-abrir") || b.getAttribute("data-ac-g") || b.getAttribute("data-ac-calc") || b.getAttribute("data-ac-q") || (b.className && String(b.className).indexOf("ac-mais") >= 0)))) b = b.parentNode;
+    if (!b || b === document) return;
+    var caixa = b; while (caixa && !(caixa.getAttribute && caixa.getAttribute("data-aba") && caixa.className === "acervo")) caixa = caixa.parentNode;
+    var aba = caixa && caixa.getAttribute ? caixa.getAttribute("data-aba") : b.getAttribute("data-aba");
+    if (b.getAttribute("data-ac-q") != null && b.tagName === "A") { AC.pendente = b.getAttribute("data-ac-q"); return; }
+    if (b.getAttribute("data-ac-calc")) { acervoCalc(b); return; }
+    if (!aba || !AC.est[aba]) return;
+    var st = AC.est[aba];
+    if (b.getAttribute("data-ac-abrir")) { var p = b.getAttribute("data-ac-abrir").split("/"); acervoAbrir(aba, p[0], p[1], true); return; }
+    if (b.getAttribute("data-ac-g")) {
+      var g = b.getAttribute("data-ac-g");
+      st.grupos = g === "*" ? ACERVO_ABAS[aba].grupos.slice() : [g]; st.n = AC_PASSO;
+      cada(b.parentNode.getElementsByTagName("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      acervoListar(aba); return;
+    }
+    if (String(b.className).indexOf("ac-mais") >= 0) { st.n += AC_PASSO; acervoListar(aba); }
+  });
+  cada(document.querySelectorAll(".ac-q"), function (inp) {
+    var tm = null;
+    inp.oninput = function () {
+      var aba = inp.getAttribute("data-aba"), st = AC.est[aba];
+      if (tm) clearTimeout(tm);
+      tm = setTimeout(function () { st.q = inp.value.replace(/^\s+|\s+$/g, ""); st.n = AC_PASSO; if (AC.idx) acervoListar(aba); else acervoAtivar(aba); }, 120);
+    };
+    inp.onkeydown = function (e) {
+      if (e.key !== "Enter" && e.keyCode !== 13) return;
+      var aba = inp.getAttribute("data-aba"), pri = $("acl-" + aba).getElementsByTagName("button")[0];
+      if (pri) pri.click();
+    };
+  });
+}
+// Rota com item do acervo: #t-proto/proto/p-asma
+function rota(h) {
+  var p = String(h || "").split("/");
+  return { aba: p[0], g: p.length === 3 ? p[1] : null, id: p.length === 3 ? p[2] : null };
+}
 
 /* =====================================================================
    Interface: leitura do paciente, cálculo de cada aba, navegação,
@@ -2241,9 +3061,13 @@ function calcItem(it) {
   var c = doseCalc(it.d, P);
   var dose = doseTxt(c) + (c.cap ? " (teto)" : "") + (c.minAp ? " (dose mínima)" : "");
   var vol;
-  if (it.c) {
+  if (it.cs) {
+    var ps = [];
+    for (var j = 0; j < it.cs.length; j++) ps.push(volTxt(c, it.cs[j][0]) + " (" + it.cs[j][1] + ")");
+    vol = ps.join(" ou ");
+    if (c.hi / it.c < 0.2) vol += "; volume pequeno: seringa de 1 mL ou diluir";
+  } else if (it.c) {
     vol = volTxt(c, it.c);
-    if (it.c2) vol += " da ampola 50% ou " + volTxt(c, it.c2) + " da ampola 10%";
     if (c.hi / it.c < 0.2) vol += " (volume pequeno: seringa de 1 mL ou diluir)";
   } else vol = c.u === "mL" ? doseTxt(c) : "—";
   return { c: c, dose: dose, vol: vol, kg: porKgTxt(it.d, P) };
@@ -2424,7 +3248,7 @@ function cMal() {
   set("mIV", dv({ k: [0.1, 0.2], max: 10 }, 5, "da ampola 5 mg/mL"));
   if (ehNeo(P)) { set("mDzIV", "Evitar no recém-nascido: preferir fenobarbital ou midazolam"); set("mRet", "Evitar no recém-nascido: preferir fenobarbital ou midazolam"); }
   else {
-    set("mDzIV", dv({ k: [0.2, 0.3], max: 10 }, 5, "da ampola 5 mg/mL, sem diluir, lento"));
+    set("mDzIV", dv({ k: [0.15, 0.2], max: 10 }, 5, "da ampola 5 mg/mL, sem diluir, lento"));
     set("mRet", dv({ k: 0.5, max: 20 }, 5, "da ampola 5 mg/mL"));
   }
   set("mLev", dv({ k: [40, 60], max: 4500 }, 100, "do frasco 100 mg/mL"));
@@ -2672,7 +3496,7 @@ function cCorr() {
   var maxDia = agua * 8;
   set("coVel", "Até " + num(maxDia) + " mEq em 24 h = " + mlh(maxDia / 0.513 / 24) + " de NaCl 3%");
   set("coBolus", faixaTxt(Math.min(3 * kg, 150), Math.min(5 * kg, 150), mlNum) + " mL em 10–20 min (3–5 mL/kg, teto de 150 mL)");
-  var base = "NaCl 3% = 0,513 mEq/mL. Preparo: 15 mL de NaCl 20% + 85 mL de água destilada.";
+  var base = "NaCl 3% = 0,513 mEq/mL. Preparo de 100 mL: 15 mL de NaCl 20% + 85 mL de água destilada, ou 30 mL de NaCl 10% + 70 mL de água destilada.";
   if (!isFinite(na) || !isFinite(alvo)) {
     set("coDef", "—"); set("coVol3", "—"); set("coAviso", "Informe sódio atual e sódio alvo. " + base);
   } else if (alvo <= na) {
@@ -2800,7 +3624,7 @@ function linhaParacetamol() {
 }
 function linhaDipirona() {
   if (P.idade < 0.25 || P.peso < 5) return null;
-  var n = Math.max(1, Math.min(Math.round(0.6 * P.peso), 40));
+  var n = Math.max(1, Math.min(Math.round(0.4 * P.peso), 40));
   return "Dipirona gotas 500 mg/mL: dar " + n + (n === 1 ? " gota" : " gotas") + " pela boca a cada 6 horas se houver febre ou dor.";
 }
 function linhasFebre(L) {
@@ -2964,6 +3788,7 @@ function cPrint() {
 var CALCS = [["Painel", cPainel], ["Estabilização", cEstab], ["Sala vermelha", cSala], ["Via aérea", cVia], ["PCR", cPcr], ["Choques", cChoque],
   ["Estado de mal", cMal], ["Trauma", cTrauma], ["Intoxicações", cIntox], ["Metabólicos", cMetab], ["Diluições", cDil], ["Repertório", cRep],
   ["Antibióticos", cAtb], ["Posologias", cPos], ["Soroterapia", cSoro], ["Correção", cCorr], ["Ventilação", cVm], ["VNI", cVni],
+  ["Sedação para procedimento", cProced], ["Doses tóxicas", cToxicos], ["Modos ventilatórios", cModos],
   ["Gasometria", cGaso], ["Receita de alta", cAlta], ["Documentos", cDocs], ["Impressão", cPrint]];
 window.__erros = [];
 function recalc() {
@@ -3029,7 +3854,10 @@ function pesoRapido(kg) {
 
 /* ---------- navegação ---------- */
 function mostrarAba(id, foco) {
-  if (!$(id) || !ROTULOS[id]) id = "t-painel";
+  var r = rota(id);
+  if (r.g) { var abg = abaDoGrupo(r.g); if (abg) r.aba = abg; }
+  id = r.aba;
+  if (!$(id) || !ROTULOS[id]) { id = "t-painel"; r.g = null; }
   abaAtual = id;
   cada(document.querySelectorAll("section.tab"), function (s) { s.className = s.id === id ? "tab active" : "tab"; });
   cada($("navGroups").getElementsByTagName("a"), function (a) {
@@ -3042,7 +3870,12 @@ function mostrarAba(id, foco) {
   fecharMenu();
   window.scrollTo(0, 0);
   try { cPrint(); } catch (e2) {}
-  if (foco) { var h = $(id).getElementsByTagName("h1")[0]; if (h) { h.setAttribute("tabindex", "-1"); try { h.focus({ preventScroll: true }); } catch (e3) { h.focus(); } } }
+  if (foco && !r.g) { var h = $(id).getElementsByTagName("h1")[0]; if (h) { h.setAttribute("tabindex", "-1"); try { h.focus({ preventScroll: true }); } catch (e3) { h.focus(); } } }
+  if (AC.est[id]) {
+    var pend = AC.pendente; AC.pendente = null;
+    acervoAtivar(id, pend);
+    if (r.g) acervoAbrir(id, r.g, r.id, foco);
+  }
 }
 function abrirMenu() { $("side").className = "side no-print open"; mostra($("veu"), true); $("btnMenu").setAttribute("aria-expanded", "true"); }
 function fecharMenu() { $("side").className = "side no-print"; mostra($("veu"), false); $("btnMenu").setAttribute("aria-expanded", "false"); }
@@ -3059,6 +3892,7 @@ function filtrarNav() {
     mostra(g, vis > 0);
   });
   mostra($("navVazio"), total === 0);
+  acervoNav($("navSearch").value);
   return primeiro;
 }
 
@@ -3128,7 +3962,7 @@ function aplicarTema(t, salvar) {
   document.documentElement.setAttribute("data-theme", t);
   set("btnTema", t === "dark" ? "Tema claro" : "Tema escuro");
   var mt = document.querySelector('meta[name="theme-color"]');
-  if (mt) mt.setAttribute("content", t === "dark" ? "#121A23" : "#FFFFFF");
+  if (mt) mt.setAttribute("content", t === "dark" ? "#111921" : "#1B2631");
   if (salvar) try { localStorage.setItem("eu.tema", t); } catch (e) {}
 }
 
@@ -3180,6 +4014,10 @@ function montar() {
   h = "";
   for (i = 0; i < SINAIS.length; i++) h += '<label><input type="checkbox" value="' + SINAIS[i].id + '"> ' + esc(SINAIS[i].l) + "</label>";
   setH("diagChecks", h);
+  h = "";
+  for (i = 0; i < MODOS.length; i++) h += '<option value="' + MODOS[i].id + '">' + esc(MODOS[i].n) + "</option>";
+  setH("modoSel", h);
+  acervoMontar();
   cada(document.querySelectorAll("table.ref tbody"), rotular);
 }
 function ligar() {
@@ -3192,7 +4030,9 @@ function ligar() {
   $("atbSind").onchange = cAtb;
   $("soNa").oninput = cSoro; $("soK").oninput = cSoro;
   $("coNa").oninput = function () { cCorr(); cMetab(); }; $("coNaAlvo").oninput = function () { cCorr(); cMetab(); };
-  $("vmAlt").oninput = cVm;
+  $("vmAlt").oninput = function () { cVm(); cModos(); };
+  $("modoSel").onchange = cModos;
+  ligarAcervo();
   cada(["gaNa", "gaCl", "gaHco", "gaGlic"], function (id) { $(id).oninput = cGaso; });
   $("diagChecks").onchange = cDiag;
   $("diagLimpar").onclick = function () { cada($("diagChecks").getElementsByTagName("input"), function (c) { c.checked = false; }); cDiag(); };

@@ -1,9 +1,11 @@
 // Testes funcionais da página montada. Uso: node funcional.js [url]
+// O acervo é carregado por HTTP: rodar contra um servidor (python3 -m http.server na pasta dist) ou contra o site publicado.
 const path = require('path');
 let chromium; try { ({ chromium } = require('playwright')); } catch (e) { ({ chromium } = require('/opt/npm-tools/node_modules/playwright')); }
 const CHROME = process.env.CHROME || '/usr/bin/google-chrome';
 const RAIZ = path.resolve(__dirname, '..');
-const URL0 = process.argv[2] || 'file://' + RAIZ + '/dist/index.html';
+const URL0 = process.argv[2] || 'http://127.0.0.1:8765/index.html';
+const ORIGEM = new URL(URL0).origin;
 let ok = 0; const falhas = [];
 function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !== undefined ? ' → ' + JSON.stringify(extra).slice(0, 200) : '')); }
 
@@ -14,7 +16,7 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
   const erros = [], pedidos = [];
   page.on('console', m => { if (m.type() === 'error') erros.push(m.text()); });
   page.on('pageerror', e => erros.push(e.message));
-  page.on('request', r => { const u = r.url(); if (!u.startsWith('data:') && !u.startsWith('blob:') && u.split('#')[0] !== URL0.split('#')[0]) pedidos.push(u); });
+  page.on('request', r => { const u = r.url(); if (!u.startsWith('data:') && !u.startsWith('blob:') && u.split('#')[0] !== URL0.split('#')[0] && !u.startsWith(ORIGEM + '/acervo/')) pedidos.push(u); });
   await page.goto(URL0); await page.waitForTimeout(300);
   const $v = (id) => page.evaluate(i => { const e = document.getElementById(i); return e ? (('value' in e && e.tagName !== 'BUTTON' && e.tagName !== 'LI') ? e.value : e.textContent) : null; }, id);
   const setar = (id, v) => page.evaluate(([i, v]) => { const e = document.getElementById(i); e.value = v; e.dispatchEvent(new Event('input', { bubbles: true })); e.dispatchEvent(new Event('change', { bubbles: true })); }, [id, String(v)]);
@@ -26,9 +28,9 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
   t('receita com paciente de exemplo traz alerta', (await $v('altCopy')).startsWith('ATENÇÃO: PACIENTE DE EXEMPLO'));
   t('selo de exemplo visível', await page.isVisible('#pacExemplo'));
 
-  // 2. navegação pelas 26 abas
+  // 2. navegação pelas 30 abas
   const links = await page.$$eval('#navGroups a', as => as.map(a => a.getAttribute('href').slice(1)));
-  t('26 abas no menu', links.length === 26, links.length);
+  t('30 abas no menu', links.length === 30, links.length);
   for (const id of links) {
     await page.click(`#navGroups a[href="#${id}"]`); await page.waitForTimeout(40);
     const a = await ativa();
@@ -40,9 +42,9 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
   await page.goto(URL0 + '#t-painel'); await page.waitForTimeout(150);
   let passos = 0;
   while (passos < 30) { const prox = await page.$('section.tab.active .pn a[href]:last-child'); const txt = prox ? await prox.textContent() : ''; if (!txt.startsWith('Próxima')) break; await prox.click(); await page.waitForTimeout(30); passos++; }
-  t('"Próxima" percorre as 26 abas', passos === 25 && (await ativa())[0] === 't-novidades', passos);
+  t('"Próxima" percorre as 30 abas', passos === 29 && (await ativa())[0] === 't-acervo', passos);
   await page.goBack(); await page.waitForTimeout(80);
-  t('botão Voltar do navegador retorna à aba anterior', (await ativa())[0] === 't-docs', await ativa());
+  t('botão Voltar do navegador retorna à aba anterior', (await ativa())[0] === 't-calc', await ativa());
   await page.goto(URL0 + '#t-sala'); await page.reload(); await page.waitForTimeout(200);
   t('link direto com #t-sala abre a Sala vermelha', (await ativa())[0] === 't-sala');
   await page.goto(URL0 + '#nao-existe'); await page.reload(); await page.waitForTimeout(200);
@@ -51,7 +53,7 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
   // 3. busca
   await page.fill('#navSearch', 'atropina'); await page.waitForTimeout(60);
   let vis = await page.$$eval('#navGroups a', as => as.filter(a => !a.hasAttribute('hidden')).map(a => a.getAttribute('href')));
-  t('busca "atropina" filtra as abas', vis.includes('#t-sala') && vis.includes('#t-via') && vis.includes('#t-intox') && vis.length < 26 && !vis.includes('#t-docs'), vis);
+  t('busca "atropina" filtra as abas', vis.includes('#t-sala') && vis.includes('#t-via') && vis.includes('#t-intox') && vis.length < 30 && !vis.includes('#t-docs'), vis);
   await page.fill('#navSearch', 'sufocacao xyz'); await page.waitForTimeout(60);
   t('busca sem resultado mostra aviso', await page.isVisible('#navVazio'));
   await page.fill('#navSearch', 'Westley'); await page.press('#navSearch', 'Enter'); await page.waitForTimeout(80);
@@ -139,7 +141,7 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
   for (const cen of ['febre', 'ivas', 'gea', 'sib']) { await setar('altCen', cen); const x = await $v('altCopy'); t(`receita ${cen} gerada`, x.includes('Peso: 18 kg. Idade: 4 anos.') && x.includes('192') && x.length > 500, x.slice(0, 90)); }
   await setar('altCen', 'febre');
   let rec = await $v('altCopy');
-  t('receita: paracetamol 18 gotas e dipirona 11 gotas para 18 kg', rec.includes('dar 18 gotas pela boca a cada 6 horas se houver febre (37,8') && rec.includes('Dipirona gotas 500 mg/mL: dar 11 gotas'), rec.slice(0, 400));
+  t('receita: paracetamol 18 gotas e dipirona 7 gotas (10 mg/kg) para 18 kg', rec.includes('dar 18 gotas pela boca a cada 6 horas se houver febre (37,8') && rec.includes('Dipirona gotas 500 mg/mL: dar 7 gotas'), rec.slice(0, 400));
   t('receita sem ibuprofeno por padrão', !rec.includes('Ibuprofeno'));
   await page.check('#altIbu'); rec = await $v('altCopy');
   t('ibuprofeno entra só quando marcado, com alerta de dengue', rec.includes('Ibuprofeno gotas 100 mg/mL: dar 18 gotas') && rec.includes('suspeita de dengue'));
@@ -251,6 +253,64 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
   t('impressão: só a aba ativa, com cabeçalho do paciente e sem menus', imp.side === 'none' && imp.top === 'none' && imp.head === 'block' && imp.tabs === 1 && imp.btn === 'none' && imp.txt.includes('Paciente: 18 kg, 4 anos, masculino') && imp.txt.includes('Sala vermelha'), imp);
   await page.emulateMedia({ media: 'screen' });
 
+  // 16b. painéis acrescentados na integração
+  const tx = async sel => ((await page.textContent(sel)) || '').replace(/\u00a0/g, ' ');
+  await page.goto(URL0 + '#t-via'); await page.waitForTimeout(150);
+  t('sedação para procedimento: 14 fármacos em 5 grupos', (await page.$$eval('#procTab tr', r => r.length)) === 19 && (await page.$$eval('#procTab tr.grp', r => r.length)) === 5);
+  t('sedação: cetamina IV 18–36 mg = 0,36–0,72 mL para 18 kg', (await tx('#procTab')).includes('18–36 mg') && (await tx('#procTab')).includes('0,36–0,72 mL'));
+  t('sequência rápida: atropina nas duas ampolas e cisatracúrio', (await tx('#viaTab')).includes('(ampola 0,5 mg/mL) ou') && (await tx('#viaTab')).includes('Cisatracúrio'), (await tx('#viaTab')).slice(0, 200));
+  await page.goto(URL0 + '#t-intox'); await page.waitForTimeout(150);
+  const tox = await tx('#toxTab');
+  t('doses tóxicas: paracetamol 2,7 g (150 mg/kg) e 13,5 mL das gotas para 18 kg', tox.includes('2,7 g') && tox.includes('13,5 mL das gotas de 200 mg/mL'), tox.slice(0, 160));
+  t('lista de agentes fatais em uma dose', (await page.$$eval('#toxUm li', l => l.length)) === 14);
+  await page.goto(URL0 + '#t-vm'); await page.waitForTimeout(150);
+  t('modos ventilatórios: 9 modos no seletor', (await page.$$eval('#modoSel option', o => o.length)) === 9);
+  t('modo VCV: volume de 108–144 mL para 18 kg', (await tx('#modoVt')).includes('108–144 mL'), await tx('#modoVt'));
+  await setar('modoSel', 'vafo'); await page.waitForTimeout(60);
+  t('modo VAFO: frequência de 8–10 Hz para 18 kg e sem volume corrente', (await page.textContent('#modoOut')).includes('8–10 Hz') && !(await page.$('#modoVt')), (await page.textContent('#modoOut')).slice(0, 120));
+  await setar('modoSel', 'vcv');
+  t('prona e ECMO presentes', (await page.textContent('#t-vm')).includes('PROSEVA') && (await page.textContent('#t-vm')).includes('EOLIA'));
+
+  // 16c. acervo integrado
+  await page.goto(URL0 + '#t-proto'); await page.waitForTimeout(700);
+  t('acervo: índice carrega com 559 temas em Protocolos', (await $v('acn-t-proto')).startsWith('559 itens'), await $v('acn-t-proto'));
+  const cont = await page.evaluate(() => { const c = {}; (window.__acervoIdx || []).forEach(e => { c[e.g] = (c[e.g] || 0) + 1; }); return c; });
+  t('acervo: 1.809 itens nas seis coleções (110, 362, 87, 266, 498, 486)', JSON.stringify(cont) === JSON.stringify({ proto: 110, tera: 362, neo: 87, pps: 266, mono: 498, esc: 486 }), cont);
+  await page.fill('#acq-t-proto', 'bronquiolite'); await page.waitForTimeout(300);
+  t('acervo: busca acha os 2 temas de bronquiolite', (await page.$$eval('#acl-t-proto button', b => b.length)) === 2, await $v('acn-t-proto'));
+  await page.click('#acl-t-proto button'); await page.waitForTimeout(500);
+  t('acervo: abrir tema mostra título, origem e situação, e atualiza o endereço', (await page.textContent('#acr-t-proto h2')) === 'Bronquiolite' && (await page.textContent('#acr-t-proto')).includes('Situação declarada na origem') && (await page.evaluate(() => location.hash)) === '#t-proto/proto/p-bronquiolite');
+  await page.click('#t-proto button[data-copy]'); await page.waitForTimeout(150);
+  const copAc = await page.evaluate(() => window.__copiado || '');
+  t('acervo: copiar leva o tema aberto, sem a lista de resultados', copAc.includes('Bronquiolite') && copAc.includes('Situação declarada') && !copAc.includes('Mostrar mais'), copAc.slice(0, 200));
+  await page.click('#t-proto [data-ac-g="neo"]'); await page.waitForTimeout(150);
+  t('acervo: filtro por origem (Neonatologia)', (await $v('acn-t-proto')).startsWith('Nada encontrado') || (await page.$$eval('#acl-t-proto small', s => s.every(x => x.textContent.startsWith('Neonatologia')))));
+  await page.fill('#acq-t-proto', ''); await page.waitForTimeout(250);
+  t('acervo: Neonatologia lista 87 capítulos', (await $v('acn-t-proto')).startsWith('87 itens'), await $v('acn-t-proto'));
+  await page.click('#acm-t-proto'); await page.waitForTimeout(100);
+  t('acervo: Mostrar mais amplia a lista', (await page.$$eval('#acl-t-proto li', l => l.length)) === 80);
+  await page.goto(URL0 + '#t-proto/neo/n-sala-de-parto-e-transicao'); await page.reload(); await page.waitForTimeout(900);
+  const figs = await page.$$eval('#acr-t-proto img', i => i.map(x => x.complete && x.naturalWidth > 0));
+  t('acervo: link direto abre o capítulo neonatal com as duas figuras', figs.length === 2 && figs.every(Boolean), figs);
+  await page.goto(URL0 + '#t-mono/pps/m-amoxicilina'); await page.reload(); await page.waitForTimeout(900);
+  t('acervo: link direto abre a linha do Manual PPS', (await ativa())[0] === 't-mono' && (await page.textContent('#acr-t-mono')).includes('80–90 mg/kg/dia'));
+  await page.goto(URL0 + '#t-calc'); await page.waitForTimeout(500);
+  await page.fill('#acq-t-calc', 'glasgow'); await page.waitForTimeout(250); await page.press('#acq-t-calc', 'Enter'); await page.waitForTimeout(500);
+  await page.click('#acr-t-calc [data-ac-calc]'); await page.waitForTimeout(2500);
+  const fr = page.frames().find(f => f.url().includes('/acervo/escores/'));
+  const ftxt = fr ? await fr.evaluate(() => document.body.innerText) : '';
+  t('calculadora de escores abre dentro da aba, no escore escolhido', !!fr && fr.url().endsWith('#score/glasgow') && ftxt.includes('Glasgow'), fr && fr.url());
+  await page.goto(URL0 + '#t-painel'); await page.waitForTimeout(200);
+  await page.fill('#navSearch', 'cetoacidose'); await page.waitForTimeout(600);
+  const na = await page.$$eval('#navAcervo a', a => a.map(x => x.getAttribute('href')));
+  t('busca do menu também procura no acervo', (await page.isVisible('#navAcervo')) && na.length >= 3 && na.some(h => h === '#t-proto/proto/p-cetoacidose-diabetica'), na);
+  await page.click('#navAcervo a[href="#t-proto/proto/p-cetoacidose-diabetica"]'); await page.waitForTimeout(800);
+  t('resultado do acervo no menu abre o tema na aba certa', (await ativa())[0] === 't-proto' && (await page.textContent('#acr-t-proto h2')) === 'Cetoacidose diabética');
+  await page.fill('#navSearch', ''); await page.waitForTimeout(80);
+  await page.goto(URL0 + '#t-acervo'); await page.waitForTimeout(200);
+  const tam = await page.evaluate(() => ['acGrupos', 'acRecon', 'acSites', 'acDrive'].map(i => document.getElementById(i).rows.length));
+  t('aba Acervo e fontes: coleções, conferência, sites e documentos', JSON.stringify(tam) === '[6,15,30,7]', tam);
+
   // 17. acessibilidade básica
   const a11y = await page.evaluate(() => {
     const semRotulo = Array.from(document.querySelectorAll('input,select,textarea')).filter(e => !(e.labels && e.labels.length) && !e.getAttribute('aria-label') && !e.getAttribute('aria-labelledby')).map(e => e.id || e.outerHTML.slice(0, 60));
@@ -275,6 +335,15 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
       if (sw > 1) transb.push(id + ':' + sw);
     }
     t(`${largura} px: nenhuma aba transborda na horizontal`, transb.length === 0, transb);
+    const transbAc = [];
+    for (const rota of ['t-proto/proto/p-bronquiolite', 't-mono/mono/f-haloperidol', 't-proto/neo/n-classificacao-e-exame-do-recem-nascido', 't-calc/esc/e-glasgow', 't-mono/pps/m-amoxicilina']) {
+      await p.evaluate(i => { location.hash = '#' + i; }, rota); await p.waitForTimeout(700);
+      const sw = await p.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+      const h2 = await p.evaluate(() => { const e = document.querySelector('section.tab.active .ac-leitor h2'); return e ? e.textContent : ''; });
+      if (sw > 1 || !h2) transbAc.push(rota + ':' + sw + ':' + h2);
+    }
+    t(`${largura} px: itens do acervo abrem sem transbordar`, transbAc.length === 0, transbAc);
+    if (largura === 390) await p.screenshot({ path: path.join(RAIZ, 'tests/shots/mob-acervo-pps.png') });
     if (largura === 390) {
       await p.evaluate(() => { location.hash = '#t-sala'; }); await p.waitForTimeout(80);
       t('celular: menu começa fechado', !(await p.evaluate(() => document.getElementById('side').className.includes('open'))));

@@ -63,19 +63,19 @@ var CHOQUES = {
 };
 
 /* ---------- equipamentos por zona de peso ---------- */
-var EQUIP_ITENS = ["Tubo traqueal sem cuff", "Tubo traqueal com cuff", "Lâmina do laringoscópio", "Cânula orofaríngea", "Máscara laríngea", "Sonda de aspiração", "Sonda gástrica", "Sonda vesical", "Dreno de tórax", "Cateter venoso", "Bolsa-válvula-máscara", "Agulha intraóssea (EZ-IO®)", "Pás do desfibrilador"];
+var EQUIP_ITENS = ["Tubo traqueal sem cuff", "Tubo traqueal com cuff", "Lâmina do laringoscópio", "Cânula orofaríngea", "Máscara laríngea", "Sonda de aspiração", "Sonda gástrica", "Sonda vesical", "Dreno de tórax", "Cateter venoso periférico", "Bolsa-válvula-máscara", "Agulha intraóssea (EZ-IO®)", "Pás do desfibrilador", "Cateter venoso central", "Cateter arterial", "Cateter para descompressão torácica", "Guia bougie"];
 var EQUIP = {
-  sub:      ["2,5–3,0 mm", "não usar", "Reta nº 0", "30–40 mm", "nº 1", "5–6 Fr", "5 Fr", "5 Fr", "8–10 Fr", "24 G", "Neonatal (250 mL)", "Agulha manual 18 G (EZ-IO® não indicada abaixo de 3 kg)", "Infantis"],
-  cinza:    ["3,0–3,5 mm", "3,0 mm", "Reta nº 0–1", "40–50 mm", "nº 1", "6–8 Fr", "5–8 Fr", "5–8 Fr", "10–12 Fr", "22–24 G", "Lactente (450–500 mL)", "15 mm (rosa)", "Infantis"],
-  rosa:     ["3,5 mm", "3,0 mm", "Reta nº 1", "50 mm", "nº 1,5", "8 Fr", "5–8 Fr", "8 Fr", "10–12 Fr", "22–24 G", "Lactente (450–500 mL)", "15 mm (rosa)", "Infantis"],
-  vermelha: ["3,5 mm", "3,0 mm", "Reta nº 1", "50 mm", "nº 1,5", "8 Fr", "5–8 Fr", "8 Fr", "10–12 Fr", "22–24 G", "Criança (450–500 mL)", "15 mm (rosa)", "Infantis"],
-  roxa:     ["4,0 mm", "3,5 mm", "Reta nº 1", "60 mm", "nº 2", "8–10 Fr", "8–10 Fr", "8–10 Fr", "16–20 Fr", "20–24 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto (acima de 10 kg)"],
-  amarela:  ["4,5 mm", "4,0 mm", "Reta nº 2", "60 mm", "nº 2", "10 Fr", "10 Fr", "10 Fr", "20–24 Fr", "18–22 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto"],
-  branca:   ["5,0 mm", "4,5 mm", "Reta ou curva nº 2", "60 mm", "nº 2", "10 Fr", "10 Fr", "10–12 Fr", "20–24 Fr", "18–22 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto"],
-  azul:     ["5,5 mm", "5,0 mm", "Reta ou curva nº 2", "70 mm", "nº 2–2,5", "10 Fr", "12–14 Fr", "10–12 Fr", "24–32 Fr", "18–20 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto"],
-  laranja:  ["preferir com cuff", "5,5–6,0 mm", "Reta ou curva nº 2", "80 mm", "nº 2,5", "10 Fr", "14–18 Fr", "12 Fr", "28–32 Fr", "18–20 G", "Criança ou adulto", "15 mm (rosa)", "Adulto"],
-  verde:    ["preferir com cuff", "6,0–6,5 mm", "Reta ou curva nº 3", "80 mm", "nº 3", "10–12 Fr", "16–18 Fr", "12 Fr", "32–38 Fr", "16–20 G", "Adulto (1.600 mL)", "15 mm (rosa)", "Adulto"],
-  adulto:   ["não usar", "7,0–8,0 mm", "Curva nº 3–4", "80–100 mm", "nº 3 (30–50 kg); nº 4 (50–70 kg); nº 5 (> 70 kg)", "12–14 Fr", "14–18 Fr", "14–16 Fr", "28–36 Fr", "14–18 G", "Adulto (1.600 mL)", "25 mm (azul); 45 mm (amarela) no úmero ou com tecido espesso", "Adulto"]
+  sub:      ["2,5–3,0 mm", "não usar", "Reta nº 0", "30–40 mm", "nº 1", "5–6 Fr", "5 Fr", "5 Fr", "8–10 Fr", "24 G", "Neonatal (250 mL)", "Agulha manual 18 G (EZ-IO® não indicada abaixo de 3 kg)", "Infantis", "3 Fr (umbilical 3,5–5 Fr)", "24 G", "18–20 G (NRP) ou escalpe 23 G", "5–6 Fr"],
+  cinza:    ["3,0–3,5 mm", "3,0 mm", "Reta nº 0–1", "40–50 mm", "nº 1", "6–8 Fr", "5–8 Fr", "5–8 Fr", "10–12 Fr", "22–24 G", "Lactente (450–500 mL)", "15 mm (rosa)", "Infantis", "3–4 Fr", "24 G", "20–22 G", "5–6 Fr"],
+  rosa:     ["3,5 mm", "3,0 mm", "Reta nº 1", "50 mm", "nº 1,5", "8 Fr", "5–8 Fr", "8 Fr", "10–12 Fr", "22–24 G", "Lactente (450–500 mL)", "15 mm (rosa)", "Infantis", "4 Fr", "24 G", "20–22 G", "5–6 Fr"],
+  vermelha: ["3,5 mm", "3,0 mm", "Reta nº 1", "50 mm", "nº 1,5", "8 Fr", "5–8 Fr", "8 Fr", "10–12 Fr", "22–24 G", "Criança (450–500 mL)", "15 mm (rosa)", "Infantis", "4 Fr", "24 G", "18–20 G", "5–6 Fr"],
+  roxa:     ["4,0 mm", "3,5 mm", "Reta nº 1", "60 mm", "nº 2", "8–10 Fr", "8–10 Fr", "8–10 Fr", "16–20 Fr", "20–24 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto (acima de 10 kg)", "4 Fr", "22–24 G", "18 G", "6 Fr"],
+  amarela:  ["4,5 mm", "4,0 mm", "Reta nº 2", "60 mm", "nº 2", "10 Fr", "10 Fr", "10 Fr", "20–24 Fr", "18–22 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto", "4–5 Fr", "22 G", "18 G", "10 Fr"],
+  branca:   ["5,0 mm", "4,5 mm", "Reta ou curva nº 2", "60 mm", "nº 2", "10 Fr", "10 Fr", "10–12 Fr", "20–24 Fr", "18–22 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto", "5 Fr", "22 G", "16–18 G", "10 Fr"],
+  azul:     ["5,5 mm", "5,0 mm", "Reta ou curva nº 2", "70 mm", "nº 2–2,5", "10 Fr", "12–14 Fr", "10–12 Fr", "24–32 Fr", "18–20 G", "Criança (450–500 mL)", "15 mm (rosa)", "Adulto", "5 Fr", "22 G", "16–18 G", "10 Fr"],
+  laranja:  ["preferir com cuff", "5,5–6,0 mm", "Reta ou curva nº 2", "80 mm", "nº 2,5", "10 Fr", "14–18 Fr", "12 Fr", "28–32 Fr", "18–20 G", "Criança ou adulto", "15 mm (rosa)", "Adulto", "5 Fr", "22 G", "16 G", "10 Fr"],
+  verde:    ["preferir com cuff", "6,0–6,5 mm", "Reta ou curva nº 3", "80 mm", "nº 3", "10–12 Fr", "16–18 Fr", "12 Fr", "32–38 Fr", "16–20 G", "Adulto (1.600 mL)", "15 mm (rosa)", "Adulto", "5–7 Fr", "20–22 G", "14–16 G", "10 Fr (15 Fr se o tubo for 6,0 ou maior)"],
+  adulto:   ["não usar", "7,0–8,0 mm", "Curva nº 3–4", "80–100 mm", "nº 3 (30–50 kg); nº 4 (50–70 kg); nº 5 (> 70 kg)", "12–14 Fr", "14–18 Fr", "14–16 Fr", "28–36 Fr", "14–18 G", "Adulto (1.600 mL)", "25 mm (azul); 45 mm (amarela) no úmero ou com tecido espesso", "Adulto", "7 Fr (duplo ou triplo lúmen)", "20 G", "14 G com 8 cm ou toracostomia digital", "15 Fr"]
 };
 
 // Tuberculose: mg/kg até 10 anos; a partir daí, comprimido de dose fixa (linha E).
@@ -105,8 +105,8 @@ var SINDROMES = {
     { l: "4ª", n: "Meropenem", d: { k: [20, 40] }, int: "8/8 h (12/12 h se < 14 dias e < 32 semanas)", via: "EV", dur: "Conforme cultura", renal: "Sim", esp: "Gram-negativo resistente; 40 mg/kg/dose na meningite" },
     { l: "5ª", n: "Polimixina B", d: { k: [15000, 40000], per: "dia", n: 2, u: "UI" }, int: "12/12 h", via: "EV", dur: "Conforme cultura", renal: "Não (nefrotóxica)", esp: "Gram-negativo multirresistente, só com a comissão de infecção. Fora do período neonatal: 15.000–25.000 UI/kg/dia" }
   ]},
-  pneu: { t: "Pneumonia comunitária", nota: "SBP 2022. Menores de 2 meses: internar e tratar com ampicilina ou penicilina cristalina + gentamicina 7,5 mg/kg/dia. Internar se SpO₂ < 92%, desconforto moderado a grave, recusa alimentar ou toxemia.", linhas: [
-    { l: "1ª", n: "Amoxicilina", d: { k: 50, per: "dia", n: 3, maxDia: 4000 }, int: "8/8 h (ou 12/12 h)", via: "VO", dur: "7 dias (5 se não grave e com boa evolução)", renal: "Sim", esp: "Pneumococo. Ambulatorial, de 2 meses a 5 anos e também nos maiores" },
+  pneu: { t: "Pneumonia comunitária", nota: "Amoxicilina: o Manual PPS e a AAP/IDSA usam 80–90 mg/kg/dia de 12/12 h; a SBP 2022 aceita 50 mg/kg/dia de 8/8 h na pneumonia não grave. Menores de 2 meses: internar e tratar com ampicilina ou penicilina cristalina + gentamicina 7,5 mg/kg/dia. Internar se SpO₂ < 92%, desconforto moderado a grave, recusa alimentar ou toxemia.", linhas: [
+    { l: "1ª", n: "Amoxicilina", d: { k: [80, 90], per: "dia", n: 2, maxDia: 4000 }, int: "12/12 h", via: "VO", dur: "7 dias (5 se não grave e com boa evolução)", renal: "Sim", esp: "Pneumococo. Ambulatorial, a partir de 2 meses. Alternativa da SBP 2022: 50 mg/kg/dia de 8/8 h" },
     { l: "2ª", comp: [{ n: "Ampicilina", d: { k: 50, max: 2000 } }, { n: "ou penicilina cristalina", d: { k: 150000, per: "dia", n: 4, u: "UI" } }], int: "6/6 h", via: "EV", dur: "7–10 dias; passar para via oral ao melhorar", renal: "Sim", esp: "Primeira escolha no internado" },
     { l: "3ª", n: "Ceftriaxona", d: { k: [50, 100], per: "dia", n: 1, max: 2000, maxDia: 4000 }, int: "24 h (ou 12/12 h)", via: "EV ou IM", dur: "7–10 dias", renal: "Não", esp: "Grave, vacinação incompleta, HIV, falha em 48–72 h" },
     { l: "4ª", n: "Azitromicina", d: { k: 10, per: "dia", n: 1, maxDia: 500 }, int: "24 h", via: "VO", dur: "5 dias", renal: "Não", esp: "Suspeita de Mycoplasma ou Chlamydophila: associar ou substituir. Claritromicina 15 mg/kg/dia ÷ 2 por 7–10 dias" },
@@ -181,7 +181,9 @@ var SINDROMES = {
   ]},
   faringo: { t: "Faringoamigdalite estreptocócica", nota: "Tratar com teste rápido ou cultura positivos, ou quadro típico acima de 3 anos. Objetivo principal: prevenir febre reumática.", linhas: [
     { l: "1ª", n: "Penicilina G benzatina", f: function (p) {
-        return p.peso < 20 ? { kg: "< 20 kg: 600.000 UI", dose: "600 000 UI", teto: "1.200.000 UI" } : { kg: "≥ 20 kg: 1.200.000 UI", dose: "1 200 000 UI", teto: "1.200.000 UI" };
+        if (p.peso < 20) return { kg: "até 20 kg: 600.000 UI", dose: "600 000 UI", teto: "1.200.000 UI" };
+        if (p.peso < 27) return { kg: "entre 20 e 27 kg as fontes divergem", dose: "600 000 UI (corte de 27 kg: Manual PPS e AAP) ou 1 200 000 UI (corte de 20 kg: Ministério da Saúde)", teto: "1.200.000 UI" };
+        return { kg: "a partir de 27 kg: 1.200.000 UI", dose: "1 200 000 UI", teto: "1.200.000 UI" };
       }, int: "Dose única", via: "IM profundo", dur: "1 dose", renal: "Não", esp: "Garante adesão" },
     { l: "2ª", n: "Amoxicilina", d: { k: 50, per: "dia", n: 2, maxDia: 1000 }, int: "12/12 h (ou 1 vez ao dia)", via: "VO", dur: "10 dias", renal: "Sim", esp: "Estreptococo do grupo A" },
     { l: "3ª", n: "Cefalexina", d: { k: [40, 50], per: "dia", n: 2, max: 500 }, int: "12/12 h", via: "VO", dur: "10 dias", renal: "Sim", esp: "Alergia não anafilática à penicilina" },
@@ -189,8 +191,8 @@ var SINDROMES = {
     { l: "5ª", n: "Clindamicina", d: { k: 20, per: "dia", n: 3, max: 300 }, int: "8/8 h", via: "VO", dur: "10 dias", renal: "Não", esp: "Alergia grave; recorrência" }
   ]},
   oma: { t: "Otite média aguda e rinossinusite bacteriana", nota: "Otite: analgesia sempre; observar 48–72 h é opção acima de 2 anos, unilateral e sem gravidade. Duração: menores de 2 anos 10 dias; 2–5 anos 7 dias; maiores 5–7 dias. Sinusite: 10–14 dias.", linhas: [
-    { l: "1ª", n: "Amoxicilina", d: { k: 50, per: "dia", n: 3, max: 500 }, int: "8/8 h (ou 12/12 h)", via: "VO", dur: "Conforme idade e foco", renal: "Sim", esp: "Sem fator de risco para pneumococo resistente" },
-    { l: "2ª", n: "Amoxicilina em dose alta", d: { k: [80, 90], per: "dia", n: 2, maxDia: 4000 }, int: "12/12 h", via: "VO", dur: "Idem", renal: "Sim", esp: "Menor de 2 anos, creche, antibiótico nos últimos 30 dias" },
+    { l: "1ª", n: "Amoxicilina em dose alta", d: { k: [80, 90], per: "dia", n: 2, maxDia: 4000 }, int: "12/12 h", via: "VO", dur: "Conforme idade e foco", renal: "Sim", esp: "Esquema do Manual PPS quando o antibiótico está indicado" },
+    { l: "2ª", n: "Amoxicilina em dose padrão", d: { k: 50, per: "dia", n: 3, max: 500 }, int: "8/8 h (ou 12/12 h)", via: "VO", dur: "Idem", renal: "Sim", esp: "Alternativa acima de 2 anos, sem creche e sem antibiótico nos últimos 30 dias" },
     { l: "3ª", n: "Amoxicilina + clavulanato", d: { k: [50, 90], per: "dia", n: 2, maxDia: 4000 }, int: "12/12 h", via: "VO", dur: "Idem", renal: "Sim", esp: "Falha em 48–72 h, conjuntivite associada. 90 mg/kg/dia só com a formulação ES (600 + 42,9)" },
     { l: "4ª", n: "Ceftriaxona", d: { k: 50, per: "dia", n: 1, maxDia: 1000 }, int: "24 h", via: "IM ou EV", dur: "1–3 doses", renal: "Não", esp: "Vômitos, falha ou sem via oral" },
     { l: "5ª", comp: [{ n: "Cefuroxima axetil", d: { k: 30, per: "dia", n: 2, max: 500 } }, { n: "ou claritromicina", d: { k: 15, per: "dia", n: 2, max: 500 } }], int: "12/12 h", via: "VO", dur: "Idem", renal: "Sim", esp: "Alergia à penicilina: não grave (cefuroxima) ou grave (macrolídeo)" }
@@ -248,7 +250,7 @@ var SINAIS = [
   { id: "sangramento", l: "Sangramento" }, { id: "exposicao", l: "Exposição a tóxico ou medicamento" }
 ];
 var HIPOTESES = [
-  { sind: "Pneumonia", sis: "respiratório", sinais: ["febre", "tosse", "dispneia"], etio: "Pneumococo, vírus respiratórios, Mycoplasma (acima de 5 anos)", conf: "Taquipneia, crepitações, opacidade alveolar na radiografia", afasta: "Frequência respiratória normal, ausculta e radiografia limpas", exame: "Radiografia de tórax e oximetria; hemograma e proteína C reativa se for internar", prox: "Amoxicilina 50 mg/kg/dia por 7 dias; oxigênio se SpO₂ < 92%; internar conforme critérios" },
+  { sind: "Pneumonia", sis: "respiratório", sinais: ["febre", "tosse", "dispneia"], etio: "Pneumococo, vírus respiratórios, Mycoplasma (acima de 5 anos)", conf: "Taquipneia, crepitações, opacidade alveolar na radiografia", afasta: "Frequência respiratória normal, ausculta e radiografia limpas", exame: "Radiografia de tórax e oximetria; hemograma e proteína C reativa se for internar", prox: "Amoxicilina 80–90 mg/kg/dia de 12/12 h por 7 dias (Manual PPS); a SBP 2022 aceita 50 mg/kg/dia. Oxigênio se SpO₂ < 92%; internar conforme critérios" },
   { sind: "Bronquiolite ou crise de sibilância", sis: "respiratório", sinais: ["sibilo", "tosse", "dispneia"], etio: "Vírus sincicial respiratório e outros vírus (lactente); asma (maiores)", conf: "Primeiro episódio de sibilância em menor de 2 anos com pródromo viral; ou história de crises", afasta: "Febre alta persistente com toxemia; estridor", exame: "Diagnóstico clínico; oximetria. Radiografia só se grave ou atípico", prox: "Bronquiolite: suporte, oxigênio, hidratação, alto fluxo se grave. Asma: salbutamol, ipratrópio e corticoide" },
   { sind: "Crupe (laringotraqueíte viral)", sis: "respiratório", sinais: ["estridor", "tosse", "febre"], etio: "Parainfluenza e outros vírus", conf: "Tosse ladrante, rouquidão, estridor inspiratório, de 6 meses a 5 anos", afasta: "Sialorreia, postura em tripé e toxemia (epiglotite, traqueíte); início súbito sem pródromo (corpo estranho)", exame: "Diagnóstico clínico; escore de Westley", prox: "Dexametasona 0,15–0,6 mg/kg em dose única; adrenalina nebulizada se estridor em repouso" },
   { sind: "Anafilaxia", sis: "sistêmico", sinais: ["urticaria", "dispneia", "sibilo", "vomito", "estridor"], etio: "Alimentos, medicamentos, insetos, látex", conf: "Início súbito de sintomas de pele ou mucosa com comprometimento respiratório, circulatório ou gastrointestinal", afasta: "Urticária isolada sem outros sistemas", exame: "Diagnóstico clínico; não atrasar o tratamento", prox: "Adrenalina IM 0,01 mg/kg na coxa, imediatamente; observar 4–6 h" },
@@ -312,6 +314,7 @@ var GRUPOS = [
   { g: "Fármacos", n: 2, tabs: [["t-dil", "Diluições calculadas"], ["t-repertorio", "Repertório ANVISA"], ["t-atb", "Antibióticos por linha"], ["t-pos", "Posologias por peso"]] },
   { g: "Suporte", n: 3, tabs: [["t-soro", "Soroterapia"], ["t-corr", "Correção hidroeletrolítica"], ["t-vm", "Ventilação invasiva"], ["t-vni", "VNI e CPAP"], ["t-desmame", "Desmame e assincronia"]] },
   { g: "Raciocínio", n: 4, tabs: [["t-escores", "Escores"], ["t-diag", "Diagnóstico sindrômico"], ["t-exames", "Exames iniciais"], ["t-img", "Imagens e laudos"]] },
-  { g: "Alta e documentos", n: 5, tabs: [["t-alta", "Receita de alta"], ["t-docs", "Modelos de documentos"], ["t-novidades", "Novidades"]] }
+  { g: "Alta e documentos", n: 5, tabs: [["t-alta", "Receita de alta"], ["t-docs", "Modelos de documentos"], ["t-novidades", "Novidades"]] },
+  { g: "Acervo integrado", n: 6, tabs: [["t-proto", "Protocolos por diagnóstico"], ["t-mono", "Monografias e Manual PPS"], ["t-calc", "Calculadoras de escores"], ["t-acervo", "Acervo e fontes"]] }
 ];
 var PESOS_RAPIDOS = [3.5, 5, 9, 13, 18, 28, 50, 70];
