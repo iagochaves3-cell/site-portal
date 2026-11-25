@@ -472,6 +472,41 @@ for reg in dados["casos"]:
     confere(c, "dgC", b["dgC"], [mln(10 * kg)]); confere(c, "dgD", b["dgD"], [mln(20 * kg)])
     confere(c, "dgCman", b["dgCman"], [mln(25 * kg), "6", vaz(25 * kg / 6), mln(25 * kg), "8", vaz(25 * kg / 8)])
 
+    # trilhas OMS × RCH × NICE (Guia de soroterapia do autor)
+    hsd = holliday(kg); Mh = hsd / 24; T = b["soTrilhas"]
+    def trilha(nome): return next((r for r in T if r[0].startswith(nome)), None)
+    r = trilha("OMS, Plano B"); confere(c, "trilha/OMS B/volume", r[1], [mln(75 * kg), "4"]); confere(c, "trilha/OMS B/vazão", r[2], [vaz(75 * kg / 4)])
+    r = trilha("OMS, Plano C")
+    if neo: total += 1; (r[1] == "—") or falhas.append(f"{kg} kg | trilha C no RN deveria estar vazia")
+    elif a < 1: confere(c, "trilha/OMS C/volume", r[1], [mln(100 * kg), "6"]); confere(c, "trilha/OMS C/vazão", r[2], [vaz(30 * kg), "1", vaz(14 * kg), "5"])
+    else: confere(c, "trilha/OMS C/volume", r[1], [mln(100 * kg), "3"]); confere(c, "trilha/OMS C/vazão", r[2], [vaz(60 * kg), "30", vaz(28 * kg), "2", "30"])
+    r = trilha("RCH, venoso"); confere(c, "trilha/RCH EV/volume", r[1], [mln(hsd + 50 * kg), "24"]); confere(c, "trilha/RCH EV/vazão", r[2], [vaz((hsd + 50 * kg) / 24)])
+    r = trilha("RCH, sonda rápida")
+    if a < 0.5: total += 1; (r[1] == "—") or falhas.append(f"{kg} kg, {c['idade']} | sonda rápida abaixo de 6 meses deveria estar bloqueada")
+    else: confere(c, "trilha/RCH rápida/volume", r[1], faixa(40 * kg, 100 * kg, mln)); confere(c, "trilha/RCH rápida/vazão", r[2], faixa(10 * kg, min(25 * kg, 300), vaz))
+    r = trilha("RCH, sonda lenta"); confere(c, "trilha/RCH lenta/volume", r[1], [mln(50 * kg), "6"]); confere(c, "trilha/RCH lenta/vazão", r[2], [vaz(50 * kg / 6), vaz(Mh), "18"])
+    r = trilha("NICE, oral"); confere(c, "trilha/NICE oral/volume", r[1], [mln(50 * kg + 4 * Mh), "4"]); confere(c, "trilha/NICE oral/vazão", r[2], [vaz((50 * kg + 4 * Mh) / 4)])
+    r = trilha("NICE, venoso sem"); confere(c, "trilha/NICE EV/volume", r[1], [mln(50 * kg + hsd), "24"]); confere(c, "trilha/NICE EV/vazão", r[2], [vaz((50 * kg + hsd) / 24)])
+    r = trilha("NICE, venoso após"); confere(c, "trilha/NICE choque/volume", r[1], [mln(100 * kg + hsd), "24"]); confere(c, "trilha/NICE choque/vazão", r[2], [vaz((100 * kg + hsd) / 24)])
+    r = trilha("NICE, bolus"); confere(c, "trilha/NICE bolus", r[1], [mln(min(10 * kg, 500))])
+
+    # plano gradual com os valores iniciais: déficit de 5%, manutenção de 100%, 24 h, sem perdas, glicose 5%
+    base_pg = Mh + 50 * kg / 24
+    confere(c, "plano/déficit", b["pgDefOut"], [mln(50 * kg), "5", num(kg), "24"])
+    confere(c, "plano/manutenção", b["pgM"], [vaz(Mh), num(hsd)])
+    confere(c, "plano/déficit por hora", b["pgDT"], [vaz(50 * kg / 24)])
+    confere(c, "plano/vazão", b["pgR"], [vaz(base_pg)])
+    confere(c, "plano/24 h", b["pgV24"], [mln(base_pg * 24)])
+    confere(c, "plano/TIG", b["pgTig"], [f"{arred(50 * base_pg / (kg * 60), 2):.2f}".replace(".", ",")])
+    vol = base_pg * 24; nb = math.ceil(vol / 500 - 1e-9); ult = vol - 500 * (nb - 1)
+    h1 = lambda x: _fmt(x, 1)
+    confere(c, "plano/bolsas", b["pgBolsas"], ["1", mln(vol), "24"] if nb == 1 else [str(nb), "500", h1(500 / base_pg), mln(ult), h1(ult / base_pg)])
+
+    # preparo com os valores iniciais: 500 mL de NaCl 0,9% + glicose 5% com SF, G50 e NaCl 20%, sem potássio
+    vg = 500 * 5 / 50; vna = 9 * vg / (200 - 9); vsf = 500 - vg - vna
+    fp = lambda v: _fmt(v, 1) if v >= 10 else _fmt(v, 2)
+    confere(c, "preparo/SF", b["ppTab"][0][1], [fp(vsf)]); confere(c, "preparo/G50", b["ppTab"][1][1], [fp(vg)]); confere(c, "preparo/NaCl", b["ppTab"][2][1], [fp(vna)])
+
     # correção
     confere(c, "coFrac", b["coFrac"], [str(rj(fr * 100))])
     confere(c, "coAgua", b["coAgua"], [f"{arred(fr * kg, 1):.1f}".replace(".", ",")])

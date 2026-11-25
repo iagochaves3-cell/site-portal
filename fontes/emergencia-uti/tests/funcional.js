@@ -273,11 +273,13 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
 
   // 16c. acervo integrado
   await page.goto(URL0 + '#t-proto'); await page.waitForTimeout(700);
-  t('acervo: índice carrega com 559 temas em Protocolos', (await $v('acn-t-proto')).startsWith('559 itens'), await $v('acn-t-proto'));
+  t('acervo: índice carrega com 735 itens em Protocolos', (await $v('acn-t-proto')).startsWith('735 itens'), await $v('acn-t-proto'));
   const cont = await page.evaluate(() => { const c = {}; (window.__acervoIdx || []).forEach(e => { c[e.g] = (c[e.g] || 0) + 1; }); return c; });
-  t('acervo: 1.809 itens nas seis coleções (110, 362, 87, 266, 498, 486)', JSON.stringify(cont) === JSON.stringify({ proto: 110, tera: 362, neo: 87, pps: 266, mono: 498, esc: 486 }), cont);
+  const esperado = { proto: 110, tera: 362, neo: 87, pps: 266, mono: 498, esc: 486, trat: 161, soro: 15 };
+  t('acervo: 1.985 itens nas oito coleções', Object.keys(esperado).every(k => cont[k] === esperado[k]) && Object.keys(cont).length === 8, cont);
   await page.fill('#acq-t-proto', 'bronquiolite'); await page.waitForTimeout(300);
-  t('acervo: busca acha os 2 temas de bronquiolite', (await page.$$eval('#acl-t-proto button', b => b.length)) === 2, await $v('acn-t-proto'));
+  const bq = await page.$$eval('#acl-t-proto button', b => b.map(x => x.firstChild.textContent));
+  t('acervo: busca traz primeiro os temas de bronquiolite e depois as combinações do Tratado', bq.length >= 3 && bq.slice(0, 3).every(x => x.startsWith('Bronquiolite')), bq);
   await page.click('#acl-t-proto button'); await page.waitForTimeout(500);
   t('acervo: abrir tema mostra título, origem e situação, e atualiza o endereço', (await page.textContent('#acr-t-proto h2')) === 'Bronquiolite' && (await page.textContent('#acr-t-proto')).includes('Situação declarada na origem') && (await page.evaluate(() => location.hash)) === '#t-proto/proto/p-bronquiolite');
   await page.click('#t-proto button[data-copy]'); await page.waitForTimeout(150);
@@ -309,7 +311,56 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
   await page.fill('#navSearch', ''); await page.waitForTimeout(80);
   await page.goto(URL0 + '#t-acervo'); await page.waitForTimeout(200);
   const tam = await page.evaluate(() => ['acGrupos', 'acRecon', 'acSites', 'acDrive'].map(i => document.getElementById(i).rows.length));
-  t('aba Acervo e fontes: coleções, conferência, sites e documentos', JSON.stringify(tam) === '[6,15,30,7]', tam);
+  t('aba Acervo e fontes: coleções, conferência, sites e documentos', JSON.stringify(tam) === '[8,15,30,7]', tam);
+
+  // 16d. Guia de soroterapia e Tratado (Drive do autor)
+  await page.goto(URL0 + '#t-soro'); await page.waitForTimeout(150);
+  await setar('sexo', 'M'); await setar('idade', '18 meses'); await setar('peso', '10'); await page.waitForTimeout(120);
+  const tri = await page.evaluate(() => Array.from(document.querySelectorAll('#soTrilhas tr')).map(r => Array.from(r.cells).map(c => c.textContent.replace(/ /g, ' '))));
+  const lin = n => tri.find(r => r[0].startsWith(n)) || [];
+  t('trilhas, exemplo do Guia (10 kg, 18 meses): OMS B 750 mL em 4 h a 188 mL/h (187,5 arredondado)', lin('OMS, Plano B')[1] === '750 mL em 4 h' && lin('OMS, Plano B')[2] === '188 mL/h', lin('OMS, Plano B'));
+  t('trilhas: Plano C 600 mL/h por 30 min e 280 mL/h por 2 h 30 min', lin('OMS, Plano C')[2] === '600 mL/h por 30 min; depois 280 mL/h por 2 h 30 min', lin('OMS, Plano C'));
+  t('trilhas: RCH venoso e NICE sem choque a 62,5 mL/h; NICE após choque a 83,3 mL/h', lin('RCH, venoso')[2] === '62,5 mL/h' && lin('NICE, venoso sem')[2] === '62,5 mL/h' && lin('NICE, venoso após')[2] === '83,3 mL/h', [lin('RCH, venoso')[2], lin('NICE, venoso após')[2]]);
+  await page.fill('#pgPerdas', '80'); await page.waitForTimeout(80);
+  const pg = await page.evaluate(() => ['pgR', 'pgV24', 'pgTig', 'pgBolsas'].map(i => document.getElementById(i).textContent.replace(/ /g, ' ')));
+  t('plano gradual do Guia: 82,5 mL/h nas primeiras 4 h, 62,5 depois, 1580 mL, TIG 5,21 e 3 bolsas de 8 h', pg[0] === '82,5 mL/h nas primeiras 4 h; depois 62,5 mL/h' && pg[1] === '1580 mL' && pg[2].startsWith('5,21 mg/kg/min') && pg[3] === '3 bolsas: cada 500 mL dura 8 h; a última, 500 mL em 8 h', pg);
+  await page.fill('#pgPerdas', '0'); await setar('peso', '9'); await page.fill('#pgAnt', '10'); await page.waitForTimeout(80);
+  const pgB = await page.evaluate(() => ['pgDefOut', 'pgR'].map(i => document.getElementById(i).textContent.replace(/ /g, ' ')));
+  t('caso B do Guia: déficit de 1000 mL (10%), 500 mL nas primeiras 24 h e 62,5 mL/h', pgB[0] === '1000 mL (10% do peso de 10 kg); 500 mL nas primeiras 24 h e 500 mL depois de reavaliar' && pgB[1] === '62,5 mL/h', pgB);
+  await page.fill('#pgAnt', ''); await setar('peso', '18'); await setar('idade', '4 anos');
+  const prep = async () => page.evaluate(() => Array.from(document.querySelectorAll('#ppTab tr')).map(r => Array.from(r.cells).map(c => c.textContent.replace(/ /g, ' ')).join(': ')));
+  let pp = await prep();
+  t('preparo: SF 447,6 + G50 50 + NaCl 20% 2,36 = 500 mL', pp.join('|') === 'Soro fisiológico 0,9%: 447,6 mL|Glicose 50%: 50 mL|NaCl 20%: 2,36 mL|Volume final: 500 mL', pp);
+  t('preparo: conferência dá 9 mg/mL de NaCl e 50 mg/mL de glicose', (await $v('ppConf')).includes('= 9 mg/mL (0,9%)') && (await $v('ppConf')).includes('= 50 mg/mL (5%)'), await $v('ppConf'));
+  await setar('ppEst', 'sg5'); await setar('ppNa', '100'); pp = await prep();
+  t('preparo: SG 5% 450 + G50 5 + NaCl 10% 45', pp.join('|') === 'Soro glicosado 5%: 450 mL|Glicose 50%: 5 mL|NaCl 10%: 45 mL|Volume final: 500 mL', pp);
+  await setar('ppNa', '200'); pp = await prep();
+  t('preparo: SG 5% 475 + G50 2,5 + NaCl 20% 22,5', pp.join('|') === 'Soro glicosado 5%: 475 mL|Glicose 50%: 2,5 mL|NaCl 20%: 22,5 mL|Volume final: 500 mL', pp);
+  await setar('ppGli', '2.5'); pp = await prep();
+  t('preparo: SG 5% não chega a glicose 2,5% e o site avisa', pp.length === 1 && pp[0].startsWith('Este estoque não alcança'), pp);
+  await setar('ppGli', '5'); await setar('ppEst', 'sf50'); await setar('ppK', '20'); pp = await prep();
+  t('preparo com KCl 19,1% a 20 mEq/L: 3,91 mL (10 mEq) e NaCl recalculado', pp.join('|') === 'Soro fisiológico 0,9%: 443,6 mL|Glicose 50%: 50 mL|NaCl 20%: 2,54 mL|KCl 19,1%: 3,91 mL (10 mEq)|Volume final: 500 mL' && (await page.isVisible('#ppAviso')), pp);
+  await setar('ppK', '0');
+  await page.goto(URL0 + '#t-diag'); await page.waitForTimeout(150);
+  await page.fill('#tsBusca', 'petéquias febre'); await page.waitForTimeout(900);
+  let ts = await page.$$eval('#tsOut h4', h => h.map(x => x.textContent));
+  t('Tratado: busca por "petéquias febre" traz a meningococcemia primeiro', ts.length >= 3 && ts[0].startsWith('17. Meningococcemia'), ts.slice(0, 3));
+  await page.check('#diagChecks input[value="estridor"]'); await page.check('#diagChecks input[value="tosse"]');
+  await page.click('#tsMarcados'); await page.waitForTimeout(300);
+  ts = await page.$$eval('#tsOut h4', h => h.map(x => x.textContent));
+  t('Tratado: sinais marcados (estridor e tosse) trazem o crupe entre os primeiros', ts.slice(0, 3).some(x => x.startsWith('5. Crupe')), ts.slice(0, 3));
+  await page.click('#diagLimpar');
+  await page.click('#tsOut a[href="#t-proto/trat/c-005"]'); await page.waitForTimeout(900);
+  t('Tratado: "Abrir no acervo" mostra a combinação', (await ativa())[0] === 't-proto' && (await page.textContent('#acr-t-proto h2')).startsWith('Crupe viral'));
+  await page.goto(URL0 + '#t-proto/trat/c-030'); await page.reload(); await page.waitForTimeout(900);
+  const rel = await page.$$eval('#acr-t-proto .ac-ln a', a => a.map(x => x.getAttribute('href')));
+  t('Tratado: combinação liga ao tema do acervo', rel.length >= 1 && /^#t-proto\/(proto|tera|neo)\//.test(rel[0]), rel);
+  await page.click('#acr-t-proto .ac-ln a'); await page.waitForTimeout(900);
+  t('Tratado: o link abre o protocolo relacionado', (await page.textContent('#acr-t-proto h2')).startsWith('Invaginação'));
+  await page.goto(URL0 + '#t-proto/trat/c-correcoes'); await page.reload(); await page.waitForTimeout(900);
+  t('Tratado: tabela com as 28 correções', (await page.$$eval('#acr-t-proto tbody tr', r => r.length)) === 28);
+  await page.goto(URL0 + '#t-proto/soro/s-08-preparo'); await page.reload(); await page.waitForTimeout(900);
+  t('Guia de soroterapia: página de preparo com a tabela de 8 opções e link para a calculadora', (await page.$$eval('#acr-t-proto tbody tr', r => r.length)) === 8 && !!(await page.$('#acr-t-proto a[href="#t-soro"]')));
 
   // 17. acessibilidade básica
   const a11y = await page.evaluate(() => {
@@ -336,7 +387,7 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
     }
     t(`${largura} px: nenhuma aba transborda na horizontal`, transb.length === 0, transb);
     const transbAc = [];
-    for (const rota of ['t-proto/proto/p-bronquiolite', 't-mono/mono/f-haloperidol', 't-proto/neo/n-classificacao-e-exame-do-recem-nascido', 't-calc/esc/e-glasgow', 't-mono/pps/m-amoxicilina']) {
+    for (const rota of ['t-proto/proto/p-bronquiolite', 't-mono/mono/f-haloperidol', 't-proto/neo/n-classificacao-e-exame-do-recem-nascido', 't-calc/esc/e-glasgow', 't-mono/pps/m-amoxicilina', 't-proto/soro/s-08-preparo', 't-proto/soro/s-11-glicose', 't-proto/trat/c-122']) {
       await p.evaluate(i => { location.hash = '#' + i; }, rota); await p.waitForTimeout(700);
       const sw = await p.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
       const h2 = await p.evaluate(() => { const e = document.querySelector('section.tab.active .ac-leitor h2'); return e ? e.textContent : ''; });

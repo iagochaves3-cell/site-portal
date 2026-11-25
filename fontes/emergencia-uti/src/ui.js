@@ -791,6 +791,7 @@ var CALCS = [["Painel", cPainel], ["Estabilização", cEstab], ["Sala vermelha",
   ["Estado de mal", cMal], ["Trauma", cTrauma], ["Intoxicações", cIntox], ["Metabólicos", cMetab], ["Diluições", cDil], ["Repertório", cRep],
   ["Antibióticos", cAtb], ["Posologias", cPos], ["Soroterapia", cSoro], ["Correção", cCorr], ["Ventilação", cVm], ["VNI", cVni],
   ["Sedação para procedimento", cProced], ["Doses tóxicas", cToxicos], ["Modos ventilatórios", cModos],
+  ["Trilhas de soroterapia", cTrilhas], ["Plano gradual", cPlano], ["Preparo de soro", cPreparo],
   ["Gasometria", cGaso], ["Receita de alta", cAlta], ["Documentos", cDocs], ["Impressão", cPrint]];
 window.__erros = [];
 function recalc() {
@@ -876,7 +877,7 @@ function mostrarAba(id, foco) {
   if (AC.est[id]) {
     var pend = AC.pendente; AC.pendente = null;
     acervoAtivar(id, pend);
-    if (r.g) acervoAbrir(id, r.g, r.id, foco);
+    if (r.g) acervoAbrir(id, r.g, r.id, true);
   }
 }
 function abrirMenu() { $("side").className = "side no-print open"; mostra($("veu"), true); $("btnMenu").setAttribute("aria-expanded", "true"); }
@@ -1034,7 +1035,7 @@ function ligar() {
   $("coNa").oninput = function () { cCorr(); cMetab(); }; $("coNaAlvo").oninput = function () { cCorr(); cMetab(); };
   $("vmAlt").oninput = function () { cVm(); cModos(); };
   $("modoSel").onchange = cModos;
-  ligarAcervo();
+  ligarAcervo(); ligarNovos();
   cada(["gaNa", "gaCl", "gaHco", "gaGlic"], function (id) { $(id).oninput = cGaso; });
   $("diagChecks").onchange = cDiag;
   $("diagLimpar").onclick = function () { cada($("diagChecks").getElementsByTagName("input"), function (c) { c.checked = false; }); cDiag(); };

@@ -38,6 +38,41 @@
 <div class="kv"><span>Grupo D: SF 0,9% em até 20 min</span><span id="dgD" class="calc">—</span></div>
 <p class="helper" style="margin-top:8px">Um terço do volume oral como soro de reidratação e o restante com líquidos caseiros. Grupo C: repetir 10 mL/kg/h na 2ª hora e reavaliar o hematócrito. Grupo D: repetir até 3 vezes, reavaliando a cada 15–30 min. Não usar anti-inflamatório nem ácido acetilsalicílico.</p></div>
 </div>
+<div class="panel"><h3>Trilhas da OMS, da RCH e do NICE para este peso</h3><p class="helper">Guia de soroterapia do autor (25/10/2026). São alternativas para populações diferentes: escolher uma, sem somar. Manutenção por Holliday-Segar; prazo venoso de 24 h nos exemplos do NICE.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Trilha</th><th>Volume</th><th>Vazão</th><th>Observação</th></tr></thead><tbody id="soTrilhas"></tbody></table></div></div>
+<div class="panel"><h3>Plano gradual: manutenção, déficit e perdas</h3><p class="helper">Taxa = manutenção + déficit ÷ prazo + perdas ÷ janela − outros aportes (RCH e NICE). Choque, recém-nascido, cetoacidose, desnutrição grave, queimadura e disnatremia seguem protocolo próprio.</p>
+<div class="grid3">
+<div class="field"><label for="pgDef">Déficit estimado</label><select id="pgDef"><option value="0">Sem déficit</option><option value="3">3% do peso</option><option value="5" selected>5% do peso</option><option value="7">7% do peso</option><option value="10">10% do peso</option></select></div>
+<div class="field"><label for="pgAnt">Peso antes da doença (kg), se conhecido</label><input id="pgAnt" type="number" inputmode="decimal" step="0.1" min="0.5" max="260" placeholder="Opcional"></div>
+<div class="field"><label for="pgFrac">Manutenção</label><select id="pgFrac"><option value="100" selected>100% (Holliday-Segar)</option><option value="67">2/3, se risco de ADH</option></select></div>
+<div class="field"><label for="pgT">Prazo do déficit</label><select id="pgT"><option value="24" selected>24 h</option><option value="48">48 h (hipernatremia)</option></select></div>
+<div class="field"><label for="pgPerdas">Perdas medidas a repor (mL)</label><input id="pgPerdas" type="number" inputmode="decimal" step="1" min="0" value="0"></div>
+<div class="field"><label for="pgJan">Repor as perdas em</label><select id="pgJan"><option value="1">1 h</option><option value="4" selected>4 h</option></select></div>
+<div class="field"><label for="pgOutros">Outros aportes contínuos (mL/h)</label><input id="pgOutros" type="number" inputmode="decimal" step="0.1" min="0" value="0"></div>
+<div class="field"><label for="pgGli">Glicose na solução de manutenção e déficit</label><select id="pgGli"><option value="50" selected>Glicose 5%</option><option value="100">Glicose 10%</option><option value="0">Sem glicose</option></select></div>
+</div>
+<label class="marca-check"><input type="checkbox" id="pgRch" checked> Limitar o déficit a 5% do peso nas primeiras 24 h (RCH)</label>
+<div class="kv"><span>Déficit</span><span id="pgDefOut" class="calc">—</span></div>
+<div class="kv"><span>Manutenção</span><span id="pgM" class="calc">—</span></div>
+<div class="kv"><span>Déficit programado por hora</span><span id="pgDT" class="calc">—</span></div>
+<div class="kv"><span>Perdas por hora</span><span id="pgL" class="calc">—</span></div>
+<div class="kv"><span>Vazão total</span><span id="pgR" class="calc">—</span></div>
+<div class="kv"><span>Volume nas primeiras 24 h</span><span id="pgV24" class="calc">—</span></div>
+<div class="kv"><span>Taxa de infusão de glicose</span><span id="pgTig" class="calc">—</span></div>
+<div class="kv"><span>Bolsas de 500 mL de manutenção e déficit</span><span id="pgBolsas" class="calc">—</span></div>
+<div class="aviso" id="pgAviso" hidden></div></div>
+<div class="panel"><h3>Preparo de NaCl 0,9% com glicose no volume final exato</h3><p class="helper">Balanço de massa para a farmácia ou o preparo assistido: os volumes já somam o volume final. Preferir bolsa pronta quando houver.</p>
+<div class="grid3">
+<div class="field"><label for="ppVol">Volume final</label><select id="ppVol"><option value="250">250 mL</option><option value="500" selected>500 mL</option><option value="1000">1.000 mL</option></select></div>
+<div class="field"><label for="ppGli">Glicose final</label><select id="ppGli"><option value="2.5">2,5%</option><option value="5" selected>5%</option><option value="10">10%</option></select></div>
+<div class="field"><label for="ppEst">Estoque disponível</label><select id="ppEst"><option value="sf10">Soro fisiológico + glicose 10%</option><option value="sf25">Soro fisiológico + glicose 25%</option><option value="sf50" selected>Soro fisiológico + glicose 50%</option><option value="sg5">Soro glicosado 5% + glicose 50%</option></select></div>
+<div class="field"><label for="ppNa">NaCl concentrado</label><select id="ppNa"><option value="100">NaCl 10%</option><option value="200" selected>NaCl 20%</option></select></div>
+<div class="field"><label for="ppK">Potássio final</label><select id="ppK"><option value="0" selected>Sem potássio</option><option value="10">10 mEq/L</option><option value="20">20 mEq/L</option><option value="30">30 mEq/L</option><option value="40">40 mEq/L</option></select></div>
+<div class="field"><label for="ppKcl">KCl disponível</label><select id="ppKcl"><option value="1.341">KCl 10% (1,34 mEq/mL)</option><option value="2.012">KCl 15% (2,01 mEq/mL)</option><option value="2.56" selected>KCl 19,1% (2,56 mEq/mL)</option></select></div>
+</div>
+<div class="tbl"><table class="ref"><thead><tr><th>Componente</th><th>Volume</th></tr></thead><tbody id="ppTab"></tbody></table></div>
+<p class="helper" id="ppConf" style="margin-top:8px">—</p>
+<div class="aviso" id="ppAviso" hidden></div></div>
 <div class="light"><h3>Soluções isotônicas e balanceadas</h3><p>Na manutenção de 28 dias a 18 anos, usar solução isotônica (sódio de 130–154 mEq/L) com glicose e potássio: soluções hipotônicas aumentam o risco de hiponatremia (American Academy of Pediatrics, 2018). Exceções: recém-nascido, cardiopatia, doença renal ou hepática e perdas volumosas, que pedem prescrição individual.</p><p style="margin:0">Em expansões grandes e na sepse, preferir Ringer lactato ou outra solução balanceada, que causam menos hipercloremia. Na manutenção contínua, medir sódio, potássio e glicemia a cada 12–24 h e registrar balanço e diurese.</p></div>
 </section>
 
@@ -198,6 +233,11 @@
 </div>
 <div class="panel"><h3>Hipóteses em ordem de concordância</h3><p class="helper">A ordem conta os achados marcados que coincidem com cada síndrome. É um lembrete de diagnósticos, não uma probabilidade.</p>
 <div id="diagOut" aria-live="polite"></div></div>
+<div class="panel"><h3>Combinações semiológicas do Tratado</h3><p class="helper">As 160 constelações de sinais do Tratado do autor, com diagnóstico provável e diferenciais. Escreva sinais ou use os marcados acima; aparecem primeiro as combinações que reúnem mais termos.</p>
+<div class="field"><label for="tsBusca">Sinais, sintomas ou achados</label><input id="tsBusca" type="search" placeholder="Ex.: febre petéquias; vômitos biliosos; estridor" autocomplete="off"></div>
+<div class="actions no-print" style="margin:0 0 8px"><button class="btn-m" type="button" id="tsMarcados">Usar os sinais marcados acima</button></div>
+<p class="helper" id="tsInfo" aria-live="polite">Escreva ao menos 3 letras ou use os sinais marcados.</p>
+<div id="tsOut"></div></div>
 </section>
 
 <!-- ============ 22. EXAMES ============ -->
@@ -306,7 +346,7 @@
 <section class="tab" id="t-novidades" data-title="novidades atualizações diretrizes Surviving Sepsis 2026 AHA AAP 2025 PADIS Phoenix PALICC dengue VSR nirsevimabe ISPAD fontes referências" data-copiar="Copiar novidades">
 <div class="hero-head"><div><h1>Novidades e fontes</h1><p class="sub">O que mudou nas diretrizes recentes e as referências usadas nesta revisão.</p></div></div>
 <div class="light"><h3>Esta versão: acervo do autor integrado (25 de novembro de 2026)</h3><p class="helper">Junção com o projeto do agente Adapta e com os sites e documentos do autor.</p>
-<ul style="margin-bottom:0"><li>Quatro abas novas: protocolos por diagnóstico, monografias e Manual PPS, calculadoras de escores, e acervo e fontes, com 1.809 itens pesquisáveis.</li><li>Núcleo conferido com o Manual Integral PPS e a folha ABRAMEDE-MG 2022 pediátrica: atropina e lidocaína nas duas apresentações, indução e bloqueio ajustados, cisatracúrio, amoxicilina de 80–90 mg/kg/dia na pneumonia e na otite, dipirona de 10 mg/kg na receita e quatro itens de equipamento.</li><li>Painéis novos: sedação para procedimento, doses tóxicas por peso, abordagem por modo ventilatório, posição prona e ECMO.</li><li>Plano C do Ministério da Saúde (2023) conferido: 30 mL/kg e 70 mL/kg, em 1 h e 5 h abaixo de 1 ano e em 30 min e 2 h 30 min a partir de 1 ano.</li></ul></div>
+<ul style="margin-bottom:0"><li>Quatro abas novas: protocolos por diagnóstico, monografias e Manual PPS, calculadoras de escores, e acervo e fontes, com 1.809 itens pesquisáveis.</li><li>Núcleo conferido com o Manual Integral PPS e a folha ABRAMEDE-MG 2022 pediátrica: atropina e lidocaína nas duas apresentações, indução e bloqueio ajustados, cisatracúrio, amoxicilina de 80–90 mg/kg/dia na pneumonia e na otite, dipirona de 10 mg/kg na receita e quatro itens de equipamento.</li><li>Painéis novos: sedação para procedimento, doses tóxicas por peso, abordagem por modo ventilatório, posição prona e ECMO.</li><li>Tratado de combinações semiológicas (160 combinações, com 28 correções) e Guia de soroterapia OMS, RCH e NICE incorporados: busca por sinais no Diagnóstico sindrômico e, na Soroterapia, trilhas por diretriz, plano gradual e preparo no volume final exato.</li><li>Plano C do Ministério da Saúde (2023) conferido: 30 mL/kg e 70 mL/kg, em 1 h e 5 h abaixo de 1 ano e em 30 min e 2 h 30 min a partir de 1 ano.</li></ul></div>
 <div class="light"><h3>Surviving Sepsis Campaign, crianças, 2026</h3><p class="helper">Publicada em 23 de março de 2026, na Pediatric Critical Care Medicine e na Intensive Care Medicine. São 61 enunciados; adota os critérios Phoenix.</p>
 <ul style="margin-bottom:0"><li>Antibiótico em até 1 h no choque séptico; na sepse provável sem choque, após avaliação rápida, em até 3 h.</li><li>Lactato na avaliação inicial passou a recomendação forte.</li><li>Fluidos: com UTI disponível, até 40–60 mL/kg na primeira hora em alíquotas de 10–20 mL/kg; sem UTI, bolus apenas se houver hipotensão (até 40 mL/kg). Cristaloide balanceado preferido.</li><li>Sem preferência definida entre adrenalina e noradrenalina; iniciar em veia periférica em vez de atrasar; vasopressina quando a catecolamina está em dose alta.</li><li>Ultrassom à beira do leito sugerido para guiar a ressuscitação, onde houver treinamento.</li><li>Sugere não usar etomidato e não usar hidrocortisona quando fluido e vasoativo restauram a estabilidade.</li><li>Alvo conservador de SpO₂ (88–92%) após a ressuscitação nas crianças intubadas, exceto anemia, hemoglobinopatia e cardiopatia cianótica.</li><li>Seção nova sobre seguimento após a UTI, com reabilitação precoce.</li></ul></div>
 <div class="light"><h3>American Heart Association e American Academy of Pediatrics, 2025</h3><p class="helper">Publicadas em 22 de outubro de 2025.</p>
@@ -359,13 +399,18 @@
 <li>Ministério da Saúde. Manejo do paciente com diarreia: avaliação do estado de hidratação e planos A, B e C. Brasília, 2023.</li>
 <li>Almeida IV. Prescrição Pediátrica Segura: manual integral, versão consolidada de 15 de agosto de 2026. Documento do autor.</li>
 <li>Folha de Emergência ABRAMEDE-MG 2022, pediátrica, variante 9, corrigida em 15 de novembro de 2026. Documento do autor.</li>
+<li>Royal Children's Hospital Melbourne. Clinical Practice Guidelines: Intravenous fluids; Nasogastric fluids.</li>
+<li>NICE CG84. Diarrhoea and vomiting caused by gastroenteritis in under 5s; NICE NG29. Intravenous fluid therapy in children and young people in hospital.</li>
+<li>Organização Mundial da Saúde. The treatment of diarrhoea: a manual for physicians and other senior health workers. 2005.</li>
+<li>Almeida IV. Guia de soroterapia pediátrica: OMS, RCH e NICE. 25 de outubro de 2026. Documento do autor.</li>
+<li>Almeida IV. Tratado mestre de combinações semiológicas e diagnósticos em pediatria, partes I a III. Novembro de 2026. Documento do autor.</li>
 </ol></div>
 </section>
 
 
 <!-- ============ 27. PROTOCOLOS ============ -->
 <section class="tab" id="t-proto" data-title="acervo protocolos por diagnóstico temas condutas estudo continuado terapêuticas PedWB neonatologia recém-nascido" data-copiar="Copiar o tema aberto" data-imprimir="Imprimir o tema aberto">
-<div class="hero-head"><div><h1>Protocolos por diagnóstico</h1><p class="sub">Os temas do Estudo Continuado, das Terapêuticas e da Neonatologia, com busca e leitura aqui mesmo.</p></div></div>
+<div class="hero-head"><div><h1>Protocolos por diagnóstico</h1><p class="sub">Os temas do Estudo Continuado, das Terapêuticas e da Neonatologia, as 160 combinações do Tratado semiológico e o Guia de soroterapia, com busca e leitura aqui mesmo.</p></div></div>
 <p class="aviso-acervo">Conteúdo do acervo do autor, reproduzido como está na origem, com a situação de revisão que ela declara. As doses do acervo não passam pelo cálculo nem pela conferência desta ferramenta: para dose calculada, use as abas de Estabilização e de Fármacos.</p>
 <div class="acervo" data-aba="t-proto"></div>
 </section>
@@ -390,7 +435,7 @@
 <div class="hero-head"><div><h1>Acervo e fontes</h1><p class="sub">O que foi integrado, de onde veio, como foi conferido e onde consultar o restante.</p></div></div>
 <div class="grid">
 <div class="panel"><h3>Duas camadas de conteúdo</h3><p class="helper">Saber de qual camada vem cada informação.</p>
-<ul><li>Núcleo calculado: as abas de Estabilização, Fármacos, Suporte, Raciocínio e Alta. Cada dose e volume é recalculado pelo peso e pela idade e conferido por um cálculo independente a cada versão.</li><li>Acervo integrado: protocolos, monografias, Manual PPS e escores dos sites e documentos do autor, reproduzidos como estão na origem, com a situação de revisão declarada por ela.</li><li>Onde o núcleo e o acervo divergem, vale o núcleo, que traz a fonte de cada dose; as divergências encontradas estão na tabela de conferência.</li></ul></div>
+<ul><li>Núcleo calculado: as abas de Estabilização, Fármacos, Suporte, Raciocínio e Alta, incluindo as contas do Guia de soroterapia do autor. Cada dose e volume é recalculado pelo peso e pela idade e conferido por um cálculo independente a cada versão.</li><li>Acervo integrado: protocolos, monografias, Manual PPS e escores dos sites e documentos do autor, reproduzidos como estão na origem, com a situação de revisão declarada por ela.</li><li>Onde o núcleo e o acervo divergem, vale o núcleo, que traz a fonte de cada dose; as divergências encontradas estão na tabela de conferência.</li></ul></div>
 <div class="panel"><h3>Conteúdo integrado</h3><p class="helper">Coleções pesquisáveis nas abas do acervo.</p>
 <div class="tbl"><table class="ref"><thead><tr><th>Coleção</th><th>Origem</th><th>Itens</th><th>Aba</th></tr></thead><tbody id="acGrupos"></tbody></table></div></div>
 </div>

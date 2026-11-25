@@ -147,7 +147,7 @@ var MODOS = [
 
 /* ---------- acervo integrado ---------- */
 var ACERVO_ABAS = {
-  "t-proto": { grupos: ["proto", "tera", "neo"], rotulo: "Buscar tema ou diagnóstico", exemplo: "Ex.: bronquiolite, cetoacidose, icterícia",
+  "t-proto": { grupos: ["proto", "tera", "neo", "trat", "soro"], rotulo: "Buscar tema, diagnóstico ou sinal", exemplo: "Ex.: bronquiolite, petéquias, soroterapia",
     vazio: "Escolha um tema na lista para ler aqui. A busca procura no título, na especialidade e nas palavras-chave." },
   "t-mono": { grupos: ["pps", "mono"], rotulo: "Buscar medicamento", exemplo: "Ex.: amoxicilina, cetamina, salbutamol",
     vazio: "Escolha um medicamento na lista para ler as linhas do Manual PPS ou a monografia." },
@@ -160,7 +160,9 @@ var ACERVO_GRUPOS = {
   neo: { n: "Neonatologia", o: "Neonatologia: cuidados com o RN", itens: 87 },
   pps: { n: "Manual PPS", o: "Manual Integral de Prescrição Pediátrica Segura", itens: 266 },
   mono: { n: "Monografias", o: "Catálogo posológico pediátrico", itens: 498 },
-  esc: { n: "Escores clínicos", o: "Escores Clínicos", itens: 486 }
+  esc: { n: "Escores clínicos", o: "Escores Clínicos", itens: 486 },
+  trat: { n: "Tratado semiológico", o: "Tratado de Combinações Semiológicas e Diagnósticos em Pediatria", itens: 161 },
+  soro: { n: "Guia de soroterapia", o: "Guia de Soroterapia Pediátrica: OMS, RCH e NICE", itens: 15 }
 };
 // [título, descrição, endereço, o que foi integrado]
 var ACERVO_SITES = [
@@ -200,8 +202,8 @@ var ACERVO_DRIVE = [
   ["Manual Integral de Prescrição Pediátrica Segura (versão de 15/08/2026, 541 páginas)", "Google Drive e repositório do portal", "Lido por inteiro: 577 linhas farmacológicas de 265 medicamentos e o catálogo de 315 diagnósticos, consultáveis em Monografias e Manual PPS. Doses de uso corrente confrontadas com o núcleo calculado."],
   ["Folha de Emergência ABRAMEDE-MG 2022, pediátrica (variante 9, corrigida em 15/11/2026)", "Google Drive", "Lida e confrontada linha a linha com a carta de parada, a sequência rápida, as infusões e os equipamentos."],
   ["Tabela de doses tóxicas em ingestão aguda", "Google Drive", "Lida e usada no painel Doses tóxicas por peso, em Intoxicações, junto das diretrizes da AAPCC."],
-  ["Tratado de Combinações Semiológicas e Diagnósticos em Pediatria (partes I a III)", "Google Drive", "Listado; não incorporado nesta revisão."],
-  ["Guia de Soroterapia OMS, RCH e NICE", "Google Drive", "Listado; a aba Soroterapia segue as mesmas fontes primárias."],
+  ["Tratado de Combinações Semiológicas e Diagnósticos em Pediatria (Tratado Mestre e Partes II e III)", "Google Drive", "Incorporado: 160 combinações em Protocolos por diagnóstico e na busca por sinais da aba Diagnóstico sindrômico, com 28 correções de conteúdo listadas no acervo."],
+  ["Guia de Soroterapia Pediátrica: OMS, RCH e NICE (25/10/2026)", "Google Drive", "Incorporado: as 15 páginas em Protocolos por diagnóstico e as contas na aba Soroterapia (trilhas, plano gradual e preparo no volume final exato), conferidas pelo oráculo."],
   ["Planilha ANVISA Master e planilha médica completa", "Google Drive", "Listadas; consulta pelos sites Medicações ANVISA e Bulário Completo."],
   ["Farmacologia Pediátrica, UTI COVID: guia do plantonista, Pediatric Clinical Governance", "Google Drive", "Listados; não incorporados nesta revisão."]
 ];

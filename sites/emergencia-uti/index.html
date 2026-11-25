@@ -876,6 +876,41 @@ a.btn-m { display: inline-flex; align-items: center; text-decoration: none; colo
 <div class="kv"><span>Grupo D: SF 0,9% em até 20 min</span><span id="dgD" class="calc">—</span></div>
 <p class="helper" style="margin-top:8px">Um terço do volume oral como soro de reidratação e o restante com líquidos caseiros. Grupo C: repetir 10 mL/kg/h na 2ª hora e reavaliar o hematócrito. Grupo D: repetir até 3 vezes, reavaliando a cada 15–30 min. Não usar anti-inflamatório nem ácido acetilsalicílico.</p></div>
 </div>
+<div class="panel"><h3>Trilhas da OMS, da RCH e do NICE para este peso</h3><p class="helper">Guia de soroterapia do autor (25/10/2026). São alternativas para populações diferentes: escolher uma, sem somar. Manutenção por Holliday-Segar; prazo venoso de 24 h nos exemplos do NICE.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Trilha</th><th>Volume</th><th>Vazão</th><th>Observação</th></tr></thead><tbody id="soTrilhas"></tbody></table></div></div>
+<div class="panel"><h3>Plano gradual: manutenção, déficit e perdas</h3><p class="helper">Taxa = manutenção + déficit ÷ prazo + perdas ÷ janela − outros aportes (RCH e NICE). Choque, recém-nascido, cetoacidose, desnutrição grave, queimadura e disnatremia seguem protocolo próprio.</p>
+<div class="grid3">
+<div class="field"><label for="pgDef">Déficit estimado</label><select id="pgDef"><option value="0">Sem déficit</option><option value="3">3% do peso</option><option value="5" selected>5% do peso</option><option value="7">7% do peso</option><option value="10">10% do peso</option></select></div>
+<div class="field"><label for="pgAnt">Peso antes da doença (kg), se conhecido</label><input id="pgAnt" type="number" inputmode="decimal" step="0.1" min="0.5" max="260" placeholder="Opcional"></div>
+<div class="field"><label for="pgFrac">Manutenção</label><select id="pgFrac"><option value="100" selected>100% (Holliday-Segar)</option><option value="67">2/3, se risco de ADH</option></select></div>
+<div class="field"><label for="pgT">Prazo do déficit</label><select id="pgT"><option value="24" selected>24 h</option><option value="48">48 h (hipernatremia)</option></select></div>
+<div class="field"><label for="pgPerdas">Perdas medidas a repor (mL)</label><input id="pgPerdas" type="number" inputmode="decimal" step="1" min="0" value="0"></div>
+<div class="field"><label for="pgJan">Repor as perdas em</label><select id="pgJan"><option value="1">1 h</option><option value="4" selected>4 h</option></select></div>
+<div class="field"><label for="pgOutros">Outros aportes contínuos (mL/h)</label><input id="pgOutros" type="number" inputmode="decimal" step="0.1" min="0" value="0"></div>
+<div class="field"><label for="pgGli">Glicose na solução de manutenção e déficit</label><select id="pgGli"><option value="50" selected>Glicose 5%</option><option value="100">Glicose 10%</option><option value="0">Sem glicose</option></select></div>
+</div>
+<label class="marca-check"><input type="checkbox" id="pgRch" checked> Limitar o déficit a 5% do peso nas primeiras 24 h (RCH)</label>
+<div class="kv"><span>Déficit</span><span id="pgDefOut" class="calc">—</span></div>
+<div class="kv"><span>Manutenção</span><span id="pgM" class="calc">—</span></div>
+<div class="kv"><span>Déficit programado por hora</span><span id="pgDT" class="calc">—</span></div>
+<div class="kv"><span>Perdas por hora</span><span id="pgL" class="calc">—</span></div>
+<div class="kv"><span>Vazão total</span><span id="pgR" class="calc">—</span></div>
+<div class="kv"><span>Volume nas primeiras 24 h</span><span id="pgV24" class="calc">—</span></div>
+<div class="kv"><span>Taxa de infusão de glicose</span><span id="pgTig" class="calc">—</span></div>
+<div class="kv"><span>Bolsas de 500 mL de manutenção e déficit</span><span id="pgBolsas" class="calc">—</span></div>
+<div class="aviso" id="pgAviso" hidden></div></div>
+<div class="panel"><h3>Preparo de NaCl 0,9% com glicose no volume final exato</h3><p class="helper">Balanço de massa para a farmácia ou o preparo assistido: os volumes já somam o volume final. Preferir bolsa pronta quando houver.</p>
+<div class="grid3">
+<div class="field"><label for="ppVol">Volume final</label><select id="ppVol"><option value="250">250 mL</option><option value="500" selected>500 mL</option><option value="1000">1.000 mL</option></select></div>
+<div class="field"><label for="ppGli">Glicose final</label><select id="ppGli"><option value="2.5">2,5%</option><option value="5" selected>5%</option><option value="10">10%</option></select></div>
+<div class="field"><label for="ppEst">Estoque disponível</label><select id="ppEst"><option value="sf10">Soro fisiológico + glicose 10%</option><option value="sf25">Soro fisiológico + glicose 25%</option><option value="sf50" selected>Soro fisiológico + glicose 50%</option><option value="sg5">Soro glicosado 5% + glicose 50%</option></select></div>
+<div class="field"><label for="ppNa">NaCl concentrado</label><select id="ppNa"><option value="100">NaCl 10%</option><option value="200" selected>NaCl 20%</option></select></div>
+<div class="field"><label for="ppK">Potássio final</label><select id="ppK"><option value="0" selected>Sem potássio</option><option value="10">10 mEq/L</option><option value="20">20 mEq/L</option><option value="30">30 mEq/L</option><option value="40">40 mEq/L</option></select></div>
+<div class="field"><label for="ppKcl">KCl disponível</label><select id="ppKcl"><option value="1.341">KCl 10% (1,34 mEq/mL)</option><option value="2.012">KCl 15% (2,01 mEq/mL)</option><option value="2.56" selected>KCl 19,1% (2,56 mEq/mL)</option></select></div>
+</div>
+<div class="tbl"><table class="ref"><thead><tr><th>Componente</th><th>Volume</th></tr></thead><tbody id="ppTab"></tbody></table></div>
+<p class="helper" id="ppConf" style="margin-top:8px">—</p>
+<div class="aviso" id="ppAviso" hidden></div></div>
 <div class="light"><h3>Soluções isotônicas e balanceadas</h3><p>Na manutenção de 28 dias a 18 anos, usar solução isotônica (sódio de 130–154 mEq/L) com glicose e potássio: soluções hipotônicas aumentam o risco de hiponatremia (American Academy of Pediatrics, 2018). Exceções: recém-nascido, cardiopatia, doença renal ou hepática e perdas volumosas, que pedem prescrição individual.</p><p style="margin:0">Em expansões grandes e na sepse, preferir Ringer lactato ou outra solução balanceada, que causam menos hipercloremia. Na manutenção contínua, medir sódio, potássio e glicemia a cada 12–24 h e registrar balanço e diurese.</p></div>
 </section>
 
@@ -1036,6 +1071,11 @@ a.btn-m { display: inline-flex; align-items: center; text-decoration: none; colo
 </div>
 <div class="panel"><h3>Hipóteses em ordem de concordância</h3><p class="helper">A ordem conta os achados marcados que coincidem com cada síndrome. É um lembrete de diagnósticos, não uma probabilidade.</p>
 <div id="diagOut" aria-live="polite"></div></div>
+<div class="panel"><h3>Combinações semiológicas do Tratado</h3><p class="helper">As 160 constelações de sinais do Tratado do autor, com diagnóstico provável e diferenciais. Escreva sinais ou use os marcados acima; aparecem primeiro as combinações que reúnem mais termos.</p>
+<div class="field"><label for="tsBusca">Sinais, sintomas ou achados</label><input id="tsBusca" type="search" placeholder="Ex.: febre petéquias; vômitos biliosos; estridor" autocomplete="off"></div>
+<div class="actions no-print" style="margin:0 0 8px"><button class="btn-m" type="button" id="tsMarcados">Usar os sinais marcados acima</button></div>
+<p class="helper" id="tsInfo" aria-live="polite">Escreva ao menos 3 letras ou use os sinais marcados.</p>
+<div id="tsOut"></div></div>
 </section>
 
 <!-- ============ 22. EXAMES ============ -->
@@ -1144,7 +1184,7 @@ a.btn-m { display: inline-flex; align-items: center; text-decoration: none; colo
 <section class="tab" id="t-novidades" data-title="novidades atualizações diretrizes Surviving Sepsis 2026 AHA AAP 2025 PADIS Phoenix PALICC dengue VSR nirsevimabe ISPAD fontes referências" data-copiar="Copiar novidades">
 <div class="hero-head"><div><h1>Novidades e fontes</h1><p class="sub">O que mudou nas diretrizes recentes e as referências usadas nesta revisão.</p></div></div>
 <div class="light"><h3>Esta versão: acervo do autor integrado (25 de novembro de 2026)</h3><p class="helper">Junção com o projeto do agente Adapta e com os sites e documentos do autor.</p>
-<ul style="margin-bottom:0"><li>Quatro abas novas: protocolos por diagnóstico, monografias e Manual PPS, calculadoras de escores, e acervo e fontes, com 1.809 itens pesquisáveis.</li><li>Núcleo conferido com o Manual Integral PPS e a folha ABRAMEDE-MG 2022 pediátrica: atropina e lidocaína nas duas apresentações, indução e bloqueio ajustados, cisatracúrio, amoxicilina de 80–90 mg/kg/dia na pneumonia e na otite, dipirona de 10 mg/kg na receita e quatro itens de equipamento.</li><li>Painéis novos: sedação para procedimento, doses tóxicas por peso, abordagem por modo ventilatório, posição prona e ECMO.</li><li>Plano C do Ministério da Saúde (2023) conferido: 30 mL/kg e 70 mL/kg, em 1 h e 5 h abaixo de 1 ano e em 30 min e 2 h 30 min a partir de 1 ano.</li></ul></div>
+<ul style="margin-bottom:0"><li>Quatro abas novas: protocolos por diagnóstico, monografias e Manual PPS, calculadoras de escores, e acervo e fontes, com 1.809 itens pesquisáveis.</li><li>Núcleo conferido com o Manual Integral PPS e a folha ABRAMEDE-MG 2022 pediátrica: atropina e lidocaína nas duas apresentações, indução e bloqueio ajustados, cisatracúrio, amoxicilina de 80–90 mg/kg/dia na pneumonia e na otite, dipirona de 10 mg/kg na receita e quatro itens de equipamento.</li><li>Painéis novos: sedação para procedimento, doses tóxicas por peso, abordagem por modo ventilatório, posição prona e ECMO.</li><li>Tratado de combinações semiológicas (160 combinações, com 28 correções) e Guia de soroterapia OMS, RCH e NICE incorporados: busca por sinais no Diagnóstico sindrômico e, na Soroterapia, trilhas por diretriz, plano gradual e preparo no volume final exato.</li><li>Plano C do Ministério da Saúde (2023) conferido: 30 mL/kg e 70 mL/kg, em 1 h e 5 h abaixo de 1 ano e em 30 min e 2 h 30 min a partir de 1 ano.</li></ul></div>
 <div class="light"><h3>Surviving Sepsis Campaign, crianças, 2026</h3><p class="helper">Publicada em 23 de março de 2026, na Pediatric Critical Care Medicine e na Intensive Care Medicine. São 61 enunciados; adota os critérios Phoenix.</p>
 <ul style="margin-bottom:0"><li>Antibiótico em até 1 h no choque séptico; na sepse provável sem choque, após avaliação rápida, em até 3 h.</li><li>Lactato na avaliação inicial passou a recomendação forte.</li><li>Fluidos: com UTI disponível, até 40–60 mL/kg na primeira hora em alíquotas de 10–20 mL/kg; sem UTI, bolus apenas se houver hipotensão (até 40 mL/kg). Cristaloide balanceado preferido.</li><li>Sem preferência definida entre adrenalina e noradrenalina; iniciar em veia periférica em vez de atrasar; vasopressina quando a catecolamina está em dose alta.</li><li>Ultrassom à beira do leito sugerido para guiar a ressuscitação, onde houver treinamento.</li><li>Sugere não usar etomidato e não usar hidrocortisona quando fluido e vasoativo restauram a estabilidade.</li><li>Alvo conservador de SpO₂ (88–92%) após a ressuscitação nas crianças intubadas, exceto anemia, hemoglobinopatia e cardiopatia cianótica.</li><li>Seção nova sobre seguimento após a UTI, com reabilitação precoce.</li></ul></div>
 <div class="light"><h3>American Heart Association e American Academy of Pediatrics, 2025</h3><p class="helper">Publicadas em 22 de outubro de 2025.</p>
@@ -1197,13 +1237,18 @@ a.btn-m { display: inline-flex; align-items: center; text-decoration: none; colo
 <li>Ministério da Saúde. Manejo do paciente com diarreia: avaliação do estado de hidratação e planos A, B e C. Brasília, 2023.</li>
 <li>Almeida IV. Prescrição Pediátrica Segura: manual integral, versão consolidada de 15 de agosto de 2026. Documento do autor.</li>
 <li>Folha de Emergência ABRAMEDE-MG 2022, pediátrica, variante 9, corrigida em 15 de novembro de 2026. Documento do autor.</li>
+<li>Royal Children's Hospital Melbourne. Clinical Practice Guidelines: Intravenous fluids; Nasogastric fluids.</li>
+<li>NICE CG84. Diarrhoea and vomiting caused by gastroenteritis in under 5s; NICE NG29. Intravenous fluid therapy in children and young people in hospital.</li>
+<li>Organização Mundial da Saúde. The treatment of diarrhoea: a manual for physicians and other senior health workers. 2005.</li>
+<li>Almeida IV. Guia de soroterapia pediátrica: OMS, RCH e NICE. 25 de outubro de 2026. Documento do autor.</li>
+<li>Almeida IV. Tratado mestre de combinações semiológicas e diagnósticos em pediatria, partes I a III. Novembro de 2026. Documento do autor.</li>
 </ol></div>
 </section>
 
 
 <!-- ============ 27. PROTOCOLOS ============ -->
 <section class="tab" id="t-proto" data-title="acervo protocolos por diagnóstico temas condutas estudo continuado terapêuticas PedWB neonatologia recém-nascido" data-copiar="Copiar o tema aberto" data-imprimir="Imprimir o tema aberto">
-<div class="hero-head"><div><h1>Protocolos por diagnóstico</h1><p class="sub">Os temas do Estudo Continuado, das Terapêuticas e da Neonatologia, com busca e leitura aqui mesmo.</p></div></div>
+<div class="hero-head"><div><h1>Protocolos por diagnóstico</h1><p class="sub">Os temas do Estudo Continuado, das Terapêuticas e da Neonatologia, as 160 combinações do Tratado semiológico e o Guia de soroterapia, com busca e leitura aqui mesmo.</p></div></div>
 <p class="aviso-acervo">Conteúdo do acervo do autor, reproduzido como está na origem, com a situação de revisão que ela declara. As doses do acervo não passam pelo cálculo nem pela conferência desta ferramenta: para dose calculada, use as abas de Estabilização e de Fármacos.</p>
 <div class="acervo" data-aba="t-proto"></div>
 </section>
@@ -1228,7 +1273,7 @@ a.btn-m { display: inline-flex; align-items: center; text-decoration: none; colo
 <div class="hero-head"><div><h1>Acervo e fontes</h1><p class="sub">O que foi integrado, de onde veio, como foi conferido e onde consultar o restante.</p></div></div>
 <div class="grid">
 <div class="panel"><h3>Duas camadas de conteúdo</h3><p class="helper">Saber de qual camada vem cada informação.</p>
-<ul><li>Núcleo calculado: as abas de Estabilização, Fármacos, Suporte, Raciocínio e Alta. Cada dose e volume é recalculado pelo peso e pela idade e conferido por um cálculo independente a cada versão.</li><li>Acervo integrado: protocolos, monografias, Manual PPS e escores dos sites e documentos do autor, reproduzidos como estão na origem, com a situação de revisão declarada por ela.</li><li>Onde o núcleo e o acervo divergem, vale o núcleo, que traz a fonte de cada dose; as divergências encontradas estão na tabela de conferência.</li></ul></div>
+<ul><li>Núcleo calculado: as abas de Estabilização, Fármacos, Suporte, Raciocínio e Alta, incluindo as contas do Guia de soroterapia do autor. Cada dose e volume é recalculado pelo peso e pela idade e conferido por um cálculo independente a cada versão.</li><li>Acervo integrado: protocolos, monografias, Manual PPS e escores dos sites e documentos do autor, reproduzidos como estão na origem, com a situação de revisão declarada por ela.</li><li>Onde o núcleo e o acervo divergem, vale o núcleo, que traz a fonte de cada dose; as divergências encontradas estão na tabela de conferência.</li></ul></div>
 <div class="panel"><h3>Conteúdo integrado</h3><p class="helper">Coleções pesquisáveis nas abas do acervo.</p>
 <div class="tbl"><table class="ref"><thead><tr><th>Coleção</th><th>Origem</th><th>Itens</th><th>Aba</th></tr></thead><tbody id="acGrupos"></tbody></table></div></div>
 </div>
@@ -2510,7 +2555,7 @@ var MODOS = [
 
 /* ---------- acervo integrado ---------- */
 var ACERVO_ABAS = {
-  "t-proto": { grupos: ["proto", "tera", "neo"], rotulo: "Buscar tema ou diagnóstico", exemplo: "Ex.: bronquiolite, cetoacidose, icterícia",
+  "t-proto": { grupos: ["proto", "tera", "neo", "trat", "soro"], rotulo: "Buscar tema, diagnóstico ou sinal", exemplo: "Ex.: bronquiolite, petéquias, soroterapia",
     vazio: "Escolha um tema na lista para ler aqui. A busca procura no título, na especialidade e nas palavras-chave." },
   "t-mono": { grupos: ["pps", "mono"], rotulo: "Buscar medicamento", exemplo: "Ex.: amoxicilina, cetamina, salbutamol",
     vazio: "Escolha um medicamento na lista para ler as linhas do Manual PPS ou a monografia." },
@@ -2523,7 +2568,9 @@ var ACERVO_GRUPOS = {
   neo: { n: "Neonatologia", o: "Neonatologia: cuidados com o RN", itens: 87 },
   pps: { n: "Manual PPS", o: "Manual Integral de Prescrição Pediátrica Segura", itens: 266 },
   mono: { n: "Monografias", o: "Catálogo posológico pediátrico", itens: 498 },
-  esc: { n: "Escores clínicos", o: "Escores Clínicos", itens: 486 }
+  esc: { n: "Escores clínicos", o: "Escores Clínicos", itens: 486 },
+  trat: { n: "Tratado semiológico", o: "Tratado de Combinações Semiológicas e Diagnósticos em Pediatria", itens: 161 },
+  soro: { n: "Guia de soroterapia", o: "Guia de Soroterapia Pediátrica: OMS, RCH e NICE", itens: 15 }
 };
 // [título, descrição, endereço, o que foi integrado]
 var ACERVO_SITES = [
@@ -2563,8 +2610,8 @@ var ACERVO_DRIVE = [
   ["Manual Integral de Prescrição Pediátrica Segura (versão de 15/08/2026, 541 páginas)", "Google Drive e repositório do portal", "Lido por inteiro: 577 linhas farmacológicas de 265 medicamentos e o catálogo de 315 diagnósticos, consultáveis em Monografias e Manual PPS. Doses de uso corrente confrontadas com o núcleo calculado."],
   ["Folha de Emergência ABRAMEDE-MG 2022, pediátrica (variante 9, corrigida em 15/11/2026)", "Google Drive", "Lida e confrontada linha a linha com a carta de parada, a sequência rápida, as infusões e os equipamentos."],
   ["Tabela de doses tóxicas em ingestão aguda", "Google Drive", "Lida e usada no painel Doses tóxicas por peso, em Intoxicações, junto das diretrizes da AAPCC."],
-  ["Tratado de Combinações Semiológicas e Diagnósticos em Pediatria (partes I a III)", "Google Drive", "Listado; não incorporado nesta revisão."],
-  ["Guia de Soroterapia OMS, RCH e NICE", "Google Drive", "Listado; a aba Soroterapia segue as mesmas fontes primárias."],
+  ["Tratado de Combinações Semiológicas e Diagnósticos em Pediatria (Tratado Mestre e Partes II e III)", "Google Drive", "Incorporado: 160 combinações em Protocolos por diagnóstico e na busca por sinais da aba Diagnóstico sindrômico, com 28 correções de conteúdo listadas no acervo."],
+  ["Guia de Soroterapia Pediátrica: OMS, RCH e NICE (25/10/2026)", "Google Drive", "Incorporado: as 15 páginas em Protocolos por diagnóstico e as contas na aba Soroterapia (trilhas, plano gradual e preparo no volume final exato), conferidas pelo oráculo."],
   ["Planilha ANVISA Master e planilha médica completa", "Google Drive", "Listadas; consulta pelos sites Medicações ANVISA e Bulário Completo."],
   ["Farmacologia Pediátrica, UTI COVID: guia do plantonista, Pediatric Clinical Governance", "Google Drive", "Listados; não incorporados nesta revisão."]
 ];
@@ -2911,6 +2958,11 @@ function acervoHTML(d, g) {
       h += "</tbody></table></div>";
     }
     if (s.pre) h += '<pre class="ac-pre">' + esc(s.pre) + "</pre>";
+    if (s.ln && s.ln.length) {
+      h += '<ul class="ac-ln">';
+      for (j = 0; j < s.ln.length; j++) if (/^#t-[a-z]+(\/[a-z]+\/[a-z0-9-]+)?$/.test(s.ln[j][1])) h += '<li><a href="' + s.ln[j][1] + '">' + esc(s.ln[j][0]) + "</a></li>";
+      h += "</ul>";
+    }
   }
   if (d.r && d.r.length) {
     h += '<h3>Referências da origem</h3><ol class="ac-refs">';
@@ -2994,6 +3046,146 @@ function ligarAcervo() {
 function rota(h) {
   var p = String(h || "").split("/");
   return { aba: p[0], g: p.length === 3 ? p[1] : null, id: p.length === 3 ? p[2] : null };
+}
+
+/* =====================================================================
+   Soroterapia: trilhas OMS × RCH × NICE, plano gradual e preparo
+   (Guia de soroterapia do autor, 25/10/2026)
+   ===================================================================== */
+function horasTxt(h) { return trim0(nf(h, 1)) + " h"; }
+function cTrilhas() {
+  var kg = P.peso, a = P.idade, hs = holliday(kg), M = hs / 24, h = "", nota5 = a >= 5 ? " Fora da faixa do CG84 (abaixo de 5 anos)." : "";
+  h += tr(["OMS, Plano B (soro oral)", K(ml(75 * kg) + " em 4 h"), K(mlh(75 * kg / 4)), "75 mL/kg; reclassificar em 4 h."]);
+  if (ehNeo(P)) h += tr(["OMS, Plano C (venoso)", "—", "—", "Não se aplica ao recém-nascido: 10 mL/kg e reavaliar."]);
+  else if (a < 1) h += tr(["OMS, Plano C (venoso)", K(ml(100 * kg) + " em 6 h"), K(mlh(30 * kg) + " por 1 h; depois " + mlh(14 * kg) + " por 5 h"), "Ringer lactato; não somar manutenção."]);
+  else h += tr(["OMS, Plano C (venoso)", K(ml(100 * kg) + " em 3 h"), K(mlh(60 * kg) + " por 30 min; depois " + mlh(28 * kg) + " por 2 h 30 min"), "Ringer lactato; não somar manutenção."]);
+  h += tr(["RCH, venoso: manutenção + 5% em 24 h", K(ml(hs + 50 * kg) + " em 24 h"), K(mlh((hs + 50 * kg) / 24)), "Déficit restante só depois de reavaliar; perdas à parte."]);
+  if (a < 0.5) h += tr(["RCH, sonda rápida", "—", "—", "Abaixo de 6 meses: avaliação pediátrica antes de sonda rápida."]);
+  else h += tr(["RCH, sonda rápida (10–25 mL/kg/h)", K(faixaTxt(40 * kg, 100 * kg, mlNum) + " mL"), K(faixaTxt(10 * kg, Math.min(25 * kg, 300), vazNum) + " mL/h"),
+    (25 * kg > 300 ? "Acima de 12 kg, a RCH limita a 300 mL/h e prolonga o tempo. " : "Por 4 h. ") + "Desidratação moderada e via segura."]);
+  h += tr(["RCH, sonda lenta: 5% em 6 h", K(ml(50 * kg) + " em 6 h"), K(mlh(50 * kg / 6) + "; depois " + mlh(M) + " por 18 h"), "Depois do déficit, manutenção nas 18 h seguintes."]);
+  h += tr(["NICE, oral ou sonda", K(ml(50 * kg + 4 * M) + " em 4 h"), K(mlh((50 * kg + 4 * M) / 4)), "50 mL/kg + 4 h de manutenção." + nota5]);
+  h += tr(["NICE, venoso sem choque", K(ml(50 * kg + hs) + " em 24 h"), K(mlh((50 * kg + hs) / 24)), "Déficit de 50 mL/kg + manutenção." + nota5]);
+  h += tr(["NICE, venoso após choque tratado", K(ml(100 * kg + hs) + " em 24 h"), K(mlh((100 * kg + hs) / 24)), "Déficit de 100 mL/kg + manutenção; bolus registrados à parte." + nota5]);
+  h += tr(["NICE, bolus no choque", K(ml(Math.min(10 * kg, 500))), K("em menos de 10 min"), "NaCl 0,9%, 10 mL/kg (NG29); teto de 500 mL, dose do adulto."]);
+  corpo("soTrilhas", h);
+}
+function cPlano() {
+  var kg = P.peso, av = [], ant = valorDe("pgAnt"), temAnt = isFinite(ant) && ant > kg && ant <= kg * 1.3;
+  if (isFinite(ant) && !temAnt) av.push("Peso anterior ignorado: precisa ser maior que o atual e no máximo 30% acima.");
+  var ref = temAnt ? ant : kg, pct = parseFloat($("pgDef").value);
+  var defMl = temAnt ? (ant - kg) * 1000 : pct * 10 * kg, defPct = temAnt ? (ant - kg) / ant * 100 : pct;
+  var hs = holliday(ref), frac = $("pgFrac").value === "67" ? 2 / 3 : 1, M = hs * frac / 24;
+  var T = parseFloat($("pgT").value), prog = defMl, resto = 0;
+  if ($("pgRch").checked && T === 24 && defMl > 50 * ref + 1e-9) { prog = 50 * ref; resto = defMl - prog; }
+  var dT = prog / T, perdas = valorDe("pgPerdas"), outros = valorDe("pgOutros"), jan = parseFloat($("pgJan").value);
+  if (!isFinite(perdas) || perdas < 0) perdas = 0;
+  if (!isFinite(outros) || outros < 0) outros = 0;
+  var L = perdas / jan, base = M + dT - outros, r1 = base + L, v24 = r1 * jan + base * (24 - jan);
+  set("pgDefOut", defMl > 0 ? ml(defMl) + " (" + num(defPct) + "% do peso de " + num(ref) + " kg)" + (resto > 0 ? "; " + ml(prog) + " nas primeiras 24 h e " + ml(resto) + " depois de reavaliar" : ", em " + T + " h") : "Sem déficit");
+  set("pgM", mlh(M) + " (" + num(hs) + " mL/dia" + (frac < 1 ? " × 2/3" : "") + (temAnt ? ", pelo peso anterior" : "") + ")");
+  set("pgDT", mlh(dT));
+  set("pgL", perdas > 0 ? mlh(L) + " por " + jan + " h, em programação separada" : "—");
+  if (base <= 0) {
+    av.push("Os outros aportes já cobrem manutenção e déficit: rever o plano antes de prescrever.");
+    cada(["pgR", "pgV24", "pgTig", "pgBolsas"], function (i) { set(i, "—"); });
+  } else {
+    set("pgR", perdas > 0 ? mlh(r1) + " nas primeiras " + jan + " h; depois " + mlh(base) : mlh(base));
+    set("pgV24", ml(v24) + (outros > 0 ? " (sem contar os outros aportes)" : ""));
+    var gli = parseFloat($("pgGli").value);
+    set("pgTig", gli > 0 ? nf(gli * base / (kg * 60), 2) + " mg/kg/min com glicose " + (gli === 50 ? "5%" : "10%") : "Sem glicose: acompanhar a glicemia");
+    var vol = base * 24, n = Math.ceil(vol / 500 - 1e-9), ult = vol - 500 * (n - 1);
+    set("pgBolsas", n === 1 ? "1 bolsa: " + ml(vol) + " em 24 h" : n + " bolsas: cada 500 mL dura " + horasTxt(500 / base) + "; a última, " + ml(ult) + " em " + horasTxt(ult / base));
+  }
+  if (ehNeo(P)) av.push("Recém-nascido: usar a taxa hídrica por dia de vida, não Holliday-Segar.");
+  var avEl = $("pgAviso"); avEl.textContent = av.join(" "); mostra(avEl, av.length > 0);
+}
+function fmtPrep(v) { return (v >= 10 ? trim0(nf(v, 1)) : trim0(nf(v, 2))) + " mL"; }
+function cPreparo() {
+  var Vf = parseFloat($("ppVol").value), Gf = parseFloat($("ppGli").value), est = $("ppEst").value, C = parseFloat($("ppNa").value);
+  var kL = parseFloat($("ppK").value), kc = parseFloat($("ppKcl").value), VK = kL * Vf / 1000 / kc, Vb, Vg, Vna, gEst, nomeBase, h = "", av = [];
+  if (est === "sg5") { gEst = 50; nomeBase = "Soro glicosado 5%"; Vna = 9 * Vf / C; Vg = (10 * Gf * Vf - 50 * Vf + 50 * Vna + 50 * VK) / 450; }
+  else { gEst = est === "sf10" ? 10 : (est === "sf25" ? 25 : 50); nomeBase = "Soro fisiológico 0,9%"; Vg = Vf * Gf / gEst; Vna = 9 * (Vg + VK) / (C - 9); }
+  Vb = Vf - Vg - Vna - VK;
+  var kcl = $("ppKcl").options[$("ppKcl").selectedIndex].text.replace(/ \(.*/, "");
+  if (Vg < -1e-9 || Vb < -1e-9) {
+    corpo("ppTab", tr([{ t: "Este estoque não alcança o alvo: com soro glicosado 5% a glicose final não fica abaixo de 5%, e a glicose 10% não chega a 10% depois de somar o sódio. Escolha outro estoque.", span: 2 }]));
+    set("ppConf", "—");
+  } else {
+    h += tr([nomeBase, K(fmtPrep(Vb))]);
+    h += tr(["Glicose " + gEst + "%", K(fmtPrep(Vg))]);
+    h += tr(["NaCl " + (C === 100 ? "10%" : "20%"), K(fmtPrep(Vna))]);
+    if (kL > 0) h += tr([kcl, K(fmtPrep(VK) + " (" + num(kL * Vf / 1000) + " mEq)")]);
+    h += tr([{ t: "Volume final" }, K(fmtPrep(Vf))]);
+    corpo("ppTab", h);
+    var naMg = (est === "sg5" ? 0 : 9 * Vb) + C * Vna, gMg = gEst * 10 * Vg + (est === "sg5" ? 50 * Vb : 0);
+    set("ppConf", "Conferência: " + num(naMg) + " mg de NaCl em " + num(Vf) + " mL = " + num(naMg / Vf) + " mg/mL (0,9%); " + num(gMg / 1000) + " g de glicose = " + num(gMg / Vf) + " mg/mL (" + num(gMg / Vf / 10) + "%)" +
+      (kL > 0 ? "; potássio " + num(kL) + " mEq/L." : "."));
+  }
+  if (kL > 0) av.push("Potássio só com potássio sérico, diurese e função renal conhecidos; nunca em bolus." + (kL >= 40 ? " Com 40 mEq/L, bomba de infusão e monitorização; acima disso, acesso central." : ""));
+  var a = $("ppAviso"); a.textContent = av.join(" "); mostra(a, av.length > 0);
+}
+
+/* ---------- Tratado: busca de combinações por sinais ---------- */
+var TS = { dados: null, carregando: false, cb: [] };
+var TS_SINAIS = { febre: ["febr"], dispneia: ["dispn", "taquipn"], tosse: ["toss"], sibilo: ["sibil"], estridor: ["estrid", "ladrant"], dorToracica: ["toracic"],
+  cefaleia: ["cefal"], rigidez: ["nuca", "mening"], convulsao: ["convuls"], alteracaoCons: ["consciencia", "letarg", "coma", "sensorio", "encefalopat", "confus"],
+  vomito: ["vomit"], diarreia: ["diarr"], dorAbdominal: ["abdom"], disuria: ["disur", "urinari"], poliuria: ["poliur", "polidips"],
+  artralgia: ["artr", "claudic", "apoiar"], mialgia: ["mialg", "muscul"], rash: ["exantem", "petequ", "purpur", "vesicul", "eritem"],
+  urticaria: ["urticar", "angioedem"], sangramento: ["sangr", "hemorrag", "hematur", "melena", "hematemes", "equimos"], exposicao: ["intoxic", "ingest", "exposic"] };
+function tsCarregar(cb) {
+  if (TS.dados) { cb(); return; }
+  TS.cb.push(cb);
+  if (TS.carregando) return;
+  TS.carregando = true; set("tsInfo", "Carregando o Tratado…");
+  obterJSON("acervo/trat/combinacoes.json", function (err, d) {
+    TS.carregando = false;
+    if (!err && d && d.length) {
+      TS.dados = [];
+      for (var i = 0; i < d.length; i++) TS.dados.push({ n: d[i][0], c: d[i][1], d: d[i][2], f: d[i][3], id: d[i][4], txt: semAcento(d[i][1] + " " + d[i][2]) });
+    }
+    var l = TS.cb; TS.cb = [];
+    for (var j = 0; j < l.length; j++) l[j]();
+  });
+}
+// grupos: lista de listas de radicais; cada grupo atendido vale 1 ponto.
+function tsBuscar(grupos, rotulo) {
+  if (!TS.dados) { set("tsInfo", "O Tratado não pôde ser carregado. Ele vem do endereço publicado na web: confira a conexão."); setH("tsOut", ""); return; }
+  var r = [], i, j, k;
+  for (i = 0; i < TS.dados.length; i++) {
+    var e = TS.dados[i], p = 0;
+    for (j = 0; j < grupos.length; j++) for (k = 0; k < grupos[j].length; k++) if (e.txt.indexOf(grupos[j][k]) >= 0) { p++; break; }
+    if (p) r.push({ e: e, p: p });
+  }
+  r.sort(function (a, b) { return b.p - a.p || a.e.n - b.e.n; });
+  var h = "", lim = Math.min(r.length, 15);
+  for (i = 0; i < lim; i++) {
+    var x = r[i].e;
+    h += '<div class="hip"><h4>' + esc(x.n + ". " + x.d) + " <small>" + r[i].p + " de " + grupos.length + (grupos.length === 1 ? " termo" : " termos") + "</small></h4><dl><dt>Sinais</dt><dd>" + esc(x.c) +
+      "</dd><dt>Diferenciais</dt><dd>" + esc(x.f) + '</dd></dl><p class="helper" style="margin:6px 0 0"><a href="#t-proto/trat/' + x.id + '">Abrir no acervo</a></p></div>';
+  }
+  setH("tsOut", h);
+  set("tsInfo", r.length ? r.length + (r.length === 1 ? " combinação" : " combinações") + " com " + rotulo + (lim < r.length ? "; mostrando as " + lim + " que reúnem mais termos." : ".") : "Nenhuma combinação do Tratado com " + rotulo + ".");
+}
+function tsTexto() {
+  var q = $("tsBusca").value.replace(/^\s+|\s+$/g, ""), termos = semAcento(q).split(/[\s,;+]+/), g = [];
+  for (var i = 0; i < termos.length; i++) if (termos[i].length >= 3) g.push([termos[i]]);
+  if (!g.length) { set("tsInfo", "Escreva ao menos 3 letras ou use os sinais marcados."); setH("tsOut", ""); return; }
+  tsCarregar(function () { tsBuscar(g, "“" + q + "”"); });
+}
+function tsMarcados() {
+  var g = [], nomes = [];
+  cada($("diagChecks").getElementsByTagName("input"), function (c) { if (c.checked && TS_SINAIS[c.value]) { g.push(TS_SINAIS[c.value]); nomes.push(c.parentNode.textContent.replace(/^\s+|\s+$/g, "").toLowerCase()); } });
+  if (!g.length) { set("tsInfo", "Marque sinais na lista acima primeiro."); setH("tsOut", ""); return; }
+  tsCarregar(function () { tsBuscar(g, "os sinais marcados (" + nomes.join(", ") + ")"); });
+}
+function ligarNovos() {
+  cada(["pgDef", "pgFrac", "pgT", "pgJan", "pgGli", "pgRch"], function (i) { $(i).onchange = cPlano; });
+  cada(["pgAnt", "pgPerdas", "pgOutros"], function (i) { $(i).oninput = cPlano; });
+  cada(["ppVol", "ppGli", "ppEst", "ppNa", "ppK", "ppKcl"], function (i) { $(i).onchange = cPreparo; });
+  var tm = null;
+  $("tsBusca").oninput = function () { if (tm) clearTimeout(tm); tm = setTimeout(tsTexto, 150); };
+  $("tsMarcados").onclick = tsMarcados;
 }
 
 /* =====================================================================
@@ -3789,6 +3981,7 @@ var CALCS = [["Painel", cPainel], ["Estabilização", cEstab], ["Sala vermelha",
   ["Estado de mal", cMal], ["Trauma", cTrauma], ["Intoxicações", cIntox], ["Metabólicos", cMetab], ["Diluições", cDil], ["Repertório", cRep],
   ["Antibióticos", cAtb], ["Posologias", cPos], ["Soroterapia", cSoro], ["Correção", cCorr], ["Ventilação", cVm], ["VNI", cVni],
   ["Sedação para procedimento", cProced], ["Doses tóxicas", cToxicos], ["Modos ventilatórios", cModos],
+  ["Trilhas de soroterapia", cTrilhas], ["Plano gradual", cPlano], ["Preparo de soro", cPreparo],
   ["Gasometria", cGaso], ["Receita de alta", cAlta], ["Documentos", cDocs], ["Impressão", cPrint]];
 window.__erros = [];
 function recalc() {
@@ -3874,7 +4067,7 @@ function mostrarAba(id, foco) {
   if (AC.est[id]) {
     var pend = AC.pendente; AC.pendente = null;
     acervoAtivar(id, pend);
-    if (r.g) acervoAbrir(id, r.g, r.id, foco);
+    if (r.g) acervoAbrir(id, r.g, r.id, true);
   }
 }
 function abrirMenu() { $("side").className = "side no-print open"; mostra($("veu"), true); $("btnMenu").setAttribute("aria-expanded", "true"); }
@@ -4032,7 +4225,7 @@ function ligar() {
   $("coNa").oninput = function () { cCorr(); cMetab(); }; $("coNaAlvo").oninput = function () { cCorr(); cMetab(); };
   $("vmAlt").oninput = function () { cVm(); cModos(); };
   $("modoSel").onchange = cModos;
-  ligarAcervo();
+  ligarAcervo(); ligarNovos();
   cada(["gaNa", "gaCl", "gaHco", "gaGlic"], function (id) { $(id).oninput = cGaso; });
   $("diagChecks").onchange = cDiag;
   $("diagLimpar").onclick = function () { cada($("diagChecks").getElementsByTagName("input"), function (c) { c.checked = false; }); cDiag(); };

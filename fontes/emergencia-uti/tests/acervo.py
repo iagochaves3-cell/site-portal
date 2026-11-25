@@ -6,7 +6,7 @@ import hashlib, json, pathlib, re, sys
 
 base = pathlib.Path(sys.argv[1])
 origem_escores = pathlib.Path(sys.argv[2]) if len(sys.argv) > 2 else None
-ESPERADO = {"proto": 110, "tera": 362, "neo": 87, "pps": 266, "mono": 498, "esc": 486}
+ESPERADO = {"proto": 110, "tera": 362, "neo": 87, "pps": 266, "mono": 498, "esc": 486, "trat": 161, "soro": 15}
 falhas, total = [], 0
 
 def ok(cond, msg):
@@ -44,8 +44,18 @@ for g, i, titulo, *_ in itens:
             m = re.match(r"Linha (\d+)", s.get("h", ""))
             if m: linhas_pps.add(int(m.group(1)))
     if d.get("calc"): calcs.add(d["calc"])
+    for s in d["s"]:
+        for t, h in s.get("ln", []):
+            m = re.fullmatch(r"#t-[a-z]+(?:/([a-z]+)/([a-z0-9-]+))?", h)
+            ok(bool(m) and (m.group(1) is None or (base / m.group(1) / (m.group(2) + ".json")).exists()), f"link interno inválido em {g}/{i}: {h}")
     for m in re.finditer(r"\]\((assets/[a-z0-9-]+\.svg)\)", texto): figuras.add(m.group(1))
 ok(linhas_pps == set(range(1, 578)), f"linhas do Manual PPS: {len(linhas_pps)} de 577")
+comb = json.loads((base / "trat" / "combinacoes.json").read_text(encoding="utf-8"))
+ok([c[0] for c in comb] == list(range(1, 161)), "Tratado: combinações fora da sequência 1 a 160")
+for n, combo, diag, dif, cid in comb:
+    f = base / "trat" / f"{cid}.json"
+    ok(f.exists() and json.loads(f.read_text(encoding="utf-8"))["t"] == diag and combo and dif, f"Tratado: combinação {n} incoerente")
+ok((base / "trat" / "c-correcoes.json").exists(), "Tratado: tabela de correções ausente")
 cat = json.loads((base / "pps" / "m-catalogo-de-diagnosticos.json").read_text(encoding="utf-8")) if (base / "pps" / "m-catalogo-de-diagnosticos.json").exists() else None
 if cat is None:
     cat = next(json.loads(p.read_text(encoding="utf-8")) for p in (base / "pps").glob("*.json") if "Catálogo de diagnósticos" in p.read_text(encoding="utf-8")[:200])
