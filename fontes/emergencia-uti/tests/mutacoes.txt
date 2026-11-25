@@ -1,7 +1,7 @@
 amiodarona 5→6 mg/kg: 80 divergências
 paracetamol 15→20 gotas/mL: 46 divergências
 noradrenalina 4→8 mg em 50 mL: 153 divergências
-Holliday-Segar 50→40 mL/kg: 30 divergências
+Holliday-Segar 50→40 mL/kg: 169 divergências
 ibuprofeno liberado aos 3 meses: 2 divergências
 teto da adrenalina 1→2 mg: 6 divergências
 ampola de atropina 0,5 lida como 0,25 mg/mL: 96 divergências
@@ -9,5 +9,9 @@ cetamina para procedimento 1–2→1–3 mg/kg: 62 divergências
 limiar tóxico do paracetamol 150→140 mg/kg: 78 divergências
 volume corrente do modo 6–8→7–8 mL/kg: 30 divergências
 succinilcolina sem a faixa acima de 2 anos: 68 divergências
+NICE após choque 100→90 mL/kg na vazão: 48 divergências
+plano gradual: manutenção dividida por 20 h: 240 divergências
+preparo: NaCl calculado com 8 mg/mL: 96 divergências
+RCH sonda rápida sem o limite de 300 mL/h: 31 divergências
 amoxicilina na pneumonia 80–90→50–90 mg/kg/dia: 44 divergências
 mutações não detectadas: nenhuma

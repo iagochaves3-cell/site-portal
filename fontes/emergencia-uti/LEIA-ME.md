@@ -7,7 +7,7 @@ Endereço público: https://emergencia-uti.sites-pediatria.workers.dev/
 ## Duas camadas
 
 - Núcleo calculado: 26 abas de Estabilização, Fármacos, Suporte, Raciocínio e Alta. Toda dose passa pelo motor de dose e é conferida pelo oráculo.
-- Acervo integrado: 4 abas (Protocolos por diagnóstico, Monografias e Manual PPS, Calculadoras de escores, Acervo e fontes) com 1.809 itens dos sites e documentos do autor, reproduzidos como estão na origem.
+- Acervo integrado: 4 abas (Protocolos por diagnóstico, Monografias e Manual PPS, Calculadoras de escores, Acervo e fontes) com 1.985 itens dos sites e documentos do autor. Os sites entram como estão na origem; o Tratado de combinações semiológicas e o Guia de soroterapia, do Drive, foram revisados na integração (correções listadas no próprio acervo).
 
 ## Estrutura
 
@@ -22,6 +22,7 @@ Endereço público: https://emergencia-uti.sites-pediatria.workers.dev/
 - `fonts/`: Barlow Semi Condensed (SIL Open Font License 1.1), embutida no arquivo final.
 - `acervo/gera_acervo.py`: gera `dist/acervo/` a partir dos sites do portal e do texto do Manual PPS.
 - `acervo/dump_escores.mjs`: lista os escores do app Escores Clínicos (usado pelo gerador e pelo teste do acervo).
+- `acervo/gera_drive.py` e `acervo/tratado.tsv`: acrescentam ao acervo o Tratado (160 combinações, com as correções) e as 15 páginas do Guia de soroterapia.
 
 ## Gerar o site
 
@@ -30,6 +31,7 @@ python3 build.py
 node acervo/dump_escores.mjs ../../sites/scores-clinicos /tmp/escores.json
 pdftotext -layout ../../sites/laboratorioeradiografia/nexo/Manual_Integral_Prescricao_Pediatrica_Segura.pdf /tmp/manual.txt
 python3 acervo/gera_acervo.py ../../sites /tmp/manual.txt /tmp/escores.json dist/acervo
+python3 acervo/gera_drive.py dist/acervo
 cp ../../sites/scores-clinicos/{*.mjs,index.html,style.css} dist/acervo/escores/
 cp ../../sites/neonatologia/assets/reanimacao-*.svg dist/acervo/neo/assets/
 cp dist/index.html ../../sites/emergencia-uti/index.html
@@ -52,8 +54,8 @@ python3 tests/acervo.py dist/acervo ../../sites/scores-clinicos
 python3 tests/mutacao.py
 ```
 
-- `oraculo.py` recalcula cada dose, volume, gota, vazão, dose tóxica e volume corrente a partir de uma tabela própria, digitada à parte, e compara com o que a tela mostra. Ao mudar uma dose em `src/`, a mesma mudança precisa ser feita no oráculo; se as duas não baterem, o teste falha.
-- `mutacao.py` injeta 12 erros de dose, um de cada vez, e exige que o oráculo acuse cada um.
+- `oraculo.py` recalcula cada dose, volume, gota, vazão, dose tóxica, volume corrente e conta de soroterapia a partir de uma tabela própria, digitada à parte, e compara com o que a tela mostra. Ao mudar uma dose em `src/`, a mesma mudança precisa ser feita no oráculo; se as duas não baterem, o teste falha.
+- `mutacao.py` injeta 16 erros de dose, um de cada vez, e exige que o oráculo acuse cada um.
 - `delta.py` compara a versão nova com o arquivo original (`tests/base-original.json`) e exige um motivo escrito para cada diferença.
 - `acervo.py` confere índice, arquivos, contagens, linhas do Manual PPS, escores e figuras, e procura conteúdo ativo.
 - `funcional.js` percorre as 30 abas, a busca, o paciente, os painéis novos, o leitor do acervo, a cópia, a impressão e o celular.

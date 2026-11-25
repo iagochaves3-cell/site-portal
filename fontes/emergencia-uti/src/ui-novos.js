@@ -322,6 +322,11 @@ function acervoHTML(d, g) {
       h += "</tbody></table></div>";
     }
     if (s.pre) h += '<pre class="ac-pre">' + esc(s.pre) + "</pre>";
+    if (s.ln && s.ln.length) {
+      h += '<ul class="ac-ln">';
+      for (j = 0; j < s.ln.length; j++) if (/^#t-[a-z]+(\/[a-z]+\/[a-z0-9-]+)?$/.test(s.ln[j][1])) h += '<li><a href="' + s.ln[j][1] + '">' + esc(s.ln[j][0]) + "</a></li>";
+      h += "</ul>";
+    }
   }
   if (d.r && d.r.length) {
     h += '<h3>Referências da origem</h3><ol class="ac-refs">';
@@ -405,4 +410,144 @@ function ligarAcervo() {
 function rota(h) {
   var p = String(h || "").split("/");
   return { aba: p[0], g: p.length === 3 ? p[1] : null, id: p.length === 3 ? p[2] : null };
+}
+
+/* =====================================================================
+   Soroterapia: trilhas OMS × RCH × NICE, plano gradual e preparo
+   (Guia de soroterapia do autor, 25/10/2026)
+   ===================================================================== */
+function horasTxt(h) { return trim0(nf(h, 1)) + " h"; }
+function cTrilhas() {
+  var kg = P.peso, a = P.idade, hs = holliday(kg), M = hs / 24, h = "", nota5 = a >= 5 ? " Fora da faixa do CG84 (abaixo de 5 anos)." : "";
+  h += tr(["OMS, Plano B (soro oral)", K(ml(75 * kg) + " em 4 h"), K(mlh(75 * kg / 4)), "75 mL/kg; reclassificar em 4 h."]);
+  if (ehNeo(P)) h += tr(["OMS, Plano C (venoso)", "—", "—", "Não se aplica ao recém-nascido: 10 mL/kg e reavaliar."]);
+  else if (a < 1) h += tr(["OMS, Plano C (venoso)", K(ml(100 * kg) + " em 6 h"), K(mlh(30 * kg) + " por 1 h; depois " + mlh(14 * kg) + " por 5 h"), "Ringer lactato; não somar manutenção."]);
+  else h += tr(["OMS, Plano C (venoso)", K(ml(100 * kg) + " em 3 h"), K(mlh(60 * kg) + " por 30 min; depois " + mlh(28 * kg) + " por 2 h 30 min"), "Ringer lactato; não somar manutenção."]);
+  h += tr(["RCH, venoso: manutenção + 5% em 24 h", K(ml(hs + 50 * kg) + " em 24 h"), K(mlh((hs + 50 * kg) / 24)), "Déficit restante só depois de reavaliar; perdas à parte."]);
+  if (a < 0.5) h += tr(["RCH, sonda rápida", "—", "—", "Abaixo de 6 meses: avaliação pediátrica antes de sonda rápida."]);
+  else h += tr(["RCH, sonda rápida (10–25 mL/kg/h)", K(faixaTxt(40 * kg, 100 * kg, mlNum) + " mL"), K(faixaTxt(10 * kg, Math.min(25 * kg, 300), vazNum) + " mL/h"),
+    (25 * kg > 300 ? "Acima de 12 kg, a RCH limita a 300 mL/h e prolonga o tempo. " : "Por 4 h. ") + "Desidratação moderada e via segura."]);
+  h += tr(["RCH, sonda lenta: 5% em 6 h", K(ml(50 * kg) + " em 6 h"), K(mlh(50 * kg / 6) + "; depois " + mlh(M) + " por 18 h"), "Depois do déficit, manutenção nas 18 h seguintes."]);
+  h += tr(["NICE, oral ou sonda", K(ml(50 * kg + 4 * M) + " em 4 h"), K(mlh((50 * kg + 4 * M) / 4)), "50 mL/kg + 4 h de manutenção." + nota5]);
+  h += tr(["NICE, venoso sem choque", K(ml(50 * kg + hs) + " em 24 h"), K(mlh((50 * kg + hs) / 24)), "Déficit de 50 mL/kg + manutenção." + nota5]);
+  h += tr(["NICE, venoso após choque tratado", K(ml(100 * kg + hs) + " em 24 h"), K(mlh((100 * kg + hs) / 24)), "Déficit de 100 mL/kg + manutenção; bolus registrados à parte." + nota5]);
+  h += tr(["NICE, bolus no choque", K(ml(Math.min(10 * kg, 500))), K("em menos de 10 min"), "NaCl 0,9%, 10 mL/kg (NG29); teto de 500 mL, dose do adulto."]);
+  corpo("soTrilhas", h);
+}
+function cPlano() {
+  var kg = P.peso, av = [], ant = valorDe("pgAnt"), temAnt = isFinite(ant) && ant > kg && ant <= kg * 1.3;
+  if (isFinite(ant) && !temAnt) av.push("Peso anterior ignorado: precisa ser maior que o atual e no máximo 30% acima.");
+  var ref = temAnt ? ant : kg, pct = parseFloat($("pgDef").value);
+  var defMl = temAnt ? (ant - kg) * 1000 : pct * 10 * kg, defPct = temAnt ? (ant - kg) / ant * 100 : pct;
+  var hs = holliday(ref), frac = $("pgFrac").value === "67" ? 2 / 3 : 1, M = hs * frac / 24;
+  var T = parseFloat($("pgT").value), prog = defMl, resto = 0;
+  if ($("pgRch").checked && T === 24 && defMl > 50 * ref + 1e-9) { prog = 50 * ref; resto = defMl - prog; }
+  var dT = prog / T, perdas = valorDe("pgPerdas"), outros = valorDe("pgOutros"), jan = parseFloat($("pgJan").value);
+  if (!isFinite(perdas) || perdas < 0) perdas = 0;
+  if (!isFinite(outros) || outros < 0) outros = 0;
+  var L = perdas / jan, base = M + dT - outros, r1 = base + L, v24 = r1 * jan + base * (24 - jan);
+  set("pgDefOut", defMl > 0 ? ml(defMl) + " (" + num(defPct) + "% do peso de " + num(ref) + " kg)" + (resto > 0 ? "; " + ml(prog) + " nas primeiras 24 h e " + ml(resto) + " depois de reavaliar" : ", em " + T + " h") : "Sem déficit");
+  set("pgM", mlh(M) + " (" + num(hs) + " mL/dia" + (frac < 1 ? " × 2/3" : "") + (temAnt ? ", pelo peso anterior" : "") + ")");
+  set("pgDT", mlh(dT));
+  set("pgL", perdas > 0 ? mlh(L) + " por " + jan + " h, em programação separada" : "—");
+  if (base <= 0) {
+    av.push("Os outros aportes já cobrem manutenção e déficit: rever o plano antes de prescrever.");
+    cada(["pgR", "pgV24", "pgTig", "pgBolsas"], function (i) { set(i, "—"); });
+  } else {
+    set("pgR", perdas > 0 ? mlh(r1) + " nas primeiras " + jan + " h; depois " + mlh(base) : mlh(base));
+    set("pgV24", ml(v24) + (outros > 0 ? " (sem contar os outros aportes)" : ""));
+    var gli = parseFloat($("pgGli").value);
+    set("pgTig", gli > 0 ? nf(gli * base / (kg * 60), 2) + " mg/kg/min com glicose " + (gli === 50 ? "5%" : "10%") : "Sem glicose: acompanhar a glicemia");
+    var vol = base * 24, n = Math.ceil(vol / 500 - 1e-9), ult = vol - 500 * (n - 1);
+    set("pgBolsas", n === 1 ? "1 bolsa: " + ml(vol) + " em 24 h" : n + " bolsas: cada 500 mL dura " + horasTxt(500 / base) + "; a última, " + ml(ult) + " em " + horasTxt(ult / base));
+  }
+  if (ehNeo(P)) av.push("Recém-nascido: usar a taxa hídrica por dia de vida, não Holliday-Segar.");
+  var avEl = $("pgAviso"); avEl.textContent = av.join(" "); mostra(avEl, av.length > 0);
+}
+function fmtPrep(v) { return (v >= 10 ? trim0(nf(v, 1)) : trim0(nf(v, 2))) + " mL"; }
+function cPreparo() {
+  var Vf = parseFloat($("ppVol").value), Gf = parseFloat($("ppGli").value), est = $("ppEst").value, C = parseFloat($("ppNa").value);
+  var kL = parseFloat($("ppK").value), kc = parseFloat($("ppKcl").value), VK = kL * Vf / 1000 / kc, Vb, Vg, Vna, gEst, nomeBase, h = "", av = [];
+  if (est === "sg5") { gEst = 50; nomeBase = "Soro glicosado 5%"; Vna = 9 * Vf / C; Vg = (10 * Gf * Vf - 50 * Vf + 50 * Vna + 50 * VK) / 450; }
+  else { gEst = est === "sf10" ? 10 : (est === "sf25" ? 25 : 50); nomeBase = "Soro fisiológico 0,9%"; Vg = Vf * Gf / gEst; Vna = 9 * (Vg + VK) / (C - 9); }
+  Vb = Vf - Vg - Vna - VK;
+  var kcl = $("ppKcl").options[$("ppKcl").selectedIndex].text.replace(/ \(.*/, "");
+  if (Vg < -1e-9 || Vb < -1e-9) {
+    corpo("ppTab", tr([{ t: "Este estoque não alcança o alvo: com soro glicosado 5% a glicose final não fica abaixo de 5%, e a glicose 10% não chega a 10% depois de somar o sódio. Escolha outro estoque.", span: 2 }]));
+    set("ppConf", "—");
+  } else {
+    h += tr([nomeBase, K(fmtPrep(Vb))]);
+    h += tr(["Glicose " + gEst + "%", K(fmtPrep(Vg))]);
+    h += tr(["NaCl " + (C === 100 ? "10%" : "20%"), K(fmtPrep(Vna))]);
+    if (kL > 0) h += tr([kcl, K(fmtPrep(VK) + " (" + num(kL * Vf / 1000) + " mEq)")]);
+    h += tr([{ t: "Volume final" }, K(fmtPrep(Vf))]);
+    corpo("ppTab", h);
+    var naMg = (est === "sg5" ? 0 : 9 * Vb) + C * Vna, gMg = gEst * 10 * Vg + (est === "sg5" ? 50 * Vb : 0);
+    set("ppConf", "Conferência: " + num(naMg) + " mg de NaCl em " + num(Vf) + " mL = " + num(naMg / Vf) + " mg/mL (0,9%); " + num(gMg / 1000) + " g de glicose = " + num(gMg / Vf) + " mg/mL (" + num(gMg / Vf / 10) + "%)" +
+      (kL > 0 ? "; potássio " + num(kL) + " mEq/L." : "."));
+  }
+  if (kL > 0) av.push("Potássio só com potássio sérico, diurese e função renal conhecidos; nunca em bolus." + (kL >= 40 ? " Com 40 mEq/L, bomba de infusão e monitorização; acima disso, acesso central." : ""));
+  var a = $("ppAviso"); a.textContent = av.join(" "); mostra(a, av.length > 0);
+}
+
+/* ---------- Tratado: busca de combinações por sinais ---------- */
+var TS = { dados: null, carregando: false, cb: [] };
+var TS_SINAIS = { febre: ["febr"], dispneia: ["dispn", "taquipn"], tosse: ["toss"], sibilo: ["sibil"], estridor: ["estrid", "ladrant"], dorToracica: ["toracic"],
+  cefaleia: ["cefal"], rigidez: ["nuca", "mening"], convulsao: ["convuls"], alteracaoCons: ["consciencia", "letarg", "coma", "sensorio", "encefalopat", "confus"],
+  vomito: ["vomit"], diarreia: ["diarr"], dorAbdominal: ["abdom"], disuria: ["disur", "urinari"], poliuria: ["poliur", "polidips"],
+  artralgia: ["artr", "claudic", "apoiar"], mialgia: ["mialg", "muscul"], rash: ["exantem", "petequ", "purpur", "vesicul", "eritem"],
+  urticaria: ["urticar", "angioedem"], sangramento: ["sangr", "hemorrag", "hematur", "melena", "hematemes", "equimos"], exposicao: ["intoxic", "ingest", "exposic"] };
+function tsCarregar(cb) {
+  if (TS.dados) { cb(); return; }
+  TS.cb.push(cb);
+  if (TS.carregando) return;
+  TS.carregando = true; set("tsInfo", "Carregando o Tratado…");
+  obterJSON("acervo/trat/combinacoes.json", function (err, d) {
+    TS.carregando = false;
+    if (!err && d && d.length) {
+      TS.dados = [];
+      for (var i = 0; i < d.length; i++) TS.dados.push({ n: d[i][0], c: d[i][1], d: d[i][2], f: d[i][3], id: d[i][4], txt: semAcento(d[i][1] + " " + d[i][2]) });
+    }
+    var l = TS.cb; TS.cb = [];
+    for (var j = 0; j < l.length; j++) l[j]();
+  });
+}
+// grupos: lista de listas de radicais; cada grupo atendido vale 1 ponto.
+function tsBuscar(grupos, rotulo) {
+  if (!TS.dados) { set("tsInfo", "O Tratado não pôde ser carregado. Ele vem do endereço publicado na web: confira a conexão."); setH("tsOut", ""); return; }
+  var r = [], i, j, k;
+  for (i = 0; i < TS.dados.length; i++) {
+    var e = TS.dados[i], p = 0;
+    for (j = 0; j < grupos.length; j++) for (k = 0; k < grupos[j].length; k++) if (e.txt.indexOf(grupos[j][k]) >= 0) { p++; break; }
+    if (p) r.push({ e: e, p: p });
+  }
+  r.sort(function (a, b) { return b.p - a.p || a.e.n - b.e.n; });
+  var h = "", lim = Math.min(r.length, 15);
+  for (i = 0; i < lim; i++) {
+    var x = r[i].e;
+    h += '<div class="hip"><h4>' + esc(x.n + ". " + x.d) + " <small>" + r[i].p + " de " + grupos.length + (grupos.length === 1 ? " termo" : " termos") + "</small></h4><dl><dt>Sinais</dt><dd>" + esc(x.c) +
+      "</dd><dt>Diferenciais</dt><dd>" + esc(x.f) + '</dd></dl><p class="helper" style="margin:6px 0 0"><a href="#t-proto/trat/' + x.id + '">Abrir no acervo</a></p></div>';
+  }
+  setH("tsOut", h);
+  set("tsInfo", r.length ? r.length + (r.length === 1 ? " combinação" : " combinações") + " com " + rotulo + (lim < r.length ? "; mostrando as " + lim + " que reúnem mais termos." : ".") : "Nenhuma combinação do Tratado com " + rotulo + ".");
+}
+function tsTexto() {
+  var q = $("tsBusca").value.replace(/^\s+|\s+$/g, ""), termos = semAcento(q).split(/[\s,;+]+/), g = [];
+  for (var i = 0; i < termos.length; i++) if (termos[i].length >= 3) g.push([termos[i]]);
+  if (!g.length) { set("tsInfo", "Escreva ao menos 3 letras ou use os sinais marcados."); setH("tsOut", ""); return; }
+  tsCarregar(function () { tsBuscar(g, "“" + q + "”"); });
+}
+function tsMarcados() {
+  var g = [], nomes = [];
+  cada($("diagChecks").getElementsByTagName("input"), function (c) { if (c.checked && TS_SINAIS[c.value]) { g.push(TS_SINAIS[c.value]); nomes.push(c.parentNode.textContent.replace(/^\s+|\s+$/g, "").toLowerCase()); } });
+  if (!g.length) { set("tsInfo", "Marque sinais na lista acima primeiro."); setH("tsOut", ""); return; }
+  tsCarregar(function () { tsBuscar(g, "os sinais marcados (" + nomes.join(", ") + ")"); });
+}
+function ligarNovos() {
+  cada(["pgDef", "pgFrac", "pgT", "pgJan", "pgGli", "pgRch"], function (i) { $(i).onchange = cPlano; });
+  cada(["pgAnt", "pgPerdas", "pgOutros"], function (i) { $(i).oninput = cPlano; });
+  cada(["ppVol", "ppGli", "ppEst", "ppNa", "ppK", "ppKcl"], function (i) { $(i).onchange = cPreparo; });
+  var tm = null;
+  $("tsBusca").oninput = function () { if (tm) clearTimeout(tm); tm = setTimeout(tsTexto, 150); };
+  $("tsMarcados").onclick = tsMarcados;
 }

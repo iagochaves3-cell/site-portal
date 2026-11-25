@@ -1,17 +1,17 @@
 # Emergência & UTI: relatório de testes
 
-Versão testada: `dist/index.html`, SHA-256 `b6ab71f5306650f55a296c1f9a9de87005ce805af5d1e3dc6560de20edecb96d`, com o acervo em `dist/acervo/`. Data: 25/11/2026.
+Versão testada: `dist/index.html`, SHA-256 `ad16e49a1d83f03cc0ae9eb6b3d84c7543644e088f831624bc4629a6bfd5eff8`, com o acervo em `dist/acervo/`. Data: 25/11/2026.
 
 ## Resultado
 
 | Teste | O que confere | Resultado |
 |---|---|---|
-| Oráculo, 48 pacientes | Cada dose, volume, gota, vazão, dose tóxica e volume corrente exibido, recalculado a partir de uma tabela digitada à parte | 33.799 conferências, 0 divergências |
-| Oráculo, varredura de peso | O mesmo, em 201 pesos de 0,5 a 150 kg | 139.679 conferências, 0 divergências |
-| Oráculo, 10 pacientes de referência | O mesmo, nos pacientes do teste em delta | 7.013 conferências, 0 divergências |
-| Mutação | 12 erros de dose injetados de propósito no código | 12 de 12 detectados |
-| Funcional | 30 abas, busca (também no acervo), paciente, painéis novos, leitor do acervo, calculadora de escores embutida, cópia, impressão, tema, celular em 390 e 320 px, nenhuma requisição fora do site | 227 verificações aprovadas, no servidor local e no endereço público |
-| Acervo | Índice × arquivos, contagens por coleção (110, 362, 87, 266, 498, 486), 577 linhas e 315 diagnósticos do Manual PPS, 486 escores × calculadora embutida idêntica à de origem, figuras, ausência de conteúdo ativo | 11.906 conferências, 0 falhas |
+| Oráculo, 48 pacientes | Cada dose, volume, gota, vazão, dose tóxica, volume corrente e conta de soroterapia (trilhas OMS, RCH e NICE, plano gradual, preparo) exibida, recalculada a partir de uma tabela digitada à parte | 36.619 conferências, 0 divergências |
+| Oráculo, varredura de peso | O mesmo, em 201 pesos de 0,5 a 150 kg | 151.435 conferências, 0 divergências |
+| Oráculo, 10 pacientes de referência | O mesmo, nos pacientes do teste em delta | 7.600 conferências, 0 divergências |
+| Mutação | 16 erros de dose injetados de propósito no código | 16 de 16 detectados |
+| Funcional | 30 abas, busca (também no acervo), paciente, painéis novos, exemplos resolvidos do Guia de soroterapia, busca do Tratado por sinais, leitor do acervo, calculadora de escores embutida, cópia, impressão, tema, celular em 390 e 320 px, nenhuma requisição fora do site | 245 verificações aprovadas, no servidor local e no endereço público |
+| Acervo | Índice × arquivos, contagens das 8 coleções (110, 362, 87, 266, 498, 486, 161, 15), 577 linhas e 315 diagnósticos do Manual PPS, 160 combinações do Tratado, links internos, 486 escores × calculadora embutida idêntica à de origem, figuras, ausência de conteúdo ativo | 12.879 conferências, 0 falhas |
 | Delta | Original × nova versão, campo a campo, em 10 pacientes | 1.250 comparações; toda diferença tem motivo registrado |
 
 ## Limite do que os testes provam
@@ -23,7 +23,7 @@ O oráculo e o site foram escritos pela mesma revisão clínica. O teste garante
 - amiodarona 5→6 mg/kg: 80 divergências
 - paracetamol 15→20 gotas/mL: 46 divergências
 - noradrenalina 4→8 mg em 50 mL: 153 divergências
-- Holliday-Segar 50→40 mL/kg: 30 divergências
+- Holliday-Segar 50→40 mL/kg: 169 divergências
 - ibuprofeno liberado aos 3 meses: 2 divergências
 - teto da adrenalina 1→2 mg: 6 divergências
 - ampola de atropina 0,5 lida como 0,25 mg/mL: 96 divergências
@@ -31,6 +31,10 @@ O oráculo e o site foram escritos pela mesma revisão clínica. O teste garante
 - limiar tóxico do paracetamol 150→140 mg/kg: 78 divergências
 - volume corrente do modo 6–8→7–8 mL/kg: 30 divergências
 - succinilcolina sem a faixa acima de 2 anos: 68 divergências
+- NICE após choque 100→90 mL/kg na vazão: 48 divergências
+- plano gradual: manutenção dividida por 20 h: 240 divergências
+- preparo: NaCl calculado com 8 mg/mL: 96 divergências
+- RCH sonda rápida sem o limite de 300 mL/h: 31 divergências
 - amoxicilina na pneumonia 80–90→50–90 mg/kg/dia: 44 divergências
 
 ## Delta: original × nova versão

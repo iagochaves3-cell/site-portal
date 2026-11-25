@@ -18,6 +18,10 @@ MUTACOES = [
     ("limiar tóxico do paracetamol 150→140 mg/kg", "data-novos.js", '{ k: 150, t: "potencialmente tóxica", cap: 7500 }', '{ k: 140, t: "potencialmente tóxica", cap: 7500 }'),
     ("volume corrente do modo 6–8→7–8 mL/kg", "ui-novos.js", '"6–8 mL/kg: " + faixaTxt(6 * w, 8 * w, mlNum)', '"6–8 mL/kg: " + faixaTxt(7 * w, 8 * w, mlNum)'),
     ("succinilcolina sem a faixa acima de 2 anos", "data-farmacos.js", "return p.idade < 2 ? 2 : [1, 1.5];", "return p.idade < 2 ? 2 : 1.5;"),
+    ("NICE após choque 100→90 mL/kg na vazão", "ui-novos.js", 'K(mlh((100 * kg + hs) / 24))', 'K(mlh((90 * kg + hs) / 24))'),
+    ("plano gradual: manutenção dividida por 20 h", "ui-novos.js", "M = hs * frac / 24;", "M = hs * frac / 20;"),
+    ("preparo: NaCl calculado com 8 mg/mL", "ui-novos.js", "Vna = 9 * (Vg + VK) / (C - 9);", "Vna = 8 * (Vg + VK) / (C - 9);"),
+    ("RCH sonda rápida sem o limite de 300 mL/h", "ui-novos.js", "faixaTxt(10 * kg, Math.min(25 * kg, 300), vazNum)", "faixaTxt(10 * kg, 25 * kg, vazNum)"),
     ("amoxicilina na pneumonia 80–90→50–90 mg/kg/dia", "data-clinica.js", '{ l: "1ª", n: "Amoxicilina", d: { k: [80, 90], per: "dia", n: 2, maxDia: 4000 }', '{ l: "1ª", n: "Amoxicilina", d: { k: [50, 90], per: "dia", n: 2, maxDia: 4000 }'),
 ]
 

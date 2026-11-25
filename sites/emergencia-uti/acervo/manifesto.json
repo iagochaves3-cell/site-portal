@@ -48,6 +48,22 @@
    "url": "https://scores-clinicos.sites-pediatria.workers.dev/",
    "obs": "Critérios, pontuação, faixas de interpretação, limites e fontes; a calculadora original abre dentro da aba.",
    "itens": 486
+  },
+  {
+   "k": "trat",
+   "n": "Tratado de combinações semiológicas",
+   "origem": "Tratado de Combinações Semiológicas e Diagnósticos em Pediatria (Google Drive do autor)",
+   "url": "",
+   "obs": "160 combinações de sinais e sintomas com diagnóstico provável e diferenciais, mais a tabela de correções.",
+   "itens": 161
+  },
+  {
+   "k": "soro",
+   "n": "Guia de soroterapia",
+   "origem": "Guia de Soroterapia Pediátrica: OMS, RCH e NICE (Google Drive do autor)",
+   "url": "",
+   "obs": "As 15 páginas do guia de plantão, com tabelas e exemplos conferidos.",
+   "itens": 15
   }
  ],
  "total": 1809,
