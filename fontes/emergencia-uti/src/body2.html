@@ -1,0 +1,344 @@
+
+<!-- ============ 15. SOROTERAPIA ============ -->
+<section class="tab" id="t-soro" data-title="soroterapia hidratação venosa manutenção Holliday-Segar regra 4-2-1 NaCl KCl receita de soro isotônico dengue grupo A B C D diarreia plano A B C reidratação oral SRO" data-copiar="Copiar soroterapia">
+<div class="hero-head"><div><h1>Soroterapia</h1><p class="sub">Expansão, manutenção por Holliday-Segar e pela regra 4-2-1, receita de soro com concentração final e hidratação na diarreia e na dengue.</p></div></div>
+<div class="grid">
+<div class="hero-result"><div class="lbl">Expansão</div><div class="val" id="soExp">—</div><div class="cap" id="soExpCap">20 mL/kg em 5–20 min; 10 mL/kg no recém-nascido, no cardiopata e na cetoacidose. Reavaliar após cada alíquota.</div></div>
+<div class="hero-result"><div class="lbl">Manutenção</div><div class="val" id="soMan">—</div><div class="cap" id="soManCap">—</div></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Regra 4-2-1</h3><p class="helper">Manutenção horária por faixa de peso; é a aproximação por hora de Holliday-Segar.</p>
+<div class="kv"><span>Primeiros 10 kg (4 mL/kg/h)</span><span id="so421a" class="calc">—</span></div>
+<div class="kv"><span>De 10 a 20 kg (2 mL/kg/h)</span><span id="so421b" class="calc">—</span></div>
+<div class="kv"><span>Acima de 20 kg (1 mL/kg/h)</span><span id="so421c" class="calc">—</span></div>
+<div class="kv"><span>Total e gotejamento</span><span id="so421t" class="calc">—</span></div>
+</div>
+<div class="panel"><h3>Receita de soro em SG 5% 500 mL</h3><p class="helper">Informe os mEq a adicionar; a concentração final já considera o volume acrescentado.</p>
+<div class="grid" style="margin-bottom:6px">
+<div class="field"><label for="soNa">NaCl 20% a adicionar (mEq)</label><input id="soNa" type="number" inputmode="decimal" step="1" min="0" value="68"><div class="hlp">NaCl 20% = 3,4 mEq/mL</div></div>
+<div class="field"><label for="soK">KCl 19,1% a adicionar (mEq)</label><input id="soK" type="number" inputmode="decimal" step="1" min="0" value="13"><div class="hlp">KCl 19,1% = 2,56 mEq/mL; KCl 10% = 1,34 mEq/mL</div></div>
+</div>
+<div class="kv"><span>Volume de NaCl 20% e de KCl 19,1%</span><span id="soVol" class="calc">—</span></div>
+<div class="kv"><span>Sódio final</span><span id="soNaF" class="calc">—</span></div>
+<div class="kv"><span>Potássio final</span><span id="soKF" class="calc">—</span></div>
+<div class="kv"><span>Glicose final</span><span id="soGli" class="calc">—</span></div>
+<p class="helper" id="soTon" style="margin-top:8px">—</p>
+</div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Diarreia aguda: planos A, B e C</h3><p class="helper">Ministério da Saúde, 2023.</p>
+<div class="kv"><span>Plano A, em casa: soro oral após cada evacuação</span><span id="soPlA" class="calc">—</span></div>
+<div class="kv"><span>Plano B, na unidade: soro oral em 4–6 h</span><span id="soPlB" class="calc">—</span></div>
+<div class="kv"><span>Plano C, fase rápida IV</span><span id="soPlC" class="calc">—</span></div>
+<p class="helper" style="margin-top:8px">Plano C com SF 0,9% ou Ringer lactato; reavaliar ao fim de cada etapa e iniciar soro oral assim que a criança aceitar. Zinco por 10–14 dias nos menores de 5 anos.</p></div>
+<div class="panel"><h3>Dengue: hidratação por grupo</h3><p class="helper">Ministério da Saúde, 6ª edição, 2024.</p>
+<div class="kv"><span>Grupos A e B: hidratação oral por dia</span><span id="dgOral" class="calc">—</span></div>
+<div class="kv"><span>Grupo C: SF 0,9% na 1ª hora</span><span id="dgC" class="calc">—</span></div>
+<div class="kv"><span>Grupo C: manutenção após a melhora</span><span id="dgCman" class="calc">—</span></div>
+<div class="kv"><span>Grupo D: SF 0,9% em até 20 min</span><span id="dgD" class="calc">—</span></div>
+<p class="helper" style="margin-top:8px">Um terço do volume oral como soro de reidratação e o restante com líquidos caseiros. Grupo C: repetir 10 mL/kg/h na 2ª hora e reavaliar o hematócrito. Grupo D: repetir até 3 vezes, reavaliando a cada 15–30 min. Não usar anti-inflamatório nem ácido acetilsalicílico.</p></div>
+</div>
+<div class="light"><h3>Soluções isotônicas e balanceadas</h3><p>Na manutenção de 28 dias a 18 anos, usar solução isotônica (sódio de 130–154 mEq/L) com glicose e potássio: soluções hipotônicas aumentam o risco de hiponatremia (American Academy of Pediatrics, 2018). Exceções: recém-nascido, cardiopatia, doença renal ou hepática e perdas volumosas, que pedem prescrição individual.</p><p style="margin:0">Em expansões grandes e na sepse, preferir Ringer lactato ou outra solução balanceada, que causam menos hipercloremia. Na manutenção contínua, medir sódio, potássio e glicemia a cada 12–24 h e registrar balanço e diurese.</p></div>
+</section>
+
+<!-- ============ 16. CORREÇÃO ============ -->
+<section class="tab" id="t-corr" data-title="correção hidroeletrolítica água corporal total déficit de sódio hiponatremia NaCl 3% potássio cálcio magnésio fósforo bicarbonato reposição" data-copiar="Copiar correção">
+<div class="hero-head"><div><h1>Correção hidroeletrolítica</h1><p class="sub">Água corporal, déficit de sódio com velocidade segura e reposição de íons em dose e volume para o peso.</p></div></div>
+<div class="grid">
+<div class="panel"><h3>Água corporal total</h3><p class="helper">Fração do peso conforme idade e sexo.</p>
+<div class="kv"><span>Fração de água</span><span id="coFrac" class="calc">—</span></div>
+<div class="kv"><span>Água corporal total</span><span id="coAgua" class="calc">—</span></div>
+</div>
+<div class="panel"><h3>Déficit de sódio</h3><p class="helper">Déficit = fração de água × peso × (sódio alvo − sódio atual).</p>
+<div class="grid" style="margin-bottom:6px">
+<div class="field"><label for="coNa">Sódio atual (mEq/L)</label><input id="coNa" type="number" inputmode="decimal" step="1" value="122"></div>
+<div class="field"><label for="coNaAlvo">Sódio alvo (mEq/L)</label><input id="coNaAlvo" type="number" inputmode="decimal" step="1" value="130"></div>
+</div>
+<div class="kv"><span>Déficit total</span><span id="coDef" class="calc">—</span></div>
+<div class="kv"><span>Volume de NaCl 3% para esse déficit</span><span id="coVol3" class="calc">—</span></div>
+<div class="kv"><span>Velocidade máxima (8 mEq/L em 24 h)</span><span id="coVel" class="calc">—</span></div>
+<div class="kv"><span>Com convulsão ou coma: bolus de NaCl 3%</span><span id="coBolus" class="calc">—</span></div>
+<p class="helper" id="coAviso" style="margin-top:8px">NaCl 3% = 0,513 mEq/mL. Preparo: 15 mL de NaCl 20% + 85 mL de água destilada.</p>
+</div>
+</div>
+<div class="panel"><h3>Tabela de reposição</h3><p class="helper">Dose e volume para o peso, na solução indicada. Monitor cardíaco nas correções de potássio, cálcio e magnésio.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Íon</th><th>Dose por kg</th><th>Dose total</th><th>Solução</th><th>Volume</th><th>Como dar</th></tr></thead><tbody id="coTab"></tbody></table></div></div>
+<div class="light"><h3>Riscos</h3><p style="margin:0">Correção rápida da hiponatremia crônica: desmielinização osmótica. Hiponatremia aguda com sintomas: edema cerebral, tratar com bolus. Potássio e cálcio rápidos: arritmia. Cálcio extravasado: necrose de pele. Repetir os eletrólitos 2–4 h após cada correção.</p></div>
+</section>
+
+<!-- ============ 17. VENTILAÇÃO INVASIVA ============ -->
+<section class="tab" id="t-vm" data-title="ventilação mecânica invasiva volume corrente peso predito PEEP SARA SDRA driving pressure PALICC prona ECMO asma bronquiolite parâmetros iniciais" data-copiar="Copiar parâmetros">
+<div class="hero-head"><div><h1>Ventilação mecânica invasiva</h1><p class="sub">Parâmetros iniciais pela faixa etária, peso para o volume corrente, ajustes por doença e proteção pulmonar.</p></div></div>
+<div class="panel"><div class="field" style="max-width:260px;margin:0"><label for="vmAlt">Altura (cm), para o peso predito do adolescente e do adulto</label><input id="vmAlt" type="number" inputmode="decimal" step="1" min="100" max="230" placeholder="Ex.: 170"></div></div>
+<div class="grid">
+<div class="hero-result"><div class="lbl">Peso para calcular o volume corrente</div><div class="val" id="vmPeso">—</div><div class="cap" id="vmPesoCap">—</div></div>
+<div class="hero-result"><div class="lbl">Volume corrente a 6 mL/kg</div><div class="val" id="vmVt">—</div><div class="cap" id="vmVtCap">—</div></div>
+</div>
+<div class="panel"><h3>Parâmetros iniciais por faixa</h3><p class="helper">A linha destacada corresponde à idade informada. Ajustar pela gasometria, pela curva e pelo conforto.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Faixa</th><th>VC (mL/kg)</th><th>PEEP</th><th>FR</th><th>Tempo inspiratório</th><th>Fluxo</th><th>FiO₂</th><th>Gatilho</th></tr></thead><tbody id="vmTab"></tbody></table></div></div>
+<div class="grid">
+<div class="panel"><h3>Modos</h3><p class="helper">Escolher o modo que a equipe domina.</p>
+<ul><li>Volume controlado (VCV) e pressão controlada (PCV): suporte total. Em PCV, conferir o volume corrente obtido.</li><li>Pressão regulada com volume controlado (PRVC): volume garantido com pressão limitada.</li><li>SIMV com pressão de suporte e PSV: suporte parcial e desmame.</li><li>APRV e alta frequência: resgate na SDRA refratária, em centro experiente.</li></ul></div>
+<div class="panel"><h3>SDRA e PEEP</h3><p class="helper">Tabela de PEEP baixa por FiO₂ (ARDSNet), usada também na pediatria.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>FiO₂</th><th>PEEP (cmH₂O)</th></tr></thead><tbody>
+<tr><td>0,3</td><td>5</td></tr><tr><td>0,4</td><td>5–8</td></tr><tr><td>0,5</td><td>8–10</td></tr><tr><td>0,6</td><td>10</td></tr><tr><td>0,7</td><td>10–14</td></tr><tr><td>0,8</td><td>14</td></tr><tr><td>0,9</td><td>14–18</td></tr><tr><td>1,0</td><td>18–24</td></tr>
+</tbody></table></div>
+<p class="helper" style="margin-top:8px">Pressão de platô até 28–30 cmH₂O e pressão de distensão (platô − PEEP) até 15 cmH₂O. Hipercapnia permissiva com pH de 7,20 ou mais.</p></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Asma e bronquiolite</h3><p class="helper">O risco é o aprisionamento de ar.</p>
+<ul><li>Frequência baixa e tempo expiratório longo (relação I:E de 1:3 a 1:5).</li><li>Hipercapnia permissiva com pH acima de 7,20.</li><li>Medir a auto-PEEP e a pressão de platô; hipotensão súbita: desconectar e deixar exalar, pensar em pneumotórax.</li></ul></div>
+<div class="panel"><h3>SDRA pediátrica (PALICC-2, 2023)</h3><p class="helper">Índice de oxigenação = FiO₂ × pressão média de vias aéreas × 100 ÷ PaO₂. Com oximetria: trocar PaO₂ por SpO₂ (até 97%).</p>
+<ul><li>Em ventilação invasiva: índice de oxigenação a partir de 4, ou de saturação a partir de 5.</li><li>Leve a moderada: índice de oxigenação abaixo de 16 (saturação abaixo de 12). Grave: 16 ou mais (12 ou mais), após 4 h de ventilação.</li><li>Em ventilação não invasiva: PaO₂/FiO₂ até 300 ou SpO₂/FiO₂ até 250.</li><li>Volume corrente de 6–8 mL/kg (4–6 se a complacência for muito baixa), platô até 28 cmH₂O, pressão de distensão até 15 cmH₂O.</li><li>Grave: posição prona e bloqueio neuromuscular a considerar; ECMO na falha refratária.</li><li>SpO₂ 92–97% na forma leve a moderada; 88–92% na grave com PEEP otimizada.</li></ul></div>
+</div>
+</section>
+
+<!-- ============ 18. VNI ============ -->
+<section class="tab" id="t-vni" data-title="VNI CPAP BiPAP ventilação não invasiva IPAP EPAP interface cateter nasal de alto fluxo CNAF neonatal pediátrica falha intubação" data-copiar="Copiar parâmetros">
+<div class="hero-head"><div><h1>VNI, CPAP e alto fluxo</h1><p class="sub">Indicações, parâmetros iniciais pela idade, fluxo do cateter nasal de alto fluxo pelo peso e critérios de falha.</p></div></div>
+<div class="panel"><h3>Indicações e contraindicações</h3><p class="helper">Só com paciente cooperativo ou adaptável, monitorado e com equipe capaz de intubar.</p>
+<ul><li>Criança: bronquiolite moderada a grave, asma sem resposta ao tratamento inicial, pneumonia com esforço, doença neuromuscular, pós-extubação de risco.</li><li>Adulto: DPOC exacerbada com acidose respiratória, edema agudo de pulmão cardiogênico, imunossuprimido com insuficiência respiratória.</li><li>Não usar: parada respiratória ou apneias, instabilidade hemodinâmica, rebaixamento sem proteção de via aérea, vômitos, trauma ou cirurgia de face, pneumotórax não drenado, obstrução de via aérea alta.</li></ul></div>
+<div class="grid">
+<div class="panel"><h3>Parâmetros iniciais de VNI</h3><p class="helper">Subir a IPAP de 2 em 2 cmH₂O conforme esforço e volume corrente.</p>
+<div class="kv"><span>IPAP inicial</span><span id="vnI" class="calc">—</span></div>
+<div class="kv"><span>EPAP inicial</span><span id="vnE" class="calc">—</span></div>
+<div class="kv"><span>FiO₂ inicial</span><span>0,4, ajustando para SpO₂ 92–97%</span></div>
+<div class="kv"><span>Frequência de segurança</span><span id="vnFr" class="calc">—</span></div>
+</div>
+<div class="panel"><h3>Cateter nasal de alto fluxo</h3><p class="helper">Fluxo aquecido e umidificado; cânula ocupando até metade da narina.</p>
+<div class="kv"><span>Fluxo inicial pelo peso</span><span id="vnCnaf" class="calc">—</span></div>
+<div class="kv"><span>FiO₂</span><span>A menor para SpO₂ 92–97%</span></div>
+<p class="helper" style="margin-top:8px">Faixas do estudo PARIS-2: até 12 kg, 2 L/kg/min; 13–15 kg, 30 L/min; 16–30 kg, 35 L/min; 31–50 kg, 40 L/min; acima de 50 kg, 50 L/min.</p></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>CPAP neonatal</h3><p class="helper">Pronga binasal curta, do tamanho que preenche a narina sem comprimir o septo.</p>
+<div class="kv"><span>Pressão</span><span>5–6 cmH₂O (até 8)</span></div>
+<div class="kv"><span>Fluxo</span><span>6–8 L/min</span></div>
+<div class="kv"><span>FiO₂</span><span>A menor para SpO₂ 90–95%</span></div></div>
+<div class="panel"><h3>Cuidados com a interface</h3><p class="helper">Lesão de pele e vazamento são as principais causas de falha.</p>
+<ul><li>Escolher o tamanho com o molde e proteger a ponte nasal com hidrocoloide.</li><li>Inspecionar pele e septo a cada 2–4 h; alternar a interface se houver hiperemia.</li><li>Sonda gástrica aberta para descomprimir; cabeceira elevada.</li></ul></div>
+</div>
+<div class="light"><h3>Critérios de falha e intubação</h3><p style="margin:0">Reavaliar em 1–2 h. Intubar sem atraso se houver piora da consciência, apneias, esforço que não cede, FiO₂ acima de 0,6 para manter a saturação, PaCO₂ em ascensão com pH abaixo de 7,25 ou instabilidade hemodinâmica.</p></div>
+</section>
+
+<!-- ============ 19. DESMAME ============ -->
+<section class="tab" id="t-desmame" data-title="desmame extubação assincronia duplo disparo autodisparo esforço ineficaz auto-PEEP barotrauma volutrauma pneumonia associada à ventilação delirium bundle ABCDEF sedação" data-copiar="Copiar tabela">
+<div class="hero-head"><div><h1>Desmame, assincronia e complicações</h1><p class="sub">Critérios de desmame, teste de respiração espontânea, assincronias com causa e correção, e pacote de prevenção.</p></div></div>
+<div class="panel"><h3>Critérios de desmame</h3><p class="helper">Avaliar todos os dias, com sedação reduzida.</p>
+<ul><li>Causa da falência em resolução, sem novos eventos.</li><li>FiO₂ até 0,4–0,5 e PEEP até 5–8 cmH₂O, com SpO₂ no alvo.</li><li>Estabilidade hemodinâmica, sem vasoativo ou em dose baixa e estável.</li><li>Drive respiratório presente, tosse eficaz e secreção manejável.</li><li>Teste de respiração espontânea por 30–120 min: pressão de suporte baixa com PEEP, CPAP ou tubo T. Na criança, pressão de suporte de 5–8 cmH₂O acima da PEEP.</li><li>Falha do teste: taquipneia, esforço, queda de saturação, taquicardia, sudorese ou alteração do sensório. Retornar ao suporte anterior e reavaliar em 24 h.</li></ul></div>
+<div class="panel"><h3>Tabela de assincronias</h3>
+<div class="tbl"><table class="ref"><thead><tr><th>Assincronia</th><th>Causa provável</th><th>Correção</th></tr></thead><tbody>
+<tr><td>Esforço ineficaz</td><td>Auto-PEEP, gatilho pouco sensível, suporte excessivo, sedação profunda</td><td>Reduzir suporte ou volume, alongar a expiração, PEEP externa próxima de 80% da auto-PEEP, sensibilizar o gatilho</td></tr>
+<tr><td>Autodisparo</td><td>Vazamento, água no circuito, oscilação cardíaca, gatilho sensível demais</td><td>Corrigir vazamento, drenar o circuito, reduzir a sensibilidade</td></tr>
+<tr><td>Duplo disparo</td><td>Tempo inspiratório do ventilador menor que o do paciente; volume insuficiente</td><td>Aumentar o tempo inspiratório ou o volume; em pressão de suporte, reduzir o limiar de ciclagem</td></tr>
+<tr><td>Ciclagem tardia</td><td>Tempo inspiratório do ventilador maior que o do paciente; vazamento</td><td>Reduzir o tempo inspiratório; em pressão de suporte, aumentar o limiar de ciclagem</td></tr>
+<tr><td>Ciclagem precoce</td><td>Tempo inspiratório curto para a demanda</td><td>Aumentar o tempo inspiratório ou reduzir o limiar de ciclagem</td></tr>
+<tr><td>Fluxo insuficiente</td><td>Fluxo baixo em volume controlado</td><td>Aumentar o fluxo ou mudar para modo limitado a pressão</td></tr>
+<tr><td>Disparo reverso</td><td>Esforço induzido pelo ciclo em paciente muito sedado</td><td>Reduzir a sedação ou ajustar a frequência</td></tr>
+<tr><td>Auto-PEEP</td><td>Expiração incompleta</td><td>Reduzir frequência e volume, alongar a expiração, broncodilatador</td></tr>
+</tbody></table></div></div>
+<div class="panel"><h3>Complicações</h3><p class="helper">Prevenir é ajustar o ventilador todos os dias.</p>
+<ul><li>Barotrauma e volutrauma: limitar platô, pressão de distensão e volume corrente.</li><li>Atelectrauma: PEEP adequada e evitar desconexões.</li><li>Pneumonia associada à ventilação: cabeceira a 30–45°, higiene oral, pressão do cuff de 20–25 cmH₂O, despertar diário.</li><li>Disfunção diafragmática: evitar sedação profunda e suporte excessivo.</li><li>Estridor pós-extubação: ver aba Via aérea.</li></ul></div>
+<div class="light"><h3>Pacote ABCDEF e prevenção</h3><p><strong>A</strong>, avaliar e tratar a dor. <strong>B</strong>, despertar diário e teste de respiração espontânea. <strong>C</strong>, escolha da analgesia e da sedação, com alvo leve. <strong>D</strong>, delirium: rastrear e prevenir. <strong>E</strong>, mobilização precoce. <strong>F</strong>, família presente e participante.</p><p style="margin:0">A atualização focada do PADIS (2025, adultos) tratou de ansiedade, agitação e sedação, delirium, imobilidade e sono: sugere dexmedetomidina em vez de propofol quando se busca sedação leve, mobilização reforçada e melatonina para o sono. Na pediatria, a referência é o PANDEM (2022).</p></div>
+</section>
+
+<!-- ============ 20. ESCORES ============ -->
+<section class="tab" id="t-escores" data-title="escores clínicos gravidade PEWS Phoenix SIRS qSOFA SOFA NEWS2 Glasgow AVDI RASS CAM-ICU FLACC Wong-Baker APGAR Silverman CURB-65 Wells HEART TIMI NIHSS Child-Pugh MELD PECARN Kocher Rochester Westley PRAM apendicite desidratação McIsaac" data-copiar="Copiar tabela">
+<div class="hero-head"><div><h1>Escores clínicos e de gravidade</h1><p class="sub">Componentes, pontuação, interpretação e uso dos principais escores de emergência e terapia intensiva.</p></div></div>
+<div class="panel"><h3>Tabela de escores</h3><p class="helper">Use a busca lateral para localizar um escore pelo nome.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Escore</th><th>Componentes</th><th>Pontuação</th><th>Interpretação</th><th>Uso</th></tr></thead><tbody>
+<tr><td>PEWS</td><td>Comportamento, cardiovascular e respiratório (0–3 cada); 2 pontos extras por nebulização a cada 15 min ou vômitos persistentes após cirurgia</td><td>0–9 (até 13)</td><td>3–4: reavaliar com o médico; 5 ou mais, ou 3 em um domínio: resposta rápida</td><td>Deterioração na enfermaria pediátrica</td></tr>
+<tr><td>Phoenix (2024)</td><td>Respiratório (0–3), cardiovascular (0–6), coagulação (0–2), neurológico (0–2)</td><td>0–13</td><td>Sepse: infecção suspeita com 2 pontos ou mais. Choque séptico: sepse com 1 ponto cardiovascular ou mais</td><td>Definição de sepse em menores de 18 anos</td></tr>
+<tr><td>SIRS</td><td>Temperatura, frequência cardíaca, frequência respiratória, leucócitos</td><td>0–4</td><td>2 critérios ou mais; não define mais sepse</td><td>Histórico; substituído por Phoenix e SOFA</td></tr>
+<tr><td>qSOFA</td><td>Frequência respiratória a partir de 22, alteração mental, pressão sistólica até 100 mmHg</td><td>0–3</td><td>2 ou mais: maior risco; não usar sozinho como triagem</td><td>Adulto fora da UTI</td></tr>
+<tr><td>SOFA</td><td>Respiratório, coagulação, fígado, cardiovascular, neurológico, renal</td><td>0–24</td><td>Aumento de 2 ou mais com infecção: sepse</td><td>Disfunção orgânica no adulto</td></tr>
+<tr><td>NEWS2</td><td>Frequência respiratória, saturação, oxigênio suplementar, pressão sistólica, frequência cardíaca, consciência, temperatura</td><td>0–20</td><td>5–6 ou 3 em um parâmetro: avaliação urgente; 7 ou mais: emergência</td><td>Adulto</td></tr>
+<tr><td>Glasgow</td><td>Abertura ocular (1–4), resposta verbal (1–5), resposta motora (1–6); verbal adaptada no lactente (balbucia, choro consolável, choro à dor, gemido)</td><td>3–15</td><td>13–15 leve; 9–12 moderado; até 8 grave, considerar via aérea</td><td>Consciência</td></tr>
+<tr><td>AVDI</td><td>Alerta, responde à voz, responde à dor, inconsciente</td><td>4 níveis</td><td>Resposta só à dor ou ausente equivale a Glasgow até 8</td><td>Avaliação rápida</td></tr>
+<tr><td>RASS</td><td>Agitação e sedação</td><td>−5 a +4</td><td>Alvo habitual de 0 a −2</td><td>Sedação em UTI</td></tr>
+<tr><td>CAM-ICU</td><td>Início agudo ou flutuação, desatenção, consciência alterada, pensamento desorganizado</td><td>Positivo ou negativo</td><td>Positivo: delirium. Na criança, pCAM-ICU, psCAM-ICU ou CAPD (9 ou mais)</td><td>Delirium em UTI</td></tr>
+<tr><td>FLACC</td><td>Face, pernas, atividade, choro, consolabilidade</td><td>0–10</td><td>1–3 leve; 4–6 moderada; 7–10 intensa</td><td>Dor de 2 meses a 7 anos e não verbal</td></tr>
+<tr><td>Wong-Baker</td><td>Seis faces</td><td>0–10</td><td>Autorrelato</td><td>Dor a partir de 3 anos</td></tr>
+<tr><td>APGAR</td><td>Frequência cardíaca, respiração, tônus, irritabilidade reflexa, cor</td><td>0–10</td><td>7–10 normal; 4–6 moderado; 0–3 grave; não decide a reanimação</td><td>Recém-nascido com 1 e 5 min</td></tr>
+<tr><td>Silverman-Andersen</td><td>Retração intercostal, retração xifoide, movimento toracoabdominal, batimento de asa de nariz, gemido</td><td>0–10</td><td>1–3 leve; 4–6 moderado; 7 ou mais grave</td><td>Desconforto respiratório do recém-nascido</td></tr>
+<tr><td>Westley</td><td>Estridor (0–2), retração (0–3), entrada de ar (0–2), cianose (0, 4, 5), consciência (0, 5)</td><td>0–17</td><td>Até 2 leve; 3–7 moderado; 8–11 grave; 12 ou mais: falência iminente</td><td>Crupe</td></tr>
+<tr><td>PRAM</td><td>Retração supraesternal, uso de escalenos, entrada de ar, sibilos, saturação</td><td>0–12</td><td>0–3 leve; 4–7 moderada; 8–12 grave</td><td>Crise de asma de 1 a 17 anos</td></tr>
+<tr><td>Desidratação clínica (CDS)</td><td>Aparência geral, olhos, mucosas, lágrimas (0–2 cada)</td><td>0–8</td><td>0 sem desidratação; 1–4 alguma; 5–8 moderada a grave</td><td>Gastroenterite de 1 mês a 3 anos</td></tr>
+<tr><td>Apendicite pediátrica (PAS)</td><td>Migração da dor, anorexia, náusea ou vômito, febre, leucocitose, neutrofilia (1 cada); dor na fossa ilíaca direita e dor à tosse, percussão ou pulo (2 cada)</td><td>0–10</td><td>Até 3 baixo risco; 4–6 imagem; 7 ou mais: avaliação cirúrgica</td><td>Dor abdominal</td></tr>
+<tr><td>Kocher</td><td>Febre acima de 38,5 °C, recusa em apoiar o membro, VHS a partir de 40 mm/h, leucócitos acima de 12.000/mm³</td><td>0–4</td><td>Probabilidade de artrite séptica: 0, menos de 1%; 1, 3%; 2, 40%; 3, 93%; 4, 99%</td><td>Quadril doloroso da criança</td></tr>
+<tr><td>PECARN (TCE)</td><td>Glasgow, estado mental, sinais de fratura, perda de consciência, vômitos, mecanismo, cefaleia; critérios por idade</td><td>Risco muito baixo, intermediário ou alto</td><td>Alto: tomografia. Muito baixo: sem tomografia</td><td>TCE leve em menores de 18 anos (aba Trauma)</td></tr>
+<tr><td>PECARN (lactente febril)</td><td>Urina normal, neutrófilos até 4.000/mm³, procalcitonina até 0,5 ng/mL</td><td>Baixo risco se todos presentes</td><td>Baixo risco de infecção bacteriana grave</td><td>Febre sem foco de 29 a 60 dias</td></tr>
+<tr><td>Rochester</td><td>Bom estado, previamente hígido, sem foco, leucócitos 5.000–15.000, bastões até 1.500, urina normal</td><td>Critérios</td><td>Baixo risco se todos presentes</td><td>Febre sem foco até 60 dias; hoje se preferem PECARN e Step-by-Step</td></tr>
+<tr><td>McIsaac</td><td>Febre acima de 38 °C, ausência de tosse, adenopatia cervical dolorosa, exsudato ou edema de amígdalas; idade de 3–14 anos soma 1, a partir de 45 anos subtrai 1</td><td>−1 a 5</td><td>0–1: não testar; 2 ou mais: teste rápido ou cultura</td><td>Faringoamigdalite</td></tr>
+<tr><td>CURB-65</td><td>Confusão, ureia acima de 50 mg/dL, frequência respiratória a partir de 30, pressão baixa, idade a partir de 65 anos</td><td>0–5</td><td>0–1 ambulatorial; 2 internação; 3 ou mais grave</td><td>Pneumonia do adulto</td></tr>
+<tr><td>Wells (TEP)</td><td>Sinais de trombose venosa, diagnóstico alternativo menos provável, taquicardia, imobilização ou cirurgia, episódio prévio, hemoptise, câncer</td><td>0–12,5</td><td>Até 4: improvável (D-dímero); acima de 4: provável (angiotomografia)</td><td>Embolia pulmonar no adulto</td></tr>
+<tr><td>HEART</td><td>História, ECG, idade, fatores de risco, troponina (0–2 cada)</td><td>0–10</td><td>0–3 baixo; 4–6 intermediário; 7–10 alto risco</td><td>Dor torácica no adulto</td></tr>
+<tr><td>TIMI (sem supra de ST)</td><td>Sete fatores de risco</td><td>0–7</td><td>0–2 baixo; 3–4 intermediário; 5–7 alto</td><td>Síndrome coronariana aguda</td></tr>
+<tr><td>NIHSS</td><td>Onze itens neurológicos</td><td>0–42</td><td>1–4 leve; 5–15 moderado; 16–20 moderado a grave; 21–42 grave</td><td>AVC</td></tr>
+<tr><td>Child-Pugh</td><td>Bilirrubina, albumina, INR, ascite, encefalopatia</td><td>5–15</td><td>A, 5–6; B, 7–9; C, 10–15</td><td>Cirrose</td></tr>
+<tr><td>MELD</td><td>Creatinina, bilirrubina, INR, sódio</td><td>6–40</td><td>Quanto maior, maior a mortalidade em 3 meses; 15 ou mais: avaliar transplante</td><td>Cirrose</td></tr>
+</tbody></table></div></div>
+</section>
+
+<!-- ============ 21. DIAGNÓSTICO ============ -->
+<section class="tab" id="t-diag" data-title="diagnóstico sindrômico etiológico hipóteses respiratório cardiovascular neurológico gastrointestinal urinário osteoarticular cutâneo hematológico toxicológico dengue bronquiolite crupe anafilaxia cetoacidose" data-copiar="Copiar hipóteses">
+<div class="hero-head"><div><h1>Diagnóstico sindrômico e etiológico</h1><p class="sub">Marque os sinais e sintomas; até cinco hipóteses aparecem, das que reúnem mais achados para as que reúnem menos.</p></div></div>
+<div class="panel"><h3>Sinais e sintomas</h3><p class="helper">Marque o que foi observado.</p>
+<div class="checks" id="diagChecks"></div>
+<div class="actions no-print" style="margin:10px 0 0"><button class="btn-m" type="button" id="diagLimpar">Limpar seleção</button></div>
+</div>
+<div class="panel"><h3>Hipóteses em ordem de concordância</h3><p class="helper">A ordem conta os achados marcados que coincidem com cada síndrome. É um lembrete de diagnósticos, não uma probabilidade.</p>
+<div id="diagOut" aria-live="polite"></div></div>
+</section>
+
+<!-- ============ 22. EXAMES ============ -->
+<section class="tab" id="t-exames" data-title="exames iniciais gasometria ânion gap delta-delta sódio corrigido lactato enchimento capilar pacote por síndrome fórmula de Winter compensação" data-copiar="Copiar exames">
+<div class="hero-head"><div><h1>Exames iniciais e gasometria</h1><p class="sub">O que pedir em cada síndrome e análise da gasometria passo a passo, com calculadora.</p></div></div>
+<div class="panel"><h3>Pacote inicial por síndrome</h3><p class="helper">O que pedir, por quê, referência e tempo esperado do resultado.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Síndrome</th><th>Exame</th><th>Por quê</th><th>Referência</th><th>Tempo</th></tr></thead><tbody>
+<tr><td>Sepse</td><td>Lactato</td><td>Hipoperfusão; a partir de 2 mmol/L, maior mortalidade</td><td>Abaixo de 2 mmol/L</td><td>Imediato</td></tr>
+<tr><td>Sepse</td><td>Hemocultura, duas amostras</td><td>Identificar o agente e ajustar o antibiótico</td><td>Negativa</td><td>24–72 h</td></tr>
+<tr><td>Sepse</td><td>Hemograma, proteína C reativa, coagulograma</td><td>Disfunção e gravidade</td><td>Plaquetas a partir de 150 mil/mm³; INR abaixo de 1,3</td><td>1 h</td></tr>
+<tr><td>Insuficiência respiratória</td><td>Gasometria</td><td>Oxigenação, ventilação e equilíbrio ácido-base</td><td>pH 7,35–7,45; PaCO₂ 35–45 mmHg; HCO₃ 22–26 mEq/L</td><td>Imediato</td></tr>
+<tr><td>Insuficiência respiratória</td><td>Radiografia de tórax</td><td>Consolidação, derrame, pneumotórax, área cardíaca</td><td>—</td><td>30 min</td></tr>
+<tr><td>Dor torácica</td><td>ECG de 12 derivações</td><td>Isquemia, arritmia, pericardite</td><td>Sem desvio de ST</td><td>10 min</td></tr>
+<tr><td>Dor torácica</td><td>Troponina seriada</td><td>Lesão miocárdica</td><td>Abaixo do percentil 99 do método</td><td>1 h; repetir em 1–3 h</td></tr>
+<tr><td>Cetoacidose</td><td>Gasometria venosa, glicemia, cetonas</td><td>Confirmar e classificar</td><td>pH a partir de 7,30; HCO₃ a partir de 18; cetonemia abaixo de 0,6 mmol/L</td><td>Imediato</td></tr>
+<tr><td>Cetoacidose</td><td>Sódio, potássio, ureia, creatinina, fósforo</td><td>Guiar hidratação e potássio</td><td>Potássio 3,5–5,0 mEq/L</td><td>1 h; repetir a cada 2–4 h</td></tr>
+<tr><td>Desidratação grave</td><td>Sódio, potássio, ureia, creatinina, gasometria</td><td>Tipo de desidratação e lesão renal</td><td>Sódio 135–145 mEq/L</td><td>1 h</td></tr>
+<tr><td>Convulsão</td><td>Glicemia capilar, sódio, cálcio, magnésio</td><td>Causas corrigíveis</td><td>Glicemia a partir de 60 mg/dL; cálcio iônico 1,1–1,3 mmol/L</td><td>Imediato</td></tr>
+<tr><td>Abdome agudo</td><td>Hemograma, proteína C reativa, urina, ultrassom</td><td>Apendicite, invaginação, infecção urinária</td><td>—</td><td>1–2 h</td></tr>
+<tr><td>Dengue</td><td>Hemograma</td><td>Hemoconcentração e plaquetopenia definem o grupo</td><td>Hematócrito habitual; plaquetas a partir de 150 mil/mm³</td><td>Grupo B: resultado antes da alta</td></tr>
+<tr><td>Intoxicação</td><td>Glicemia, gasometria, eletrólitos, ECG</td><td>Ânion gap, QRS e QT</td><td>QRS abaixo de 100 ms; QT corrigido abaixo de 440–460 ms</td><td>Imediato</td></tr>
+<tr><td>Trauma grave</td><td>Tipagem, hemograma, coagulograma, gasometria com lactato, cálcio iônico</td><td>Sangramento e coagulopatia</td><td>Lactato abaixo de 2 mmol/L; excesso de base entre −2 e +2</td><td>Imediato</td></tr>
+</tbody></table></div></div>
+<div class="light"><h3>Gasometria passo a passo</h3>
+<ol style="margin-bottom:0">
+<li>pH: acidemia abaixo de 7,35; alcalemia acima de 7,45.</li>
+<li>Distúrbio primário: o componente (PaCO₂ ou HCO₃) que explica o pH.</li>
+<li>Compensação esperada. Acidose metabólica: PaCO₂ = 1,5 × HCO₃ + 8, com margem de 2 (fórmula de Winter). Alcalose metabólica: PaCO₂ sobe 0,7 mmHg por mEq/L de HCO₃ acima de 24. Acidose respiratória: HCO₃ sobe 1 mEq/L (aguda) ou 3,5 (crônica) a cada 10 mmHg de PaCO₂ acima de 40. Alcalose respiratória: HCO₃ cai 2 (aguda) ou 4–5 (crônica) a cada 10 mmHg abaixo de 40.</li>
+<li>Ânion gap = Na − (Cl + HCO₃); normal de 8–12 mEq/L. Somar 2,5 para cada 1 g/dL de albumina abaixo de 4.</li>
+<li>Com ânion gap alto, delta-delta = (ânion gap − 12) ÷ (24 − HCO₃). Abaixo de 0,4: hiperclorêmica; 0,4–0,8: mista; 0,8–2: ânion gap alto isolado; acima de 2: alcalose metabólica associada.</li>
+<li>Sódio corrigido pela glicemia = Na + 1,6 × (glicemia − 100) ÷ 100.</li>
+</ol></div>
+<div class="panel"><h3>Calculadora de gasometria</h3>
+<div class="grid" style="margin-bottom:6px">
+<div class="field"><label for="gaNa">Na⁺ (mEq/L)</label><input id="gaNa" type="number" inputmode="decimal" step="any" value="138"></div>
+<div class="field"><label for="gaCl">Cl⁻ (mEq/L)</label><input id="gaCl" type="number" inputmode="decimal" step="any" value="102"></div>
+<div class="field"><label for="gaHco">HCO₃⁻ (mEq/L)</label><input id="gaHco" type="number" inputmode="decimal" step="any" value="16"></div>
+<div class="field"><label for="gaGlic">Glicose (mg/dL)</label><input id="gaGlic" type="number" inputmode="decimal" step="any" value="320"></div>
+</div>
+<div class="kv"><span>Ânion gap</span><span id="gaAG" class="calc">—</span></div>
+<div class="kv"><span>Delta-delta</span><span id="gaDD" class="calc">—</span></div>
+<div class="kv"><span>Sódio corrigido pela glicemia</span><span id="gaNaC" class="calc">—</span></div>
+<div class="kv"><span>PaCO₂ esperada na acidose metabólica</span><span id="gaWinter" class="calc">—</span></div>
+<p class="helper" id="gaInt" style="margin-top:8px">—</p>
+</div>
+<div class="panel"><h3>Lactato e tempo de enchimento capilar</h3><p class="helper">Marcadores de perfusão, sempre lidos junto com a clínica.</p>
+<ul><li>Lactato a partir de 2 mmol/L sugere hipoperfusão; acima de 4 mmol/L, gravidade. Repetir em 2–4 h: a queda indica resposta.</li><li>Lactato alto sem hipoperfusão: salbutamol ou adrenalina, convulsão, doença hepática, erro inato.</li><li>Enchimento capilar: comprimir a polpa digital ou o esterno por 5 s, em ambiente aquecido. Normal até 2 s; 3 s ou mais sugere choque.</li></ul></div>
+</section>
+
+<!-- ============ 23. IMAGENS ============ -->
+<section class="tab" id="t-img" data-title="imagens radiografia tórax abdome ECG eletrocardiograma ultrassom à beira do leito POCUS FAST pulmão coração laudos anexar pneumotórax derrame consolidação" data-copiar="Copiar referência">
+<div class="hero-head"><div><h1>Imagens e laudos</h1><p class="sub">Roteiro para ler radiografia, ECG e ultrassom à beira do leito, e apoio para interpretar os termos de um laudo.</p></div></div>
+<div class="grid">
+<div class="panel"><h3>Radiografia de tórax</h3><p class="helper">Leitura na mesma ordem, sempre.</p>
+<ul><li>Técnica: inspiração (8–9 arcos posteriores), rotação e penetração.</li><li>Traqueia e mediastino: índice cardiotorácico até 0,5 (até 0,6 no lactente); o timo em vela é normal no lactente.</li><li>Pulmões: opacidade com broncograma aéreo (consolidação), hiperinsuflação, atelectasia.</li><li>Pleura: pneumotórax (linha pleural sem trama além dela), derrame (seio costofrênico velado).</li><li>Ossos e partes moles: fraturas de costela, enfisema subcutâneo.</li><li>Dispositivos: tubo traqueal 1–2 cm acima da carina na criança (3–5 cm no adulto); sonda gástrica abaixo do diafragma; cateter central na junção da cava com o átrio.</li></ul></div>
+<div class="panel"><h3>Radiografia de abdome</h3><p class="helper">Distribuição do gás, ar fora de alça e corpos estranhos.</p>
+<ul><li>Gás até o reto afasta obstrução completa. Distensão com níveis hidroaéreos: obstrução ou íleo.</li><li>Ar livre: incidência ortostática ou em decúbito lateral esquerdo com raios horizontais.</li><li>Recém-nascido: pneumatose (enterocolite), dupla bolha (atresia duodenal).</li><li>Corpo estranho: bateria tem duplo halo; no esôfago, retirar em até 2 h.</li></ul></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>ECG</h3><p class="helper">Ritmo, frequência, eixo, intervalos, ST e T.</p>
+<ul><li>Ritmo sinusal: onda P positiva em DI e DII antes de cada QRS. Frequência conforme a idade (aba Painel).</li><li>Recém-nascido e lactente: eixo para a direita e R dominante em V1 são normais.</li><li>Onda T negativa de V1 a V3 é normal da primeira semana de vida à adolescência.</li><li>QRS acima de 90 ms é largo na criança. QT corrigido (Bazett) normal até 440 ms; acima de 500 ms, risco de torsades.</li><li>Supra de ST difuso com infra de PR: pericardite. Onda T apiculada: pensar em hipercalemia.</li></ul></div>
+<div class="panel"><h3>Ultrassom à beira do leito</h3><p class="helper">Responde a perguntas objetivas; não substitui o exame completo.</p>
+<ul><li>Pulmão normal: deslizamento pleural e linhas A.</li><li>Linhas B (três ou mais por campo): síndrome intersticial, como edema, bronquiolite ou pneumonia viral. A presença de linhas B afasta pneumotórax naquele ponto.</li><li>Pneumotórax: ausência de deslizamento e de linhas B; o ponto pulmonar confirma.</li><li>Consolidação: tecido com aspecto de fígado e broncograma dinâmico. Derrame: imagem anecoica acima do diafragma.</li><li>Coração: função global, derrame pericárdico, ventrículo direito dilatado, veia cava inferior.</li><li>FAST: líquido livre no espaço hepatorrenal, esplenorrenal, pelve e pericárdio.</li></ul></div>
+</div>
+<div class="panel"><h3>Achados descritos no exame</h3><p class="helper">Digite os termos do laudo ou o que você vê. A análise reconhece palavras-chave e sugere a leitura; não interpreta a imagem. A imagem escolhida abaixo fica só neste aparelho, para consulta enquanto você descreve.</p>
+<div class="field"><label for="imgArq">Imagem para consulta (opcional, não é enviada)</label><input id="imgArq" type="file" accept="image/*"></div>
+<img id="imgPrev" alt="Imagem escolhida para consulta" hidden>
+<div class="field"><label for="imgTexto">Descrição do exame</label><textarea id="imgTexto" rows="4" placeholder="Radiografia de tórax em AP: opacidade em base direita com broncograma, seio costofrênico livre"></textarea></div>
+<div class="actions no-print"><button class="btn-m primary" type="button" id="btnAnalisa">Analisar achados</button></div>
+<h3>Leitura sugerida</h3>
+<div id="imgOut" aria-live="polite">—</div></div>
+</section>
+
+<!-- ============ 24. ALTA ============ -->
+<section class="tab" id="t-alta" data-alvo="altCopy" data-title="receita de alta pais linguagem leiga instruções medicamento dose gotas retorno sinais de alarme febre resfriado gastroenterite sibilância lavagem nasal soro" data-copiar="Copiar receita">
+<div class="hero-head"><div><h1>Receita de alta para os pais</h1><p class="sub">Linguagem simples, doses em gotas e mL para o peso, sinais de alarme e retorno.</p></div></div>
+<div class="panel"><h3>Dados do paciente</h3><p class="helper">Vêm do peso e da idade informados no topo.</p>
+<div class="kv"><span>Peso</span><span id="altPeso" class="calc">—</span></div>
+<div class="kv"><span>Idade</span><span id="altIdade" class="calc">—</span></div>
+<div class="field" style="margin-top:10px"><label for="altCen">Situação clínica</label><select id="altCen">
+<option value="febre">Febre e dor</option><option value="ivas">Resfriado e tosse</option><option value="gea">Diarreia e vômitos</option><option value="sib">Crise de chiado</option>
+</select></div>
+<label class="marca-check"><input type="checkbox" id="altIbu"> Incluir ibuprofeno (sem suspeita de dengue, criança hidratada, 6 meses ou mais)</label>
+<div class="aviso" id="altNota" hidden></div>
+</div>
+<div class="panel"><h3>Receita para os pais</h3><p class="helper">Revise antes de entregar. O texto é refeito quando o peso, a idade ou a situação mudam.</p>
+<div class="copybox" id="altCopy" tabindex="0"></div>
+</div>
+</section>
+
+<!-- ============ 25. DOCUMENTOS ============ -->
+<section class="tab" id="t-docs" data-title="modelos de documentos relatório de transferência encaminhamento atestado médico acompanhamento resumo de alta ficha de evolução consentimento declaração de comparecimento" data-copiar="Copiar aba">
+<div class="hero-head"><div><h1>Modelos de documentos</h1><p class="sub">Textos editáveis, com peso, idade e data já preenchidos. Substitua o que está entre colchetes.</p></div></div>
+<div class="panel">
+<div class="field"><label for="docSel">Modelo</label><select id="docSel"></select></div>
+<h3 id="docTit">—</h3>
+<p class="helper">O que você editar é mantido enquanto a página estiver aberta. Nada é salvo no aparelho.</p>
+<label class="so-leitor" for="docTxt">Texto do documento</label>
+<textarea id="docTxt" rows="18" spellcheck="true"></textarea>
+<p class="helper" id="docAviso" hidden>Os dados do paciente mudaram depois da sua edição. Use "Restaurar modelo" para atualizar peso e idade.</p>
+<div class="actions no-print" style="margin-top:10px"><button class="btn-m primary" type="button" id="docCopiar">Copiar documento</button><button class="btn-m" type="button" id="docRestaurar">Restaurar modelo</button></div>
+</div>
+</section>
+
+<!-- ============ 26. NOVIDADES ============ -->
+<section class="tab" id="t-novidades" data-title="novidades atualizações diretrizes Surviving Sepsis 2026 AHA AAP 2025 PADIS Phoenix PALICC dengue VSR nirsevimabe ISPAD fontes referências" data-copiar="Copiar novidades">
+<div class="hero-head"><div><h1>Novidades e fontes</h1><p class="sub">O que mudou nas diretrizes recentes e as referências usadas nesta revisão.</p></div></div>
+<div class="light"><h3>Surviving Sepsis Campaign, crianças, 2026</h3><p class="helper">Publicada em 23 de março de 2026, na Pediatric Critical Care Medicine e na Intensive Care Medicine. São 61 enunciados; adota os critérios Phoenix.</p>
+<ul style="margin-bottom:0"><li>Antibiótico em até 1 h no choque séptico; na sepse provável sem choque, após avaliação rápida, em até 3 h.</li><li>Lactato na avaliação inicial passou a recomendação forte.</li><li>Fluidos: com UTI disponível, até 40–60 mL/kg na primeira hora em alíquotas de 10–20 mL/kg; sem UTI, bolus apenas se houver hipotensão (até 40 mL/kg). Cristaloide balanceado preferido.</li><li>Sem preferência definida entre adrenalina e noradrenalina; iniciar em veia periférica em vez de atrasar; vasopressina quando a catecolamina está em dose alta.</li><li>Ultrassom à beira do leito sugerido para guiar a ressuscitação, onde houver treinamento.</li><li>Sugere não usar etomidato e não usar hidrocortisona quando fluido e vasoativo restauram a estabilidade.</li><li>Alvo conservador de SpO₂ (88–92%) após a ressuscitação nas crianças intubadas, exceto anemia, hemoglobinopatia e cardiopatia cianótica.</li><li>Seção nova sobre seguimento após a UTI, com reabilitação precoce.</li></ul></div>
+<div class="light"><h3>American Heart Association e American Academy of Pediatrics, 2025</h3><p class="helper">Publicadas em 22 de outubro de 2025.</p>
+<ul style="margin-bottom:0"><li>Engasgo na criança: 5 golpes nas costas alternados com 5 compressões abdominais. No lactente: 5 golpes nas costas alternados com 5 compressões torácicas.</li><li>Compressão no lactente: dois polegares envolvendo o tórax ou a base de uma mão; a técnica de dois dedos saiu.</li><li>Recém-nascido: ventilação com pressão positiva a 30–60 por minuto.</li><li>Adrenalina o mais cedo possível no ritmo não chocável.</li><li>Atropina como pré-medicação sem dose mínima; tubos com cuff preferidos.</li><li>Pós-parada: pressão sistólica e média acima do percentil 10, SpO₂ 94–99%, normocapnia e controle de temperatura.</li></ul></div>
+<div class="light"><h3>PADIS, atualização focada, 2025</h3><p style="margin:0">Cinco temas no adulto crítico: ansiedade (novo), agitação e sedação, delirium, imobilidade e sono. Sugere dexmedetomidina em vez de propofol para sedação leve, mobilização reforçada e melatonina. Não houve atualização das recomendações de dor.</p></div>
+<div class="grid">
+<div class="light"><h3>Critérios Phoenix, 2024</h3><p style="margin:0">Sepse pediátrica passou a ser infecção suspeita com escore Phoenix de 2 ou mais (respiratório, cardiovascular, coagulação, neurológico). Choque séptico: ao menos 1 ponto cardiovascular. A SIRS deixou de definir sepse.</p></div>
+<div class="light"><h3>PALICC-2, 2023</h3><p style="margin:0">SDRA pediátrica classificada em leve a moderada ou grave pelo índice de oxigenação (corte em 16) ou de saturação (corte em 12), medidos após 4 h de ventilação. Definição própria para ventilação não invasiva e para locais com poucos recursos.</p></div>
+</div>
+<div class="grid">
+<div class="light"><h3>Dengue, Ministério da Saúde, 2024</h3><p style="margin:0">A 6ª edição mantém os grupos A a D e detalha a hidratação oral da criança por faixa de peso (130, 100 e 80 mL/kg/dia). Grupo C: 10 mL/kg na primeira hora. Grupo D: 20 mL/kg em até 20 min, até 3 vezes.</p></div>
+<div class="light"><h3>Vírus sincicial respiratório no SUS</h3><p style="margin:0">Vacina para gestantes a partir de 28 semanas desde dezembro de 2025 e nirsevimabe para prematuros e para menores de 2 anos com comorbidades desde fevereiro de 2026, conforme o protocolo do Ministério da Saúde.</p></div>
+</div>
+<div class="grid">
+<div class="light"><h3>Cetoacidose, ISPAD 2022</h3><p style="margin:0">Bicarbonato abaixo de 18 mmol/L entra no diagnóstico; bolus inicial em 20–30 min; déficit reposto em 24–48 h; insulina de 0,05–0,1 U/kg/h ao menos 1 h após iniciar a hidratação.</p></div>
+<div class="light"><h3>Pneumonia, SBP 2022</h3><p style="margin:0">Amoxicilina 50 mg/kg/dia como primeira escolha ambulatorial, por 7 dias; ampicilina ou penicilina cristalina no internado; internar com SpO₂ abaixo de 92%.</p></div>
+</div>
+<div class="panel"><h3>Fontes consultadas</h3><p class="helper">Revisão clínica e técnica desta versão em 24 de novembro de 2026. Conferir sempre a fonte oficial e o protocolo da instituição.</p>
+<ol class="fontes">
+<li>Weiss SL e colaboradores. Surviving Sepsis Campaign international guidelines for the management of sepsis and septic shock in children 2026. Pediatr Crit Care Med. 2026. <a href="https://doi.org/10.1097/PCC.0000000000003927" target="_blank" rel="noopener">doi:10.1097/PCC.0000000000003927</a>; <a href="https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-the-management-of-sepsis-and-septic-shock-in" target="_blank" rel="noopener">página da SCCM</a>.</li>
+<li>American Heart Association e American Academy of Pediatrics. Guidelines for cardiopulmonary resuscitation and emergency cardiovascular care 2025: suporte de vida em pediatria. Circulation. 2025;152(16 supl. 2). <a href="https://doi.org/10.1161/CIR.0000000000001370" target="_blank" rel="noopener">doi:10.1161/CIR.0000000000001370</a>.</li>
+<li>Schlapbach LJ e colaboradores. International consensus criteria for pediatric sepsis and septic shock. JAMA. 2024;331(8):665–674. <a href="https://jamanetwork.com/journals/jama/fullarticle/2814297" target="_blank" rel="noopener">JAMA</a>.</li>
+<li>Lewis K e colaboradores. A focused update to the clinical practice guidelines for pain, anxiety, agitation/sedation, delirium, immobility and sleep disruption in adult patients in the ICU. Crit Care Med. 2025;53(3):e711–e727. <a href="https://doi.org/10.1097/CCM.0000000000006574" target="_blank" rel="noopener">doi:10.1097/CCM.0000000000006574</a>.</li>
+<li>Emeriaud G e colaboradores. Second Pediatric Acute Lung Injury Consensus Conference (PALICC-2). Pediatr Crit Care Med. 2023;24(2):143–168.</li>
+<li>Glaser N e colaboradores. ISPAD clinical practice consensus guidelines 2022: diabetic ketoacidosis and hyperglycemic hyperosmolar state. Pediatr Diabetes. 2022. <a href="https://doi.org/10.1111/pedi.13406" target="_blank" rel="noopener">doi:10.1111/pedi.13406</a>.</li>
+<li>Kochanek PM e colaboradores. Guidelines for the management of pediatric severe traumatic brain injury, 3ª edição. 2019. <a href="https://braintrauma.org/coma/guidelines/pediatric" target="_blank" rel="noopener">Brain Trauma Foundation</a>.</li>
+<li>Kuppermann N e colaboradores (PECARN). Identification of children at very low risk of clinically-important brain injuries after head trauma. Lancet. 2009;374:1160–1170.</li>
+<li>Evans L e colaboradores. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2021. Crit Care Med. 2021;49(11):e1063–e1143.</li>
+<li>Glauser T e colaboradores. Treatment of convulsive status epilepticus in children and adults: guideline of the American Epilepsy Society. Epilepsy Curr. 2016;16(1):48–61.</li>
+<li>Feld LG e colaboradores. Clinical practice guideline: maintenance intravenous fluids in children. Pediatrics. 2018;142(6):e20183083.</li>
+<li>Franklin D e colaboradores. Effect of early high-flow nasal oxygen vs standard oxygen therapy in children with acute hypoxemic respiratory failure (PARIS-2). JAMA. 2023;329(3):224–234.</li>
+<li>Ministério da Saúde. Dengue: diagnóstico e manejo clínico: adulto e criança. 6ª edição. Brasília, 2024. <a href="https://bvsms.saude.gov.br/bvs/publicacoes/dengue_diagnostico_manejo_clinico_6ed.pdf" target="_blank" rel="noopener">Biblioteca Virtual em Saúde</a>.</li>
+<li>Ministério da Saúde. Guia de manejo e tratamento de influenza 2023. <a href="https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/influenza/guia-de-manejo-e-tratamento-de-influenza-2023/view" target="_blank" rel="noopener">gov.br/saude</a>.</li>
+<li>Ministério da Saúde. Manejo do paciente com diarreia (planos A, B e C). 2023.</li>
+<li>Ministério da Saúde. Manual de recomendações para o controle da tuberculose no Brasil. 2ª edição. 2019.</li>
+<li>Sociedade Brasileira de Pediatria. Abordagem diagnóstica e terapêutica das pneumonias adquiridas na comunidade não complicadas. 2022. <a href="https://www.sbp.com.br/fileadmin/user_upload/sbp/2022/agosto/03/23358e-DC-Pneumonias_Adquiridas_Nao_Complicadas.pdf" target="_blank" rel="noopener">Documento científico</a>.</li>
+<li>Bulário eletrônico da ANVISA: apresentações, concentrações, gotas por mL e restrições de idade dos medicamentos citados.</li>
+<li>Centro de Informação e Assistência Toxicológica de Minas Gerais (CIATox-MG), Hospital João XXIII, FHEMIG.</li>
+</ol></div>
+</section>
+
+</main>
+<footer class="footer-bar">Emergência &amp; UTI: referência clínica integrada. Revisão de 24 de novembro de 2026. Apoio à decisão: não substitui o protocolo da instituição, a bula nem o julgamento clínico. Nenhum dado do paciente é salvo ou enviado.</footer>
+</div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
