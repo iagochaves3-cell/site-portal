@@ -80,6 +80,13 @@ function t(nome, cond, extra) { if (cond) ok++; else falhas.push(nome + (extra !
   t('peso de 300 kg é recusado', (await page.evaluate(() => document.body.className)) === 'sem-paciente');
   await setar('peso', '18'); await setar('idade', 'abc');
   t('idade ilegível suspende os cálculos', (await page.evaluate(() => document.body.className)) === 'sem-paciente');
+  // Regressão: o sinal negativo não pode ser descartado pelo parser.
+  for (const txt of ['-5 anos', '-1', '-0,5 anos', '-0 dias', '2a -6m', '−2 meses', '–3 dias', '- 2 semanas', '－4']) {
+    await setar('idade', txt);
+    t(`idade negativa ${txt} suspende cálculos`, (await page.evaluate(() => document.body.className)) === 'sem-paciente' && (await page.isVisible('#pacAviso')) && (await page.$eval('#idade', e => e.className)) === 'invalido');
+  }
+  await setar('idade', '0 dias');
+  t('zero dias permanece válido para recém-nascido', (await page.evaluate(() => document.body.className)) === '' && (await $v('pacIdade')).includes('0 dias (recém-nascido)'));
   for (const [txt, esp] of [['18 meses', '18 meses'], ['2a 6m', '2 anos e 6 meses'], ['20 dias', '20 dias (recém-nascido)'], ['RN', '0 dias (recém-nascido)'], ['4', '4 anos'], ['1 ano e meio', '18 meses'], ['3 semanas', '21 dias (recém-nascido)'], ['7,5 anos', '7 anos e 6 meses']]) {
     await setar('peso', '18'); await setar('idade', txt);
     const lido = await $v('pacIdade');
