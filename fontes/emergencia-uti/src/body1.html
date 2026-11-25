@@ -1,0 +1,479 @@
+<a class="so-leitor" href="#content">Ir para o conteúdo</a>
+<div class="app">
+<aside class="side no-print" id="side" aria-label="Navegação das seções">
+<div class="marca">Emergência &amp; UTI</div>
+<p class="marca-sub">Referência clínica integrada</p>
+<label class="so-leitor" for="navSearch">Buscar seção ou termo</label>
+<input class="search-box" id="navSearch" type="search" placeholder="Buscar seção ou termo" autocomplete="off">
+<p class="helper cap-big">Filtra as abas pelo título e pelo conteúdo. Enter abre a primeira.</p>
+<nav id="navGroups" aria-label="Seções"></nav>
+<div class="nav-g"><button class="btn-m" id="btnTema" type="button">Tema escuro</button></div>
+</aside>
+<div class="veu no-print" id="veu" hidden></div>
+
+<div class="main">
+<header class="topbar no-print" id="topbar">
+<div class="zona-bar" id="zonaBar"></div>
+<div class="topbar-row">
+<button class="icon-btn" id="btnMenu" type="button" aria-controls="side" aria-expanded="false">Menu</button>
+<button class="pac-resumo" id="pacResumo" type="button" aria-controls="pacEdit" aria-expanded="false"><b id="pacPeso">18 kg</b><span id="pacTxt">4 anos, masculino. Toque para editar</span></button>
+</div>
+<div class="pac-edit" id="pacEdit">
+<div class="topbar-grid">
+<div><label for="peso">Peso (kg)</label><input id="peso" type="number" inputmode="decimal" step="0.1" min="0.4" max="250" value="18" aria-describedby="pesoHlp"></div>
+<div><label for="idade">Idade</label><input id="idade" type="text" value="4 anos" placeholder="4 anos, 18 meses, 20 dias" autocomplete="off" aria-describedby="pacIdade"></div>
+<div><label for="sexo">Sexo</label><select id="sexo"><option value="M">Masculino</option><option value="F">Feminino</option></select></div>
+<div class="fita-campo"><span class="rotulo" id="fitaLbl">Peso rápido, com a cor da faixa na fita de emergência</span><div class="fita" id="wBtns" role="group" aria-labelledby="fitaLbl"></div></div>
+</div>
+<div class="pac-info"><span class="exemplo" id="pacExemplo">Paciente de exemplo</span><span class="selo"><i></i><span id="pacZona">—</span></span><span id="pacIdade">—</span></div>
+<div class="aviso" id="pacAviso" role="alert" hidden></div>
+<p class="cap-big" id="pesoHlp" style="margin:8px 0 0">Tudo é recalculado ao mudar peso, idade ou sexo. Nenhum dado do paciente fica salvo.</p>
+</div>
+</header>
+<div class="alert-seal" role="note">Tripla checagem obrigatória antes de administrar: paciente e peso, dose e apresentação, volume e via. Ferramenta de apoio; a decisão final é do médico assistente.</div>
+
+<main class="content" id="content">
+<div class="print-head" id="printHead"></div>
+
+<!-- ============ 1. PAINEL ============ -->
+<section class="tab" id="t-painel" data-title="Painel pesos de referência tubo traqueal superfície corporal déficit hídrico sinais vitais frequência cardíaca respiratória pressão arterial desidratação" data-copiar="Copiar resumo">
+<div class="hero-head"><div><h1>Painel de referência</h1><p class="sub">Via aérea, sinais vitais da idade, superfície corporal e déficit hídrico, calculados para o peso e a idade informados.</p></div></div>
+<div class="grid">
+<div class="hero-result"><div class="lbl">Tubo traqueal sem cuff</div><div class="val" id="totSem">—</div><div class="cap" id="totSemCap"></div></div>
+<div class="hero-result"><div class="lbl">Tubo traqueal com cuff</div><div class="val" id="totCom">—</div><div class="cap" id="totComCap"></div></div>
+<div class="hero-result"><div class="lbl">Profundidade do tubo no lábio</div><div class="val" id="tubCm">—</div><div class="cap" id="tubCmCap"></div></div>
+</div>
+<div class="grid">
+<div class="panel">
+<h3>Sinais vitais e referências da idade</h3>
+<p class="helper" id="fxNome">—</p>
+<div class="kv"><span>Frequência cardíaca normal</span><span id="fcRef" class="calc">—</span></div>
+<div class="kv"><span>Frequência respiratória normal</span><span id="frRef" class="calc">—</span></div>
+<div class="kv"><span>Pressão sistólica mínima (abaixo disso, hipotensão)</span><span id="paRef" class="calc">—</span></div>
+<div class="kv"><span>Pressão arterial média alvo</span><span id="pamRef" class="calc">—</span></div>
+<div class="kv"><span>Lâmina do laringoscópio</span><span id="lamRef" class="calc">—</span></div>
+<div class="kv"><span>Superfície corporal estimada pelo peso</span><span id="scRef" class="calc">—</span></div>
+<div class="kv"><span>Faixa na fita de emergência</span><span id="zonaRef" class="calc">—</span></div>
+</div>
+<div class="panel">
+<h3>Déficit hídrico</h3>
+<p class="helper">Volume a repor além da manutenção, descontadas as expansões já feitas.</p>
+<div class="field"><label for="desPct">Desidratação estimada</label><select id="desPct">
+<option value="3">3% — leve (criança maior e adulto)</option>
+<option value="5" selected>5% — leve (lactente)</option>
+<option value="6">6% — moderada (criança maior e adulto)</option>
+<option value="9">9% — grave (criança maior e adulto)</option>
+<option value="10">10% — moderada (lactente)</option>
+<option value="15">15% — grave (lactente)</option>
+</select></div>
+<div class="kv"><span>Déficit total</span><span id="defMl" class="calc">—</span></div>
+<div class="kv"><span>1ª metade em 8 h</span><span id="defH" class="calc">—</span></div>
+<div class="kv"><span>2ª metade nas 16 h seguintes</span><span id="defH2" class="calc">—</span></div>
+<p class="helper" style="margin-top:8px">Somar à manutenção. Na desidratação hipernatrêmica, repor em 48 h. Com choque, expandir primeiro (aba Soroterapia).</p>
+</div>
+</div>
+<div class="panel">
+<h3>Fórmulas de dose e volume</h3>
+<p class="helper">Dose = peso × dose por kg, respeitando o teto. Volume (mL) = dose ÷ concentração.</p>
+<div class="kv"><span>Exemplo: 0,1 mg/kg</span><span id="formDose" class="calc">—</span></div>
+<div class="kv"><span>Volume dessa dose em solução de 1 mg/mL</span><span id="formVol" class="calc">—</span></div>
+</div>
+<div class="light"><h3>Leitura rápida</h3><p>O tubo é estimado pela idade: tenha à mão meio número acima e meio abaixo e confirme a posição por capnografia e ausculta. Peso e idade comandam todos os cálculos; se o peso for estimado, pese a criança assim que possível. Valores em azul são calculados para este paciente.</p></div>
+</section>
+
+<!-- ============ 2. ESTABILIZAÇÃO ============ -->
+<section class="tab" id="t-estab" data-title="Estabilização inicial ABCDE sepse primeira hora reavaliação transferência UTI acesso intraósseo exames" data-copiar="Copiar protocolo">
+<div class="hero-head"><div><h1>Estabilização inicial do paciente crítico</h1><p class="sub">Sequência ABCDE com ações e alvos, acesso intraósseo, exames da primeira hora e pacote da sepse.</p></div></div>
+<div class="panel">
+<h3>Sequência ABCDE</h3>
+<p class="helper">Tratar cada problema antes de passar à letra seguinte e reavaliar após cada intervenção.</p>
+<ol class="steps">
+<li class="crit"><strong>A, via aérea:</strong> pérvia e sustentável? Posicionar, aspirar, cânula orofaríngea no inconsciente; via aérea avançada se não protege. Alvo: via aérea pérvia e protegida.</li>
+<li class="crit"><strong>B, respiração:</strong> frequência, esforço, ausculta e oximetria. Oxigênio por máscara não reinalante a 10–15 L/min se houver hipoxemia ou choque; bolsa-válvula-máscara se a respiração for ineficaz. Alvo: SpO₂ 94–98%.</li>
+<li><strong>C, circulação:</strong> frequência cardíaca, pulsos, enchimento capilar e pressão. Dois acessos calibrosos (intraósseo se falhar). Cristaloide em alíquotas, reavaliando crepitações e fígado após cada uma. Alvo: pressão acima do mínimo da idade, enchimento capilar até 2 s, diurese adequada.</li>
+<li><strong>D, disfunção neurológica:</strong> escala AVDI ou Glasgow, pupilas e glicemia capilar. Tratar glicemia abaixo de 60 mg/dL (abaixo de 45 mg/dL no recém-nascido). Alvo: glicemia 70–180 mg/dL.</li>
+<li><strong>E, exposição:</strong> temperatura, pele (petéquias, lesões, sinais de trauma) e prevenção de hipotermia. Alvo: 36–37,5 °C.</li>
+</ol>
+<div class="kv"><span>Cristaloide por alíquota</span><span id="estBolus" class="calc">—</span></div>
+<div class="kv"><span>Glicose 10% na hipoglicemia</span><span id="estG10" class="calc">—</span></div>
+<div class="kv"><span>Pressão sistólica mínima</span><span id="estPas" class="calc">—</span></div>
+<div class="kv"><span>Diurese mínima esperada</span><span id="estDiur" class="calc">—</span></div>
+</div>
+<div class="grid">
+<div class="panel">
+<h3>Acesso intraósseo</h3>
+<p class="helper">Na parada e no choque descompensado, quando a veia não é obtida de imediato: não insistir além de 90 s ou duas tentativas.</p>
+<ul>
+<li>Agulha do perfurador EZ-IO®: 15 mm (rosa) para 3–39 kg; 25 mm (azul) a partir de 3 kg quando há mais tecido; 45 mm (amarela) a partir de 40 kg, no úmero ou com tecido espesso. Abaixo de 3 kg: agulha manual 18 G.</li>
+<li>Locais: tíbia proximal (face anteromedial, 1–2 cm abaixo da tuberosidade), fêmur distal no lactente, tíbia distal (acima do maléolo medial) e úmero proximal no adolescente e no adulto.</li>
+<li>Confirmação: agulha firme, lavagem com 5–10 mL de SF sem extravasamento; aspirar medula ajuda, mas nem sempre vem.</li>
+<li>Todos os fármacos, fluidos e hemocomponentes de emergência podem ser infundidos. No paciente consciente, lidocaína 2% sem vasoconstritor 0,5 mg/kg (máx. 40 mg) pela agulha, lentamente, antes da lavagem.</li>
+<li>Não puncionar osso fraturado, com infecção local ou já puncionado nas últimas 48 h. Retirar em até 24 h.</li>
+</ul>
+</div>
+<div class="panel">
+<h3>Amostras e exames na primeira hora</h3>
+<p class="helper">Coletar antes do antibiótico, sem atrasar o tratamento.</p>
+<ul>
+<li>Glicemia capilar, gasometria com lactato, hemocultura (duas amostras, se possível).</li>
+<li>Hemograma, proteína C reativa, função renal, eletrólitos com cálcio iônico, coagulograma.</li>
+<li>Urina tipo 1 e urocultura por sondagem; radiografia de tórax e outros exames conforme o foco.</li>
+</ul>
+</div>
+</div>
+<div class="light">
+<h3>Pacote da primeira hora da sepse</h3>
+<p><strong>Criança (Surviving Sepsis Campaign 2026):</strong> reconhecer e obter acesso venoso ou intraósseo; dosar lactato; colher hemocultura se isso não atrasar o antibiótico; antibiótico em até 1 h no choque séptico e, na sepse provável sem choque, após avaliação rápida, em até 3 h. Fluidos: onde há UTI, até 40–60 mL/kg na primeira hora em alíquotas de 10–20 mL/kg; onde não há UTI, só fazer bolus se houver hipotensão (até 40 mL/kg), mantendo apenas a manutenção nos demais. Preferir cristaloide balanceado. Se o choque persistir, adrenalina ou noradrenalina, que podem começar em veia periférica.</p>
+<p style="margin-bottom:0"><strong>Adulto (Surviving Sepsis Campaign 2021):</strong> lactato; hemoculturas; antibiótico em até 1 h no choque ou na alta probabilidade de sepse; cristaloide 30 mL/kg nas primeiras 3 h se houver hipotensão ou lactato a partir de 4 mmol/L; noradrenalina se a pressão arterial média ficar abaixo de 65 mmHg durante ou após a expansão.</p>
+</div>
+<div class="grid3">
+<div class="panel"><h3>Reavaliação em 5 min</h3><p class="helper">Via aérea, oximetria, pressão, frequência cardíaca, glicemia capilar.</p><p>Ajustar oxigênio e garantir o acesso.</p></div>
+<div class="panel"><h3>Reavaliação em 15 min</h3><p class="helper">Perfusão, enchimento capilar, sensório, ausculta e fígado.</p><p>Repetir a alíquota se a resposta for parcial e não houver sobrecarga.</p></div>
+<div class="panel"><h3>Reavaliação em 30 min</h3><p class="helper">Resposta ao fluido, pressão arterial média, diurese.</p><p>Iniciar vasoativo se o choque persistir após 40–60 mL/kg, ou antes se houver sobrecarga.</p></div>
+<div class="panel"><h3>Reavaliação em 60 min</h3><p class="helper">Lactato de controle, gasometria, eletrólitos, balanço hídrico.</p><p>Definir o destino e acionar a regulação.</p></div>
+</div>
+<div class="panel">
+<h3>Critérios de transferência para UTI</h3>
+<p class="helper">Qualquer item indica discussão imediata com a terapia intensiva.</p>
+<ul>
+<li>Necessidade de vasoativo ou lactato que não cai.</li>
+<li>Via aérea avançada, ventilação não invasiva, cateter nasal de alto fluxo ou FiO₂ acima de 0,5.</li>
+<li>Glasgow até 8, ou queda de 2 pontos ou mais.</li>
+<li>Choque que persiste após 40–60 mL/kg de cristaloide na criança (30 mL/kg no adulto).</li>
+<li>Sepse com disfunção de órgão (Phoenix a partir de 2 pontos), arritmia instável, pós-parada, estado de mal refratário.</li>
+</ul>
+</div>
+</section>
+
+<!-- ============ 3. SALA VERMELHA ============ -->
+<section class="tab" id="t-sala" data-title="Sala vermelha folha de parada carta de drogas adrenalina amiodarona desfibrilação cardioversão atropina adenosina naloxona equipamentos" data-copiar="Copiar carta" data-imprimir="Imprimir folha de parada">
+<div class="hero-head"><div><h1>Sala vermelha: folha de parada</h1><p class="sub">Carta de fármacos calculada para o peso, pronta para imprimir, e equipamentos pela faixa de peso.</p></div></div>
+<div class="hero-result crit"><div class="lbl">Adrenalina na parada, IV ou IO</div><div class="val" id="sPcr">—</div><div class="cap">0,01 mg/kg = 0,1 mL/kg da solução 0,1 mg/mL (1 mL da ampola de 1 mg/mL + 9 mL de SF). Repetir a cada 3–5 min. Teto de 1 mg.</div></div>
+<div class="panel">
+<h3>Carta de fármacos por peso</h3>
+<p class="helper">Doses já limitadas pelo teto. Os fármacos de alta vigilância aparecem com o nome em vermelho e, na impressão, com a palavra crítica.</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Fármaco</th><th>Dose por kg</th><th>Dose</th><th>Volume</th><th>Apresentação e preparo</th></tr></thead>
+<tbody id="cartaDrogas"></tbody>
+</table></div>
+</div>
+<div class="panel">
+<h3>Choque elétrico</h3>
+<p class="helper">Energia para o peso informado, sem ultrapassar a carga de adulto.</p>
+<div class="kv"><span>Desfibrilação, 1º choque</span><span id="sDesf" class="calc">—</span></div>
+<div class="kv"><span>Desfibrilação, choques seguintes</span><span id="sDesf2" class="calc">—</span></div>
+<div class="kv"><span>Cardioversão sincronizada, 1ª</span><span id="sCardio" class="calc">—</span></div>
+<div class="kv"><span>Cardioversão sincronizada, seguintes</span><span id="sCardio2" class="calc">—</span></div>
+<div class="kv"><span>Glicose 10%</span><span id="sG10" class="calc">—</span></div>
+<div class="kv"><span>Expansão com cristaloide</span><span id="sSF" class="calc">—</span></div>
+</div>
+<div class="panel">
+<h3>Equipamentos pela faixa de peso</h3>
+<p class="helper" id="equipZona">—</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Item</th><th>Tamanho para este paciente</th></tr></thead><tbody id="equipTab"></tbody></table></div>
+</div>
+</section>
+
+<!-- ============ 4. VIA AÉREA ============ -->
+<section class="tab" id="t-via" data-title="via aérea sequência rápida intubação etomidato cetamina propofol midazolam fentanil succinilcolina rocurônio sugamadex tubo cuff extubação via aérea difícil" data-copiar="Copiar sequência">
+<div class="hero-head"><div><h1>Via aérea e sequência rápida</h1><p class="sub">Pré-medicação, indução e bloqueio com dose e volume para o peso, tubo e profundidade pela idade.</p></div></div>
+<div class="panel">
+<h3>Pré-medicação, indução e bloqueio</h3>
+<p class="helper">Volume calculado com a apresentação indicada; conferir a ampola disponível no serviço.</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Fármaco</th><th>Dose por kg</th><th>Dose</th><th>Volume</th><th>Apresentação e observações</th></tr></thead>
+<tbody id="viaTab"></tbody>
+</table></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Pré-oxigenação e posição</h3><p class="helper">Otimizar antes da laringoscopia.</p>
+<ul>
+<li>Oxigênio a 100% por 3 min, com máscara não reinalante ou bolsa-válvula-máscara bem vedada; manter cateter nasal durante a laringoscopia (oxigenação apneica).</li>
+<li>Lactente: coxim sob os ombros, pois o occipital é proeminente. Criança maior e adulto: coxim sob o occipital, alinhando o meato acústico com a fúrcula esternal.</li>
+<li>Deixar prontos aspirador, capnógrafo, guia, tubos meio número acima e abaixo e o dispositivo de resgate.</li>
+<li>No choque, corrigir a pressão antes de induzir e preferir cetamina.</li>
+</ul></div>
+<div class="panel"><h3>Tubo, cuff e fixação</h3><p class="helper">Confirmar com capnografia e ausculta; radiografia para a posição final.</p>
+<div class="kv"><span>Tubo sem cuff</span><span id="viaSem" class="calc">—</span></div>
+<div class="kv"><span>Tubo com cuff</span><span id="viaCom" class="calc">—</span></div>
+<div class="kv"><span>Profundidade no lábio</span><span id="viaProf" class="calc">—</span></div>
+<p class="helper" style="margin-top:8px">Preferir tubo com cuff, com pressão de 20–25 cmH₂O medida com cuffômetro.</p></div>
+</div>
+<div class="light"><h3>Algoritmo de via aérea difícil</h3>
+<ol>
+<li>Planejar: avaliar abertura bucal, mandíbula e pescoço; definir o plano de resgate e chamar ajuda cedo.</li>
+<li>Laringoscopia: no máximo três tentativas, a última pelo profissional mais experiente, reoxigenando entre elas. Preferir videolaringoscópio quando disponível.</li>
+<li>Falhou: ventilar com máscara em duas pessoas ou inserir máscara laríngea.</li>
+<li>Não intubo e não oxigeno: acesso cervical de emergência. Abaixo de 8–12 anos, punção cricotireóidea com cateter 14–16 G; no adolescente e no adulto, cricotireoidostomia cirúrgica com bisturi, guia e tubo 6,0.</li>
+</ol></div>
+<div class="panel"><h3>Extubação</h3><p class="helper">Planejar como procedimento de risco.</p>
+<ul>
+<li>Causa resolvida, estabilidade hemodinâmica, tosse eficaz e paciente desperto ou em sedação leve.</li>
+<li>Teste de vazamento do cuff. Nos de alto risco de estridor, dexametasona 0,15–0,5 mg/kg por dose (máx. 10 mg) a cada 6 h, iniciada 6–24 h antes.</li>
+<li>Estridor após extubar: adrenalina por nebulização (aba Repertório).</li>
+<li>Deixar pronto material de reintubação; ventilação não invasiva ou alto fluxo como suporte nos de risco.</li>
+</ul></div>
+</section>
+
+<!-- ============ 5. PCR ============ -->
+<section class="tab" id="t-pcr" data-title="PCR parada cardiorrespiratória arritmias fibrilação ventricular assistolia AESP 5H 5T adenosina torsades bradicardia taquicardia supraventricular cuidados pós-parada RCP" data-copiar="Copiar algoritmo">
+<div class="hero-head"><div><h1>PCR e arritmias</h1><p class="sub">Algoritmos de parada e de arritmias com doses para o peso, causas reversíveis e cuidados após o retorno da circulação.</p></div></div>
+<div class="panel"><h3>Qualidade da RCP</h3><p class="helper">American Heart Association e American Academy of Pediatrics, 2025.</p>
+<ul>
+<li>Compressões a 100–120 por minuto, com profundidade de um terço do tórax (cerca de 4 cm no lactente, 5 cm na criança, 5–6 cm no adolescente e no adulto) e retorno completo.</li>
+<li>Lactente: dois polegares com as mãos envolvendo o tórax, ou a base de uma mão. A técnica com dois dedos foi abandonada.</li>
+<li>Relação 15:2 com dois socorristas (30:2 com um; no adulto, sempre 30:2). Com via aérea avançada na criança, 20–30 ventilações por minuto sem pausar as compressões.</li>
+<li>Trocar quem comprime a cada 2 min; pausas de menos de 10 s. Com linha arterial, buscar diastólica de 25 mmHg ou mais no lactente e 30 mmHg ou mais a partir de 1 ano.</li>
+</ul></div>
+<div class="grid">
+<div class="panel"><h3>FV e TV sem pulso (chocável)</h3><p class="helper">Desfibrilar assim que o aparelho estiver pronto.</p>
+<ol class="steps"><li class="crit"><strong>Choque:</strong> 2 J/kg, depois 4 J/kg, depois 4 J/kg ou mais (até 10 J/kg ou a carga de adulto). RCP por 2 min após cada choque.</li><li><strong>Adrenalina</strong> 0,01 mg/kg após o 2º choque e depois a cada 3–5 min.</li><li><strong>Amiodarona</strong> 5 mg/kg (ou lidocaína 1 mg/kg) após o 3º choque; a amiodarona pode ser repetida até 3 doses.</li></ol>
+<div class="kv"><span>1º choque</span><span id="pcrJ1" class="calc">—</span></div>
+<div class="kv"><span>Adrenalina</span><span id="pcrAdr" class="calc">—</span></div>
+<div class="kv"><span>Amiodarona</span><span id="pcrAmio" class="calc">—</span></div></div>
+<div class="panel"><h3>AESP e assistolia (não chocável)</h3><p class="helper">Sem indicação de choque.</p>
+<ol class="steps"><li class="crit"><strong>RCP de alta qualidade</strong> e adrenalina 0,01 mg/kg o mais cedo possível, repetida a cada 3–5 min.</li><li>Procurar e tratar as causas reversíveis.</li><li>Checar o ritmo a cada 2 min; se virar chocável, desfibrilar.</li></ol></div>
+</div>
+<div class="panel">
+<h3>Causas reversíveis: Hs e Ts</h3>
+<p class="helper">Rever a cada ciclo de RCP.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>H</th><th>T</th></tr></thead><tbody>
+<tr><td>Hipóxia; hipovolemia; hidrogênio (acidose); hipo ou hipercalemia; hipotermia; hipoglicemia</td><td>Tensão no tórax (pneumotórax hipertensivo); tamponamento cardíaco; toxinas; trombose pulmonar; trombose coronária; trauma</td></tr>
+</tbody></table></div>
+</div>
+<div class="grid3">
+<div class="panel"><h3>Torsades de pointes</h3><p class="helper">Sulfato de magnésio 25–50 mg/kg (máx. 2 g): em bolus se sem pulso, em 10–20 min se com pulso.</p><div class="kv"><span>Magnésio 50 mg/kg</span><span id="pMg" class="calc">—</span></div></div>
+<div class="panel"><h3>Hipercalemia e hipocalcemia</h3><p class="helper">Cálcio lento, com monitor; não é rotina na parada.</p><div class="kv"><span>Gluconato de cálcio 10%, 60 mg/kg</span><span id="pCa" class="calc">—</span></div><div class="kv"><span>Cloreto de cálcio 10%, 20 mg/kg</span><span id="pCaCl" class="calc">—</span></div></div>
+<div class="panel"><h3>Bradicardia com má perfusão</h3><p class="helper">Oxigenar e ventilar primeiro. Frequência abaixo de 60 com má perfusão apesar disso: iniciar RCP.</p><div class="kv"><span>Adrenalina 0,01 mg/kg</span><span id="pAdr" class="calc">—</span></div><div class="kv"><span>Atropina 0,02 mg/kg (tônus vagal ou bloqueio AV)</span><span id="pAtro" class="calc">—</span></div></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Taquicardia supraventricular</h3><p class="helper">Estável: manobra vagal e depois adenosina em bolus rápido com flush. Instável: cardioversão sincronizada 0,5–1 J/kg, depois 2 J/kg.</p><div class="kv"><span>Adenosina, 1ª dose (0,1 mg/kg)</span><span id="pAde" class="calc">—</span></div><div class="kv"><span>Adenosina, 2ª dose (0,2 mg/kg)</span><span id="pAde2" class="calc">—</span></div><p class="helper" style="margin-top:8px">QRS largo com pulso e estável: discutir com especialista antes de amiodarona 5 mg/kg em 20–60 min.</p></div>
+<div class="panel"><h3>Cuidados pós-parada</h3><p class="helper">Após o retorno da circulação espontânea (AHA 2025).</p>
+<ul><li>Pressão sistólica e média acima do percentil 10 da idade (no adulto, média de 65 mmHg ou mais).</li><li>SpO₂ 94–99% e PaCO₂ 35–45 mmHg; evitar hiperóxia e hipocapnia.</li><li>Controle de temperatura por 5 dias no paciente comatoso: 36–37,5 °C o tempo todo, ou 32–34 °C por 2 dias seguidos de 36–37,5 °C por 3 dias. Tratar qualquer temperatura acima de 37,5 °C.</li><li>Glicemia, eletrólitos, ECG de 12 derivações e ecocardiograma; tratar convulsões e monitorar com EEG quando possível.</li></ul></div>
+</div>
+</section>
+
+<!-- ============ 6. CHOQUES ============ -->
+<section class="tab" id="t-choques" data-title="choque séptico anafilático hipovolêmico cardiogênico neurogênico obstrutivo noradrenalina adrenalina vasoativo hidrocortisona expansão" data-copiar="Copiar conduta">
+<div class="hero-head"><div><h1>Choques</h1><p class="sub">Reconhecimento, expansão, primeiro fármaco com dose e vazão para o peso, e alvos de reavaliação pela idade.</p></div></div>
+<div class="panel">
+<h3>Quadro comparativo</h3>
+<p class="helper">Escolha o tipo para ver a conduta calculada para este paciente.</p>
+<div class="field"><label for="choqueSel">Tipo de choque</label><select id="choqueSel">
+<option value="sep">Séptico</option><option value="ana">Anafilático</option><option value="hipo">Hipovolêmico</option><option value="card">Cardiogênico</option><option value="neu">Neurogênico</option><option value="obs">Obstrutivo</option>
+</select></div>
+</div>
+<div class="grid">
+<div class="hero-result"><div class="lbl">Expansão</div><div class="val" id="chExp">—</div><div class="cap" id="chExpCap">—</div></div>
+<div class="hero-result"><div class="lbl" id="chVasoLbl">Primeiro fármaco</div><div class="val" id="chVaso">—</div><div class="cap" id="chVasoCap">—</div></div>
+</div>
+<div class="panel"><h3 id="chTitulo">Choque séptico</h3><p id="chRecon">—</p><ul id="chDetail"></ul></div>
+<div class="light"><h3>Alvos de reavaliação</h3><p id="chAlvo" style="margin:0">—</p></div>
+<div class="panel"><h3>Escalonamento e adjuvantes</h3><p class="helper">Conforme a resposta nos primeiros 30–60 min.</p>
+<ul>
+<li>Catecolamina em dose alta: associar vasopressina 0,3–2 mU/kg/min ou trocar a classe (aba Diluições).</li>
+<li>Hidrocortisona apenas no choque refratário a fluido e catecolamina ou na suspeita de insuficiência adrenal: 2–4 mg/kg/dia (50–100 mg/m²/dia) a cada 6 h, máx. 200 mg/dia. Para este paciente: <span id="chHidro" class="calc">—</span>.</li>
+<li>Ecocardiograma ou ultrassom à beira do leito para diferenciar as causas e guiar o fluido.</li>
+<li>Intubação no choque: corrigir a pressão antes, usar cetamina e evitar etomidato na sepse.</li>
+</ul></div>
+</section>
+
+<!-- ============ 7. ESTADO DE MAL ============ -->
+<section class="tab" id="t-mal" data-title="estado de mal convulsivo crise convulsiva midazolam diazepam fenitoína levetiracetam valproato fenobarbital cronograma convulsão status epilepticus" data-copiar="Copiar cronograma">
+<div class="hero-head"><div><h1>Estado de mal convulsivo</h1><p class="sub">Cronograma por janela de tempo, com dose e volume para o peso em cada linha de tratamento.</p></div></div>
+<div class="light"><h3>0–5 min: estabilização</h3><p style="margin:0">Proteger a via aérea e posicionar, oxigênio, monitor, cronometrar a crise, glicemia capilar (corrigir se baixa) e acesso venoso. Crise que passa de 5 min deve ser tratada.</p></div>
+<div class="grid">
+<div class="panel"><h3>5–20 min: 1ª linha</h3><p class="helper">Benzodiazepínico; pode repetir uma vez após 5 min. Sem acesso venoso, usar via IM, intranasal ou bucal.</p>
+<div class="kv"><span>Midazolam IM, 0,2 mg/kg (máx. 10 mg)</span><span id="mIM" class="calc">—</span></div>
+<div class="kv"><span>Midazolam intranasal, 0,2 mg/kg (máx. 10 mg)</span><span id="mIN" class="calc">—</span></div>
+<div class="kv"><span>Midazolam bucal, 0,3 mg/kg (máx. 10 mg)</span><span id="mBuc" class="calc">—</span></div>
+<div class="kv"><span>Midazolam IV, 0,1–0,2 mg/kg (máx. 10 mg)</span><span id="mIV" class="calc">—</span></div>
+<div class="kv"><span>Diazepam IV, 0,2–0,3 mg/kg (máx. 10 mg)</span><span id="mDzIV" class="calc">—</span></div>
+<div class="kv"><span>Diazepam retal, 0,5 mg/kg (máx. 20 mg)</span><span id="mRet" class="calc">—</span></div>
+</div>
+<div class="panel"><h3>20–40 min: 2ª linha</h3><p class="helper">Um dos fármacos abaixo, em dose plena. Eficácia semelhante entre eles.</p>
+<div class="kv"><span>Levetiracetam, 40–60 mg/kg (máx. 4.500 mg) em 5–15 min</span><span id="mLev" class="calc">—</span></div>
+<div class="kv"><span>Fenitoína, 20 mg/kg (máx. 1.500 mg), até 1 mg/kg/min</span><span id="mFen" class="calc">—</span></div>
+<div class="kv"><span>Valproato de sódio, 20–40 mg/kg (máx. 3.000 mg) em 5–10 min</span><span id="mVal" class="calc">—</span></div>
+<div class="kv"><span>Fenobarbital, 15–20 mg/kg (máx. 1.000 mg), até 1 mg/kg/min</span><span id="mFb" class="calc">—</span></div>
+<p class="helper" style="margin-top:8px">Fenitoína só em SF, com monitor. Valproato: evitar em menores de 2 anos, na doença hepática e na suspeita de doença metabólica. Fenobarbital é a primeira opção no recém-nascido.</p>
+</div>
+</div>
+<div class="panel"><h3>40–60 min: refratário</h3><p class="helper">Via aérea definitiva, UTI e EEG. Infusão contínua titulada até cessar a crise.</p>
+<div class="kv"><span>Midazolam contínuo a 5 mcg/kg/min (0,3 mg/kg/h)</span><span id="mCont" class="calc">—</span></div>
+<ul style="margin-top:8px">
+<li>Midazolam: ataque de 0,2 mg/kg e infusão de 1–10 mcg/kg/min; em UTI, até 30 mcg/kg/min.</li>
+<li>Alternativas: cetamina (ataque 1–2 mg/kg; 1–5 mg/kg/h), tiopental ou propofol (cautela na criança: síndrome da infusão do propofol).</li>
+<li>Lactente com crise refratária sem causa: piridoxina 100 mg IV.</li>
+</ul></div>
+<div class="panel"><h3>Investigação etiológica</h3><p class="helper">Em paralelo ao tratamento.</p>
+<ul><li>Glicemia, sódio, cálcio, magnésio, gasometria, hemograma, nível sérico do anticonvulsivante em uso e triagem toxicológica.</li><li>Líquor se houver febre com sinais meníngeos, lactente jovem ou imunossuprimido; iniciar antibiótico e aciclovir sem esperar.</li><li>Neuroimagem na crise focal, trauma, sinais de hipertensão intracraniana ou sem recuperação da consciência.</li><li>EEG se a consciência não voltar: estado de mal não convulsivo.</li></ul></div>
+</section>
+
+<!-- ============ 8. TRAUMA ============ -->
+<section class="tab" id="t-trauma" data-title="trauma TCE traumatismo craniano hemorragia transfusão maciça ácido tranexâmico salina hipertônica manitol PECARN tomografia pressão de perfusão cerebral" data-copiar="Copiar protocolo">
+<div class="hero-head"><div><h1>Trauma e TCE</h1><p class="sub">Reposição, transfusão, ácido tranexâmico, medidas para hipertensão intracraniana e critérios de tomografia.</p></div></div>
+<div class="grid3">
+<div class="hero-result"><div class="lbl">Cristaloide</div><div class="val" id="trVol">—</div><div class="cap">10–20 mL/kg por alíquota; se persistir o choque, passar para hemocomponentes.</div></div>
+<div class="hero-result"><div class="lbl">Concentrado de hemácias</div><div class="val" id="trTr">—</div><div class="cap">10–20 mL/kg; no adulto, 1–2 unidades.</div></div>
+<div class="hero-result"><div class="lbl">Ácido tranexâmico</div><div class="val" id="trTxa">—</div><div class="cap" id="trTxaCap">15 mg/kg (máx. 1 g) em 10 min; depois 2 mg/kg/h por 8 h.</div></div>
+</div>
+<div class="panel"><h3>Hemorragia e controle de dano</h3><p class="helper">Parar o sangramento é a prioridade.</p>
+<ul><li>Compressão direta, torniquete em membro, cinta pélvica; cirurgia de controle de dano.</li><li>Sangramento maciço: hemácias, plasma e plaquetas em proporção próxima de 1:1:1; ácido tranexâmico nas primeiras 3 h.</li><li>Repor cálcio (gluconato de cálcio 10% 0,5 mL/kg) a cada 4 unidades ou se o cálcio iônico cair; prevenir hipotermia e acidose.</li><li>Na criança com TCE, não aceitar hipotensão.</li></ul></div>
+<div class="panel"><h3>TCE grave e hipertensão intracraniana</h3><p class="helper">Pressão de perfusão cerebral = pressão arterial média − pressão intracraniana. Na criança, mínimo de 40 mmHg e alvo de 40–50 mmHg (lactentes no limite inferior, adolescentes no superior); no adulto, 60–70 mmHg. Pressão intracraniana abaixo de 20 mmHg.</p>
+<div class="kv"><span>NaCl 3%, 2–5 mL/kg em 10–20 min</span><span id="trSH" class="calc">—</span></div>
+<div class="kv"><span>Manitol 20%, 0,5–1 g/kg em 15–20 min</span><span id="trMan" class="calc">—</span></div>
+<ul style="margin-top:8px"><li>Cabeceira a 30°, cabeça centrada, colar sem comprimir as jugulares.</li><li>SpO₂ acima de 94% e PaCO₂ 35–40 mmHg; hiperventilar apenas na herniação iminente, como ponte.</li><li>Normotermia, glicemia e sódio controlados, analgesia e sedação adequadas.</li><li>Anticonvulsivante profilático por 7 dias pode ser considerado no TCE grave.</li></ul></div>
+<div class="panel"><h3>Critérios de tomografia (PECARN)</h3><p class="helper">Para trauma craniano nas primeiras 24 h, com Glasgow de 14 ou 15.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Idade</th><th>Tomografia indicada</th><th>Observar ou tomografia, conforme o caso</th></tr></thead><tbody>
+<tr><td>Menor de 2 anos</td><td>Glasgow 14, alteração do estado mental ou fratura de crânio palpável</td><td>Hematoma de couro cabeludo que não seja frontal, perda de consciência por 5 s ou mais, mecanismo grave, comportamento diferente do habitual segundo os pais</td></tr>
+<tr><td>2 anos ou mais</td><td>Glasgow 14, alteração do estado mental ou sinais de fratura de base do crânio</td><td>Perda de consciência, vômitos, mecanismo grave, cefaleia intensa</td></tr>
+</tbody></table></div>
+<p class="helper" style="margin-top:8px">Mecanismo grave: atropelamento, ejeção, capotamento ou morte de outro ocupante, queda acima de 0,9 m (menor de 2 anos) ou 1,5 m (2 anos ou mais), impacto por objeto em alta velocidade. Sem nenhum critério, a tomografia não é indicada. Glasgow até 13: tomografia.</p></div>
+<div class="light"><h3>Critérios de neurocirurgia</h3><p style="margin:0">Glasgow até 8, lesão com efeito de massa, sinais de herniação, déficit focal progressivo, fratura com afundamento ou hematoma epidural ou subdural com desvio da linha média.</p></div>
+</section>
+
+<!-- ============ 9. INTOXICAÇÕES ============ -->
+<section class="tab" id="t-intox" data-title="intoxicação exógena antídotos naloxona flumazenil N-acetilcisteína paracetamol fomepizol atropina carvão ativado organofosforado biperideno CIATox toxicologia síndromes tóxicas" data-copiar="Copiar antídotos">
+<div class="hero-head"><div><h1>Intoxicações exógenas</h1><p class="sub">Abordagem inicial, descontaminação e antídotos com dose e volume para o peso.</p></div></div>
+<div class="light"><h3>Centro de informação toxicológica</h3><p style="margin:0">CIATox de Minas Gerais, no Hospital João XXIII, 24 h: <strong>0800 722 6001</strong>, (31) 3224-4000 ou (31) 3239-9308. Ligar em toda intoxicação com sintomas, dose alta ou agente desconhecido.</p></div>
+<div class="panel">
+<h3>Antídotos calculados</h3>
+<p class="helper">Doses de ataque para o peso, já limitadas pelo teto.</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Antídoto</th><th>Indicação</th><th>Dose por kg</th><th>Dose</th><th>Volume</th><th>Apresentação e observações</th></tr></thead>
+<tbody id="intoxTab"></tbody>
+</table></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Descontaminação</h3><p class="helper">Carvão ativado em até 1–2 h da ingestão, com via aérea protegida.</p>
+<div class="kv"><span>Carvão ativado, 1 g/kg (máx. 50 g)</span><span id="itCarv" class="calc">—</span></div>
+<ul style="margin-top:8px"><li>Não usar com cáusticos, hidrocarbonetos, rebaixamento sem via aérea protegida ou íleo.</li><li>Não adsorve ferro, lítio, álcoois nem metais.</li><li>Lavagem gástrica é exceção: ingestão recente e potencialmente letal. Não induzir vômito.</li></ul></div>
+<div class="panel"><h3>N-acetilcisteína IV no paracetamol</h3><p class="helper">Esquema de 21 h em três fases, em SG 5%.</p>
+<div class="kv"><span>Fase 1: 150 mg/kg em 1 h</span><span id="itNac1" class="calc">—</span></div>
+<div class="kv"><span>Fase 2: 50 mg/kg em 4 h</span><span id="itNac2" class="calc">—</span></div>
+<div class="kv"><span>Fase 3: 100 mg/kg em 16 h</span><span id="itNac3" class="calc">—</span></div>
+<p class="helper" style="margin-top:8px" id="itNacDil">—</p></div>
+</div>
+<div class="panel"><h3>Síndromes tóxicas</h3><p class="helper">O conjunto de sinais orienta o agente antes do laboratório.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Síndrome</th><th>Sinais</th><th>Agentes comuns</th><th>Conduta</th></tr></thead><tbody>
+<tr><td>Colinérgica</td><td>Miose, salivação, broncorreia, bradicardia, diarreia, fasciculações</td><td>Organofosforado, carbamato (chumbinho)</td><td>Atropina até secar a secreção; pralidoxima no organofosforado</td></tr>
+<tr><td>Anticolinérgica</td><td>Midríase, pele seca e quente, taquicardia, retenção urinária, delírio</td><td>Anti-histamínicos, tricíclicos, atropina, plantas (trombeteira)</td><td>Suporte, benzodiazepínico, resfriamento; bicarbonato se QRS largo</td></tr>
+<tr><td>Simpaticomimética</td><td>Midríase, sudorese, taquicardia, hipertensão, agitação, hipertermia</td><td>Cocaína, anfetaminas, descongestionantes</td><td>Benzodiazepínico, resfriamento; evitar betabloqueador isolado</td></tr>
+<tr><td>Opioide</td><td>Miose, bradipneia, rebaixamento</td><td>Morfina, codeína, tramadol, metadona</td><td>Ventilar e naloxona</td></tr>
+<tr><td>Sedativo-hipnótica</td><td>Rebaixamento com sinais vitais pouco alterados, ataxia</td><td>Benzodiazepínicos, barbitúricos, álcool</td><td>Suporte; flumazenil só em casos selecionados</td></tr>
+<tr><td>Serotoninérgica</td><td>Clônus, hiper-reflexia, tremor, hipertermia, diarreia</td><td>Antidepressivos, tramadol, associações</td><td>Suspender o agente, benzodiazepínico, resfriamento; ciproeptadina</td></tr>
+<tr><td>Extrapiramidal</td><td>Distonia, torcicolo, crise oculógira</td><td>Bromoprida, metoclopramida, haloperidol</td><td>Biperideno</td></tr>
+</tbody></table></div></div>
+<div class="light"><h3>Níveis séricos e doses tóxicas</h3>
+<ul style="margin-bottom:0">
+<li><strong>Paracetamol:</strong> ingestão aguda a partir de 150 mg/kg é potencialmente tóxica (para este paciente: <span id="itPara" class="calc">—</span>). Dosar o nível a partir de 4 h e tratar se estiver acima da linha de 150 mcg/mL em 4 h no nomograma de Rumack-Matthew; a N-acetilcisteína protege melhor nas primeiras 8 h.</li>
+<li><strong>Salicilatos:</strong> tóxico acima de 150 mg/kg; nível acima de 30 mg/dL com sintomas pede alcalinização; hemodiálise se acima de 90–100 mg/dL, acidose refratária, alteração neurológica ou edema pulmonar.</li>
+<li><strong>Tricíclicos:</strong> QRS acima de 100 ms indica bicarbonato de sódio.</li>
+<li><strong>Ferro:</strong> acima de 40–60 mg/kg de ferro elementar; nível acima de 500 mcg/dL ou choque indica deferoxamina.</li>
+</ul></div>
+</section>
+
+<!-- ============ 10. METABÓLICOS ============ -->
+<section class="tab" id="t-metab" data-title="cetoacidose diabética CAD insulina hipoglicemia hipercalemia hipocalemia potássio hiponatremia hipernatremia sódio amônia hiperamonemia edema cerebral" data-copiar="Copiar conduta">
+<div class="hero-head"><div><h1>Distúrbios metabólicos</h1><p class="sub">Cetoacidose, hipoglicemia, potássio, sódio e amônia, com doses e velocidades de correção para o peso.</p></div></div>
+<div class="grid">
+<div class="hero-result"><div class="lbl">Insulina regular contínua na cetoacidose</div><div class="val" id="meIns">—</div><div class="cap">0,05–0,1 U/kg/h em solução de 1 U/mL, sem bolus, iniciada 1 h ou mais após começar a hidratação. Usar 0,05 se pH acima de 7,15.</div></div>
+<div class="hero-result"><div class="lbl">Déficit de sódio</div><div class="val" id="meNa">—</div><div class="cap" id="meNaCap">Fração de água × peso × (sódio alvo − sódio atual), com os valores da aba Correção.</div></div>
+</div>
+<div class="panel"><h3>Cetoacidose diabética</h3><p class="helper">ISPAD 2022. Diagnóstico: glicemia acima de 200 mg/dL, pH abaixo de 7,30 ou bicarbonato abaixo de 18 mmol/L, com cetonemia ou cetonúria. Grave: pH abaixo de 7,1 ou bicarbonato abaixo de 5.</p>
+<div class="kv"><span>Expansão com SF 0,9%, 10–20 mL/kg</span><span id="meExp" class="calc">—</span></div>
+<div class="kv"><span>Hidratação seguinte (déficit em 48 h + manutenção)</span><span id="meHid" class="calc">—</span></div>
+<div class="kv"><span>Glicose no soro</span><span id="meGlu" class="calc">—</span></div>
+<div class="kv"><span>Edema cerebral: manitol 20% ou NaCl 3%</span><span id="meEdema" class="calc">—</span></div>
+<ul style="margin-top:8px">
+<li>Expansão de 10 mL/kg em 20–30 min; repetir se a perfusão continuar ruim. No choque, 20 mL/kg rápido.</li>
+<li>Potássio: 40 mEq/L no soro desde o início se houver diurese e o potássio não estiver alto. Se abaixo de 3,0 mEq/L, repor antes e adiar a insulina.</li>
+<li>Bicarbonato não é recomendado, salvo hipercalemia com risco de vida ou acidose extrema com instabilidade.</li>
+<li>Edema cerebral (cefaleia, bradicardia, hipertensão, rebaixamento): tratar de imediato, reduzir a hidratação e elevar a cabeceira.</li>
+</ul></div>
+<div class="grid">
+<div class="panel"><h3>Hipoglicemia</h3><p class="helper">Abaixo de 60 mg/dL com sintomas; no recém-nascido, abaixo de 45 mg/dL.</p>
+<div class="kv"><span>Glicose 10% em bolus</span><span id="meG10" class="calc">—</span></div>
+<div class="kv"><span>Manutenção com glicose 10%</span><span id="meTig" class="calc">—</span></div>
+<div class="kv"><span>Glucagon IM ou SC, sem acesso</span><span id="meGluc" class="calc">—</span></div>
+<p class="helper" style="margin-top:8px">Taxa de infusão de glicose (mg/kg/min) = concentração (%) × mL/h ÷ (6 × peso). Sem causa conhecida, colher amostra crítica antes de corrigir.</p></div>
+<div class="panel"><h3>Hipercalemia</h3><p class="helper">Potássio acima de 6,0–6,5 mEq/L ou ECG alterado: ECG contínuo e tratamento imediato.</p>
+<div class="kv"><span>Gluconato de cálcio 10%, 60 mg/kg em 5–10 min</span><span id="meCa" class="calc">—</span></div>
+<div class="kv"><span>Insulina regular 0,1 U/kg + glicose 0,5 g/kg em 30 min</span><span id="meInsK" class="calc">—</span></div>
+<div class="kv"><span>Salbutamol por nebulização</span><span id="meSalb" class="calc">—</span></div>
+<p class="helper" style="margin-top:8px">Bicarbonato 1 mEq/kg se houver acidose; furosemida 1 mg/kg; resina de troca; diálise se refratária.</p></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Hipocalemia</h3><p class="helper">Via oral quando possível. IV se abaixo de 2,5 mEq/L, com arritmia ou fraqueza, sempre com monitor.</p>
+<div class="kv"><span>KCl 0,5 mEq/kg em 1–2 h</span><span id="meK" class="calc">—</span></div>
+<p class="helper" style="margin-top:8px">Velocidade até 0,5 mEq/kg/h (máx. 20 mEq/h). Em veia periférica, até 40 mEq/L. Nunca em bolus. Corrigir magnésio junto.</p></div>
+<div class="light"><h3>Correção de sódio</h3><p>Hiponatremia com convulsão ou coma: NaCl 3% em bolus, sem esperar (aba Correção). Fora disso, subir no máximo 8 mEq/L em 24 h: correção rápida da hiponatremia crônica causa desmielinização osmótica.</p><p style="margin:0">Hipernatremia: baixar no máximo 10–12 mEq/L em 24 h (0,5 mEq/L por hora): correção rápida causa edema cerebral.</p></div>
+</div>
+<div class="panel"><h3>Hiperamonemia</h3><p class="helper">Amônia acima de 100 µmol/L (150 no recém-nascido) pede investigação urgente de erro inato e contato com centro de referência.</p>
+<ul><li>Suspender proteína por 24–48 h e oferecer calorias: glicose 10% a 8–10 mg/kg/min e lipídio.</li><li>Depuradores de amônia: benzoato de sódio 250 mg/kg em 90–120 min e depois 250 mg/kg/dia; arginina 250 mg/kg conforme o defeito.</li><li>Hemodiálise ou hemodiafiltração se a amônia passar de 500 µmol/L, subir rápido ou houver encefalopatia.</li></ul></div>
+</section>
+
+<!-- ============ 11. DILUIÇÕES ============ -->
+<section class="tab" id="t-dil" data-title="diluição infusão contínua vasoativos sedativos analgésicos noradrenalina adrenalina dopamina dobutamina milrinona vasopressina propofol midazolam fentanil dexmedetomidina cetamina insulina mcg/kg/min mL/h regra 0,3 0,6 3 6" data-copiar="Copiar diluições">
+<div class="hero-head"><div><h1>Infusões contínuas e diluições</h1><p class="sub">Solução padrão em 50 mL ou 100 mL com vazão calculada para o peso, e a regra de 0,3, 3, 0,6 e 6 mg por kg.</p></div></div>
+<div class="light"><h3>Regra por peso</h3>
+<p>Para fármacos dosados em mcg/kg/min, a massa é multiplicada pelo peso; assim, a vazão em mL/h lê a dose diretamente:</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Regra</th><th>Massa para este paciente</th><th>Volume final</th><th>1 mL/h equivale a</th></tr></thead><tbody id="dvRegra"></tbody></table></div>
+<p class="helper" style="margin:8px 0 0">Dobrar o volume final com a mesma massa reduz a concentração à metade e dobra a vazão. Conferir a concentração máxima do fármaco e identificar a solução na seringa.</p></div>
+<div class="panel">
+<h3>Calculadora de vazão exata</h3>
+<p class="helper">Escolha o fármaco, a dose e o volume final da solução padrão.</p>
+<div class="grid">
+<div class="field"><label for="dvDrug">Fármaco</label><select id="dvDrug"></select></div>
+<div class="field"><label for="dvDose" id="dvDoseLbl">Dose</label><input id="dvDose" type="number" inputmode="decimal" step="any" min="0" value="0.1"><div class="hlp" id="dvDoseHlp">—</div></div>
+<div class="field"><label for="dvVol">Volume final</label><select id="dvVol"><option value="50">50 mL</option><option value="100">100 mL</option></select></div>
+</div>
+<div class="hero-result"><div class="lbl">Vazão</div><div class="val" id="dvOut">—</div><div class="cap" id="dvCap">—</div></div>
+</div>
+<div class="panel"><h3>Tabela padrão em 50 mL e 100 mL</h3><p class="helper">Vazão mínima e máxima da faixa usual de cada fármaco, para o peso informado.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Fármaco</th><th>Solução padrão</th><th>Preparo em 50 mL</th><th>Faixa de dose</th><th>Vazão em 50 mL</th><th>Vazão em 100 mL</th><th>Observações</th></tr></thead><tbody id="dvTable"></tbody></table></div></div>
+</section>
+
+<!-- ============ 12. REPERTÓRIO ============ -->
+<section class="tab" id="t-repertorio" data-title="repertório medicações anvisa princípio ativo apresentação dose indicação antitérmico analgésico antibiótico antiemético corticoide broncodilatador gotas" data-copiar="Copiar repertório">
+<div class="hero-head"><div><h1>Repertório de medicações</h1><p class="sub">Apresentações registradas na ANVISA, com dose, volume e gotas para o peso informado.</p></div></div>
+<div class="panel">
+<h3>Busca por princípio ativo, classe ou indicação</h3>
+<div class="field"><label for="repBusca">Filtrar</label><input id="repBusca" type="search" placeholder="paracetamol, antitérmico, ceftriaxona" autocomplete="off"></div>
+<p class="helper" id="repCont">—</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Medicamento</th><th>Apresentação</th><th>Indicação</th><th>Dose por kg</th><th>Dose para este paciente</th><th>Volume e gotas</th><th>Via, intervalo e duração</th><th>Máximo</th><th>Observações</th></tr></thead>
+<tbody id="repTab"></tbody>
+</table></div>
+<p class="helper" style="margin-top:8px">O número de gotas por mL varia com o fabricante e o frasco: conferir na bula do produto em uso.</p>
+</div>
+</section>
+
+<!-- ============ 13. ANTIBIÓTICOS ============ -->
+<section class="tab" id="t-atb" data-title="antibióticos linhas sepse neonatal pneumonia meningite pielonefrite infecção urinária celulite osteomielite artrite séptica endocardite abdome neutropenia febril cateter faringoamigdalite otite sinusite tuberculose fungos vírus" data-copiar="Copiar esquema">
+<div class="hero-head"><div><h1>Antibióticos por linha</h1><p class="sub">Por síndrome, com dose por kg, dose calculada, máximo, intervalo, via, duração e ajuste renal.</p></div></div>
+<div class="panel">
+<div class="field"><label for="atbSind">Síndrome</label><select id="atbSind"></select></div>
+<h3 id="atbTit">—</h3>
+<p class="helper" id="atbNota">—</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Linha</th><th>Antibiótico</th><th>Dose/kg</th><th>Dose total</th><th>Dose máxima</th><th>Intervalo</th><th>Via</th><th>Duração</th><th>Ajuste renal</th><th>Espectro</th></tr></thead>
+<tbody id="atbTab"></tbody>
+</table></div>
+<p class="helper" style="margin-top:8px">Ajustar ao perfil de resistência local, à cultura e à função renal. Doses para fora do período neonatal, salvo quando indicado.</p>
+</div>
+</section>
+
+<!-- ============ 14. POSOLOGIAS ============ -->
+<section class="tab" id="t-pos" data-title="posologias calculadas peso analgesia antitérmico antiemético corticoide broncodilatador anticonvulsivante sedativo gotas mL" data-copiar="Copiar posologias">
+<div class="hero-head"><div><h1>Posologias calculadas por peso</h1><p class="sub">Dose por kg, dose por tomada, teto, volume em mL e gotas, na apresentação mais usada.</p></div></div>
+<div class="panel">
+<h3>Tabela global de posologias</h3>
+<p class="helper">Recalculada para o peso e a idade; teto e restrições de idade já aplicados.</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Fármaco</th><th>Classe</th><th>Dose/kg</th><th>Dose total</th><th>Teto</th><th>Volume</th><th>Gotas</th><th>Apresentação e intervalo</th></tr></thead>
+<tbody id="posTab"></tbody>
+</table></div>
+</div>
+</section>
