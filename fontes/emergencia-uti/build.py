@@ -22,7 +22,7 @@ def fonte(peso):
 
 css = ("/* Barlow Semi Condensed: (c) The Barlow Project Authors, SIL Open Font License 1.1 */\n"
        + fonte(500) + "\n" + fonte(600) + "\n" + ler("styles.css"))
-js = "\n".join(ler(n) for n in ["core.js", "data-farmacos.js", "data-clinica.js", "ui.js"])
+js = "\n".join(ler(n) for n in ["core.js", "data-farmacos.js", "data-clinica.js", "data-novos.js", "ui-novos.js", "ui.js"])
 corpo = ler("body1.html") + ler("body2.html")
 assert "</script" not in js.lower(), "o JS não pode conter </script"
 
@@ -40,7 +40,7 @@ html = f"""<!DOCTYPE html>
 <title>Emergência &amp; UTI — Referência Clínica Integrada</title>
 <meta name="description" content="Referência clínica de emergência e terapia intensiva, adulto e pediátrica: doses, diluições, vazões e condutas calculadas pelo peso e pela idade. Uso profissional.">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#1B2631">
 <link rel="icon" href="{icone}">
 <script>(function(){{try{{var t=localStorage.getItem("eu.tema");if(t!=="dark"&&t!=="light")t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}}catch(e){{}}}})();</script>
 <style>

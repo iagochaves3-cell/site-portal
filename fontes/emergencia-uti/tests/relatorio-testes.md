@@ -1,20 +1,22 @@
 # Emergência & UTI: relatório de testes
 
-Versão testada: `dist/index.html`, SHA-256 `8e96b8fdfebea7875309d3acdf202897dc45e177eada8b9d403bc6188e1a83d9`. Data: 24/11/2026.
+Versão testada: `dist/index.html`, SHA-256 `b6ab71f5306650f55a296c1f9a9de87005ce805af5d1e3dc6560de20edecb96d`, com o acervo em `dist/acervo/`. Data: 25/11/2026.
 
 ## Resultado
 
 | Teste | O que confere | Resultado |
 |---|---|---|
-| Oráculo, 48 pacientes | Cada dose, volume, gota e vazão exibida, recalculada a partir de uma tabela digitada à parte | 28.447 conferências, 0 divergências |
-| Oráculo, varredura de peso | O mesmo, em 201 pesos de 0,5 a 150 kg | 117.359 conferências, 0 divergências |
-| Mutação | 7 erros de dose injetados de propósito no arquivo | 7 de 7 detectados |
-| Funcional | Navegação pelas 26 abas, busca, paciente, cópia, impressão, tema, celular em 390 e 320 px, sem requisição externa | 194 verificações aprovadas, no arquivo local e no endereço público |
+| Oráculo, 48 pacientes | Cada dose, volume, gota, vazão, dose tóxica e volume corrente exibido, recalculado a partir de uma tabela digitada à parte | 33.799 conferências, 0 divergências |
+| Oráculo, varredura de peso | O mesmo, em 201 pesos de 0,5 a 150 kg | 139.679 conferências, 0 divergências |
+| Oráculo, 10 pacientes de referência | O mesmo, nos pacientes do teste em delta | 7.013 conferências, 0 divergências |
+| Mutação | 12 erros de dose injetados de propósito no código | 12 de 12 detectados |
+| Funcional | 30 abas, busca (também no acervo), paciente, painéis novos, leitor do acervo, calculadora de escores embutida, cópia, impressão, tema, celular em 390 e 320 px, nenhuma requisição fora do site | 227 verificações aprovadas, no servidor local e no endereço público |
+| Acervo | Índice × arquivos, contagens por coleção (110, 362, 87, 266, 498, 486), 577 linhas e 315 diagnósticos do Manual PPS, 486 escores × calculadora embutida idêntica à de origem, figuras, ausência de conteúdo ativo | 11.906 conferências, 0 falhas |
 | Delta | Original × nova versão, campo a campo, em 10 pacientes | 1.250 comparações; toda diferença tem motivo registrado |
 
 ## Limite do que os testes provam
 
-O oráculo e o site foram escritos pela mesma revisão clínica. O teste garante que o site calcula e exibe exatamente o que a tabela de referência manda, e que os tetos e as restrições de idade são aplicados; ele não substitui a conferência das doses de referência com a bula e o protocolo da instituição.
+O oráculo e o site foram escritos pela mesma revisão clínica. O teste garante que o site calcula e exibe exatamente o que a tabela de referência manda, e que os tetos e as restrições de idade são aplicados; ele não substitui a conferência das doses de referência com a bula e o protocolo da instituição. O acervo integrado é reproduzido como está na origem: os testes conferem a integridade e a segurança da exibição, não o conteúdo clínico de cada tema.
 
 ## Erros injetados (teste de mutação)
 
@@ -24,7 +26,12 @@ O oráculo e o site foram escritos pela mesma revisão clínica. O teste garante
 - Holliday-Segar 50→40 mL/kg: 30 divergências
 - ibuprofeno liberado aos 3 meses: 2 divergências
 - teto da adrenalina 1→2 mg: 6 divergências
-- ampola de atropina 0,25→0,5 mg/mL: 48 divergências
+- ampola de atropina 0,5 lida como 0,25 mg/mL: 96 divergências
+- cetamina para procedimento 1–2→1–3 mg/kg: 62 divergências
+- limiar tóxico do paracetamol 150→140 mg/kg: 78 divergências
+- volume corrente do modo 6–8→7–8 mL/kg: 30 divergências
+- succinilcolina sem a faixa acima de 2 anos: 68 divergências
+- amoxicilina na pneumonia 80–90→50–90 mg/kg/dia: 44 divergências
 
 ## Delta: original × nova versão
 
@@ -32,13 +39,13 @@ Texto idêntico: 354 comparações. Mesmo número com formato diferente: 177. Di
 
 | Campo | Idêntico | Mesmo número | Diferente | Motivo |
 |---|---|---|---|---|
-| `altCopy` | 0 | 0 | 10 | Receita refeita: gotas calculadas (o original dava paracetamol em mL sem gotas, intervalo de 6–8 h e ibuprofeno para qualquer idade, sem alerta de dengue). |
+| `altCopy` | 0 | 0 | 10 | Receita refeita: gotas calculadas (o original dava paracetamol em mL sem gotas, intervalo de 6–8 h e ibuprofeno para qualquer idade, sem alerta de dengue). Dipirona de 10 mg/kg/dose (0,4 gota/kg), como no Manual PPS do autor. |
 | `altIdade` | 9 | 1 | 0 | Idade passa a ser lida e normalizada (dias, meses, anos). |
 | `altPeso` | 1 | 9 | 0 | Só formato (18,0 kg → 18 kg). |
 | `atbSind` | 0 | 0 | 10 | Lista de síndromes ampliada e reordenada; a primeira passou a ser sepse comunitária. |
-| `atbTab` | 0 | 0 | 10 | Coluna Dose total passou a ser calculada (o original repetia a dose máxima); doses revistas por síndrome. |
+| `atbTab` | 0 | 0 | 10 | Coluna Dose total passou a ser calculada (o original repetia a dose máxima); doses revistas por síndrome. Amoxicilina de 80–90 mg/kg/dia como 1ª linha na pneumonia e na otite (Manual PPS); benzatina com os dois cortes de peso. |
 | `atbTit` | 0 | 0 | 10 | Idem. |
-| `cartaDrogas` | 0 | 0 | 10 | Mesmas doses onde o original estava certo; corrigidos o volume da atropina (mostrava a dose em mg como mL), tetos ausentes e 4 linhas acrescentadas (adrenalina ET, adenosina 1ª e 2ª, naloxona). |
+| `cartaDrogas` | 0 | 0 | 10 | Mesmas doses onde o original estava certo; corrigidos o volume da atropina (mostrava a dose em mg como mL), tetos ausentes e 4 linhas acrescentadas (adrenalina ET, adenosina 1ª e 2ª, naloxona). Volumes nas duas apresentações de atropina, lidocaína e magnésio (folha ABRAMEDE-MG). |
 | `chAlvo` | 0 | 3 | 7 | Alvos passam a depender da idade (o original usava alvos de adulto para todos). |
 | `chDetail` | 0 | 0 | 10 | Conduta revista (SSC 2026, AHA 2025). |
 | `chExp` | 0 | 0 | 10 | Mostra a faixa de 10–20 mL/kg por alíquota e limita a 1.000 mL; recém-nascido 10 mL/kg. |
@@ -60,7 +67,7 @@ Texto idêntico: 354 comparações. Mesmo número com formato diferente: 177. Di
 | `dvDose` | 0 | 0 | 10 | Dose inicial passa a ser o mínimo da faixa do fármaco. |
 | `dvOut` | 0 | 0 | 10 | Idem (0,05 em vez de 0,1 mcg/kg/min); mesma fórmula. |
 | `dvTable` | 0 | 0 | 10 | Soluções padronizadas e conferidas (o original trazia dexmedetomidina 10 vezes mais concentrada e dopamina com massa impossível em 50 mL). |
-| `equipTab` | 0 | 0 | 10 | Tamanhos por faixa de peso (o original repetia fórmulas e trazia agulha intraóssea errada). |
+| `equipTab` | 0 | 0 | 10 | Tamanhos por faixa de peso (o original repetia fórmulas e trazia agulha intraóssea errada). Quatro itens acrescentados da folha ABRAMEDE-MG do autor: cateter central, cateter arterial, descompressão torácica e bougie. |
 | `fcRef` | 3 | 3 | 4 | Faixas por idade em vigília e sono (PALS). |
 | `formDose` | 0 | 0 | 10 | Só formato. |
 | `formVol` | 6 | 3 | 1 | Só formato. |
@@ -123,7 +130,7 @@ Texto idêntico: 354 comparações. Mesmo número com formato diferente: 177. Di
 | `viaCom` | 0 | 0 | 10 | ERRO CORRIGIDO: campo ficava vazio. |
 | `viaProf` | 0 | 0 | 10 | Idem. |
 | `viaSem` | 0 | 0 | 10 | Idem. |
-| `viaTab` | 0 | 0 | 10 | ERRO CORRIGIDO: a tabela de indução e bloqueio não era preenchida no original. |
+| `viaTab` | 0 | 0 | 10 | ERRO CORRIGIDO: a tabela de indução e bloqueio não era preenchida no original. Conferida com a folha ABRAMEDE-MG: etomidato 0,2–0,3, propofol 1–2,5, succinilcolina por idade, cisatracúrio e atropina nas ampolas de 0,5 e 0,25 mg/mL. |
 | `vmPeso` | 0 | 2 | 8 | ERRO CORRIGIDO: o original aplicava peso predito de adulto a crianças (18 kg virava 36,9 kg). |
 | `vmTab` | 0 | 0 | 10 | Parâmetros por faixa revistos. |
 | `vmVt` | 2 | 0 | 8 | Idem: 221 mL para uma criança de 18 kg; o correto é 108 mL. |
@@ -132,13 +139,3 @@ Texto idêntico: 354 comparações. Mesmo número com formato diferente: 177. Di
 | `wBtns` | 0 | 0 | 10 | Rótulos sem a casa decimal. |
 
 Campos sem nenhuma diferença: btnAnalisa, chTitulo, choqueSel, coNa, coNaAlvo, desPct, docSel, docTit, dvDrug, dvVol, gaAG, gaCl, gaDD, gaGlic, gaHco, gaNa, gaNaC, idade, imgOut, imgTexto, navSearch, peso, repBusca, sexo, so421a, so421b, so421c
-
-## Como repetir
-
-```
-python3 build.py
-node tests/funcional.js
-node tests/captura.js dist/index.html tests/matriz-novo.json tests/matriz.json && python3 tests/oraculo.py tests/matriz-novo.json
-node tests/captura.js dist/index.html tests/varredura-novo.json tests/varredura.json && python3 tests/oraculo.py tests/varredura-novo.json
-node tests/captura.js dist/index.html tests/base-novo.json && python3 tests/delta.py tests/base-original.json tests/base-novo.json tests/relatorio-delta.md
-```

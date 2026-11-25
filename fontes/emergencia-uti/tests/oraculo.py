@@ -89,12 +89,12 @@ def carta(kg, a):
         "Adrenalina IV/IO (PCR)": (0.01, 1, None, 0.1),
         "Adrenalina endotraqueal": (0.1, 2.5, None, 1),
         "Amiodarona": (5, 300, None, 50),
-        "Lidocaína 2% sem vasoconstritor": (1, 100, None, 20),
+        "Lidocaína sem vasoconstritor": (1, 100, None, 20),
         "Sulfato de magnésio": (50, 2000, None, 500),
         "Bicarbonato de sódio 8,4%": (1, 50, None, 1),
         "Gluconato de cálcio 10%": (60, 2000, None, 100),
         "Cloreto de cálcio 10%": (20, 1000, None, 100),
-        "Atropina": (0.02, 1 if a >= 12 else 0.5, 0.1, 0.25),
+        "Atropina": (0.02, 1 if a >= 12 else 0.5, 0.1, 0.5),
         "Adenosina — 1ª dose": (0.1, 6, None, 3),
         "Adenosina — 2ª dose": (0.2, 12, None, 3),
         "Naloxona": (0.1, 2, None, 0.4),
@@ -104,20 +104,50 @@ def carta(kg, a):
 
 def via(kg, a):
     return {
-        "Atropina": (0.02, 0.5, 0.25), "Fentanil": ((1, 3), 150, 50), "Midazolam": ((0.1, 0.3), 10, 5),
-        "Cetamina": ((1, 2), 200, 50), "Etomidato": (0.3, 40, 2), "Propofol": ((1, 2), 200, 10),
-        "Succinilcolina (suxametônio)": (2 if a < 2 else 1.5, 200, 10), "Rocurônio": ((1, 1.2), 120, 10),
-        "Vecurônio": ((0.1, 0.2), 20, 1), "Sugamadex": (16, None, 100),
+        "Atropina": (0.02, 0.5, 0.5), "Fentanil": ((1, 3), 150, 50), "Midazolam": ((0.1, 0.3), 10, 5),
+        "Cetamina": ((1, 2), 200, 50), "Etomidato": ((0.2, 0.3), 40, 2), "Propofol": ((1, 2.5), 200, 10),
+        "Succinilcolina (suxametônio)": (2 if a < 2 else (1, 1.5), 200, 10), "Rocurônio": ((1, 1.2), 120, 10),
+        "Vecurônio": ((0.1, 0.2), 20, 1), "Cisatracúrio": ((0.1, 0.2), 20, 2), "Sugamadex": (16, None, 100),
     }
 
 def antidotos(kg, a):
     return {
-        "Naloxona": (0.1, 2, 0.4), "Flumazenil": (0.01, 0.2, 0.1), "Atropina": ((0.02, 0.05), 3, 0.25),
+        "Naloxona": (0.1, 2, 0.4), "Flumazenil": (0.01, 0.2, 0.1), "Atropina": ((0.02, 0.05), 3, 0.5),
         "Pralidoxima": ((20, 40), 2000, 20), "Biperideno": (0.04, 5, 5), "Bicarbonato de sódio 8,4%": ((1, 2), None, 1),
         "Azul de metileno 1%": ((1, 2), None, 10), "Glucagon": ((0.05, 0.15), 5, 1), "Insulina regular em dose alta": (1, None, 1),
         "Gluconato de cálcio 10%": (60, 3000, 100), "Hidroxocobalamina": (70, 5000, 25), "Octreotida": ((1, 1.5), 100, 100),
         "Emulsão lipídica 20%": (1.5, 100, None), "Fomepizol": (15, None, 1000), "Fisostigmina": (0.02, 2 if a >= 12 else 0.5, 1),
     }
+
+def proced(kg, a):
+    m = a * 12
+    return {
+        "Cetamina IV": ((1, 2), 100, 50, m < 3), "Cetamina IM": ((4, 5), None, 50, m < 3),
+        "Midazolam IV": ((0.05, 0.1) if a < 6 else (0.025, 0.05), 2.5, 5, False), "Midazolam intranasal": ((0.2, 0.5), 10, 5, False),
+        "Midazolam oral": ((0.25, 0.5), 20, 2, False), "Propofol IV": (1, 100, 10, False), "Etomidato IV": ((0.1, 0.2), 20, 2, False),
+        "Dexmedetomidina intranasal (off label)": ((2, 3), 200, 100, False), "Fentanil IV": ((1, 2), 50, 50, False),
+        "Fentanil intranasal": ((1.5, 2), 100, 50, False), "Lidocaína sem vasoconstritor": (4.5, 300, 10, False),
+        "Lidocaína com adrenalina": (7, 500, 10, False), "Naloxona, reversão titulada": ((0.001, 0.005), 0.4, 0.04, False),
+        "Flumazenil": (0.01, 0.2, 0.1, False),
+    }
+
+# (nome, unidade, [(mg ou g por kg, limite absoluto, idade a partir da qual o limite vale)], [(quantidade por unidade, é volume em mL)])
+ETANOL = 0.789
+TOXICOS = [
+    ("Paracetamol", "mg", [(150, 7500, None), (200, 10000, 6)], [(200, True), (500, False), (750, False)]),
+    ("Ácido acetilsalicílico e salicilatos", "mg", [(150, 6500, None), (300, None, None), (500, None, None)], [(100, False), (500, False)]),
+    ("Ferro elementar", "mg", [(20, None, None), (40, None, None), (60, None, None)], [(25, True), (40, False)]),
+    ("Ibuprofeno", "mg", [(100, None, None), (400, None, None)], [(100, True), (50, True)]),
+    ("Antidepressivos tricíclicos (amitriptilina, imipramina, clomipramina)", "mg", [(5, None, None), (10, None, None)], [(25, False)]),
+    ("Difenidramina ou dimenidrinato", "mg", [(7.5, 300, 6)], [(50, False)]),
+    ("Carbamazepina", "mg", [(20, None, None), (50, None, None)], [(200, False), (20, True)]),
+    ("Isoniazida", "mg", [(20, None, None), (35, None, None), (80, None, None)], [(100, False)]),
+    ("Etanol", "g", [(3, None, None)], [(ETANOL * 0.40, True), (ETANOL * 0.12, True), (ETANOL * 0.05, True)]),
+]
+
+def pbw_modo(kg, a, sx):
+    if a >= 16: return (45.5 if sx == "F" else 50) + 0.91 * ((160 if sx == "F" else 170) - 152.4)
+    return kg
 
 # (unidade da dose, mínimo, máximo, quantidade em 50 mL, unidade da quantidade)
 INFUSOES = {
@@ -147,7 +177,7 @@ def posologias(kg, a):
     """nome -> (k, teto por dose, teto diário, doses/dia ou None, mínimo, [(conc, gotas/mL)], bloqueado)"""
     neo, m = a * 365.25 < 28, a * 12
     t = {}
-    t["Paracetamol"] = ((10, 15), 466 if a < 12 else 1000, min((60 if neo else 75) * kg, 4000), None, None, [(200, 15), (32, None)], False)
+    t["Paracetamol"] = ((10, 15), 466 if a < 12 else 1000, min((60 if neo else 75) * kg, 4000), None, None, [(200, 15), (32, None), (100, None)], False)
     t["Dipirona (oral)"] = ((10, 20), 1000, 4000, None, None, [(500, 20), (50, None)], m < 3 or kg < 5)
     t["Dipirona (injetável)"] = ((10, 20), 1000, 4000, None, None, [(500, None)], m < 3 or kg < 5)
     t["Ibuprofeno"] = ((5, 10), 200 if a < 12 else 400, min(40 * kg, 800) if a < 12 else 1200, None, None, [(50, 10), (100, 10)], m < 6)
@@ -160,13 +190,13 @@ def posologias(kg, a):
     t["Dimenidrinato + piridoxina"] = (1.25, 50, 75 if a < 6 else 150 if a < 12 else 400, None, None, [(25, 20), (3, None)], a < 2)
     t["Adrenalina IM (anafilaxia)"] = (0.01, 0.5, None, None, None, [(1, None)], False)
     t["Hidroxizina"] = ((0.5, 1), 25, min(2 * kg, 100), None, None, [(2, None)], m < 6)
-    t["Prometazina"] = (0.5, 25, None, None, None, [(25, None)], a < 2)
+    t["Prometazina"] = ((0.25, 0.5), 25, None, None, None, [(25, None)], a < 2)
     t["Prednisolona"] = ((1, 2), None, 40, 1, None, [(3, None)], False)
     t["Dexametasona"] = ((0.15, 0.6), 16, None, None, None, [(4, None)], False)
     t["Hidrocortisona"] = ((2, 4), 100, None, None, None, [(50, None)], False)
     t["Metilprednisolona"] = ((1, 2), None, 60, 4, None, [(40, None)], False)
     t["Salbutamol para nebulização"] = (0.15, 5, None, None, 2.5, [(5, 20)], False)
-    t["Sulfato de magnésio (asma)"] = ((25, 75), 2000, None, None, None, [(100, None), (500, None)], False)
+    t["Sulfato de magnésio (asma)"] = ((25, 50), 2000, None, None, None, [(100, None), (500, None)], False)
     t["Terbutalina subcutânea"] = (0.01, 0.25, None, None, None, [(0.5, None)], False)
     t["Amoxicilina (dose padrão)"] = (50, 500, None, 3, None, [(50, None)], m < 2)
     t["Amoxicilina (dose alta)"] = ((80, 90), None, 4000, 2, None, [(80, None)], m < 2)
@@ -186,7 +216,7 @@ def posologias(kg, a):
     t["Escopolamina (butilbrometo)"] = (1.5 if m < 3 else 0.7 if a < 1 else (0.3, 0.5), 20, None, None, None, [(10, 20), (20, None)], False)
     t["Omeprazol"] = (1, None, 40, 1, None, [(4, None)], neo)
     t["Midazolam (crise convulsiva)"] = (0.2, 10, None, None, None, [(5, None)], False)
-    t["Diazepam"] = ((0.2, 0.3), 10, None, None, None, [(5, None)], neo)
+    t["Diazepam"] = ((0.15, 0.2), 10, None, None, None, [(5, None)], neo)
     t["Fenitoína"] = (20, 1500, None, None, None, [(50, None)], False)
     t["Fenobarbital"] = ((15, 20), 1000, None, None, None, [(100, None)], False)
     t["Levetiracetam"] = ((40, 60), 4500, None, None, None, [(100, None)], False)
@@ -228,6 +258,12 @@ for reg in dados["casos"]:
         lo, hi = dose(k, kg, mx, mn=mn)
         confere(c, f"carta/{nome}/dose", r[2], faixa(lo, hi))
         confere(c, f"carta/{nome}/volume", r[3], faixa(lo / conc, hi / conc, mln) if conc else faixa(lo, hi))
+    r = linha(b["cartaDrogas"], "Atropina")
+    lo, hi = dose(0.02, kg, 1 if a >= 12 else 0.5, mn=0.1)
+    confere(c, "carta/atropina 0,25 mg/mL", r[3], faixa(lo / 0.5, hi / 0.5, mln) + ["0,5"] + faixa(lo / 0.25, hi / 0.25, mln))
+    r = linha(b["cartaDrogas"], "Lidocaína sem vasoconstritor")
+    lo, hi = dose(1, kg, 100)
+    confere(c, "carta/lidocaína 1%", r[3], faixa(lo / 20, hi / 20, mln) + ["2"] + faixa(lo / 10, hi / 10, mln))
     r = linha(b["cartaDrogas"], "Sulfato de magnésio")
     lo, hi = dose(50, kg, 2000)
     confere(c, "carta/magnésio 10%", r[3], faixa(lo / 500, hi / 500, mln) + ["50"] + faixa(lo / 100, hi / 100, mln))
@@ -240,6 +276,50 @@ for reg in dados["casos"]:
         lo, hi = dose(k, kg, mx)
         confere(c, f"via/{nome}/dose", r[2], faixa(lo, hi))
         confere(c, f"via/{nome}/volume", r[3], faixa(lo / conc, hi / conc, mln))
+
+    # sedação e analgesia para procedimento
+    for nome, (k, mx, conc, bloq) in proced(kg, a).items():
+        r = linha(b["procTab"], nome)
+        if r is None:
+            falhas.append(f"{kg} kg | sedação ausente: {nome}"); continue
+        total += 1
+        if bloq:
+            if not r[2].startswith("Não usar"): falhas.append(f"{kg} kg, {c['idade']} | sedação/{nome}: deveria estar bloqueada | {r[2]}")
+            continue
+        lo, hi = dose(k, kg, mx)
+        confere(c, f"sedação/{nome}/dose", r[2], faixa(lo, hi))
+        confere(c, f"sedação/{nome}/volume", r[3], faixa(lo / conc, hi / conc, mln))
+    r = linha(b["procTab"], "Naloxona, reversão titulada"); lo, hi = dose((0.001, 0.005), kg, 0.4)
+    confere(c, "sedação/naloxona ampola", r[3], faixa(lo / 0.04, hi / 0.04, mln) + ["0,04"] + faixa(lo / 0.4, hi / 0.4, mln))
+
+    # doses tóxicas por peso
+    linhas_tox = b["toxTab"]
+    for nome, un, lims, aps in TOXICOS:
+        ini = next((i for i, rr in enumerate(linhas_tox) if len(rr) == 1 and rr[0] == nome), None)
+        if ini is None:
+            falhas.append(f"{kg} kg | dose tóxica ausente: {nome}"); continue
+        for j, (k, cap, cap_idade) in enumerate(lims):
+            rr = linhas_tox[ini + 1 + j]
+            v = k * kg
+            if cap is not None and (cap_idade is None or a >= cap_idade) and v > cap: v = cap
+            confere(c, f"tóxica/{nome}/{k}", rr[1], [num(v)] if un == "g" else ([num(v / 1000)] if v >= 1000 else [num(v)]))
+            segs = rr[2].split("; ")
+            total += 1
+            esperado = []
+            for q, eh_ml in aps:
+                x = v / q
+                esperado.append(num(x / 1000) if (eh_ml and x >= 1000) else (mln(x) if eh_ml else num(x)))
+            obtido = [tokens(sg)[0] if tokens(sg) else "" for sg in segs]
+            if obtido != esperado:
+                falhas.append(f"{kg} kg | tóxica/{nome}/{k}/equivalência: esperado {esperado}, exibido {obtido}")
+
+    # modo ventilatório (VCV, o primeiro da lista)
+    if neo: esp_vt = ["4", "6", mln(4 * pbw_modo(kg, a, sx)), mln(6 * pbw_modo(kg, a, sx))]
+    elif a >= 12:
+        w = pbw_modo(kg, a, sx)
+        esp_vt = ["6", f"{arred(w, 1):.1f}".replace(".", ","), mln(6 * w), "4", "8", mln(4 * w), mln(8 * w)]
+    else: esp_vt = ["6", "8", mln(6 * kg), mln(8 * kg), "4", "6"]
+    confere(c, "modoVt", b["modoVt"], esp_vt)
 
     # antídotos
     for nome, (k, mx, conc) in antidotos(kg, a).items():
@@ -279,7 +359,7 @@ for reg in dados["casos"]:
     confere(c, "mIM", b["mIM"], dvx(0.2, 10, 5)); confere(c, "mIN", b["mIN"], dvx(0.2, 10, 5))
     confere(c, "mBuc", b["mBuc"], dvx(0.3, 10, 5)); confere(c, "mIV", b["mIV"], dvx((0.1, 0.2), 10, 5))
     if not neo:
-        confere(c, "mDzIV", b["mDzIV"], dvx((0.2, 0.3), 10, 5)); confere(c, "mRet", b["mRet"], dvx(0.5, 20, 5))
+        confere(c, "mDzIV", b["mDzIV"], dvx((0.15, 0.2), 10, 5)); confere(c, "mRet", b["mRet"], dvx(0.5, 20, 5))
     confere(c, "mLev", b["mLev"], dvx((40, 60), 4500, 100)); confere(c, "mFb", b["mFb"], dvx((15, 20), 1000, 100))
     lo, hi = dose(20, kg, 1500)
     confere(c, "mFen", b["mFen"], faixa(lo, hi) + faixa(lo / 50, hi / 50, mln) + ["50", str(rj(max(hi / min(kg, 50), 20)))])
@@ -363,7 +443,7 @@ for reg in dados["casos"]:
     osel = (3 if a * 12 < 9 else 3.5) * kg if a < 1 else 30 if kg <= 15 else 45 if kg <= 23 else 60 if kg <= 40 else 75
     confere(c, "oseltamivir", r[3], [num(osel)]); confere(c, "oseltamivir/volume", r[5], [mln(osel / 10)])
     r = linha(b["posTab"], "Penicilina G benzatina")
-    confere(c, "benzatina", r[3], [num(50000 * kg)] if kg < 10 else ["600000"] if kg < 20 else ["1200000"])
+    confere(c, "benzatina", r[3], [num(50000 * kg)] if kg < 10 else ["600000"] if kg < 20 else ["600000", "27", "1200000", "20"] if kg < 27 else ["1200000"])
     r = linha(b["posTab"], "Loratadina")
     if a >= 2: confere(c, "loratadina", r[3], ["5" if kg < 30 else "10"])
     r = linha(b["posTab"], "Dexclorfeniramina")
@@ -437,13 +517,13 @@ for reg in dados["casos"]:
         confere(c, f"antibiótico/{sind[:22]}/{r[1]}", r[3], faixa(lo, hi))
     S = "Sepse e choque séptico comunitário (após o período neonatal)"
     ab(S, 0, 100, 2, 2000); ab(S, 1, 60, 4, 1000); ab(S, 2, 40, 3, 900); ab(S, 3, 150, 3, 2000); ab(S, 4, 60, 3, 1000)
-    ab("Pneumonia comunitária", 0, 50, 3, None, 4000); ab("Pneumonia comunitária", 3, 10, 1, None, 500)
+    ab("Pneumonia comunitária", 0, (80, 90), 2, None, 4000); ab("Pneumonia comunitária", 3, 10, 1, None, 500)
     M = "Meningite bacteriana"
     ab(M, 0, 100, 2, 2000); ab(M, 1, (200, 300), 4, None, 12000); ab(M, 2, (300, 400), 4, None, 12000); ab(M, 4, 120, 3, 2000)
     F = "Faringoamigdalite estreptocócica"
     ab(F, 1, 50, 2, None, 1000); ab(F, 2, (40, 50), 2, 500); ab(F, 3, 12, 1, None, 500); ab(F, 4, 20, 3, 300)
     O = "Otite média aguda e rinossinusite bacteriana"
-    ab(O, 0, 50, 3, 500); ab(O, 1, (80, 90), 2, None, 4000); ab(O, 3, 50, 1, None, 1000)
+    ab(O, 0, (80, 90), 2, None, 4000); ab(O, 1, 50, 3, 500); ab(O, 3, 50, 1, None, 1000)
 
 print(f"{total} conferências; {len(falhas)} divergências")
 for f in falhas[:80]: print("  -", f)

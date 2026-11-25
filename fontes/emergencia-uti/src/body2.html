@@ -76,6 +76,9 @@
 </div>
 <div class="panel"><h3>Parâmetros iniciais por faixa</h3><p class="helper">A linha destacada corresponde à idade informada. Ajustar pela gasometria, pela curva e pelo conforto.</p>
 <div class="tbl"><table class="ref"><thead><tr><th>Faixa</th><th>VC (mL/kg)</th><th>PEEP</th><th>FR</th><th>Tempo inspiratório</th><th>Fluxo</th><th>FiO₂</th><th>Gatilho</th></tr></thead><tbody id="vmTab"></tbody></table></div></div>
+<div class="panel"><h3>Abordagem por modo ventilatório</h3><p class="helper">Escolha o modo: funcionamento, indicação, ajuste inicial calculado para o paciente, monitorização e armadilhas.</p>
+<div class="field" style="max-width:460px"><label for="modoSel">Modo ventilatório</label><select id="modoSel"></select></div>
+<div id="modoOut" class="modo-out"></div></div>
 <div class="grid">
 <div class="panel"><h3>Modos</h3><p class="helper">Escolher o modo que a equipe domina.</p>
 <ul><li>Volume controlado (VCV) e pressão controlada (PCV): suporte total. Em PCV, conferir o volume corrente obtido.</li><li>Pressão regulada com volume controlado (PRVC): volume garantido com pressão limitada.</li><li>SIMV com pressão de suporte e PSV: suporte parcial e desmame.</li><li>APRV e alta frequência: resgate na SDRA refratária, em centro experiente.</li></ul></div>
@@ -90,6 +93,12 @@
 <ul><li>Frequência baixa e tempo expiratório longo (relação I:E de 1:3 a 1:5).</li><li>Hipercapnia permissiva com pH acima de 7,20.</li><li>Medir a auto-PEEP e a pressão de platô; hipotensão súbita: desconectar e deixar exalar, pensar em pneumotórax.</li></ul></div>
 <div class="panel"><h3>SDRA pediátrica (PALICC-2, 2023)</h3><p class="helper">Índice de oxigenação = FiO₂ × pressão média de vias aéreas × 100 ÷ PaO₂. Com oximetria: trocar PaO₂ por SpO₂ (até 97%).</p>
 <ul><li>Em ventilação invasiva: índice de oxigenação a partir de 4, ou de saturação a partir de 5.</li><li>Leve a moderada: índice de oxigenação abaixo de 16 (saturação abaixo de 12). Grave: 16 ou mais (12 ou mais), após 4 h de ventilação.</li><li>Em ventilação não invasiva: PaO₂/FiO₂ até 300 ou SpO₂/FiO₂ até 250.</li><li>Volume corrente de 6–8 mL/kg (4–6 se a complacência for muito baixa), platô até 28 cmH₂O, pressão de distensão até 15 cmH₂O.</li><li>Grave: posição prona e bloqueio neuromuscular a considerar; ECMO na falha refratária.</li><li>SpO₂ 92–97% na forma leve a moderada; 88–92% na grave com PEEP otimizada.</li></ul></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Posição prona</h3><p class="helper">Na SDRA moderada a grave, depois de otimizar volume, PEEP e sedação.</p>
+<ul><li>Adulto: PaO₂/FiO₂ abaixo de 150 com FiO₂ de 0,6 ou mais e PEEP de 5 cmH₂O ou mais; começar nas primeiras 36 h, em sessões de pelo menos 16 h (PROSEVA).</li><li>Criança: opção na SDRA pediátrica grave (índice de oxigenação de 16 ou mais), sem benefício de mortalidade demonstrado (PALICC-2).</li><li>Manter em supino quando a PaO₂/FiO₂ ficar em 150 ou mais, com PEEP até 10 cmH₂O e FiO₂ até 0,6, por 4 h após a sessão.</li><li>Contraindicações: coluna instável, hipertensão intracraniana, tórax aberto ou esterno instável, instabilidade hemodinâmica grave.</li><li>Equipe de 4 a 5 pessoas; proteger tubo, olhos e pontos de pressão; pausar a dieta antes de virar.</li></ul></div>
+<div class="panel"><h3>ECMO</h3><p class="helper">Discutir cedo com o centro de referência: o transporte exige estabilidade.</p>
+<ul><li>Adulto (EOLIA), apesar de FiO₂ de 0,8 ou mais, volume de 6 mL/kg e PEEP de 10 cmH₂O ou mais: PaO₂/FiO₂ abaixo de 50 por mais de 3 h, abaixo de 80 por mais de 6 h, ou pH abaixo de 7,25 com PaCO₂ de 60 mmHg ou mais por mais de 6 h.</li><li>Criança: falha progressiva apesar da terapia otimizada, em doença reversível; referências usuais são índice de oxigenação acima de 40, PaO₂/FiO₂ abaixo de 60 ou acidose respiratória persistente com pH abaixo de 7,0–7,25, como na asma refratária (ELSO).</li><li>Recém-nascido: índice de oxigenação acima de 40 por mais de 4 h, ou acima de 20 sem melhora após 24 h de terapia máxima (ELSO).</li><li>Pesam contra: muitos dias de ventilação com parâmetros altos (mais de 7 no adulto), dano neurológico grave, doença sem possibilidade de recuperação ou de transplante.</li></ul></div>
 </div>
 </section>
 
@@ -296,6 +305,8 @@
 <!-- ============ 26. NOVIDADES ============ -->
 <section class="tab" id="t-novidades" data-title="novidades atualizações diretrizes Surviving Sepsis 2026 AHA AAP 2025 PADIS Phoenix PALICC dengue VSR nirsevimabe ISPAD fontes referências" data-copiar="Copiar novidades">
 <div class="hero-head"><div><h1>Novidades e fontes</h1><p class="sub">O que mudou nas diretrizes recentes e as referências usadas nesta revisão.</p></div></div>
+<div class="light"><h3>Esta versão: acervo do autor integrado (25 de novembro de 2026)</h3><p class="helper">Junção com o projeto do agente Adapta e com os sites e documentos do autor.</p>
+<ul style="margin-bottom:0"><li>Quatro abas novas: protocolos por diagnóstico, monografias e Manual PPS, calculadoras de escores, e acervo e fontes, com 1.809 itens pesquisáveis.</li><li>Núcleo conferido com o Manual Integral PPS e a folha ABRAMEDE-MG 2022 pediátrica: atropina e lidocaína nas duas apresentações, indução e bloqueio ajustados, cisatracúrio, amoxicilina de 80–90 mg/kg/dia na pneumonia e na otite, dipirona de 10 mg/kg na receita e quatro itens de equipamento.</li><li>Painéis novos: sedação para procedimento, doses tóxicas por peso, abordagem por modo ventilatório, posição prona e ECMO.</li><li>Plano C do Ministério da Saúde (2023) conferido: 30 mL/kg e 70 mL/kg, em 1 h e 5 h abaixo de 1 ano e em 30 min e 2 h 30 min a partir de 1 ano.</li></ul></div>
 <div class="light"><h3>Surviving Sepsis Campaign, crianças, 2026</h3><p class="helper">Publicada em 23 de março de 2026, na Pediatric Critical Care Medicine e na Intensive Care Medicine. São 61 enunciados; adota os critérios Phoenix.</p>
 <ul style="margin-bottom:0"><li>Antibiótico em até 1 h no choque séptico; na sepse provável sem choque, após avaliação rápida, em até 3 h.</li><li>Lactato na avaliação inicial passou a recomendação forte.</li><li>Fluidos: com UTI disponível, até 40–60 mL/kg na primeira hora em alíquotas de 10–20 mL/kg; sem UTI, bolus apenas se houver hipotensão (até 40 mL/kg). Cristaloide balanceado preferido.</li><li>Sem preferência definida entre adrenalina e noradrenalina; iniciar em veia periférica em vez de atrasar; vasopressina quando a catecolamina está em dose alta.</li><li>Ultrassom à beira do leito sugerido para guiar a ressuscitação, onde houver treinamento.</li><li>Sugere não usar etomidato e não usar hidrocortisona quando fluido e vasoativo restauram a estabilidade.</li><li>Alvo conservador de SpO₂ (88–92%) após a ressuscitação nas crianças intubadas, exceto anemia, hemoglobinopatia e cardiopatia cianótica.</li><li>Seção nova sobre seguimento após a UTI, com reabilitação precoce.</li></ul></div>
 <div class="light"><h3>American Heart Association e American Academy of Pediatrics, 2025</h3><p class="helper">Publicadas em 22 de outubro de 2025.</p>
@@ -313,7 +324,7 @@
 <div class="light"><h3>Cetoacidose, ISPAD 2022</h3><p style="margin:0">Bicarbonato abaixo de 18 mmol/L entra no diagnóstico; bolus inicial em 20–30 min; déficit reposto em 24–48 h; insulina de 0,05–0,1 U/kg/h ao menos 1 h após iniciar a hidratação.</p></div>
 <div class="light"><h3>Pneumonia, SBP 2022</h3><p style="margin:0">Amoxicilina 50 mg/kg/dia como primeira escolha ambulatorial, por 7 dias; ampicilina ou penicilina cristalina no internado; internar com SpO₂ abaixo de 92%.</p></div>
 </div>
-<div class="panel"><h3>Fontes consultadas</h3><p class="helper">Revisão clínica e técnica desta versão em 24 de novembro de 2026. Conferir sempre a fonte oficial e o protocolo da instituição.</p>
+<div class="panel"><h3>Fontes consultadas</h3><p class="helper">Revisão clínica e técnica desta versão em 25 de novembro de 2026. Conferir sempre a fonte oficial e o protocolo da instituição.</p>
 <ol class="fontes">
 <li>Weiss SL e colaboradores. Surviving Sepsis Campaign international guidelines for the management of sepsis and septic shock in children 2026. Pediatr Crit Care Med. 2026. <a href="https://doi.org/10.1097/PCC.0000000000003927" target="_blank" rel="noopener">doi:10.1097/PCC.0000000000003927</a>; <a href="https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-the-management-of-sepsis-and-septic-shock-in" target="_blank" rel="noopener">página da SCCM</a>.</li>
 <li>American Heart Association e American Academy of Pediatrics. Guidelines for cardiopulmonary resuscitation and emergency cardiovascular care 2025: suporte de vida em pediatria. Circulation. 2025;152(16 supl. 2). <a href="https://doi.org/10.1161/CIR.0000000000001370" target="_blank" rel="noopener">doi:10.1161/CIR.0000000000001370</a>.</li>
@@ -334,11 +345,64 @@
 <li>Sociedade Brasileira de Pediatria. Abordagem diagnóstica e terapêutica das pneumonias adquiridas na comunidade não complicadas. 2022. <a href="https://www.sbp.com.br/fileadmin/user_upload/sbp/2022/agosto/03/23358e-DC-Pneumonias_Adquiridas_Nao_Complicadas.pdf" target="_blank" rel="noopener">Documento científico</a>.</li>
 <li>Bulário eletrônico da ANVISA: apresentações, concentrações, gotas por mL e restrições de idade dos medicamentos citados.</li>
 <li>Centro de Informação e Assistência Toxicológica de Minas Gerais (CIATox-MG), Hospital João XXIII, FHEMIG.</li>
+<li>Godwin SA e colaboradores. Clinical policy: procedural sedation and analgesia in the emergency department. Ann Emerg Med. 2014.</li>
+<li>Dart RC e colaboradores. Acetaminophen poisoning: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2006.</li>
+<li>Chyka PA e colaboradores. Salicylate poisoning: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2007.</li>
+<li>Manoguerra AS e colaboradores. Iron ingestion: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2005.</li>
+<li>Woolf AD e colaboradores. Tricyclic antidepressant poisoning: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2007.</li>
+<li>Scharman EJ e colaboradores. Diphenhydramine and dimenhydrinate poisoning: an evidence-based consensus guideline for out-of-hospital management. Clin Toxicol. 2006. <a href="https://doi.org/10.1080/15563650600585920" target="_blank" rel="noopener noreferrer">doi:10.1080/15563650600585920</a></li>
+<li>Guérin C e colaboradores. Prone positioning in severe acute respiratory distress syndrome (PROSEVA). N Engl J Med. 2013.</li>
+<li>Combes A e colaboradores. Extracorporeal membrane oxygenation for severe acute respiratory distress syndrome (EOLIA). N Engl J Med. 2018.</li>
+<li>Maratta C e colaboradores. Extracorporeal Life Support Organization: 2020 pediatric respiratory ELSO guideline. ASAIO J. 2020.</li>
+<li>Lalgudi Ganesan S e colaboradores. Airway pressure release ventilation in pediatric acute respiratory distress syndrome: a randomized controlled trial. Am J Respir Crit Care Med. 2018.</li>
+<li>Ferguson ND e colaboradores (OSCILLATE) e Young D e colaboradores (OSCAR). High-frequency oscillation in early acute respiratory distress syndrome. N Engl J Med. 2013.</li>
+<li>Ministério da Saúde. Manejo do paciente com diarreia: avaliação do estado de hidratação e planos A, B e C. Brasília, 2023.</li>
+<li>Almeida IV. Prescrição Pediátrica Segura: manual integral, versão consolidada de 15 de agosto de 2026. Documento do autor.</li>
+<li>Folha de Emergência ABRAMEDE-MG 2022, pediátrica, variante 9, corrigida em 15 de novembro de 2026. Documento do autor.</li>
 </ol></div>
 </section>
 
+
+<!-- ============ 27. PROTOCOLOS ============ -->
+<section class="tab" id="t-proto" data-title="acervo protocolos por diagnóstico temas condutas estudo continuado terapêuticas PedWB neonatologia recém-nascido" data-copiar="Copiar o tema aberto" data-imprimir="Imprimir o tema aberto">
+<div class="hero-head"><div><h1>Protocolos por diagnóstico</h1><p class="sub">Os temas do Estudo Continuado, das Terapêuticas e da Neonatologia, com busca e leitura aqui mesmo.</p></div></div>
+<p class="aviso-acervo">Conteúdo do acervo do autor, reproduzido como está na origem, com a situação de revisão que ela declara. As doses do acervo não passam pelo cálculo nem pela conferência desta ferramenta: para dose calculada, use as abas de Estabilização e de Fármacos.</p>
+<div class="acervo" data-aba="t-proto"></div>
+</section>
+
+<!-- ============ 28. MONOGRAFIAS ============ -->
+<section class="tab" id="t-mono" data-title="acervo monografias medicamentos manual PPS prescrição pediátrica segura catálogo posológico bula apresentações esquemas" data-copiar="Copiar o item aberto" data-imprimir="Imprimir o item aberto">
+<div class="hero-head"><div><h1>Monografias e Manual PPS</h1><p class="sub">As 577 linhas farmacológicas do Manual de Prescrição Pediátrica Segura e as 498 monografias do catálogo posológico pediátrico.</p></div></div>
+<p class="aviso-acervo">Conteúdo do acervo do autor, reproduzido como está na origem, com a situação de revisão que ela declara. As doses do acervo não passam pelo cálculo nem pela conferência desta ferramenta: para dose calculada, use as abas de Estabilização e de Fármacos.</p>
+<div class="acervo" data-aba="t-mono"></div>
+</section>
+
+<!-- ============ 29. CALCULADORAS ============ -->
+<section class="tab" id="t-calc" data-title="acervo escores calculadoras critérios pontuação faixas Glasgow Westley Phoenix PEWS escore clínico" data-copiar="Copiar o escore aberto" data-imprimir="Imprimir o escore aberto">
+<div class="hero-head"><div><h1>Calculadoras de escores</h1><p class="sub">Os 486 escores do site Escores Clínicos: critérios, pontuação e faixas, com a calculadora completa aberta aqui.</p></div></div>
+<p class="aviso-acervo">Conteúdo do site Escores Clínicos do autor, reproduzido como está na origem. Os escores mais usados no plantão também estão, calculados, na aba Escores.</p>
+<div class="acervo" data-aba="t-calc"></div>
+<p class="no-print" style="margin-top:12px"><a class="btn-m" href="acervo/escores/index.html" target="_blank" rel="noopener">Abrir o catálogo completo de escores em nova aba</a></p>
+</section>
+
+<!-- ============ 30. ACERVO E FONTES ============ -->
+<section class="tab" id="t-acervo" data-title="acervo e fontes integração sites do autor Google Drive manual PPS folha ABRAMEDE conferência proveniência camadas" data-copiar="Copiar acervo e fontes">
+<div class="hero-head"><div><h1>Acervo e fontes</h1><p class="sub">O que foi integrado, de onde veio, como foi conferido e onde consultar o restante.</p></div></div>
+<div class="grid">
+<div class="panel"><h3>Duas camadas de conteúdo</h3><p class="helper">Saber de qual camada vem cada informação.</p>
+<ul><li>Núcleo calculado: as abas de Estabilização, Fármacos, Suporte, Raciocínio e Alta. Cada dose e volume é recalculado pelo peso e pela idade e conferido por um cálculo independente a cada versão.</li><li>Acervo integrado: protocolos, monografias, Manual PPS e escores dos sites e documentos do autor, reproduzidos como estão na origem, com a situação de revisão declarada por ela.</li><li>Onde o núcleo e o acervo divergem, vale o núcleo, que traz a fonte de cada dose; as divergências encontradas estão na tabela de conferência.</li></ul></div>
+<div class="panel"><h3>Conteúdo integrado</h3><p class="helper">Coleções pesquisáveis nas abas do acervo.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Coleção</th><th>Origem</th><th>Itens</th><th>Aba</th></tr></thead><tbody id="acGrupos"></tbody></table></div></div>
+</div>
+<div class="panel"><h3>Conferência com o manual e a folha de emergência do autor</h3><p class="helper">Doses do núcleo comparadas com o Manual Integral PPS (15/08/2026) e a folha ABRAMEDE-MG 2022 pediátrica (corrigida em 15/11/2026). Os demais itens comparados coincidem.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Item</th><th>Antes</th><th>Fonte do autor</th><th>Decisão</th></tr></thead><tbody id="acRecon"></tbody></table></div></div>
+<div class="panel"><h3>Sites do autor</h3><p class="helper">Abrem em nova aba.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Site</th><th>Conteúdo</th><th>Neste site</th></tr></thead><tbody id="acSites"></tbody></table></div></div>
+<div class="panel"><h3>Documentos do Google Drive</h3><p class="helper">Documentos consultados na pasta do autor. Só entra no site o que está descrito abaixo.</p>
+<div class="tbl"><table class="ref"><thead><tr><th>Documento</th><th>Onde está</th><th>Como entrou</th></tr></thead><tbody id="acDrive"></tbody></table></div></div>
+</section>
 </main>
-<footer class="footer-bar">Emergência &amp; UTI: referência clínica integrada. Revisão de 24 de novembro de 2026. Apoio à decisão: não substitui o protocolo da instituição, a bula nem o julgamento clínico. Nenhum dado do paciente é salvo ou enviado.</footer>
+<footer class="footer-bar">Emergência &amp; UTI: referência clínica integrada. Revisão de 25 de novembro de 2026. Apoio à decisão: não substitui o protocolo da instituição, a bula nem o julgamento clínico. Nenhum dado do paciente é salvo ou enviado.</footer>
 </div>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>

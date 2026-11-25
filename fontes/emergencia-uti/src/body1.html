@@ -7,6 +7,7 @@
 <input class="search-box" id="navSearch" type="search" placeholder="Buscar seção ou termo" autocomplete="off">
 <p class="helper cap-big">Filtra as abas pelo título e pelo conteúdo. Enter abre a primeira.</p>
 <nav id="navGroups" aria-label="Seções"></nav>
+<div class="nav-g nav-acervo" id="navAcervo" hidden></div>
 <div class="nav-g"><button class="btn-m" id="btnTema" type="button">Tema escuro</button></div>
 </aside>
 <div class="veu no-print" id="veu" hidden></div>
@@ -185,6 +186,31 @@
 <tbody id="viaTab"></tbody>
 </table></div>
 </div>
+<div class="panel">
+<h3>Sedação e analgesia para procedimento</h3>
+<p class="helper">Doses iniciais para o peso, a titular pelo efeito. Volume calculado com a apresentação indicada.</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Fármaco</th><th>Dose por kg</th><th>Dose</th><th>Volume</th><th>Apresentação e observações</th></tr></thead>
+<tbody id="procTab"></tbody>
+</table></div>
+</div>
+<div class="grid">
+<div class="panel"><h3>Antes de sedar</h3><p class="helper">Sedação moderada ou profunda fora do centro cirúrgico.</p>
+<ul>
+<li>Classificar o risco: no pronto-socorro, pacientes ASA I e II. ASA III ou mais, via aérea difícil prevista ou lactente abaixo de 6 meses: considerar o anestesista.</li>
+<li>Jejum: na urgência, o tempo de jejum não deve atrasar a sedação (ACEP). No procedimento eletivo: 2 h para líquidos claros, 4 h para leite materno e 6 h para fórmula e refeição leve.</li>
+<li>Monitorização contínua com oximetria, capnografia, frequência cardíaca e pressão arterial; um profissional dedicado à sedação e outro ao procedimento.</li>
+<li>Material pronto: aspirador, oxigênio, bolsa-válvula-máscara, cânulas, dispositivo supraglótico, material de intubação e antagonistas.</li>
+</ul></div>
+<div class="panel"><h3>Escolha pelo procedimento</h3><p class="helper">Somar analgesia e sedação conforme a dor esperada.</p>
+<ul>
+<li>Doloroso e curto (redução de fratura, sutura extensa, drenagem): cetamina IV ou IM; alternativa, propofol com fentanil.</li>
+<li>Exame de imagem sem dor: dexmedetomidina intranasal, ou midazolam oral ou intranasal.</li>
+<li>Ansiedade com dor leve: midazolam intranasal com anestesia local, ou fentanil intranasal.</li>
+<li>Cardioversão no adolescente e no adulto: etomidato ou propofol em dose pequena.</li>
+<li>Alta com o nível de consciência prévio, sinais vitais estáveis, sem náusea importante e com acompanhante.</li>
+</ul></div>
+</div>
 <div class="grid">
 <div class="panel"><h3>Pré-oxigenação e posição</h3><p class="helper">Otimizar antes da laringoscopia.</p>
 <ul>
@@ -288,7 +314,7 @@
 <div class="kv"><span>Midazolam intranasal, 0,2 mg/kg (máx. 10 mg)</span><span id="mIN" class="calc">—</span></div>
 <div class="kv"><span>Midazolam bucal, 0,3 mg/kg (máx. 10 mg)</span><span id="mBuc" class="calc">—</span></div>
 <div class="kv"><span>Midazolam IV, 0,1–0,2 mg/kg (máx. 10 mg)</span><span id="mIV" class="calc">—</span></div>
-<div class="kv"><span>Diazepam IV, 0,2–0,3 mg/kg (máx. 10 mg)</span><span id="mDzIV" class="calc">—</span></div>
+<div class="kv"><span>Diazepam IV, 0,15–0,2 mg/kg (máx. 10 mg)</span><span id="mDzIV" class="calc">—</span></div>
 <div class="kv"><span>Diazepam retal, 0,5 mg/kg (máx. 20 mg)</span><span id="mRet" class="calc">—</span></div>
 </div>
 <div class="panel"><h3>20–40 min: 2ª linha</h3><p class="helper">Um dos fármacos abaixo, em dose plena. Eficácia semelhante entre eles.</p>
@@ -345,6 +371,15 @@
 <tbody id="intoxTab"></tbody>
 </table></div>
 </div>
+<div class="panel">
+<h3>Doses tóxicas por peso</h3>
+<p class="helper">Ingestão aguda única, para o peso informado. Abaixo do primeiro limiar, sem sintomas, sem intenção autolesiva e sem suspeita de maus-tratos, a observação em casa costuma ser segura; na dúvida, ligar para o CIATox.</p>
+<div class="tbl"><table class="ref">
+<thead><tr><th>Limiar por kg</th><th>Para este paciente</th><th>Equivale a</th></tr></thead>
+<tbody id="toxTab"></tbody>
+</table></div>
+</div>
+<div class="light"><h3>Uma dose pode ser fatal em criança pequena</h3><p class="helper">Um comprimido ou um gole destes agentes pode matar uma criança de 10 kg: sempre observar no hospital.</p><ul id="toxUm"></ul></div>
 <div class="grid">
 <div class="panel"><h3>Descontaminação</h3><p class="helper">Carvão ativado em até 1–2 h da ingestão, com via aérea protegida.</p>
 <div class="kv"><span>Carvão ativado, 1 g/kg (máx. 50 g)</span><span id="itCarv" class="calc">—</span></div>
